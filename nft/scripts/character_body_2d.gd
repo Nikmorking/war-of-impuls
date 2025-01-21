@@ -20,3 +20,12 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+	pass
+
+func _input(event):
+	# Mouse in viewport coordinates.
+	var mouse_pos
+	if event is InputEventMouseButton:
+		mouse_pos = event.position
+		print("Mouse Click/Unclick at: ", mouse_pos)
+	pass
