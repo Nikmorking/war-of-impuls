@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dy00tgqfpnr0o"]
+
+[ext_resource type="Texture2D" uid="uid://bqmul5hx2soob" path="res://icon.svg" id="1_mtqyw"]
+[ext_resource type="Script" path="res://scripts/пуля.gd" id="1_qs21c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2fmtn"]
+
+[node name="Пуля" type="Area2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_qs21c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_2fmtn")
+
+[node name="Icon" type="Sprite2D" parent="."]
+self_modulate = Color(3.7542e-06, 0, 0.783205, 1)
+scale = Vector2(0.156114, 0.155371)
+texture = ExtResource("1_mtqyw")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

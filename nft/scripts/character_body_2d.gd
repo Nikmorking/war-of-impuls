@@ -2,7 +2,14 @@ extends CharacterBody2D
 
 
 @export var SPEED = 300.0
+var move
 
+
+func _input(event: InputEvent) -> void:
+	var mouse_pos = get_global_mouse_position()
+	if Input.is_action_just_released("mouse_left"):
+		shoot(mouse_pos)
+	pass
 
 func _physics_process(delta: float) -> void:
 	var direction_y := Input.get_axis("ui_up", "ui_down")
@@ -21,11 +28,10 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	pass
+func shoot(vector: Vector2) -> void:
+	var mob = load("res://сцены/Пуля.tscn").instantiate()
 
-func _input(event):
-	# Mouse in viewport coordinates.
-	var mouse_pos
-	if event is InputEventMouseButton:
-		mouse_pos = event.position
-		print("Mouse Click/Unclick at: ", mouse_pos)
+	get_tree().root.get_node("Node2D/Node2D").add_child(mob)
+	mob.global_position = position
+	mob.pos = vector
 	pass

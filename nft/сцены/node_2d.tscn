@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://d0jqwgl2j8c8k"]
+[gd_scene load_steps=14 format=3 uid="uid://d0jqwgl2j8c8k"]
 
 [ext_resource type="Texture2D" uid="uid://bkqhwrkhlmeda" path="res://asset/Grass.png" id="1_gpw7w"]
 [ext_resource type="Texture2D" uid="uid://v8qswn0xclpw" path="res://asset/Hills.png" id="2_7pj1m"]
@@ -216,7 +216,11 @@ sources/6 = SubResource("TileSetAtlasSource_qqsbi")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bti15"]
 size = Vector2(16.25, 16.5)
 
+[sub_resource type="GDScript" id="GDScript_uepox"]
+
 [node name="Node2D" type="Node2D"]
+metadata/_edit_vertical_guides_ = [297.0]
+metadata/_edit_horizontal_guides_ = [324.0]
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(226, 289)
@@ -234,21 +238,19 @@ rotation = -3.08372
 scale = Vector2(0.901358, -312.119)
 zoom = Vector2(4, 4)
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(291, 264)
 script = ExtResource("5_j6inj")
 SPEED = 100.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(289.875, 292.75)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(-0.124939, 0.750061)
 shape = SubResource("RectangleShape2D_bti15")
 
-[node name="Icon" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(289.5, 292.5)
+[node name="Icon" type="Sprite2D" parent="Player"]
+position = Vector2(-0.49997, 0.500029)
 scale = Vector2(0.132813, 0.132813)
 texture = ExtResource("5_ngdly")
 
-[node name="Icon2" type="Sprite2D" parent="CharacterBody2D"]
-modulate = Color(0.243137, 1, 1, 1)
-position = Vector2(316, 333)
-scale = Vector2(0.132813, 0.132813)
-texture = ExtResource("5_ngdly")
+[node name="Node2D" type="Node2D" parent="."]
+script = SubResource("GDScript_uepox")
