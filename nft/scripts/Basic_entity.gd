@@ -30,6 +30,13 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 		play = true
 	pass # Replace with function body.
 
+func wait(time: float)->
+ timer = Timer.new()
+ add_child(timer)
+ timer.wait_time = time
+ timer.connect("timeout", self, hit())
+ timer.start()
+
 
 
 func get_player() -> void:
