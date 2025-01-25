@@ -7,7 +7,7 @@ var stop = false
 func _ready() -> void:
 	pass # Replace with function body.
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if pos is Vector2 and !stop:
 		position = lerp(position, pos, speed)
 	pass

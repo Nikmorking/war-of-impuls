@@ -1,11 +1,37 @@
 extends CharacterBody2D
 
-@export var speed = 0.1
-
 var player
-var pos_player
+var player_position
 var play = true
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	player = get_parent().get_node("Player")
+
+@export var SPEED = 10
+@export var damage = 1
+
+func move_to_player(delta: float) -> void:
+	player_position = player.global_position
+	var enemy_position = global_position
+	var direction = player_position - enemy_position
+	direction = direction.normalized()
+	var motion = direction * SPEED * delta
+	move_and_collide(motion)
+	pass
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if(body == player):
+		play = false
+		$Timer.start()
 	pass # Replace with function body.
+	
+
+
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	if(body == player):
+		play = true
+	pass # Replace with function body.
+
+
+
+func get_player() -> void:
+	player = get_parent().get_node("Player")
+	pass

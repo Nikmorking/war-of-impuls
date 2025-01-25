@@ -5,9 +5,10 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2fmtn"]
 
-[node name="Пуля" type="StaticBody2D"]
+[node name="Пуля" type="Area2D"]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_qs21c")
+speed = 0.05
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_2fmtn")
@@ -22,4 +23,5 @@ autostart = true
 
 [node name="Area2D" type="Area2D" parent="."]
 
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -250,7 +250,7 @@ shape = SubResource("RectangleShape2D_bti15")
 
 [node name="Icon" type="Sprite2D" parent="Player"]
 position = Vector2(-0.49997, 0.500029)
-scale = Vector2(0.132813, 0.132813)
+scale = Vector2(0.132813, 0.133379)
 texture = ExtResource("5_ngdly")
 
 [node name="Node2D" type="Node2D" parent="."]
@@ -258,14 +258,3 @@ script = SubResource("GDScript_uepox")
 
 [node name="Воин" parent="." instance=ExtResource("7_hk7sb")]
 position = Vector2(290, 300)
-speed = 0.02
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(316, 243, 218, 243, 213, 251, 213, 326, 215, 332, 313, 334, 321, 328, 320, 249, 316, 243, 320, 239, 324, 244, 328, 252, 325, 328, 315, 337, 214, 337, 208, 325, 209, 249, 217, 238, 320, 239)
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2"]
-polygon = PackedVector2Array(270, 269, 270, 259, 231, 257, 231, 301, 269, 300, 269, 291, 237, 291, 237, 267)
