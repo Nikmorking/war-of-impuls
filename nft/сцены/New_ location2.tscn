@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://m7id8i2fut7e"]
+
+[ext_resource type="TileSet" uid="uid://bcclw1ii0vyf" path="res://сцены/tile_1.tres" id="1_qkf40"]
+
+[node name="NewLocation2" type="TileMap"]
+position = Vector2(0, -70)
+tile_set = ExtResource("1_qkf40")
+format = 2
