@@ -1,11 +1,10 @@
-[gd_scene load_steps=16 format=3 uid="uid://d0jqwgl2j8c8k"]
+[gd_scene load_steps=14 format=3 uid="uid://d0jqwgl2j8c8k"]
 
 [ext_resource type="Texture2D" uid="uid://bkqhwrkhlmeda" path="res://asset/Grass.png" id="1_gpw7w"]
 [ext_resource type="Texture2D" uid="uid://v8qswn0xclpw" path="res://asset/Hills.png" id="2_7pj1m"]
 [ext_resource type="Texture2D" uid="uid://2iueix5sfsgr" path="res://asset/Water.png" id="3_xcmam"]
 [ext_resource type="Texture2D" uid="uid://vlknd2cx6mdb" path="res://asset/Fences.png" id="4_lyodw"]
-[ext_resource type="Script" path="res://scripts/character_body_2d.gd" id="5_j6inj"]
-[ext_resource type="Texture2D" uid="uid://bqmul5hx2soob" path="res://icon.svg" id="5_ngdly"]
+[ext_resource type="PackedScene" uid="uid://ciehno2dtgtce" path="res://сцены/player.tscn" id="5_dye2w"]
 [ext_resource type="PackedScene" uid="uid://j6oehfe0lyn4" path="res://сцены/Воин.tscn" id="7_hk7sb"]
 [ext_resource type="Script" path="res://scripts/spawner.gd" id="7_kly5t"]
 
@@ -205,9 +204,6 @@ sources/4 = SubResource("TileSetAtlasSource_a4snh")
 sources/5 = SubResource("TileSetAtlasSource_yje66")
 sources/6 = SubResource("TileSetAtlasSource_qqsbi")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bti15"]
-size = Vector2(16.25, 16.5)
-
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_8vbh3"]
 vertices = PackedVector2Array(316.953, 248.922, 316.039, 332.148, 274.227, 287.141, 273, 277.141, 273, 258.188, 272.773, 312, 231.977, 312, 270.844, 334, 231.633, 313.172, 224.898, 312.313, 221.938, 334.938, 212, 333.531, 244, 286.117, 244, 276.141, 212, 247.07, 222.844, 255.797)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 2, 1), PackedInt32Array(6, 5, 1, 7, 8), PackedInt32Array(9, 8, 7, 10, 11), PackedInt32Array(12, 13, 3, 2), PackedInt32Array(14, 0, 4, 15), PackedInt32Array(11, 14, 15, 9)])
@@ -234,19 +230,8 @@ rotation = -3.08372
 scale = Vector2(0.901358, -312.119)
 zoom = Vector2(4, 4)
 
-[node name="Player" type="CharacterBody2D" parent="."]
-position = Vector2(291, 264)
-script = ExtResource("5_j6inj")
-SPEED = 100.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(-0.124939, 0.750061)
-shape = SubResource("RectangleShape2D_bti15")
-
-[node name="Icon" type="Sprite2D" parent="Player"]
-position = Vector2(-0.49997, 0.500029)
-scale = Vector2(0.132813, 0.133379)
-texture = ExtResource("5_ngdly")
+[node name="Player" parent="." instance=ExtResource("5_dye2w")]
+position = Vector2(302, 268)
 
 [node name="Пули" type="Node2D" parent="."]
 position = Vector2(0, -2)
@@ -265,5 +250,3 @@ script = ExtResource("7_kly5t")
 [node name="Воин" parent="." instance=ExtResource("7_hk7sb")]
 position = Vector2(289, 300)
 scale = Vector2(0.7, 0.7)
-
-[connection signal="restart" from="Player" to="Воин" method="_on_player_restart"]
