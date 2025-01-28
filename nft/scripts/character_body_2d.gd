@@ -2,10 +2,13 @@ extends CharacterBody2D
 
 
 @export var SPEED = 300.0
+
 var move
+var health = 100
 
-var heals = 100
+signal restart
 
+@onready var start_pos = get_parent().get_node("Spawn_pos").position
 
 func _input(_event: InputEvent) -> void:
 	var mouse_pos = get_global_mouse_position()
@@ -24,15 +27,18 @@ func move_player() -> void:
 
 func _physics_process(_delta: float) -> void:
 	move_player()
-	if(heals == 70):
+	if(health == 0):
 		print("die")
+		position = start_pos
+		health = 100
+		restart.emit()
 	move_and_slide()
 	pass
 
 func shoot(vector: Vector2) -> void:
 	var mob = load("res://сцены/Пуля.tscn").instantiate()
 
-	get_tree().root.get_node("Node2D/Node2D").add_child(mob)
+	get_tree().root.get_node("Node2D/Пули").add_child(mob)
 	mob.global_position = position
 	mob.pos = vector
 	pass
