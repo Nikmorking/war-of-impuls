@@ -215,6 +215,7 @@ metadata/_edit_vertical_guides_ = [297.0]
 metadata/_edit_horizontal_guides_ = [324.0]
 
 [node name="TileMap" type="TileMap" parent="."]
+texture_filter = 1
 position = Vector2(226, 289)
 tile_set = SubResource("TileSet_n0k0m")
 format = 2
