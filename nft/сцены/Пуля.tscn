@@ -8,6 +8,7 @@ size = Vector2(18, 10)
 
 [node name="Пуля" type="Area2D"]
 scale = Vector2(0.5, 0.5)
+collision_mask = 3
 script = ExtResource("1_qs21c")
 speed = 0.05
 

@@ -19,3 +19,8 @@ texture_filter = 1
 position = Vector2(9, 9)
 scale = Vector2(1.14205, 1.07093)
 texture = ExtResource("2_dg6v2")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="call_down"]

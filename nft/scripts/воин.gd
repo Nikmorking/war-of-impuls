@@ -12,21 +12,25 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if play:
 		move_to_player(delta)
-		$CollisionPolygon2D.disabled = false
+		#$CollisionPolygon2D.disabled = false
 	else:
-		$CollisionPolygon2D.disabled = true
-		if hit:
-			print(111)
-			player.health -= damage
-			down = true
-			hit = false
-		else:
-			if down:
-				$Timer.start()
-				down = false
+		hit_player()
+		#$CollisionPolygon2D.disabled = true
+		
 	pass
 
-
+func hit_player()->void:
+	if hit:
+		print(111)
+		player.health -= damage
+		player.vis_health()
+		down = true
+		hit = false
+	else:
+		if down:
+			$Timer.start()
+			down = false
+	pass
 
 
 func call_down() -> void:
