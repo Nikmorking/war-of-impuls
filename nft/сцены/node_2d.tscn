@@ -1,9 +1,9 @@
 [gd_scene load_steps=16 format=3 uid="uid://d0jqwgl2j8c8k"]
 
-[ext_resource type="Texture2D" uid="uid://bkqhwrkhlmeda" path="res://asset/Grass.png" id="1_gpw7w"]
-[ext_resource type="Texture2D" uid="uid://v8qswn0xclpw" path="res://asset/Hills.png" id="2_7pj1m"]
-[ext_resource type="Texture2D" uid="uid://2iueix5sfsgr" path="res://asset/Water.png" id="3_xcmam"]
-[ext_resource type="Texture2D" uid="uid://vlknd2cx6mdb" path="res://asset/Fences.png" id="4_lyodw"]
+[ext_resource type="Texture2D" uid="uid://bkqhwrkhlmeda" path="res://asset/Tile/Grass.png" id="1_gpw7w"]
+[ext_resource type="Texture2D" uid="uid://v8qswn0xclpw" path="res://asset/Tile/Hills.png" id="2_7pj1m"]
+[ext_resource type="Texture2D" uid="uid://2iueix5sfsgr" path="res://asset/Tile/Water.png" id="3_xcmam"]
+[ext_resource type="Texture2D" uid="uid://vlknd2cx6mdb" path="res://asset/Tile/Fences.png" id="4_lyodw"]
 [ext_resource type="PackedScene" uid="uid://ciehno2dtgtce" path="res://сцены/player.tscn" id="5_dye2w"]
 [ext_resource type="PackedScene" uid="uid://j6oehfe0lyn4" path="res://сцены/Воин.tscn" id="7_hk7sb"]
 [ext_resource type="Script" path="res://scripts/spawner.gd" id="7_kly5t"]
@@ -206,10 +206,9 @@ sources/5 = SubResource("TileSetAtlasSource_yje66")
 sources/6 = SubResource("TileSetAtlasSource_qqsbi")
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_8vbh3"]
-vertices = PackedVector2Array(279.547, 314.547, 310.453, 327.641, 172.547, 330.242, 220.688, 314.547, 310.453, 239.547, 279.547, 284.773, 172.547, 239.547, 219.203, 250.172, 279.547, 251.719, 247.547, 283.773, 247.547, 280.883, 279.547, 281.883)
+vertices = PackedVector2Array(279, 314, 311, 328.18, 172, 330.797, 221.227, 314, 311, 239, 279, 285.313, 172, 239, 219.758, 250.727, 279, 252.25, 247, 284.297, 247, 280.32, 279, 281.32)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 1, 0, 5), PackedInt32Array(3, 2, 6, 7), PackedInt32Array(7, 6, 4, 8), PackedInt32Array(9, 10, 11, 5), PackedInt32Array(4, 5, 11), PackedInt32Array(4, 11, 8)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(321, 229, 162, 229, 162, 341, 321, 338)])
-agent_radius = 10.55
 
 [sub_resource type="LabelSettings" id="LabelSettings_tea7f"]
 font_size = 56
@@ -241,6 +240,7 @@ layer_2/tile_data = PackedInt32Array(-131072, 65542, 0, -65536, 6, 1, 0, 65542, 
 [node name="Player" parent="." instance=ExtResource("5_dye2w")]
 position = Vector2(302, 268)
 scale = Vector2(0.8, 0.8)
+SPEED = 100
 
 [node name="Пули" type="Node2D" parent="."]
 position = Vector2(0, -2)
@@ -250,6 +250,7 @@ position = Vector2(0, -3)
 navigation_polygon = SubResource("NavigationPolygon_8vbh3")
 
 [node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="NavigationRegion2D"]
+radius = 10.0
 vertices = PackedVector2Array(231, 304, 269, 304, 269, 295, 237, 294, 237, 270, 269, 271, 269, 262, 230, 261)
 affect_navigation_mesh = true
 
