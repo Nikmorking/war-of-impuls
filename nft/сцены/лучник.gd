@@ -3,8 +3,8 @@ extends "res://scripts/Basic_enemy.gd"
 var down = true
 
 func _ready() -> void:
-	get_player()
 	nav = $NavigationAgent2D
+	get_player()
 	
 
 func _process(delta: float) -> void:
@@ -22,8 +22,7 @@ func _process(delta: float) -> void:
 func hit_player()->void:
 	if hit:
 		print(222)
-		player.health -= damage
-		player.vis_health()
+		shoot()
 		down = true
 		hit = false
 	else:
@@ -32,6 +31,14 @@ func hit_player()->void:
 			down = false
 	pass
 
+func shoot() -> void:
+	var pyl = load("res://сцены/стрела.tscn").instantiate()
+
+	get_tree().root.get_node("Node2D/Пули").add_child(pyl)
+	pyl.global_position = position
+	pyl.pos = player.position
+	pyl.look_at(player.position)
+	pass
 
 
 func call_down() -> void:

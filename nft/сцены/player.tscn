@@ -8,7 +8,7 @@ size = Vector2(16.25, 16.5)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_y2g1n")
-SPEED = 100.0
+tipy = "Player"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.124939, 0.750061)
