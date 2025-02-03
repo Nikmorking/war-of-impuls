@@ -280,3 +280,10 @@ z_index = 1
 position = Vector2(573, 299)
 scale = Vector2(1.92813, 1.175)
 texture = ExtResource("8_twdo3")
+
+[node name="TextEdit" type="TextEdit" parent="UI"]
+visible = false
+offset_left = 167.0
+offset_top = 264.0
+offset_right = 405.0
+offset_bottom = 335.0
