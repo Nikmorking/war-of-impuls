@@ -1,12 +1,12 @@
 [gd_resource type="TileSet" load_steps=15 format=3 uid="uid://bcclw1ii0vyf"]
 
-[ext_resource type="Texture2D" uid="uid://bkqhwrkhlmeda" path="res://asset/Grass.png" id="1_3rfla"]
-[ext_resource type="Texture2D" uid="uid://brkfbej7xlcbm" path="res://asset/Wooden_House_Roof_Tilset.png" id="1_vpdx5"]
-[ext_resource type="Texture2D" uid="uid://v8qswn0xclpw" path="res://asset/Hills.png" id="2_3v4su"]
-[ext_resource type="Texture2D" uid="uid://c4vktxbbhc4bw" path="res://asset/Wooden_House_Walls_Tilset.png" id="2_jk47a"]
-[ext_resource type="Texture2D" uid="uid://2iueix5sfsgr" path="res://asset/Water.png" id="3_51e4i"]
-[ext_resource type="Texture2D" uid="uid://s70gl81i4sra" path="res://asset/Doors.png" id="3_kga8w"]
-[ext_resource type="Texture2D" uid="uid://vlknd2cx6mdb" path="res://asset/Fences.png" id="4_i1d2h"]
+[ext_resource type="Texture2D" uid="uid://bkqhwrkhlmeda" path="res://asset/Tile/Grass.png" id="1_3rfla"]
+[ext_resource type="Texture2D" uid="uid://brkfbej7xlcbm" path="res://asset/Tile/Wooden_House_Roof_Tilset.png" id="1_vpdx5"]
+[ext_resource type="Texture2D" uid="uid://v8qswn0xclpw" path="res://asset/Tile/Hills.png" id="2_3v4su"]
+[ext_resource type="Texture2D" uid="uid://c4vktxbbhc4bw" path="res://asset/Tile/Wooden_House_Walls_Tilset.png" id="2_jk47a"]
+[ext_resource type="Texture2D" uid="uid://2iueix5sfsgr" path="res://asset/Tile/Water.png" id="3_51e4i"]
+[ext_resource type="Texture2D" uid="uid://s70gl81i4sra" path="res://asset/Tile/Doors.png" id="3_kga8w"]
+[ext_resource type="Texture2D" uid="uid://vlknd2cx6mdb" path="res://asset/Tile/Fences.png" id="4_i1d2h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l2on4"]
 texture = ExtResource("1_vpdx5")

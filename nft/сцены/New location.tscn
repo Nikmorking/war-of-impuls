@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://4s5vsbkeb5u0"]
 
-[ext_resource type="Texture2D" uid="uid://brkfbej7xlcbm" path="res://asset/Wooden_House_Roof_Tilset.png" id="1_ivcu1"]
-[ext_resource type="Texture2D" uid="uid://c4vktxbbhc4bw" path="res://asset/Wooden_House_Walls_Tilset.png" id="2_bp81g"]
-[ext_resource type="Texture2D" uid="uid://bkqhwrkhlmeda" path="res://asset/Grass.png" id="3_s10bc"]
+[ext_resource type="Texture2D" uid="uid://brkfbej7xlcbm" path="res://asset/Tile/Wooden_House_Roof_Tilset.png" id="1_ivcu1"]
+[ext_resource type="Texture2D" uid="uid://c4vktxbbhc4bw" path="res://asset/Tile/Wooden_House_Walls_Tilset.png" id="2_bp81g"]
+[ext_resource type="Texture2D" uid="uid://bkqhwrkhlmeda" path="res://asset/Tile/Grass.png" id="3_s10bc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q5uwf"]
 texture = ExtResource("1_ivcu1")

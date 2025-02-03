@@ -16,13 +16,15 @@ func _process(_delta: float) -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	if(body != get_parent().get_parent().get_node("Player")):
-		stop = true
-		if body is CharacterBody2D:
+	if body is CharacterBody2D:
+		if body is Enemy:
+			stop = true
 			print("gg")
 			body.health -= damage
 			if(body.health <= 0):
 				body.queue_free()
+	else:
+		stop = true
 	pass # Replace with function body.
 
 

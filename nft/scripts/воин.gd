@@ -1,9 +1,10 @@
-extends "res://scripts/Basic_entity.gd"
+extends "res://scripts/Basic_enemy.gd"
 
 var down = true
 
 func _ready() -> void:
 	get_player()
+	nav = $NavigationAgent2D
 	
 
 # Called when the node enters the scene tree for the first time.
@@ -11,22 +12,27 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if play:
-		move_to_player(delta)
-		$CollisionPolygon2D.disabled = false
-	else:
-		$CollisionPolygon2D.disabled = true
-		if hit:
-			print(111)
-			player.health -= damage
-			down = true
-			hit = false
+		if movi:
+			move_to_player(delta)
+			#$CollisionPolygon2D.disabled = false
 		else:
-			if down:
-				$Timer.start()
-				down = false
+			hit_player()
+		#$CollisionPolygon2D.disabled = true
+		
 	pass
 
-
+func hit_player()->void:
+	if hit:
+		print(111)
+		player.health -= damage
+		player.vis_health()
+		down = true
+		hit = false
+	else:
+		if down:
+			$Timer.start()
+			down = false
+	pass
 
 
 func call_down() -> void:
