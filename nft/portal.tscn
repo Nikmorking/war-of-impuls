@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c80agmnknnt3a"]
+
+[ext_resource type="Texture2D" uid="uid://bhaxq7ncsn3fb" path="res://asset/ПОРТАЛ.png" id="1_rt4od"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nekn6"]
+
+[node name="portal" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_rt4od")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_nekn6")
