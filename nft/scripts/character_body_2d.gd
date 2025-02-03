@@ -7,7 +7,7 @@ signal restart
 
 @onready var start_pos = get_parent().get_node("Spawn_pos").position
 @onready var ui = Gg.get_papa(1, self).get_node("UI")
-@onready var black = ui.get_node("black") 
+#@onready var black = ui.get_node("black") 
 
 func _input(_event: InputEvent) -> void:
 	var mouse_pos = get_global_mouse_position()
@@ -37,7 +37,7 @@ func _physics_process(_delta: float) -> void:
 
 func die()->void:
 	print("die")
-	black.visible = true
+	#black.visible = true
 	$Timer.start()
 	health = 100
 	Enemy.play = false
@@ -53,13 +53,13 @@ func shoot(vector: Vector2) -> void:
 	pass
 
 func vis_health()->void:
-	ui.get_node("Label").text = str(health)
+	#ui.get_node("Label").text = str(health)
 	pass
 
 
 
 func call_down() -> void:
-	black.visible = false
+	#black.visible = false
 	position = start_pos
 	restart.emit()
 	pass # Replace with function body.
