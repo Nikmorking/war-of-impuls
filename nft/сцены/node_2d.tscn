@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://d0jqwgl2j8c8k"]
+[gd_scene load_steps=17 format=3 uid="uid://d0jqwgl2j8c8k"]
 
 [ext_resource type="Texture2D" uid="uid://bkqhwrkhlmeda" path="res://asset/Tile/Grass.png" id="1_gpw7w"]
 [ext_resource type="Texture2D" uid="uid://v8qswn0xclpw" path="res://asset/Tile/Hills.png" id="2_7pj1m"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://j6oehfe0lyn4" path="res://сцены/Воин.tscn" id="7_hk7sb"]
 [ext_resource type="Script" path="res://scripts/spawner.gd" id="7_kly5t"]
 [ext_resource type="Texture2D" uid="uid://b5mamcyhk8x80" path="res://asset/Чёрный_квадрат.PNG" id="8_twdo3"]
+[ext_resource type="PackedScene" uid="uid://b088uqy5qe8w0" path="res://сцены/лучник.tscn" id="9_ekwph"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6cvji"]
 texture = ExtResource("1_gpw7w")
@@ -271,7 +272,7 @@ offset_left = 782.0
 offset_top = 528.0
 offset_right = 1116.0
 offset_bottom = 605.0
-text = "fdghfdhgdfd"
+text = "Молодец!"
 label_settings = SubResource("LabelSettings_tea7f")
 
 [node name="black" type="Sprite2D" parent="UI"]
@@ -280,3 +281,6 @@ z_index = 1
 position = Vector2(573, 299)
 scale = Vector2(1.92813, 1.175)
 texture = ExtResource("8_twdo3")
+
+[node name="Лучник" parent="." instance=ExtResource("9_ekwph")]
+position = Vector2(282, 323)
