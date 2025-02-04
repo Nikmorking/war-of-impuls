@@ -6,8 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://vlknd2cx6mdb" path="res://asset/Tile/Fences.png" id="4_lyodw"]
 [ext_resource type="PackedScene" uid="uid://ciehno2dtgtce" path="res://сцены/player.tscn" id="5_dye2w"]
 [ext_resource type="Script" path="res://scripts/spawner.gd" id="7_kly5t"]
+[ext_resource type="PackedScene" uid="uid://c07orr4dvp474" path="res://сцены/Маг.tscn" id="8_j2dlb"]
 [ext_resource type="Texture2D" uid="uid://b5mamcyhk8x80" path="res://asset/Чёрный_квадрат.PNG" id="8_twdo3"]
-[ext_resource type="PackedScene" uid="uid://b088uqy5qe8w0" path="res://сцены/лучник.tscn" id="9_ekwph"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6cvji"]
 texture = ExtResource("1_gpw7w")
@@ -261,9 +261,6 @@ position = Vector2(291, 264)
 position = Vector2(301, 305)
 script = ExtResource("7_kly5t")
 
-[node name="Лучник" parent="." instance=ExtResource("9_ekwph")]
-position = Vector2(282, 323)
-
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Label" type="Label" parent="UI"]
@@ -280,3 +277,6 @@ z_index = 1
 position = Vector2(573, 299)
 scale = Vector2(1.92813, 1.175)
 texture = ExtResource("8_twdo3")
+
+[node name="маг" parent="." instance=ExtResource("8_j2dlb")]
+position = Vector2(301, 317)
