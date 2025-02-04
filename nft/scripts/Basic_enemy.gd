@@ -18,6 +18,7 @@ func move_to_player(delta: float) -> void:
 	var next_path_position: Vector2 = nav.get_next_path_position()
 
 	velocity = current_agent_position.direction_to(next_path_position) * SPEED
+ look_at(next_path_position)
 	move_and_slide()
 	pass
 
