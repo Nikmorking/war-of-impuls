@@ -1,14 +1,11 @@
 extends "res://scripts/Basic_enemy.gd"
 
-
-
 var down = true
 
 func _ready() -> void:
 	nav = $NavigationAgent2D
 	get_player()
 	$RayCast2D.target_position.x = $Area2D/CollisionShape2D.shape.radius
-
 
 func _process(delta: float) -> void:
 	if play:

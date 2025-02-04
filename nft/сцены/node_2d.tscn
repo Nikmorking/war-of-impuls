@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://d0jqwgl2j8c8k"]
+[gd_scene load_steps=18 format=3 uid="uid://d0jqwgl2j8c8k"]
 
 [ext_resource type="Texture2D" uid="uid://bkqhwrkhlmeda" path="res://asset/Tile/Grass.png" id="1_gpw7w"]
 [ext_resource type="Texture2D" uid="uid://v8qswn0xclpw" path="res://asset/Tile/Hills.png" id="2_7pj1m"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://scripts/spawner.gd" id="7_kly5t"]
 [ext_resource type="PackedScene" uid="uid://c07orr4dvp474" path="res://сцены/Маг.tscn" id="8_j2dlb"]
 [ext_resource type="Texture2D" uid="uid://b5mamcyhk8x80" path="res://asset/Чёрный_квадрат.PNG" id="8_twdo3"]
+[ext_resource type="PackedScene" uid="uid://b088uqy5qe8w0" path="res://сцены/лучник.tscn" id="9_ihm2v"]
 [ext_resource type="PackedScene" uid="uid://bp34hrsjcwqh5" path="res://сцены/челночки.tscn" id="9_y54xj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6cvji"]
@@ -279,8 +280,11 @@ position = Vector2(573, 299)
 scale = Vector2(1.92813, 1.175)
 texture = ExtResource("8_twdo3")
 
-[node name="маг" parent="." instance=ExtResource("8_j2dlb")]
-position = Vector2(192, 290)
-
 [node name="челночки" parent="." instance=ExtResource("9_y54xj")]
-position = Vector2(287, 313)
+position = Vector2(308, 327)
+
+[node name="Лучник" parent="." instance=ExtResource("9_ihm2v")]
+position = Vector2(186, 312)
+
+[node name="маг" parent="." instance=ExtResource("8_j2dlb")]
+position = Vector2(187, 250)
