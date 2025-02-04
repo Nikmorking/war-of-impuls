@@ -16,11 +16,10 @@ func _process(delta: float) -> void:
 			#$CollisionPolygon2D.disabled = false
 		else:
 			hit_player()
-		#$CollisionPolygon2D.disabled = true
-		
+			$RayCast2D.is_colliding()
 	pass
-	
-	
+
+
 func hit_player()->void:
 	if hit:
 		print(222)
@@ -43,7 +42,6 @@ func shoot() -> void:
 
 func call_down() -> void:
 	hit = true
-	$RayCast2D.is_colliding()
 	pass # Replace with function body.
 
 func _on_player_restart() -> void:
