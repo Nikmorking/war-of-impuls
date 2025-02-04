@@ -17,10 +17,10 @@ func _input(_event: InputEvent) -> void:
 		dep = true
 	if Input.is_action_just_released("ui_accept"):
 		if dep:
-			if ui.get_node("TextEdit").text == "gamemode casual":
+			var texter = ui.get_node("TextEdit").text
+			if (texter == "gamemode casual"):
 				print("{jhji}")
 	pass
-
 func _ready() -> void:
 	vis_health()
 	pass
