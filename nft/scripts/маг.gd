@@ -34,17 +34,16 @@ func hit_player()->void:
 	pass
 
 func shoot() -> void:
-	var pyl = load("res://сцены/стрела.tscn").instantiate()
-
+	var pyl = load("res://сцены/fire_ball.tscn").instantiate()
 	get_tree().root.get_node("Node2D/Пули").add_child(pyl)
 	pyl.global_position = position
 	pyl.pos = player.position
-	pyl.look_at(player.position)
 	pass
 
 
 func call_down() -> void:
 	hit = true
+	$RayCast2D.is_colliding()
 	pass # Replace with function body.
 
 func _on_player_restart() -> void:
