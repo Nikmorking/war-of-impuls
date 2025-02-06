@@ -217,6 +217,10 @@ font_size = 56
 metadata/_edit_vertical_guides_ = [297.0]
 metadata/_edit_horizontal_guides_ = [324.0]
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
 position = Vector2(226, 289)
@@ -261,10 +265,6 @@ position = Vector2(291, 264)
 position = Vector2(301, 305)
 script = ExtResource("7_kly5t")
 
-[node name="Timer" type="Timer" parent="Spawner"]
-wait_time = 60.0
-one_shot = true
-
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Label" type="Label" parent="UI"]
@@ -292,3 +292,5 @@ offset_bottom = 335.0
 [node name="маг" parent="." instance=ExtResource("6_jx680")]
 position = Vector2(203, 280)
 scale = Vector2(0.56, 0.56)
+
+[connection signal="timeout" from="Timer" to="Spawner" method="_on_timer_timeout"]
