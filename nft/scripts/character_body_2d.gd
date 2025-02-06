@@ -1,7 +1,7 @@
 extends "res://scripts/Entity.gd"
 
 var move
-
+var dep = false
 
 signal restart
 
@@ -10,11 +10,17 @@ signal restart
 #@onready var black = ui.get_node("black") 
 
 func _input(_event: InputEvent) -> void:
-	var mouse_pos = get_global_mouse_position()
 	if Input.is_action_just_released("mouse_left"):
-		shoot(mouse_pos)
+		shoot(get_global_mouse_position())
+	if Input.is_action_just_released("devlog"):
+		ui.get_node("TextEdit").visible = true
+		dep = true
+	if Input.is_action_just_released("ui_accept"):
+		if dep:
+			var texter = ui.get_node("TextEdit").text
+			if (texter == "gamemode casual"):
+				print("{jhji}")
 	pass
-
 func _ready() -> void:
 	vis_health()
 	pass
@@ -53,7 +59,7 @@ func shoot(vector: Vector2) -> void:
 	pass
 
 func vis_health()->void:
-	#ui.get_node("Label").text = str(health)
+	ui.get_node("Label").text = str(health)
 	pass
 
 

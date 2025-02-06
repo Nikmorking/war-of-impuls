@@ -1,14 +1,13 @@
-[gd_scene load_steps=17 format=3 uid="uid://d0jqwgl2j8c8k"]
+[gd_scene load_steps=16 format=3 uid="uid://d0jqwgl2j8c8k"]
 
 [ext_resource type="Texture2D" uid="uid://bkqhwrkhlmeda" path="res://asset/Tile/Grass.png" id="1_gpw7w"]
 [ext_resource type="Texture2D" uid="uid://v8qswn0xclpw" path="res://asset/Tile/Hills.png" id="2_7pj1m"]
 [ext_resource type="Texture2D" uid="uid://2iueix5sfsgr" path="res://asset/Tile/Water.png" id="3_xcmam"]
 [ext_resource type="Texture2D" uid="uid://vlknd2cx6mdb" path="res://asset/Tile/Fences.png" id="4_lyodw"]
 [ext_resource type="PackedScene" uid="uid://ciehno2dtgtce" path="res://сцены/player.tscn" id="5_dye2w"]
-[ext_resource type="PackedScene" uid="uid://j6oehfe0lyn4" path="res://сцены/Воин.tscn" id="7_hk7sb"]
+[ext_resource type="PackedScene" uid="uid://c07orr4dvp474" path="res://сцены/Маг.tscn" id="6_jx680"]
 [ext_resource type="Script" path="res://scripts/spawner.gd" id="7_kly5t"]
 [ext_resource type="Texture2D" uid="uid://b5mamcyhk8x80" path="res://asset/Чёрный_квадрат.PNG" id="8_twdo3"]
-[ext_resource type="PackedScene" uid="uid://c80agmnknnt3a" path="res://portal.tscn" id="9_0l3gt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5mvxk"]
 texture = ExtResource("1_gpw7w")
@@ -237,17 +236,17 @@ position = Vector2(302, 268)
 scale = Vector2(0.8, 0.8)
 SPEED = 100
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(273, 280)
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(-1.25, 0)
 rotation = -3.08372
-scale = Vector2(0.901358, -312.119)
+scale = Vector2(1.1267, -390.149)
 zoom = Vector2(4, 4)
 
 [node name="Пули" type="Node2D" parent="."]
 position = Vector2(0, -2)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
-position = Vector2(0, -3)
+position = Vector2(7, -4)
 navigation_polygon = SubResource("NavigationPolygon_8vbh3")
 
 [node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="NavigationRegion2D"]
@@ -262,9 +261,6 @@ position = Vector2(291, 264)
 position = Vector2(301, 305)
 script = ExtResource("7_kly5t")
 
-[node name="Воин" parent="." instance=ExtResource("7_hk7sb")]
-position = Vector2(289, 300)
-
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Label" type="Label" parent="UI"]
@@ -272,7 +268,7 @@ offset_left = 782.0
 offset_top = 528.0
 offset_right = 1116.0
 offset_bottom = 605.0
-text = "fdghfdhgdfd"
+text = "Молодец!"
 label_settings = SubResource("LabelSettings_tea7f")
 
 [node name="black" type="Sprite2D" parent="UI"]
@@ -282,5 +278,13 @@ position = Vector2(573, 299)
 scale = Vector2(1.92813, 1.175)
 texture = ExtResource("8_twdo3")
 
-[node name="portal" parent="." instance=ExtResource("9_0l3gt")]
-position = Vector2(187, 253)
+[node name="TextEdit" type="TextEdit" parent="UI"]
+visible = false
+offset_left = 167.0
+offset_top = 264.0
+offset_right = 405.0
+offset_bottom = 335.0
+
+[node name="маг" parent="." instance=ExtResource("6_jx680")]
+position = Vector2(203, 280)
+scale = Vector2(0.56, 0.56)
