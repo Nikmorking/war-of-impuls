@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bhaxq7ncsn3fb" path="res://asset/ПОРТАЛ.png" id="1_rt4od"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nekn6"]
+size = Vector2(26, 25)
 
 [node name="portal" type="Area2D"]
 
@@ -10,4 +11,5 @@
 texture = ExtResource("1_rt4od")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_nekn6")
