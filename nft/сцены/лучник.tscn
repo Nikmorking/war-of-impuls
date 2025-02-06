@@ -35,10 +35,15 @@ avoidance_mask = 3
 debug_enabled = true
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 target_position = Vector2(0, 0)
 
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 0.5
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
 [connection signal="timeout" from="Timer" to="." method="call_down"]
+[connection signal="timeout" from="Timer2" to="." method="move_"]

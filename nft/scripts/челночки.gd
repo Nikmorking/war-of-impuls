@@ -7,8 +7,7 @@ func _on_body_entered(body: Node2D) -> void:
 		if body.tipy == "Player":
 			print("xx")
 			body.max_health *= 2
-			vost_xp= body.max_health - body.health
-			body.health += vost_xp
+			body.health = body.max_health
 			body.vis_health()
 			queue_free()
 		else:

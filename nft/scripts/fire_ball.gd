@@ -14,12 +14,9 @@ func _process(_delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D:
 		if body.tipy == "Player":
-			stop = true
 			print("gg")
 			body.health -= damage
 			body.vis_health()
-	else:
-		stop = true
 	pass
 
 func _on_timer_timeout() -> void:

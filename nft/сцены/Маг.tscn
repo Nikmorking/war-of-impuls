@@ -9,6 +9,7 @@ radius = 81.4286
 [node name="маг" type="CharacterBody2D"]
 scale = Vector2(0.7, 0.7)
 script = ExtResource("1_recxx")
+damage = 20
 SPEED = 60
 
 [node name="Маг" type="Sprite2D" parent="."]
@@ -16,11 +17,12 @@ texture_filter = 1
 texture = ExtResource("1_eufb3")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-6, 15, -5.71429, 11.4286, -4, 7, -4, 1, -5, -6, -4, -10, -3, -2, 1, -2, 5, -9, 6, -2, 3, 3, 6, 9, 6, 11, 2, 6, -2, 8, -4, 9)
+polygon = PackedVector2Array(-4, 7, -4, 1, -5, -6, -4, -10, -3, -2, 1, -2, 4.28571, -2.85714, 5, -9, 6, -2, 3, 3, 2, 6, -2, 8)
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1.42857, 0)
 shape = SubResource("CircleShape2D_hih16")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
@@ -33,6 +35,7 @@ avoidance_mask = 3
 debug_enabled = true
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 target_position = Vector2(0, 0)
