@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dfxng4r3v5cs1"]
+[gd_scene load_steps=14 format=3 uid="uid://dfxng4r3v5cs1"]
 
 [ext_resource type="Texture2D" uid="uid://c4vktxbbhc4bw" path="res://asset/Tile/Wooden_House_Walls_Tilset.png" id="1_xixdd"]
 [ext_resource type="Texture2D" uid="uid://2iueix5sfsgr" path="res://asset/Tile/Water.png" id="2_gs2oy"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://vlknd2cx6mdb" path="res://asset/Tile/Fences.png" id="4_iv2bq"]
 [ext_resource type="Texture2D" uid="uid://s70gl81i4sra" path="res://asset/Tile/Doors.png" id="5_cuakp"]
 [ext_resource type="PackedScene" uid="uid://c80agmnknnt3a" path="res://portal.tscn" id="6_j80c8"]
+[ext_resource type="Script" path="res://scripts/spawner.gd" id="7_cbpmr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0omhr"]
 texture = ExtResource("1_xixdd")
@@ -179,3 +180,7 @@ layer_1/tile_data = PackedInt32Array(-196610, 65540, 0, -262140, 196612, 0, 3276
 
 [node name="portal" parent="." instance=ExtResource("6_j80c8")]
 position = Vector2(-205, 643)
+
+[node name="Spawner" type="Node2D" parent="."]
+position = Vector2(-5, 69)
+script = ExtResource("7_cbpmr")
