@@ -38,11 +38,9 @@ zoom = Vector2(4, 4)
 
 [node name="Пули" type="Node2D" parent="."]
 position = Vector2(-3.05176e-05, -2)
-scale = Vector2(1, 1)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 position = Vector2(-529, -328)
-scale = Vector2(1, 1)
 navigation_polygon = SubResource("NavigationPolygon_g62gl")
 
 [node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="NavigationRegion2D"]
@@ -53,19 +51,27 @@ affect_navigation_mesh = true
 
 [node name="Spawn_pos" type="Node2D" parent="."]
 position = Vector2(-275, -31)
-scale = Vector2(1, 1)
+
+[node name="Spawner2" type="Node2D" parent="."]
+position = Vector2(-326, 100)
+script = ExtResource("3_v660h")
 
 [node name="Spawner" type="Node2D" parent="."]
 position = Vector2(-324, -24)
 script = ExtResource("3_v660h")
 
+[node name="Spawner3" type="Node2D" parent="."]
+position = Vector2(-269, 93)
+script = ExtResource("3_v660h")
+
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Label" type="Label" parent="UI"]
-offset_left = -464.0
-offset_top = -94.0
-offset_right = -130.0
-offset_bottom = -17.0
+offset_left = 799.0
+offset_top = 494.0
+offset_right = 1179.0
+offset_bottom = 675.0
+text = "vgbmnbn"
 label_settings = SubResource("LabelSettings_m6e7d")
 
 [node name="black" type="Sprite2D" parent="UI"]
@@ -75,4 +81,6 @@ position = Vector2(573, 299)
 scale = Vector2(1.92813, 1.175)
 texture = ExtResource("2_j320f")
 
+[connection signal="timeout" from="Timer" to="Spawner2" method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer" to="Spawner" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="Spawner3" method="_on_timer_timeout"]
