@@ -11,7 +11,9 @@ scale = Vector2(0.7, 0.7)
 collision_layer = 2
 collision_mask = 3
 script = ExtResource("1_a1ml1")
-SPEED = 50
+health = 80
+SPEED = 60
+tipy = "Лучник"
 
 [node name="Лучник" type="Sprite2D" parent="."]
 texture_filter = 1

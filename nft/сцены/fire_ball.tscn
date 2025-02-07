@@ -19,6 +19,7 @@ position = Vector2(-3.97364e-08, 9.93411e-08)
 shape = SubResource("CircleShape2D_6iijs")
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
 one_shot = true
 autostart = true
 

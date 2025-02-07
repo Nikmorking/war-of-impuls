@@ -5,6 +5,7 @@ extends Node2D
 
 var pos
 var stop = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -23,6 +24,9 @@ func _on_body_entered(body: Node2D) -> void:
 			body.health -= damage
 			if(body.health <= 0):
 				body.queue_free()
+				Gg.get_papa(2, self).kill()
+				
+			
 	else:
 		stop = true
 	pass # Replace with function body.
