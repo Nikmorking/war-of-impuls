@@ -12,6 +12,7 @@ radius = 3.16228
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_y2g1n")
 tipy = "Player"
+damage = 25
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.124939, 0.750061)
@@ -32,4 +33,12 @@ one_shot = true
 position = Vector2(0, 3)
 shape = SubResource("CircleShape2D_erawe")
 
+[node name="Timer2" type="Timer" parent="."]
+one_shot = true
+
+[node name="Timer3" type="Timer" parent="."]
+autostart = true
+
 [connection signal="timeout" from="Timer" to="." method="call_down"]
+[connection signal="timeout" from="Timer2" to="." method="Shoot"]
+[connection signal="timeout" from="Timer3" to="." method="vis_health"]

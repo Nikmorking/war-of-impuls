@@ -25,8 +25,6 @@ func _on_body_entered(body: Node2D) -> void:
 			if(body.health <= 0):
 				body.queue_free()
 				Gg.get_papa(2, self).kill()
-				
-			
 	else:
 		stop = true
 	pass # Replace with function body.

@@ -6,8 +6,6 @@ var play = true
 var hit = false
 var movi = true
 
-		 
-@export var damage = 10
 
 @onready var nav: NavigationAgent2D 
 @onready var start_pos = position

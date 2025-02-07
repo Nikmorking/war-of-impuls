@@ -14,6 +14,7 @@ script = ExtResource("1_a1ml1")
 health = 80
 SPEED = 60
 tipy = "Лучник"
+damage = 15
 
 [node name="Лучник" type="Sprite2D" parent="."]
 texture_filter = 1
