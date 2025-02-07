@@ -25,7 +25,6 @@ func move_to_player(delta: float) -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if(body == player):
 		movi = false
-		$Timer.start()
 	pass # Replace with function body.
 	
 

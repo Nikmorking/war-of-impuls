@@ -45,14 +45,14 @@ func die()->void:
 	print("die")
 	#black.visible = true
 	$Timer.start()
-	health = 100
+	health = max_health
 	Enemy.play = false
+	get_parent().schot = 0
 	pass
 
 
 func shoot(vector: Vector2) -> void:
 	var pyl = load("res://сцены/Пуля.tscn").instantiate()
-
 	get_tree().root.get_node("Node2D/Пули").add_child(pyl)
 	pyl.global_position = position
 	pyl.pos = vector
