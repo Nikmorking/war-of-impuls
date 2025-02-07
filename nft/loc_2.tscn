@@ -1,0 +1,86 @@
+[gd_scene load_steps=8 format=3 uid="uid://cclgniu6713f1"]
+
+[ext_resource type="PackedScene" uid="uid://ciehno2dtgtce" path="res://сцены/player.tscn" id="1_ryomp"]
+[ext_resource type="Texture2D" uid="uid://b5mamcyhk8x80" path="res://asset/Чёрный_квадрат.PNG" id="2_j320f"]
+[ext_resource type="Script" path="res://scripts/spawner.gd" id="3_v660h"]
+[ext_resource type="PackedScene" uid="uid://c80agmnknnt3a" path="res://portal.tscn" id="4_hr8hk"]
+[ext_resource type="PackedScene" uid="uid://m7id8i2fut7e" path="res://сцены/New_ location2.tscn" id="4_khoe1"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_g62gl"]
+vertices = PackedVector2Array(339.594, 434.602, 338.477, 406.289, 348.703, 408.344, 369.781, 433.359, 372.047, 406.75, 358, 407.688, 419.281, 281.617, 486, 276.727, 486, 319.32, 455, 320.32, 419.859, 317.773, 445.383, 322.883, 455, 356.188, 443.531, 363.617, 245.391, 409.75, 290.313, 406.68, 291, 429.297, 239, 367.789, 196.273, 368.688, 196.398, 356.617, 234.617, 358.359, 243.539, 362.789, 292.641, 499.906, 200.578, 499.063, 196.656, 408.227, 239, 406.633, 247.523, 371.352, 245.039, 318.727, 196.82, 319.719, 197.859, 226.883, 224.797, 226.656, 290.75, 227.828, 245.398, 318.219, 483.398, 466.82, 419.117, 467.828, 419.883, 407, 445.391, 407, 483.906, 405.688, 450.617, 404.648, 447.641, 371, 455.273, 369.844, 346.438, 367.641, 358, 371, 708, 370.5, 707.094, 466.063, 570, 466.93, 570, 417, 618.594, 274.477, 708, 275.844, 340, 321.188, 340, 291, 371.203, 291, 371.813, 320.961, 362.953, 321.852, 347.391, 325.422, 345.398, 355.344, 358.898, 358.328, 528.758, 354.82, 530.727, 274.031, 618.594, 274.469, 530.57, 417, 528.578, 371.172, 293.297, 259.43, 293.969, 281.617, 290.023, 317.188)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 3, 2, 5), PackedInt32Array(6, 7, 8, 9, 10), PackedInt32Array(11, 10, 9), PackedInt32Array(11, 9, 12, 13), PackedInt32Array(14, 15, 16), PackedInt32Array(17, 18, 19, 20, 21), PackedInt32Array(16, 22, 23, 24, 14), PackedInt32Array(14, 24, 25), PackedInt32Array(26, 14, 25, 17, 21), PackedInt32Array(27, 28, 29, 30, 31, 32), PackedInt32Array(33, 34, 35, 36), PackedInt32Array(37, 33, 36, 38), PackedInt32Array(38, 36, 39, 40), PackedInt32Array(5, 2, 41, 42), PackedInt32Array(43, 44, 45, 46, 47, 48), PackedInt32Array(49, 50, 51, 52, 53), PackedInt32Array(54, 49, 53), PackedInt32Array(55, 54, 53, 56, 41), PackedInt32Array(57, 58, 59, 47, 46, 60, 61), PackedInt32Array(12, 57, 61, 40, 13), PackedInt32Array(56, 13, 40, 39, 42, 41), PackedInt32Array(55, 41, 26, 21), PackedInt32Array(32, 21, 20, 27), PackedInt32Array(32, 31, 62, 63, 64)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(719, 265, 523, 264, 305, 280, 300, 218, 188, 216, 186, 393, 191, 509, 193, 509, 302, 510, 717, 476)])
+
+[sub_resource type="LabelSettings" id="LabelSettings_m6e7d"]
+font_size = 56
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[node name="NewLocation2" parent="." instance=ExtResource("4_khoe1")]
+
+[node name="portal" parent="." instance=ExtResource("4_hr8hk")]
+position = Vector2(8, 129)
+
+[node name="Player" parent="." instance=ExtResource("1_ryomp")]
+position = Vector2(-276, -61)
+scale = Vector2(0.8, 0.8)
+SPEED = 100
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(1.25, -1.25)
+rotation = -3.08372
+scale = Vector2(1.1267, -390.149)
+zoom = Vector2(4, 4)
+
+[node name="Пули" type="Node2D" parent="."]
+position = Vector2(-3.05176e-05, -2)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+position = Vector2(-529, -328)
+navigation_polygon = SubResource("NavigationPolygon_g62gl")
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="NavigationRegion2D"]
+position = Vector2(0, 1)
+radius = 10.0
+vertices = PackedVector2Array(304, 282, 302, 216, 185, 217, 184, 330, 232, 329, 227, 348, 183, 346, 182, 379, 229, 378, 229, 397, 183.364, 398.742, 183, 510, 99, 518, 90, 167, 752, 211, 764, 560, 303, 515, 301, 429, 300, 396, 256, 399, 257, 381, 337, 378, 338, 396, 328, 394, 330, 445, 379, 443, 383, 396, 368, 397, 368, 381, 437, 381, 436, 397, 410, 397, 409, 478, 493.322, 476.672, 494, 396, 462, 395, 464, 380, 519, 381, 521, 427, 542, 427, 560, 427, 560, 477, 718, 476, 718, 266, 521, 263, 519, 345, 465, 346, 465, 330, 496, 329, 496, 266, 409, 264, 410, 326, 435, 331, 434, 353, 370, 349, 372, 331, 382, 330, 381, 281, 330, 281, 330, 327, 337, 331, 336, 346, 254, 352, 255, 328, 299, 327)
+affect_navigation_mesh = true
+
+[node name="Spawn_pos" type="Node2D" parent="."]
+position = Vector2(-275, -31)
+
+[node name="Spawner2" type="Node2D" parent="."]
+position = Vector2(-326, 100)
+script = ExtResource("3_v660h")
+
+[node name="Spawner" type="Node2D" parent="."]
+position = Vector2(-324, -24)
+script = ExtResource("3_v660h")
+
+[node name="Spawner3" type="Node2D" parent="."]
+position = Vector2(-269, 93)
+script = ExtResource("3_v660h")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="UI"]
+offset_left = 799.0
+offset_top = 494.0
+offset_right = 1179.0
+offset_bottom = 675.0
+text = "vgbmnbn"
+label_settings = SubResource("LabelSettings_m6e7d")
+
+[node name="black" type="Sprite2D" parent="UI"]
+visible = false
+z_index = 1
+position = Vector2(573, 299)
+scale = Vector2(1.92813, 1.175)
+texture = ExtResource("2_j320f")
+
+[connection signal="timeout" from="Timer" to="Spawner2" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="Spawner" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="Spawner3" method="_on_timer_timeout"]

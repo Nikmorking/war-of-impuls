@@ -1,20 +1,26 @@
 extends "res://scripts/Entity.gd"
 
 var move
-
+var dep = false
 
 signal restart
 
 @onready var start_pos = get_parent().get_node("Spawn_pos").position
 @onready var ui = Gg.get_papa(1, self).get_node("UI")
-@onready var black = ui.get_node("black") 
+#@onready var black = ui.get_node("black") 
 
 func _input(_event: InputEvent) -> void:
-	var mouse_pos = get_global_mouse_position()
 	if Input.is_action_just_released("mouse_left"):
-		shoot(mouse_pos)
+		shoot(get_global_mouse_position())
+	if Input.is_action_just_released("devlog"):
+		ui.get_node("TextEdit").visible = true
+		dep = true
+	if Input.is_action_just_released("ui_accept"):
+		if dep:
+			var texter = ui.get_node("TextEdit").text
+			if (texter == "gamemode casual"):
+				print("{jhji}")
 	pass
-
 func _ready() -> void:
 	vis_health()
 	pass
@@ -37,7 +43,7 @@ func _physics_process(_delta: float) -> void:
 
 func die()->void:
 	print("die")
-	black.visible = true
+	#black.visible = true
 	$Timer.start()
 	health = max_health
 	Enemy.play = false
@@ -59,7 +65,7 @@ func vis_health()->void:
 
 
 func call_down() -> void:
-	black.visible = false
+	#black.visible = false
 	position = start_pos
 	restart.emit()
 	pass # Replace with function body.
