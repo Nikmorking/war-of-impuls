@@ -2,7 +2,7 @@ extends "res://scripts/Entity.gd"
 
 var move
 var dep = false
-var call = 2
+var call = 4
 var play = true
 
 signal restart
@@ -13,9 +13,18 @@ signal restart
 
 func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_released("mouse_right"):
-		if call == 2:
+		if call != 2:
 			shoot(get_global_mouse_position())
-			$Icon.texture = load("res://asset/импульс/импульс.png")
+			if call == 1:
+				call = 3
+				$Icon.texture = load("res://asset/импульс/импульс3.png")
+			if call == 0:
+				call = 2
+				$Icon.texture = load("res://asset/импульс/импульс.png")
+	if Input.is_action_just_released("mouse_left"):
+		if call != 1:
+			shoot(get_global_mouse_position())
+			$Icon.texture = load("res://asset/импульс/импульс2.png")
 			call = 1
 	if Input.is_action_just_released("devlog"):
 		ui.get_node("TextEdit").visible = true
@@ -81,6 +90,13 @@ func call_down() -> void:
 
 
 func Shoot() -> void:
-	call = 2
-	$Icon.texture = load("res://asset/импульс/перс.png")
+	if call == 2:
+		$Icon.texture = load("res://asset/импульс/перс.png")
+		call = 0
+	if call == 1:
+		$Icon.texture = load("res://asset/импульс/перс.png")
+		call = 0
+	if call == 3:
+		$Icon.texture = load("res://asset/Импульс/импульс2.png")
+		call -= 1
 	pass # Replace with function body.
