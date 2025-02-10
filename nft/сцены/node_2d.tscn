@@ -242,6 +242,8 @@ layer_2/tile_data = PackedInt32Array(-131072, 65542, 0, -65536, 6, 1, 0, 65542, 
 [node name="Player" parent="." instance=ExtResource("5_dye2w")]
 position = Vector2(302, 268)
 scale = Vector2(0.8, 0.8)
+max_health = null
+health = null
 SPEED = 100
 
 [node name="Camera2D" type="Camera2D" parent="Player"]

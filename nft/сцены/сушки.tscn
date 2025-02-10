@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b4aehn75ogi26"]
 
-[ext_resource type="Script" path="res://сцены/сушки.gd" id="1_76ika"]
+[ext_resource type="Script" path="res://scripts/сушки.gd" id="1_76ika"]
 [ext_resource type="Texture2D" uid="uid://d235r7w6ile7k" path="res://asset/biosladiya-304-chaynaya-s-makom-_3_.png" id="1_ocyyw"]
 
 [node name="Сушки" type="Area2D"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://wdvne2tixe4v"]
 
-[ext_resource type="Script" path="res://сцены/кастеты_бога_фараона.gd" id="1_oht7c"]
+[ext_resource type="Script" path="res://scripts/кастеты_бога_фараона.gd" id="1_oht7c"]
 [ext_resource type="Texture2D" uid="uid://bqmul5hx2soob" path="res://icon.svg" id="1_wbi04"]
 
 [node name="Кастеты бога фараона" type="Area2D"]
@@ -12,7 +12,6 @@ position = Vector2(18, 11)
 texture = ExtResource("1_wbi04")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-scale = Vector2(1, 1)
 polygon = PackedVector2Array(-40, -50, -40, 70, 80, 70, 80, -50)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

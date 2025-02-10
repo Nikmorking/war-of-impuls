@@ -20,7 +20,7 @@ func _input(_event: InputEvent) -> void:
 			$Timer2.start()
 			call = 0
 	if Input.is_action_just_released("devlog"):
-		ui.get_node("TextEdit").visible = true
+		ui.get_nodea("TextEdit").visible = true
 		dep = true
 	if Input.is_action_just_released("ui_accept"):
 		if dep:
@@ -61,6 +61,7 @@ func die()->void:
 func shoot(vector: Vector2) -> void:
 	var pyl = load("res://сцены/Пуля.tscn").instantiate()
 	get_tree().root.get_node("Node2D/Пули").add_child(pyl)
+	pyl.vamp = get_path()
 	pyl.global_position = position
 	pyl.pos = vector
 	pyl.damage = damage
