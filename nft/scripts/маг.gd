@@ -10,8 +10,14 @@ func _process(delta: float) -> void:
 	if play:
 		if movi:
 			move_to_player(delta)
-		else:
-			hit_player()
+		else: 
+			if ray_cast():
+				hit_player()
+			else:
+				if coll:
+					movi = true
+					$Timer2.start()
+					coll = false
 	pass
 
 
