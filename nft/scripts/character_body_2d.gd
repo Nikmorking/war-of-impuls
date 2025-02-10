@@ -30,9 +30,9 @@ func _input(_event: InputEvent) -> void:
 			if lapka == 0:
 				lapka = 1
 				$Icon.texture = load("res://asset/импульс/импульс2.png")
-	if Input.is_action_just_released("devlog"):
-		ui.get_node("TextEdit").visible = true
-		dep = true
+	#if Input.is_action_just_released("devlog"):
+		#ui.get_node("TextEdit").visible = true
+		#dep = true
 	if Input.is_action_just_released("ui_accept"):
 		if dep:
 			var texter = ui.get_node("TextEdit").text
@@ -68,6 +68,11 @@ func die()->void:
 	Enemy.play = false
 	get_parent().schot = 0
 	play = false
+	lapka = 0
+	var pyli = get_parent().get_node("Пули").get_children()
+	for i in pyli.size():
+		pyli[i].queue_free()
+	$Icon.texture = load("res://asset/импульс/перс.png")
 	pass
 
 

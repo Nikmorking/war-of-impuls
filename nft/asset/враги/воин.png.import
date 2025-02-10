@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqcvb3eymgtxv"
-path="res://.godot/imported/маг.png-622e5c3b07d6e8d54fe15cf8caa5462b.ctex"
+uid="uid://dipbxlyv4cqq0"
+path="res://.godot/imported/воин.png-22410e416dd6d7c8f91704f9e80688b3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/маг.png"
-dest_files=["res://.godot/imported/маг.png-622e5c3b07d6e8d54fe15cf8caa5462b.ctex"]
+source_file="res://asset/враги/воин.png"
+dest_files=["res://.godot/imported/воин.png-22410e416dd6d7c8f91704f9e80688b3.ctex"]
 
 [params]
 

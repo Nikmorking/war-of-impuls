@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d02tfmsw055pp"
-path="res://.godot/imported/дебаффер.png-37fb84c9393ed13abee9e4fa10091948.ctex"
+path="res://.godot/imported/дебаффер.png-a6eda657194873696b93a0b904117861.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/дебаффер.png"
-dest_files=["res://.godot/imported/дебаффер.png-37fb84c9393ed13abee9e4fa10091948.ctex"]
+source_file="res://asset/враги/дебаффер.png"
+dest_files=["res://.godot/imported/дебаффер.png-a6eda657194873696b93a0b904117861.ctex"]
 
 [params]
 

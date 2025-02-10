@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c07orr4dvp474"]
 
-[ext_resource type="Texture2D" uid="uid://cqcvb3eymgtxv" path="res://asset/маг.png" id="1_eufb3"]
+[ext_resource type="Texture2D" uid="uid://cqcvb3eymgtxv" path="res://asset/враги/маг.png" id="1_eufb3"]
 [ext_resource type="Script" path="res://scripts/маг.gd" id="1_recxx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hih16"]
@@ -8,6 +8,8 @@ radius = 81.4286
 
 [node name="маг" type="CharacterBody2D"]
 scale = Vector2(0.7, 0.7)
+collision_layer = 2
+collision_mask = 3
 script = ExtResource("1_recxx")
 health = 90
 SPEED = 50

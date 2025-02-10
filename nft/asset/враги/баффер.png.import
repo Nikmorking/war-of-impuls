@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dipbxlyv4cqq0"
-path="res://.godot/imported/воин.png-fbd645c1d4bc3b74c120789192d293fc.ctex"
+uid="uid://dft2x6pbywysk"
+path="res://.godot/imported/баффер.png-bd2192cae23aeb51aab5eba15447fc47.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/воин.png"
-dest_files=["res://.godot/imported/воин.png-fbd645c1d4bc3b74c120789192d293fc.ctex"]
+source_file="res://asset/враги/баффер.png"
+dest_files=["res://.godot/imported/баффер.png-bd2192cae23aeb51aab5eba15447fc47.ctex"]
 
 [params]
 
