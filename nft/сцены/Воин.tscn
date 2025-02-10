@@ -9,7 +9,7 @@ collision_layer = 2
 collision_mask = 3
 script = ExtResource("1_17h4j")
 max_health = 160
-health = 160
+health = 130
 SPEED = 70
 
 [node name="Воин" type="Sprite2D" parent="."]
@@ -17,7 +17,7 @@ texture_filter = 1
 texture = ExtResource("1_bma60")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(2, 9, 4, 8, 4, 2, 7, -2, 6, -12, 4, -12, 2, -4, -2, -4, -4, -11, -6, -11, -7, -2, -4, 2, -4, 8, -3, 9, -3, 9)
+polygon = PackedVector2Array(1.42857, 7.14286, 2.85714, 5.71429, 4.28571, 0, 5.71429, -2.85714, 5.71429, -8.57143, 1.42857, -1.42857, -1.42857, -1.42857, -4.28571, -7.14286, -5.71429, -5.71429, -2.85714, 0, -2.85714, 7.14286)
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -30,9 +30,8 @@ wait_time = 0.5
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 path_desired_distance = 0.1
 avoidance_enabled = true
-radius = 57.6
-neighbor_distance = 15298.9
-max_neighbors = 20
+radius = 100.0
+avoidance_layers = 3
 avoidance_mask = 3
 debug_enabled = true
 
