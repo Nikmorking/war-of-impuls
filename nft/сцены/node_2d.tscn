@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://d0jqwgl2j8c8k"]
+[gd_scene load_steps=19 format=3 uid="uid://d0jqwgl2j8c8k"]
 
 [ext_resource type="Script" path="res://scripts/schotchik.gd" id="1_eb1ss"]
 [ext_resource type="Texture2D" uid="uid://bkqhwrkhlmeda" path="res://asset/Tile/Grass.png" id="1_gpw7w"]
@@ -8,6 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://ciehno2dtgtce" path="res://сцены/player.tscn" id="5_dye2w"]
 [ext_resource type="Script" path="res://scripts/spawner.gd" id="7_kly5t"]
 [ext_resource type="Texture2D" uid="uid://b5mamcyhk8x80" path="res://asset/Чёрный_квадрат.PNG" id="8_twdo3"]
+[ext_resource type="PackedScene" uid="uid://bp34hrsjcwqh5" path="res://сцены/челночки.tscn" id="9_ys2e1"]
+[ext_resource type="PackedScene" uid="uid://b4aehn75ogi26" path="res://сцены/сушки.tscn" id="10_dhvxc"]
+[ext_resource type="PackedScene" uid="uid://wdvne2tixe4v" path="res://сцены/кастеты_бога_фараона.tscn" id="11_o2d8a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5mvxk"]
 texture = ExtResource("1_gpw7w")
@@ -299,3 +302,12 @@ offset_bottom = 522.0
 text = "0
 "
 label_settings = SubResource("LabelSettings_tea7f")
+
+[node name="челночки" parent="." instance=ExtResource("9_ys2e1")]
+position = Vector2(302, 320)
+
+[node name="Сушки" parent="." instance=ExtResource("10_dhvxc")]
+position = Vector2(213, 316)
+
+[node name="Кастеты бога фараона" parent="." instance=ExtResource("11_o2d8a")]
+position = Vector2(242, 327)
