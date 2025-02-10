@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://d0jqwgl2j8c8k"]
+[gd_scene load_steps=17 format=3 uid="uid://d0jqwgl2j8c8k"]
 
 [ext_resource type="Script" path="res://scripts/schotchik.gd" id="1_eb1ss"]
 [ext_resource type="Texture2D" uid="uid://bkqhwrkhlmeda" path="res://asset/Tile/Grass.png" id="1_gpw7w"]
@@ -7,7 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://vlknd2cx6mdb" path="res://asset/Tile/Fences.png" id="4_lyodw"]
 [ext_resource type="PackedScene" uid="uid://ciehno2dtgtce" path="res://сцены/player.tscn" id="5_dye2w"]
 [ext_resource type="Script" path="res://scripts/spawner.gd" id="7_kly5t"]
-[ext_resource type="Texture2D" uid="uid://b5mamcyhk8x80" path="res://asset/Чёрный_квадрат.PNG" id="8_twdo3"]
+[ext_resource type="Texture2D" uid="uid://xcaswa6m3jmo" path="res://asset/1_002.png" id="8_gh7k2"]
+[ext_resource type="Texture2D" uid="uid://curb4aj7ek84m" path="res://asset/умер.png" id="9_gufnj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5mvxk"]
 texture = ExtResource("1_gpw7w")
@@ -279,9 +280,15 @@ label_settings = SubResource("LabelSettings_tea7f")
 [node name="black" type="Sprite2D" parent="UI"]
 visible = false
 z_index = 1
-position = Vector2(573, 299)
-scale = Vector2(1.92813, 1.175)
-texture = ExtResource("8_twdo3")
+position = Vector2(585, 323)
+scale = Vector2(0.439989, 0.449653)
+texture = ExtResource("8_gh7k2")
+
+[node name="Умер" type="Sprite2D" parent="UI/black"]
+texture_filter = 1
+position = Vector2(-100.002, 26.6873)
+scale = Vector2(19.7214, 24.6301)
+texture = ExtResource("9_gufnj")
 
 [node name="Label2" type="Label" parent="UI"]
 offset_left = 773.0

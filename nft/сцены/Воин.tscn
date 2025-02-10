@@ -30,9 +30,8 @@ wait_time = 0.5
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 path_desired_distance = 0.1
 avoidance_enabled = true
-radius = 57.6
-neighbor_distance = 15298.9
-max_neighbors = 20
+radius = 100.0
+avoidance_layers = 3
 avoidance_mask = 3
 debug_enabled = true
 
