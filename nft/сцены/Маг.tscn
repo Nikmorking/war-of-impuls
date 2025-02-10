@@ -9,18 +9,17 @@ radius = 81.4286
 [node name="маг" type="CharacterBody2D"]
 scale = Vector2(0.7, 0.7)
 script = ExtResource("1_recxx")
-damage = 20
-health = 110
+health = 90
 SPEED = 50
 tipy = "Маг"
+damage = 20
 
 [node name="Маг" type="Sprite2D" parent="."]
 texture_filter = 1
 texture = ExtResource("1_eufb3")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-
-polygon = PackedVector2Array(-4, 7, -4, 1, -5, -6, -4, -10, -3, -2, 1, -2, 4.28571, -2.85714, 5, -9, 6, -2, 3, 3, 2, 6, -2, 8)
+polygon = PackedVector2Array(-2.85714, 5.71429, -4.28571, 0, -5.71429, -5.71429, -4.28571, -7.14286, -3, -2, 1, -2, 4.28571, -2.85714, 5.71429, -7.14286, 6, -2, 3, 3, 2.85714, 7.14286, 0, 8.57143)
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -31,9 +30,12 @@ shape = SubResource("CircleShape2D_hih16")
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 path_desired_distance = 0.1
 avoidance_enabled = true
-radius = 57.0
-neighbor_distance = 15298.9
+radius = 63.85
+neighbor_distance = 15570.4
 max_neighbors = 20
+time_horizon_agents = 2.3
+max_speed = 380.2
+avoidance_layers = 3
 avoidance_mask = 3
 debug_enabled = true
 
@@ -43,6 +45,10 @@ wait_time = 2.0
 [node name="RayCast2D" type="RayCast2D" parent="."]
 target_position = Vector2(0, 0)
 
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 0.6
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
 [connection signal="timeout" from="Timer" to="." method="call_down"]
+[connection signal="timeout" from="Timer2" to="." method="move_"]

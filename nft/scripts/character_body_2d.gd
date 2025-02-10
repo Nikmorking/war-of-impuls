@@ -2,16 +2,30 @@ extends "res://scripts/Entity.gd"
 
 var move
 var dep = false
+var call = 4
+var play = true
 
 signal restart
 
 @onready var start_pos = get_parent().get_node("Spawn_pos").position
 @onready var ui = Gg.get_papa(1, self).get_node("UI")
-#@onready var black = ui.get_node("black") 
+@onready var black = ui.get_node("black") 
 
 func _input(_event: InputEvent) -> void:
+	if Input.is_action_just_released("mouse_right"):
+		if call != 2:
+			shoot(get_global_mouse_position())
+			if call == 1:
+				call = 3
+				$Icon.texture = load("res://asset/импульс/импульс3.png")
+			if call == 0:
+				call = 2
+				$Icon.texture = load("res://asset/импульс/импульс.png")
 	if Input.is_action_just_released("mouse_left"):
-		shoot(get_global_mouse_position())
+		if call != 1:
+			shoot(get_global_mouse_position())
+			$Icon.texture = load("res://asset/импульс/импульс2.png")
+			call = 1
 	if Input.is_action_just_released("devlog"):
 		ui.get_node("TextEdit").visible = true
 		dep = true
@@ -35,7 +49,8 @@ func move_player() -> void:
 	pass
 
 func _physics_process(_delta: float) -> void:
-	move_player()
+	if play:
+		move_player()
 	if(health <= 0):
 		die()
 	move_and_slide()
@@ -43,11 +58,12 @@ func _physics_process(_delta: float) -> void:
 
 func die()->void:
 	print("die")
-	#black.visible = true
+	black.visible = true
 	$Timer.start()
 	health = max_health
 	Enemy.play = false
 	get_parent().schot = 0
+	play = false
 	pass
 
 
@@ -56,6 +72,7 @@ func shoot(vector: Vector2) -> void:
 	get_tree().root.get_node("Node2D/Пули").add_child(pyl)
 	pyl.global_position = position
 	pyl.pos = vector
+	pyl.damage = damage
 	pass
 
 func vis_health()->void:
@@ -65,7 +82,21 @@ func vis_health()->void:
 
 
 func call_down() -> void:
-	#black.visible = false
+	black.visible = false
 	position = start_pos
-	restart.emit()
+	restart.emit() 
+	play = true
+	pass # Replace with function body.
+
+
+func Shoot() -> void:
+	if call == 2:
+		$Icon.texture = load("res://asset/импульс/перс.png")
+		call = 0
+	if call == 1:
+		$Icon.texture = load("res://asset/импульс/перс.png")
+		call = 0
+	if call == 3:
+		$Icon.texture = load("res://asset/Импульс/импульс2.png")
+		call -= 1
 	pass # Replace with function body.
