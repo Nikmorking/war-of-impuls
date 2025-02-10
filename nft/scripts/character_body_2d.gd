@@ -2,7 +2,7 @@ extends "res://scripts/Entity.gd"
 
 var move
 var dep = false
-var call = 4
+var lapka = 0
 var play = true
 
 signal restart
@@ -13,19 +13,23 @@ signal restart
 
 func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_released("mouse_right"):
-		if call != 2:
+		if lapka != 2 and lapka != 3:
 			shoot(get_global_mouse_position())
-			if call == 1:
-				call = 3
+			if lapka == 1:
+				lapka = 3
 				$Icon.texture = load("res://asset/импульс/импульс3.png")
-			if call == 0:
-				call = 2
+			if lapka == 0:
+				lapka = 2
 				$Icon.texture = load("res://asset/импульс/импульс.png")
 	if Input.is_action_just_released("mouse_left"):
-		if call != 1:
+		if lapka != 1 and lapka != 3:
 			shoot(get_global_mouse_position())
-			$Icon.texture = load("res://asset/импульс/импульс2.png")
-			call = 1
+			if lapka == 2:
+				lapka = 3
+				$Icon.texture = load("res://asset/импульс/импульс3.png")
+			if lapka == 0:
+				lapka = 1
+				$Icon.texture = load("res://asset/импульс/импульс2.png")
 	if Input.is_action_just_released("devlog"):
 		ui.get_node("TextEdit").visible = true
 		dep = true
@@ -90,13 +94,14 @@ func call_down() -> void:
 
 
 func Shoot() -> void:
-	if call == 2:
+	if lapka == 2:
 		$Icon.texture = load("res://asset/импульс/перс.png")
-		call = 0
-	if call == 1:
+		lapka = 0
+	if lapka == 1:
 		$Icon.texture = load("res://asset/импульс/перс.png")
-		call = 0
-	if call == 3:
-		$Icon.texture = load("res://asset/Импульс/импульс2.png")
-		call -= 1
+		lapka = 0
+	if lapka == 3:
+		$Icon.texture = load("res://asset/Импульс/импульс.png")
+		lapka = 2
+		
 	pass # Replace with function body.

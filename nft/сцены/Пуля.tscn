@@ -7,6 +7,8 @@
 size = Vector2(24, 12)
 
 [node name="Пуля" type="Area2D"]
+light_mask = 2
+visibility_layer = 2
 scale = Vector2(0.5, 0.5)
 collision_mask = 3
 script = ExtResource("1_qs21c")
