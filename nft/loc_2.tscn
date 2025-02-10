@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" path="res://scripts/schotchik.gd" id="1_83jw7"]
 [ext_resource type="PackedScene" uid="uid://ciehno2dtgtce" path="res://сцены/player.tscn" id="1_ryomp"]
-[ext_resource type="Texture2D" uid="uid://b5mamcyhk8x80" path="res://asset/Чёрный_квадрат.PNG" id="2_j320f"]
 [ext_resource type="Script" path="res://scripts/spawner.gd" id="3_v660h"]
 [ext_resource type="PackedScene" uid="uid://cdecmnoldp5ul" path="res://portal.tscn" id="4_hr8hk"]
 [ext_resource type="PackedScene" uid="uid://m7id8i2fut7e" path="res://сцены/New_ location2.tscn" id="4_khoe1"]
 [ext_resource type="Texture2D" uid="uid://curb4aj7ek84m" path="res://asset/умер.png" id="6_23bm0"]
+[ext_resource type="Texture2D" uid="uid://xcaswa6m3jmo" path="res://asset/1_002.png" id="6_fd356"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_0vmlg"]
 vertices = PackedVector2Array(183, 418.07, 182.641, 447, 137.477, 447, 103.508, 445, 26, 416.93, 183, 367.383, 186.203, 337.953, 359.852, 337.047, 357.141, 528, 218.219, 484.727, 182.063, 358.68, 137.633, 365.633, 140.5, 355.352, -55.9922, 538.727, -58.5703, 596.281, -168, 599.68, -168, 419.453, -124.523, 421.391, -54.8828, 447, 104, 301.57, 56, 303.57, 56, 193.852, 169, 192.148, 217.313, 528, 184.063, 485.617, 25.4375, 445, 3.96875, 423.313, -118.258, 381.75, -168.078, 382.781, -168.906, 290, -56.9063, 290, -56.0781, 381.422, -101.453, 383.398, 101.531, 484.68, 133.477, 527.938, -7.35938, 527.047, 23.5234, 487.367, -10.3672, 447, 7.96875, 385.289, -8.85156, 383.188, -8.14844, 338.078, 104, 339.094, 26, 380.906, 169, 300.203, 120, 301.203, 120, 340.641, -103.578, 419.641, 136.609, 381.906, 137.703, 339.531)
@@ -33,6 +33,7 @@ layer_1/tile_data = PackedInt32Array(-131074, 65537, 0, -131073, 65537, 0, -1966
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 5.0
+one_shot = true
 autostart = true
 
 [node name="portal" parent="." instance=ExtResource("4_hr8hk")]
@@ -77,11 +78,9 @@ position = Vector2(427, 229)
 script = ExtResource("3_v660h")
 
 [node name="Пули" type="Node2D" parent="."]
-scale = Vector2(1, 1)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 position = Vector2(494, -76)
-scale = Vector2(1, 1)
 navigation_polygon = SubResource("NavigationPolygon_0vmlg")
 
 [node name="NavigationObstacle2D2" type="NavigationObstacle2D" parent="NavigationRegion2D"]
@@ -115,14 +114,14 @@ label_settings = SubResource("LabelSettings_m6e7d")
 [node name="black" type="Sprite2D" parent="UI"]
 visible = false
 z_index = 1
-position = Vector2(573, 299)
-scale = Vector2(1.92813, 1.175)
-texture = ExtResource("2_j320f")
+position = Vector2(869, 470)
+scale = Vector2(0.753208, 0.6625)
+texture = ExtResource("6_fd356")
 
 [node name="Умер" type="Sprite2D" parent="UI/black"]
 texture_filter = 1
-position = Vector2(-100.002, 26.6873)
-scale = Vector2(19.7214, 24.6301)
+position = Vector2(-322.592, -139.149)
+scale = Vector2(10.7454, 21.0426)
 texture = ExtResource("6_23bm0")
 
 [node name="Label2" type="Label" parent="UI"]
