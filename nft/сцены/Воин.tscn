@@ -11,6 +11,7 @@ script = ExtResource("1_17h4j")
 max_health = 160
 health = 130
 SPEED = 70
+tipy = "враг"
 
 [node name="Воин" type="Sprite2D" parent="."]
 texture_filter = 1

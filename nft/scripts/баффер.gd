@@ -20,6 +20,7 @@ func _process(delta: float) -> void:
 	pass
 	
 func baf(body: Node2D) -> void:
-	if body == Enemy:
+	if !body.top:
 		body.damage += 10
+		body.top = true
 	pass

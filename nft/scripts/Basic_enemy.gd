@@ -5,7 +5,7 @@ var player_position
 var play = true
 var hit = false
 var movi = true
-
+var top = false
 
 @onready var nav: NavigationAgent2D 
 @onready var start_pos = position
