@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://d0jqwgl2j8c8k"]
+[gd_scene load_steps=20 format=3 uid="uid://d0jqwgl2j8c8k"]
 
 [ext_resource type="Script" path="res://scripts/schotchik.gd" id="1_eb1ss"]
 [ext_resource type="Texture2D" uid="uid://bkqhwrkhlmeda" path="res://asset/Tile/Grass.png" id="1_gpw7w"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bp34hrsjcwqh5" path="res://сцены/челночки.tscn" id="9_ys2e1"]
 [ext_resource type="PackedScene" uid="uid://b4aehn75ogi26" path="res://сцены/сушки.tscn" id="10_dhvxc"]
 [ext_resource type="PackedScene" uid="uid://wdvne2tixe4v" path="res://сцены/кастеты_бога_фараона.tscn" id="11_o2d8a"]
+[ext_resource type="PackedScene" uid="uid://b5pconoux0nrw" path="res://сцены/тапок_алексей_сергеевича.tscn" id="12_nnk5g"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5mvxk"]
 texture = ExtResource("1_gpw7w")
@@ -209,9 +210,9 @@ sources/5 = SubResource("TileSetAtlasSource_41f3j")
 sources/6 = SubResource("TileSetAtlasSource_707wq")
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_8vbh3"]
-vertices = PackedVector2Array(276.258, 314.328, 311, 328.18, 172, 330.797, 216.227, 312.75, 172, 239, 214.758, 251, 311, 239, 273, 251, 273, 282.797, 270.203, 284, 247, 280.789, 247, 284)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(3, 2, 4, 5), PackedInt32Array(5, 4, 6, 7), PackedInt32Array(7, 6, 1, 0, 8), PackedInt32Array(8, 0, 9), PackedInt32Array(10, 8, 9, 11)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(321, 229, 162, 229, 162, 341, 321, 338)])
+vertices = PackedVector2Array(276.258, 314.328, 311, 328.047, 163, 328.938, 216.227, 312.75, 273, 251, 311, 239, 273, 282.797, 163, 239, 214.758, 251, 270.203, 284, 247, 280.789, 247, 284)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 1, 0, 6), PackedInt32Array(3, 2, 7, 8), PackedInt32Array(8, 7, 5, 4), PackedInt32Array(6, 0, 9), PackedInt32Array(10, 6, 9, 11)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(321, 229, 153, 229, 153, 339, 321, 338)])
 
 [sub_resource type="LabelSettings" id="LabelSettings_tea7f"]
 font_size = 56
@@ -242,8 +243,6 @@ layer_2/tile_data = PackedInt32Array(-131072, 65542, 0, -65536, 6, 1, 0, 65542, 
 [node name="Player" parent="." instance=ExtResource("5_dye2w")]
 position = Vector2(302, 268)
 scale = Vector2(0.8, 0.8)
-max_health = null
-health = null
 SPEED = 100
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -309,7 +308,10 @@ label_settings = SubResource("LabelSettings_tea7f")
 position = Vector2(302, 320)
 
 [node name="Сушки" parent="." instance=ExtResource("10_dhvxc")]
-position = Vector2(213, 316)
+position = Vector2(180, 325)
 
 [node name="Кастеты бога фараона" parent="." instance=ExtResource("11_o2d8a")]
-position = Vector2(242, 327)
+position = Vector2(244, 333)
+
+[node name="Тапок Алексей Сергеевича" parent="." instance=ExtResource("12_nnk5g")]
+position = Vector2(199, 326)

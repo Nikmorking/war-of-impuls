@@ -11,9 +11,6 @@ radius = 3.16228
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_y2g1n")
-max_health = null
-health = null
-SPEED = null
 tipy = "Player"
 damage = 25
 

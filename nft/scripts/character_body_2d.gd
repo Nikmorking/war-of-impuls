@@ -3,6 +3,8 @@ extends "res://scripts/Entity.gd"
 var move
 var dep = false
 var call = 2
+var vampr = false
+var pulla = false
 
 signal restart
 
@@ -43,6 +45,8 @@ func move_player() -> void:
 
 func _physics_process(_delta: float) -> void:
 	move_player()
+	if health >= max_health:
+		health = max_health
 	if(health <= 0):
 		die()
 	move_and_slide()
@@ -59,12 +63,17 @@ func die()->void:
 
 
 func shoot(vector: Vector2) -> void:
-	var pyl = load("res://сцены/Пуля.tscn").instantiate()
+	var pyl
+	if pulla == false:
+		pyl = load("res://сцены/Пуля.tscn").instantiate()
+	else :
+		pyl = load("res://сцены/Тапок.tscn").instantiate()
 	get_tree().root.get_node("Node2D/Пули").add_child(pyl)
 	pyl.vamp = get_path()
 	pyl.global_position = position
 	pyl.pos = vector
 	pyl.damage = damage
+	pyl.vampirism = vampr
 	pass
 
 func vis_health()->void:

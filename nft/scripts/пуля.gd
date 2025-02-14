@@ -23,7 +23,7 @@ func _on_body_entered(body: Node2D) -> void:
 			print("gg")
 			body.health -= damage
 			if vampirism == true:
-				get_tree().get_root().get_node(vamp).health += 10
+				get_tree().root.get_node(vamp).health += 10
 			if(body.health <= 0):
 				body.queue_free()
 				Gg.get_papa(2, self).kill()

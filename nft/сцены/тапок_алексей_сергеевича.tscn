@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5pconoux0nrw"]
+
+[ext_resource type="Texture2D" uid="uid://bqmul5hx2soob" path="res://icon.svg" id="1_jrgs4"]
+[ext_resource type="Script" path="res://сцены/тапок_алексей_сергеевича.gd" id="1_s80lq"]
+
+[node name="Тапок Алексей Сергеевича" type="Area2D"]
+scale = Vector2(0.1, 0.1)
+script = ExtResource("1_s80lq")
+damage_up = 10
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(1, 1)
+polygon = PackedVector2Array(-60, -50, -60, 61, -50, 69, 57, 69, 68, 60, 68, -49, 60, -59, -49, -59)
+
+[node name="Icon" type="Sprite2D" parent="."]
+modulate = Color(0.562595, 0.118401, 0.779475, 1)
+self_modulate = Color(1, 1, 0.156863, 1)
+position = Vector2(4, 5)
+texture = ExtResource("1_jrgs4")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
