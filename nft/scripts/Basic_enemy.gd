@@ -11,6 +11,8 @@ var top = false
 @onready var start_pos = position
 
 func move_to_player(delta: float) -> void:
+	if player == null:
+		player = self
 	nav.target_position = player.position
 	var current_agent_position: Vector2 = global_position
 	var next_path_position: Vector2 = nav.get_next_path_position()

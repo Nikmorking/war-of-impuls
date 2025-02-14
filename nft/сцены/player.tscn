@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://scripts/character_body_2d.gd" id="1_y2g1n"]
 [ext_resource type="Texture2D" uid="uid://bfo25fa3qyjii" path="res://asset/Импульс/перс.png" id="2_dg6v2"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bti15"]
-size = Vector2(16.25, 16.5)
+[sub_resource type="CircleShape2D" id="CircleShape2D_tqlrd"]
+radius = 6.13004
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_erawe"]
 radius = 3.16228
@@ -16,7 +16,7 @@ damage = 25
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.124939, 0.750061)
-shape = SubResource("RectangleShape2D_bti15")
+shape = SubResource("CircleShape2D_tqlrd")
 
 [node name="Icon" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -30,7 +30,7 @@ one_shot = true
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, 3)
+position = Vector2(0, 1)
 shape = SubResource("CircleShape2D_erawe")
 
 [node name="Timer3" type="Timer" parent="."]

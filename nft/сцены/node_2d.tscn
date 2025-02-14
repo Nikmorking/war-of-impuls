@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://d0jqwgl2j8c8k"]
+[gd_scene load_steps=23 format=3 uid="uid://d0jqwgl2j8c8k"]
 
 [ext_resource type="Script" path="res://scripts/schotchik.gd" id="1_eb1ss"]
 [ext_resource type="Texture2D" uid="uid://bkqhwrkhlmeda" path="res://asset/Tile/Grass.png" id="1_gpw7w"]
@@ -214,6 +214,26 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(321, 229, 162, 229, 162
 [sub_resource type="LabelSettings" id="LabelSettings_tea7f"]
 font_size = 56
 
+[sub_resource type="Gradient" id="Gradient_2gkgb"]
+colors = PackedColorArray(1, 0.041864, 0.0125976, 1, 1, 0.174173, 0.127215, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_pqrum"]
+gradient = SubResource("Gradient_2gkgb")
+width = 85
+height = 219
+fill = 1
+
+[sub_resource type="Gradient" id="Gradient_i5yq8"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_vnx1g"]
+gradient = SubResource("Gradient_i5yq8")
+
+[sub_resource type="Gradient" id="Gradient_olvew"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_8qhhn"]
+gradient = SubResource("Gradient_olvew")
+
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_eb1ss")
 metadata/_edit_vertical_guides_ = [297.0]
@@ -269,27 +289,6 @@ script = ExtResource("7_kly5t")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
-[node name="Label" type="Label" parent="UI"]
-offset_left = 782.0
-offset_top = 528.0
-offset_right = 1116.0
-offset_bottom = 605.0
-text = "Молодец!"
-label_settings = SubResource("LabelSettings_tea7f")
-
-[node name="black" type="Sprite2D" parent="UI"]
-visible = false
-z_index = 1
-position = Vector2(585, 323)
-scale = Vector2(0.439989, 0.449653)
-texture = ExtResource("8_gh7k2")
-
-[node name="Умер" type="Sprite2D" parent="UI/black"]
-texture_filter = 1
-position = Vector2(-100.002, 26.6873)
-scale = Vector2(19.7214, 24.6301)
-texture = ExtResource("9_gufnj")
-
 [node name="Label2" type="Label" parent="UI"]
 offset_left = 773.0
 offset_top = 444.0
@@ -306,3 +305,48 @@ offset_bottom = 522.0
 text = "0
 "
 label_settings = SubResource("LabelSettings_tea7f")
+
+[node name="ProgressBar" type="TextureProgressBar" parent="UI"]
+z_index = 1
+offset_left = 726.0
+offset_top = 525.0
+offset_right = 1081.0
+offset_bottom = 599.0
+value = 100.0
+nine_patch_stretch = true
+texture_progress = SubResource("GradientTexture2D_pqrum")
+
+[node name="Sprite2D" type="Sprite2D" parent="UI"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(903, 563)
+scale = Vector2(5.90625, 1.5625)
+texture = SubResource("GradientTexture2D_vnx1g")
+
+[node name="Label" type="Label" parent="UI"]
+z_index = 2
+offset_left = 731.0
+offset_top = 521.0
+offset_right = 1065.0
+offset_bottom = 598.0
+text = "10
+"
+label_settings = SubResource("LabelSettings_tea7f")
+
+[node name="black" type="Sprite2D" parent="UI"]
+visible = false
+z_index = 4
+position = Vector2(556, 316)
+scale = Vector2(19.4847, 11.2192)
+texture = SubResource("GradientTexture2D_8qhhn")
+
+[node name="black2" type="Sprite2D" parent="UI/black"]
+z_index = 4
+position = Vector2(0.502621, 0.0500755)
+scale = Vector2(0.0245718, 0.0450357)
+texture = ExtResource("8_gh7k2")
+
+[node name="Умер" type="Sprite2D" parent="UI/black/black2"]
+texture_filter = 1
+position = Vector2(-100.002, 26.6873)
+scale = Vector2(19.7214, 24.6301)
+texture = ExtResource("9_gufnj")
