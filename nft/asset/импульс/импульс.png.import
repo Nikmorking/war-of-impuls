@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfo25fa3qyjii"
-path="res://.godot/imported/перс.png-0906ba86a40fdb27de460c91f3e1000f.ctex"
+uid="uid://cix13lxh44i0n"
+path="res://.godot/imported/импульс.png-5432269a6ffd90e804d58f6636289c26.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Импульс/перс.png"
-dest_files=["res://.godot/imported/перс.png-0906ba86a40fdb27de460c91f3e1000f.ctex"]
+source_file="res://asset/импульс/импульс.png"
+dest_files=["res://.godot/imported/импульс.png-5432269a6ffd90e804d58f6636289c26.ctex"]
 
 [params]
 

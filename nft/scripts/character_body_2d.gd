@@ -109,7 +109,7 @@ func Shoot() -> void:
 		$Icon.texture = load("res://asset/импульс/перс.png")
 		lapka = 0
 	if lapka == 3:
-		$Icon.texture = load("res://asset/Импульс/импульс.png")
+		$Icon.texture = load("res://asset/импульс/импульс.png")
 		lapka = 2
 		
 	pass # Replace with function body.
