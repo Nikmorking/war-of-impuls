@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c07orr4dvp474"]
+[gd_scene load_steps=5 format=3 uid="uid://c07orr4dvp474"]
 
 [ext_resource type="Texture2D" uid="uid://cqcvb3eymgtxv" path="res://asset/враги/маг.png" id="1_eufb3"]
 [ext_resource type="Script" path="res://scripts/маг.gd" id="1_recxx"]
@@ -6,10 +6,14 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_hih16"]
 radius = 81.4286
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7hxwo"]
+radius = 2.85714
+height = 11.4286
+
 [node name="маг" type="CharacterBody2D"]
 scale = Vector2(0.7, 0.7)
 collision_layer = 2
-collision_mask = 2
+collision_mask = 3
 script = ExtResource("1_recxx")
 health = 90
 SPEED = 50
@@ -19,9 +23,6 @@ damage = 20
 [node name="Маг" type="Sprite2D" parent="."]
 texture_filter = 1
 texture = ExtResource("1_eufb3")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-2.85714, 5.71429, -4.28571, 0, -5.71429, -5.71429, -4.28571, -7.14286, -3, -2, 1, -2, 4.28571, -2.85714, 5.71429, -7.14286, 6, -2, 3, 3, 2.85714, 7.14286, 0, 8.57143)
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -49,6 +50,10 @@ target_position = Vector2(0, 0)
 
 [node name="Timer2" type="Timer" parent="."]
 wait_time = 0.6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2.85714)
+shape = SubResource("CapsuleShape2D_7hxwo")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

@@ -1,5 +1,8 @@
 extends "res://scripts/воин.gd"
 
+var bodys: Array
+
+
 func _ready() -> void:
 	get_player()
 	nav = $NavigationAgent2D
@@ -20,10 +23,23 @@ func _process(delta: float) -> void:
 		
 	pass
 	
-func baf(body: Node2D) -> void:
-	if body.tipy != "баффер":
-		player = body
-		if !body.top:
-			body.health += 10
-			body.top = true
+func add(body: Node2D) -> void:
+	bodys.append(body)
+	player = body
+	pass
+
+
+func hill() -> void:
+	for i in bodys.size():
+		if bodys[i] != null:
+			bodys[i].health += 10
+			print(bodys[i].tipy)
+			if bodys[i].health >= bodys[i].max_health:
+				health = max_health
+				print("Всё")
+	pass # Replace with function body.
+
+
+func remove(body: Node2D) -> void:
+	bodys[bodys.bsearch(body)] = null
 	pass

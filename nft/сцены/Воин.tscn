@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://j6oehfe0lyn4"]
+[gd_scene load_steps=4 format=3 uid="uid://j6oehfe0lyn4"]
 
 [ext_resource type="Script" path="res://scripts/воин.gd" id="1_17h4j"]
 [ext_resource type="Texture2D" uid="uid://dipbxlyv4cqq0" path="res://asset/враги/воин.png" id="1_bma60"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_aqp5a"]
+radius = 4.28571
+height = 11.4286
 
 [node name="Воин" type="CharacterBody2D"]
 scale = Vector2(0.7, 0.7)
@@ -16,9 +20,6 @@ tipy = "враг"
 [node name="Воин" type="Sprite2D" parent="."]
 texture_filter = 1
 texture = ExtResource("1_bma60")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(1.42857, 7.14286, 2.85714, 5.71429, 4.28571, 0, 5.71429, -2.85714, 5.71429, -8.57143, 1.42857, -1.42857, -1.42857, -1.42857, -4.28571, -7.14286, -5.71429, -5.71429, -2.85714, 0, -2.85714, 7.14286)
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -38,6 +39,10 @@ debug_enabled = true
 
 [node name="Timer2" type="Timer" parent="."]
 autostart = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2.85714)
+shape = SubResource("CapsuleShape2D_aqp5a")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
