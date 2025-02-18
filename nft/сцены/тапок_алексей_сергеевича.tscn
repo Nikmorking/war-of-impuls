@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b5pconoux0nrw"]
 
 [ext_resource type="Texture2D" uid="uid://bqmul5hx2soob" path="res://icon.svg" id="1_jrgs4"]
-[ext_resource type="Script" path="res://сцены/тапок_алексей_сергеевича.gd" id="1_s80lq"]
+[ext_resource type="Script" path="res://scripts/тапок_алексей_сергеевича.gd" id="1_s80lq"]
 
 [node name="Тапок Алексей Сергеевича" type="Area2D"]
 scale = Vector2(0.1, 0.1)

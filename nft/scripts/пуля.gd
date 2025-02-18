@@ -29,9 +29,9 @@ func _on_body_entered(body: Node2D) -> void:
 				Gg.get_papa(2, self).kill()
 	else:
 		stop = true
-	pass # Replace with function body.
+	pass 
 
 
 func _on_timer_timeout() -> void:
 	queue_free()
-	pass # Replace with function body.
+	pass

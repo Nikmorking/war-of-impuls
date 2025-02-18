@@ -311,7 +311,7 @@ position = Vector2(302, 320)
 position = Vector2(180, 325)
 
 [node name="Кастеты бога фараона" parent="." instance=ExtResource("11_o2d8a")]
-position = Vector2(244, 333)
+position = Vector2(185, 269)
 
 [node name="Тапок Алексей Сергеевича" parent="." instance=ExtResource("12_nnk5g")]
-position = Vector2(199, 326)
+position = Vector2(187, 300)

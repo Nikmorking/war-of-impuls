@@ -36,7 +36,6 @@ radius = 57.6
 neighbor_distance = 15298.9
 max_neighbors = 20
 avoidance_mask = 3
-debug_enabled = true
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.4
