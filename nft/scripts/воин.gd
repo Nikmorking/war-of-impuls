@@ -18,7 +18,6 @@ func _process(delta: float) -> void:
 		else:
 			hit_player()
 		#$CollisionPolygon2D.disabled = true
-		
 	pass
 
 func hit_player()->void:

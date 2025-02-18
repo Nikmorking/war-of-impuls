@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqjsy2bjxycrc"]
+
+[ext_resource type="Texture2D" uid="uid://bqmul5hx2soob" path="res://icon.svg" id="1_b5scp"]
+[ext_resource type="Script" path="res://scripts/sonic_mode.gd" id="1_iq7go"]
+
+[node name="Sonic mode" type="Area2D"]
+scale = Vector2(0.1, 0.1)
+script = ExtResource("1_iq7go")
+Speed_ap = 500
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-252, -69)
+polygon = PackedVector2Array(234, 85, 234, 192, 246, 202, 353, 201, 362, 189, 362, 83, 352, 73, 244, 73)
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(46, 68)
+texture = ExtResource("1_b5scp")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

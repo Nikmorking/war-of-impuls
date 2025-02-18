@@ -5,6 +5,7 @@ var dep = false
 var call = 2
 var vampr = false
 var pulla = false
+var xzz = false
 
 signal restart
 
@@ -73,6 +74,7 @@ func shoot(vector: Vector2) -> void:
 	pyl.global_position = position
 	pyl.pos = vector
 	pyl.damage = damage
+	pyl.xz = xzz
 	pyl.vampirism = vampr
 	pass
 

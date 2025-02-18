@@ -4,6 +4,7 @@ extends Node2D
 @export var damage = 10
 var vamp : String
 var vampirism : bool = false
+var xz = false
 
 
 var pos
@@ -19,9 +20,12 @@ func _process(_delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D:
 		if body is Enemy:
+			body.health -= damage
+			if body.tipy =="враг":
+				if xz == true:
+					body.health -= body.health
 			stop = true
 			print("gg")
-			body.health -= damage
 			if vampirism == true:
 				get_tree().root.get_node(vamp).health += 10
 			if(body.health <= 0):
