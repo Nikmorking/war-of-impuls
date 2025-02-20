@@ -65,5 +65,6 @@ func _ready() -> void:
 	health = max_health
 	if(self.name != "Enemy"):
 		tik()
+		vis_health()
 		get_player()
 	pass

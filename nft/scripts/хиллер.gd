@@ -8,6 +8,7 @@ func _ready() -> void:
 	nav = $NavigationAgent2D
 	top = true
 	player = self
+	bodys.append(self)
 
 # Called when the node enters the scene tree for the first time.
 
@@ -31,12 +32,13 @@ func add(body: Node2D) -> void:
 
 func hill() -> void:
 	$GPUParticles2D.emitting = true
+	
 	for i in bodys.size():
 		if bodys[i] != null:
+			bodys[i].vis_health()
 			print(bodys[i].tipy)
 			if (bodys[i].health <= bodys[i].max_health):
-				bodys[i].health += add_health
-				health = max_health
+				bodys[i].health += add_health 
 				print("хил")
 	pass # Replace with function body.
 
