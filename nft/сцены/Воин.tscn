@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://j6oehfe0lyn4"]
+[gd_scene load_steps=5 format=3 uid="uid://j6oehfe0lyn4"]
 
 [ext_resource type="Script" path="res://scripts/воин.gd" id="1_17h4j"]
 [ext_resource type="Texture2D" uid="uid://dipbxlyv4cqq0" path="res://asset/враги/воин.png" id="1_bma60"]
+[ext_resource type="PackedScene" uid="uid://0uc8e6pla322" path="res://сцены/hot_bar.tscn" id="3_kivil"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_aqp5a"]
 radius = 4.28571
@@ -13,7 +14,6 @@ collision_layer = 2
 collision_mask = 3
 script = ExtResource("1_17h4j")
 max_health = 160
-health = 130
 SPEED = 70
 tipy = "враг"
 
@@ -38,12 +38,19 @@ avoidance_mask = 3
 debug_enabled = true
 
 [node name="Timer2" type="Timer" parent="."]
+wait_time = 0.9
 autostart = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2.85714)
 shape = SubResource("CapsuleShape2D_aqp5a")
 
+[node name="hot_bar" parent="." instance=ExtResource("3_kivil")]
+visible = false
+offset_top = -601.429
+offset_bottom = 108.571
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
 [connection signal="timeout" from="Timer" to="." method="call_down"]
+[connection signal="timeout" from="Timer2" to="." method="tik"]

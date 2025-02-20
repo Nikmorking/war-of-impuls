@@ -1,8 +1,6 @@
 extends "res://scripts/хиллер.gd"
 
 func _ready() -> void:
-	get_player()
-	nav = $NavigationAgent2D
 	player = self
 
 # Called when the node enters the scene tree for the first time.
@@ -27,6 +25,7 @@ func baf(body: Node2D) -> void:
 		body.damage += 10
 		body.SPEED += 10
 		body.top = true
+		print("baf")
 	pass
 
 

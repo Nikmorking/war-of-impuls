@@ -6,25 +6,25 @@
 [sub_resource type="LabelSettings" id="LabelSettings_tea7f"]
 font_size = 56
 
-[sub_resource type="Gradient" id="Gradient_2gkgb"]
-colors = PackedColorArray(1, 0.041864, 0.0125976, 1, 1, 0.174173, 0.127215, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_pqrum"]
-gradient = SubResource("Gradient_2gkgb")
-width = 85
-height = 219
-fill = 1
-
-[sub_resource type="Gradient" id="Gradient_i5yq8"]
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_vnx1g"]
-gradient = SubResource("Gradient_i5yq8")
-
 [sub_resource type="Gradient" id="Gradient_olvew"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_8qhhn"]
 gradient = SubResource("Gradient_olvew")
+
+[sub_resource type="Gradient" id="Gradient_pm46s"]
+colors = PackedColorArray(1, 0.041864, 0.0125976, 1, 1, 0.174173, 0.127215, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_pqrum"]
+gradient = SubResource("Gradient_pm46s")
+width = 85
+height = 219
+fill = 1
+
+[sub_resource type="Gradient" id="Gradient_ouiu3"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_vnx1g"]
+gradient = SubResource("Gradient_ouiu3")
 
 [node name="UI" type="CanvasLayer"]
 
@@ -44,22 +44,6 @@ offset_bottom = 522.0
 text = "0
 "
 label_settings = SubResource("LabelSettings_tea7f")
-
-[node name="ProgressBar" type="TextureProgressBar" parent="."]
-z_index = 1
-offset_left = 726.0
-offset_top = 525.0
-offset_right = 1081.0
-offset_bottom = 599.0
-value = 100.0
-nine_patch_stretch = true
-texture_progress = SubResource("GradientTexture2D_pqrum")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0, 0, 0, 1)
-position = Vector2(903, 563)
-scale = Vector2(5.90625, 1.5625)
-texture = SubResource("GradientTexture2D_vnx1g")
 
 [node name="Label" type="Label" parent="."]
 z_index = 2
@@ -89,3 +73,25 @@ texture_filter = 1
 position = Vector2(-100.002, 26.6873)
 scale = Vector2(19.7214, 24.6301)
 texture = ExtResource("2_vd8p0")
+
+[node name="hot_bar" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 644.0
+
+[node name="ProgressBar" type="TextureProgressBar" parent="hot_bar"]
+z_index = 1
+offset_left = 726.0
+offset_top = 525.0
+offset_right = 1081.0
+offset_bottom = 599.0
+value = 100.0
+nine_patch_stretch = true
+texture_progress = SubResource("GradientTexture2D_pqrum")
+
+[node name="Sprite2D" type="Sprite2D" parent="hot_bar"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(903, 563)
+scale = Vector2(5.90625, 1.5625)
+texture = SubResource("GradientTexture2D_vnx1g")

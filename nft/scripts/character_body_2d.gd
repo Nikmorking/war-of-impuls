@@ -85,7 +85,7 @@ func shoot(vector: Vector2) -> void:
 	pass
 
 func vis_health()->void:
-	var bar: TextureProgressBar = ui.get_node("ProgressBar")
+	var bar: TextureProgressBar = ui.get_node("hot_bar/ProgressBar")
 	bar.max_value = max_health
 	bar.value = health
 	ui.get_node("Label").text = str(health)

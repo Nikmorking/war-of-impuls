@@ -4,7 +4,6 @@ var down = true
 var coll = true
 
 func _ready() -> void:
-	nav = $NavigationAgent2D
 	get_player()
 	$RayCast2D.target_position.x = $Area2D/CollisionShape2D.shape.radius
 
@@ -18,7 +17,7 @@ func _process(delta: float) -> void:
 			else:
 				if coll:
 					movi = true
-					$Timer2.start()
+					$move.start()
 					coll = false
 				
 			
@@ -33,7 +32,7 @@ func hit_player()->void:
 		hit = false
 	else:
 		if down:
-			$Timer.start()
+			$call_down.start()
 			down = false
 	pass
 

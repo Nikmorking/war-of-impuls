@@ -1,7 +1,7 @@
 extends "res://scripts/воин.gd"
 
 var bodys: Array
-
+@export var add_health = 5
 
 func _ready() -> void:
 	get_player()
@@ -30,13 +30,14 @@ func add(body: Node2D) -> void:
 
 
 func hill() -> void:
+	$GPUParticles2D.emitting = true
 	for i in bodys.size():
 		if bodys[i] != null:
-			bodys[i].health += 10
 			print(bodys[i].tipy)
-			if bodys[i].health >= bodys[i].max_health:
+			if (bodys[i].health <= bodys[i].max_health):
+				bodys[i].health += add_health
 				health = max_health
-				print("Всё")
+				print("хил")
 	pass # Replace with function body.
 
 
