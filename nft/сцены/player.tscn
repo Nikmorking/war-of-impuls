@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://ciehno2dtgtce"]
 
 [ext_resource type="Script" path="res://scripts/character_body_2d.gd" id="1_y2g1n"]
-[ext_resource type="Texture2D" uid="uid://bfo25fa3qyjii" path="res://asset/Импульс/перс.png" id="2_dg6v2"]
+[ext_resource type="Texture2D" uid="uid://bfo25fa3qyjii" path="res://asset/импульс/перс.png" id="2_dg6v2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bti15"]
 size = Vector2(16.25, 16.5)

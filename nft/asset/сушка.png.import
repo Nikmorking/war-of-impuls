@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfo25fa3qyjii"
-path="res://.godot/imported/перс.png-40bc2a5e14d675acbd1651b6b8517d5a.ctex"
+uid="uid://cp4e0n18mhlpv"
+path="res://.godot/imported/сушка.png-390464a986bc87eb9bae761d0c1d2775.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/импульс/перс.png"
-dest_files=["res://.godot/imported/перс.png-40bc2a5e14d675acbd1651b6b8517d5a.ctex"]
+source_file="res://asset/сушка.png"
+dest_files=["res://.godot/imported/сушка.png-390464a986bc87eb9bae761d0c1d2775.ctex"]
 
 [params]
 

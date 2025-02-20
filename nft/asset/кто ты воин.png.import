@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfo25fa3qyjii"
-path="res://.godot/imported/перс.png-40bc2a5e14d675acbd1651b6b8517d5a.ctex"
+uid="uid://dk7jiysdvvc6e"
+path="res://.godot/imported/кто ты воин.png-cfc4ddd0bca13cefd1bbe4afb734c48f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/импульс/перс.png"
-dest_files=["res://.godot/imported/перс.png-40bc2a5e14d675acbd1651b6b8517d5a.ctex"]
+source_file="res://asset/кто ты воин.png"
+dest_files=["res://.godot/imported/кто ты воин.png-cfc4ddd0bca13cefd1bbe4afb734c48f.ctex"]
 
 [params]
 

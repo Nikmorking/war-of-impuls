@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfo25fa3qyjii"
-path="res://.godot/imported/перс.png-40bc2a5e14d675acbd1651b6b8517d5a.ctex"
+uid="uid://8bjk7ktdr7d4"
+path="res://.godot/imported/кастеты бога-фараона.png-b70bec026cf6d1ee762658d4b6e13bf0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/импульс/перс.png"
-dest_files=["res://.godot/imported/перс.png-40bc2a5e14d675acbd1651b6b8517d5a.ctex"]
+source_file="res://asset/кастеты бога-фараона.png"
+dest_files=["res://.godot/imported/кастеты бога-фараона.png-b70bec026cf6d1ee762658d4b6e13bf0.ctex"]
 
 [params]
 
