@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://btkv3hlg1xbg0"]
+
+[ext_resource type="Script" path="res://scripts/не_хватило_фантазии.gd" id="1_6mgfr"]
+[ext_resource type="Texture2D" uid="uid://bqmul5hx2soob" path="res://icon.svg" id="2_tp2gi"]
+
+[node name="не хватило фантазии" type="Area2D"]
+scale = Vector2(0.1, 0.1)
+script = ExtResource("1_6mgfr")
+
+[node name="Icon" type="Sprite2D" parent="."]
+texture = ExtResource("2_tp2gi")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-64, -54, -64, 55, -53, 65, 55, 65, 64, 55, 64, -54, 53, -64, -55, -64)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

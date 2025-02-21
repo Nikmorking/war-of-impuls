@@ -13,6 +13,7 @@ position = Vector2(-252, -69)
 polygon = PackedVector2Array(234, 85, 234, 192, 246, 202, 353, 201, 362, 189, 362, 83, 352, 73, 244, 73)
 
 [node name="Icon" type="Sprite2D" parent="."]
+modulate = Color(0.634576, 0.992534, 0.912946, 1)
 position = Vector2(46, 68)
 texture = ExtResource("1_b5scp")
 

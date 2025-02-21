@@ -5,7 +5,7 @@ extends Node2D
 var vamp : String
 var vampirism : bool = false
 var xz = false
-
+var nhfa = false
 
 var pos
 var stop = false
@@ -23,6 +23,9 @@ func _on_body_entered(body: Node2D) -> void:
 			body.health -= damage
 			if body.tipy =="враг":
 				if xz == true:
+					body.health -= body.health
+			if body.tipy =="Лучник":
+				if nhfa == true:
 					body.health -= body.health
 			stop = true
 			print("gg")
