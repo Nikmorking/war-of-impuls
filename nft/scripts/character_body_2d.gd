@@ -14,7 +14,7 @@ signal restart
 func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_released("mouse_right"):
 		if lapka != 2 and lapka != 3:
-			shoot(get_global_mouse_position())
+			shoot()
 			if lapka == 1:
 				lapka = 3
 				$Icon.texture = load("res://asset/импульс/импульс3.png")
@@ -23,7 +23,7 @@ func _input(_event: InputEvent) -> void:
 				$Icon.texture = load("res://asset/импульс/импульс.png")
 	if Input.is_action_just_released("mouse_left"):
 		if lapka != 1 and lapka != 3:
-			shoot(get_global_mouse_position())
+			shoot()
 			if lapka == 2:
 				lapka = 3
 				$Icon.texture = load("res://asset/импульс/импульс3.png")
@@ -63,7 +63,7 @@ func _physics_process(_delta: float) -> void:
 func die()->void:
 	print("die")
 	black.visible = true
-	$Timer.start()
+	$Timer2.start()
 	health = max_health
 	Enemy.play = false
 	get_parent().schot = 0
@@ -76,11 +76,11 @@ func die()->void:
 	pass
 
 
-func shoot(vector: Vector2) -> void:
+func shoot() -> void:
 	var pyl = load("res://сцены/Пуля.tscn").instantiate()
-	get_tree().root.get_node("Node2D/Пули").add_child(pyl)
+	get_parent().get_node("Пули").add_child(pyl)
 	pyl.global_position = position
-	pyl.pos = vector
+	pyl.pos = get_global_mouse_position()
 	pyl.damage = damage
 	pass
 
@@ -112,4 +112,9 @@ func Shoot() -> void:
 		$Icon.texture = load("res://asset/импульс/импульс.png")
 		lapka = 2
 		
+	pass # Replace with function body.
+
+
+func _on_timer_2_timeout() -> void:
+	SceneLoader.reload_current_scene()
 	pass # Replace with function body.

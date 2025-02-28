@@ -37,8 +37,8 @@ avoidance_layers = 3
 avoidance_mask = 3
 debug_enabled = true
 
-[node name="Timer2" type="Timer" parent="."]
-wait_time = 0.9
+[node name="Tik" type="Timer" parent="."]
+wait_time = 1.8
 autostart = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -53,4 +53,4 @@ offset_bottom = 108.571
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
 [connection signal="timeout" from="Timer" to="." method="call_down"]
-[connection signal="timeout" from="Timer2" to="." method="tik"]
+[connection signal="timeout" from="Tik" to="." method="tik"]

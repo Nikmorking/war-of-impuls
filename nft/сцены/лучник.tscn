@@ -13,7 +13,7 @@ radius = 4.28571
 [node name="Лучник" type="CharacterBody2D"]
 scale = Vector2(0.7, 0.7)
 collision_layer = 2
-collision_mask = 3
+collision_mask = 2
 script = ExtResource("1_a1ml1")
 max_health = 90
 SPEED = 60
@@ -45,7 +45,7 @@ debug_enabled = true
 target_position = Vector2(0, 0)
 
 [node name="move" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 0.2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2.85714)

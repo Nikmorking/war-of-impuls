@@ -40,6 +40,8 @@ func hill() -> void:
 			if (bodys[i].health <= bodys[i].max_health):
 				bodys[i].health += add_health 
 				print("хил")
+			else:
+				health = max_health
 	pass # Replace with function body.
 
 

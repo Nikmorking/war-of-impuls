@@ -82,6 +82,7 @@ offset_bottom = 644.0
 
 [node name="ProgressBar" type="TextureProgressBar" parent="hot_bar"]
 z_index = 1
+layout_mode = 0
 offset_left = 726.0
 offset_top = 525.0
 offset_right = 1081.0

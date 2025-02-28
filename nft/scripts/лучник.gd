@@ -52,7 +52,7 @@ func shoot() -> void:
 	if self.name == "маг":
 		pyl = load("res://сцены/fire_ball.tscn").instantiate()
 	if pyl:
-		get_tree().root.get_node("Node2D/Пули").add_child(pyl)
+		get_parent().get_node("Пули").add_child(pyl)
 		pyl.global_position = position
 		pyl.pos = player.position
 		pyl.look_at(player.position)

@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://djngqv8khyndx"]
+[gd_scene load_steps=6 format=3 uid="uid://djngqv8khyndx"]
 
 [ext_resource type="Script" path="res://scripts/баффер.gd" id="1_0qyse"]
 [ext_resource type="Texture2D" uid="uid://dft2x6pbywysk" path="res://asset/враги/баффер.png" id="2_78eo3"]
+[ext_resource type="PackedScene" uid="uid://0uc8e6pla322" path="res://сцены/hot_bar.tscn" id="3_u2q6t"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ourww"]
 radius = 57.2142
@@ -44,6 +45,8 @@ shape = SubResource("CircleShape2D_ourww")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2.85714)
 shape = SubResource("CircleShape2D_c17xb")
+
+[node name="hot_bar" parent="." instance=ExtResource("3_u2q6t")]
 
 [connection signal="timeout" from="Timer" to="." method="call_down"]
 [connection signal="body_entered" from="Area2D2" to="." method="baf"]
