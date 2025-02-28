@@ -8,4 +8,4 @@ func _on_body_entered(body: Node2D) -> void:
 			body.nhf = true
 			print("vav")
 			queue_free()
-pass
+pass# смерть лучника с одного выстрела;

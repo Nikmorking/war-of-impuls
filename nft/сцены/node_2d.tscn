@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://d0jqwgl2j8c8k"]
+[gd_scene load_steps=26 format=3 uid="uid://d0jqwgl2j8c8k"]
 
 [ext_resource type="Script" path="res://scripts/schotchik.gd" id="1_eb1ss"]
 [ext_resource type="Texture2D" uid="uid://bkqhwrkhlmeda" path="res://asset/Tile/Grass.png" id="1_gpw7w"]
@@ -15,6 +15,9 @@
 [ext_resource type="PackedScene" uid="uid://bqjsy2bjxycrc" path="res://сцены/sonic_mode.tscn" id="13_8r8dv"]
 [ext_resource type="PackedScene" uid="uid://t53sol1p1p4" path="res://сцены/кто_ты_воин.tscn" id="14_ibb4f"]
 [ext_resource type="PackedScene" uid="uid://btkv3hlg1xbg0" path="res://сцены/не_хватило_фантазии.tscn" id="15_uoumt"]
+[ext_resource type="PackedScene" uid="uid://4djwuwrs0w6c" path="res://сцены/благословение_разработчиков.tscn" id="16_j0px8"]
+[ext_resource type="PackedScene" uid="uid://clqv6yyoxgnqj" path="res://сцены/плюшка.tscn" id="17_cu5hi"]
+[ext_resource type="PackedScene" uid="uid://7u76mprjcajy" path="res://сцены/бан_банан.tscn" id="18_aq7xu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5mvxk"]
 texture = ExtResource("1_gpw7w")
@@ -313,23 +316,32 @@ text = "0
 label_settings = SubResource("LabelSettings_tea7f")
 
 [node name="челночки" parent="." instance=ExtResource("9_ys2e1")]
-position = Vector2(302, 320)
+position = Vector2(751, 388)
 
 [node name="Сушки" parent="." instance=ExtResource("10_dhvxc")]
-position = Vector2(180, 325)
+position = Vector2(688, 373)
 rotation = -5.9769
 
 [node name="Кастеты бога фараона" parent="." instance=ExtResource("11_o2d8a")]
-position = Vector2(185, 269)
+position = Vector2(756, 365)
 
 [node name="Тапок Алексей Сергеевича" parent="." instance=ExtResource("12_nnk5g")]
-position = Vector2(187, 300)
+position = Vector2(799, 367)
 
 [node name="Sonic mode" parent="." instance=ExtResource("13_8r8dv")]
-position = Vector2(204, 233)
+position = Vector2(777, 360)
 
 [node name="кто ты воин" parent="." instance=ExtResource("14_ibb4f")]
 position = Vector2(874, 293)
 
 [node name="не хватило фантазии" parent="." instance=ExtResource("15_uoumt")]
 position = Vector2(732, 365)
+
+[node name="Благословение разработчиков" parent="." instance=ExtResource("16_j0px8")]
+position = Vector2(689, 251)
+
+[node name="Плюшка" parent="." instance=ExtResource("17_cu5hi")]
+position = Vector2(801, 312)
+
+[node name="бан-банан" parent="." instance=ExtResource("18_aq7xu")]
+position = Vector2(695, 289)

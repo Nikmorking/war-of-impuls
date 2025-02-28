@@ -3,8 +3,8 @@ extends "res://scripts/Entity.gd"
 var move
 var dep = false
 var call = 2
+var pulla = 0
 var vampr = false
-var pulla = false
 var xzz = false
 var nhf = false
 
@@ -66,9 +66,11 @@ func die()->void:
 
 func shoot(vector: Vector2) -> void:
 	var pyl
-	if pulla == false:
+	if pulla == 0:
 		pyl = load("res://сцены/Пуля.tscn").instantiate()
-	else :
+	if pulla == 1:
+		pyl = load("res://сцены/Тапок.tscn").instantiate()
+	if pulla == 2:
 		pyl = load("res://сцены/Тапок.tscn").instantiate()
 	get_tree().root.get_node("Node2D/Пули").add_child(pyl)
 	pyl.vamp = get_path()

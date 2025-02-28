@@ -6,7 +6,6 @@
 [node name="Sonic mode" type="Area2D"]
 scale = Vector2(0.1, 0.1)
 script = ExtResource("1_iq7go")
-Speed_ap = 500
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(-252, -69)

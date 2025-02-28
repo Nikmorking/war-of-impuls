@@ -9,7 +9,6 @@ script = ExtResource("1_s80lq")
 damage_up = 10
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-scale = Vector2(1, 1)
 polygon = PackedVector2Array(-60, -50, -60, 61, -50, 69, 57, 69, 68, 60, 68, -49, 60, -59, -49, -59)
 
 [node name="Icon" type="Sprite2D" parent="."]
