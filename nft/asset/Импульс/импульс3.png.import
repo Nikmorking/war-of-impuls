@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dowc53tbyrdpv"
-path="res://.godot/imported/импульс3.png-06dbf3519f4855d230a88247c7b87c59.ctex"
+path="res://.godot/imported/импульс3.png-fb179bf9a03eb818f755175ed17cac11.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Импульс/импульс3.png"
-dest_files=["res://.godot/imported/импульс3.png-06dbf3519f4855d230a88247c7b87c59.ctex"]
+source_file="res://asset/импульс/импульс3.png"
+dest_files=["res://.godot/imported/импульс3.png-fb179bf9a03eb818f755175ed17cac11.ctex"]
 
 [params]
 

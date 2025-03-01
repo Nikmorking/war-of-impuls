@@ -24,6 +24,10 @@ config/windows_native_icon="res://asset/Menu/Меню.ico"
 Gg="*res://scripts/gg.gd"
 Enemy="*res://scripts/Basic_enemy.gd"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [input]
 
 ui_left={
