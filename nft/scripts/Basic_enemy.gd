@@ -7,7 +7,7 @@ var hit = false
 var movi = true
 var top = false
 
-@onready var nav: NavigationAgent2D 
+@onready var nav: NavigationAgent2D = $NavigationAgent2D
 @onready var start_pos = position
 
 func move_to_player(delta: float) -> void:
@@ -45,4 +45,26 @@ func wait(time: float) -> void:
 
 func get_player() -> void:
 	player = get_parent().get_node("Player")
+	pass
+
+
+func tik() -> void:
+	$hot_bar.visible = false
+	if($GPUParticles2D != null):
+		$GPUParticles2D.emitting = false
+	pass # Replace with function body.
+
+func vis_health() -> void:
+	var hot_bar:TextureProgressBar = get_node("hot_bar/ProgressBar")
+	hot_bar.max_value = max_health
+	hot_bar.value = health
+	$hot_bar.visible = true
+	pass
+
+func _ready() -> void:
+	health = max_health
+	if(self.name != "Enemy"):
+		tik()
+		vis_health()
+		get_player()
 	pass

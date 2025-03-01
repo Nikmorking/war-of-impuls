@@ -1,4 +1,5 @@
-[gd_scene load_steps=24 format=3 uid="uid://d0jqwgl2j8c8k"]
+
+[gd_scene load_steps=15 format=3 uid="uid://dhkvwif2tn4s3"]
 
 [ext_resource type="Script" path="res://scripts/schotchik.gd" id="1_eb1ss"]
 [ext_resource type="Texture2D" uid="uid://bkqhwrkhlmeda" path="res://asset/Tile/Grass.png" id="1_gpw7w"]
@@ -7,9 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://vlknd2cx6mdb" path="res://asset/Tile/Fences.png" id="4_lyodw"]
 [ext_resource type="PackedScene" uid="uid://ciehno2dtgtce" path="res://сцены/player.tscn" id="5_dye2w"]
 [ext_resource type="Script" path="res://scripts/spawner.gd" id="7_kly5t"]
-[ext_resource type="Texture2D" uid="uid://xcaswa6m3jmo" path="res://asset/1_002.png" id="8_gh7k2"]
-[ext_resource type="Texture2D" uid="uid://curb4aj7ek84m" path="res://asset/умер.png" id="9_gufnj"]
-[ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="10_uiaj2"]
+[ext_resource type="PackedScene" uid="uid://67chr5nrw2bd" path="res://сцены/ui.tscn" id="8_18ble"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5mvxk"]
 texture = ExtResource("1_gpw7w")
@@ -212,29 +211,6 @@ vertices = PackedVector2Array(276.258, 314.328, 311, 328.18, 172, 330.797, 216.2
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(3, 2, 4, 5), PackedInt32Array(5, 4, 6, 7), PackedInt32Array(7, 6, 1, 0, 8), PackedInt32Array(8, 0, 9), PackedInt32Array(10, 8, 9, 11)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(321, 229, 162, 229, 162, 341, 321, 338)])
 
-[sub_resource type="LabelSettings" id="LabelSettings_tea7f"]
-font_size = 56
-
-[sub_resource type="Gradient" id="Gradient_2gkgb"]
-colors = PackedColorArray(1, 0.041864, 0.0125976, 1, 1, 0.174173, 0.127215, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_pqrum"]
-gradient = SubResource("Gradient_2gkgb")
-width = 85
-height = 219
-fill = 1
-
-[sub_resource type="Gradient" id="Gradient_i5yq8"]
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_vnx1g"]
-gradient = SubResource("Gradient_i5yq8")
-
-[sub_resource type="Gradient" id="Gradient_olvew"]
-colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_8qhhn"]
-gradient = SubResource("Gradient_olvew")
-
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_eb1ss")
 metadata/_edit_vertical_guides_ = [297.0]
@@ -291,72 +267,4 @@ position = Vector2(291, 264)
 position = Vector2(301, 305)
 script = ExtResource("7_kly5t")
 
-[node name="UI" type="CanvasLayer" parent="."]
-
-[node name="Label2" type="Label" parent="UI"]
-offset_left = 773.0
-offset_top = 444.0
-offset_right = 1107.0
-offset_bottom = 521.0
-text = "Убито:"
-label_settings = SubResource("LabelSettings_tea7f")
-
-[node name="Label3" type="Label" parent="UI"]
-offset_left = 963.0
-offset_top = 445.0
-offset_right = 1297.0
-offset_bottom = 522.0
-text = "0
-"
-label_settings = SubResource("LabelSettings_tea7f")
-
-[node name="ProgressBar" type="TextureProgressBar" parent="UI"]
-z_index = 1
-offset_left = 726.0
-offset_top = 525.0
-offset_right = 1081.0
-offset_bottom = 599.0
-value = 100.0
-nine_patch_stretch = true
-texture_progress = SubResource("GradientTexture2D_pqrum")
-
-[node name="Sprite2D" type="Sprite2D" parent="UI"]
-modulate = Color(0, 0, 0, 1)
-position = Vector2(903, 563)
-scale = Vector2(5.90625, 1.5625)
-texture = SubResource("GradientTexture2D_vnx1g")
-
-[node name="Label" type="Label" parent="UI"]
-z_index = 2
-offset_left = 731.0
-offset_top = 521.0
-offset_right = 1065.0
-offset_bottom = 598.0
-text = "10
-"
-label_settings = SubResource("LabelSettings_tea7f")
-
-[node name="black" type="Sprite2D" parent="UI"]
-visible = false
-z_index = 4
-position = Vector2(556, 316)
-scale = Vector2(19.4847, 11.2192)
-texture = SubResource("GradientTexture2D_8qhhn")
-
-[node name="black2" type="Sprite2D" parent="UI/black"]
-z_index = 4
-position = Vector2(0.502621, 0.0500755)
-scale = Vector2(0.0245718, 0.0450357)
-texture = ExtResource("8_gh7k2")
-
-[node name="Умер" type="Sprite2D" parent="UI/black/black2"]
-texture_filter = 1
-position = Vector2(-100.002, 26.6873)
-scale = Vector2(19.7214, 24.6301)
-texture = ExtResource("9_gufnj")
-
-[node name="Virtual Joystick" parent="UI" instance=ExtResource("10_uiaj2")]
-offset_left = -35.0
-offset_top = -267.0
-offset_right = 265.0
-offset_bottom = 33.0
+[node name="UI" parent="." instance=ExtResource("8_18ble")]

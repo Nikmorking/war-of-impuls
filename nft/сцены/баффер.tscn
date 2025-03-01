@@ -1,33 +1,28 @@
-[gd_scene load_steps=5 format=3 uid="uid://djngqv8khyndx"]
+[gd_scene load_steps=6 format=3 uid="uid://djngqv8khyndx"]
 
 [ext_resource type="Script" path="res://scripts/баффер.gd" id="1_0qyse"]
 [ext_resource type="Texture2D" uid="uid://dft2x6pbywysk" path="res://asset/враги/баффер.png" id="2_78eo3"]
+[ext_resource type="PackedScene" uid="uid://0uc8e6pla322" path="res://сцены/hot_bar.tscn" id="3_u2q6t"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ourww"]
 radius = 57.2142
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_neqeq"]
-size = Vector2(7.14286, 10)
+[sub_resource type="CircleShape2D" id="CircleShape2D_c17xb"]
+radius = 4.28571
 
 [node name="баффер" type="CharacterBody2D"]
 scale = Vector2(0.7, 0.7)
 collision_layer = 4
 collision_mask = 6
 script = ExtResource("1_0qyse")
-max_health = 160
-health = 130
-SPEED = 70
+max_health = 80
+SPEED = 80
 tipy = "баффер"
 damage = 1
 
 [node name="Воин" type="Sprite2D" parent="."]
 texture_filter = 1
 texture = ExtResource("2_78eo3")
-
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
-polygon = PackedVector2Array(7, 13, 11, 4, 13, -9, 6, -19, -8, -19, -13, -5, -10, 6, -4, 13)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
@@ -49,9 +44,10 @@ shape = SubResource("CircleShape2D_ourww")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2.85714)
-shape = SubResource("RectangleShape2D_neqeq")
+shape = SubResource("CircleShape2D_c17xb")
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[node name="hot_bar" parent="." instance=ExtResource("3_u2q6t")]
+
 [connection signal="timeout" from="Timer" to="." method="call_down"]
 [connection signal="body_entered" from="Area2D2" to="." method="baf"]
+[connection signal="body_exited" from="Area2D2" to="." method="topr"]

@@ -1,7 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://ciehno2dtgtce"]
+[gd_scene load_steps=7 format=3 uid="uid://ciehno2dtgtce"]
 
 [ext_resource type="Script" path="res://scripts/character_body_2d.gd" id="1_y2g1n"]
 [ext_resource type="Texture2D" uid="uid://bfo25fa3qyjii" path="res://asset/импульс/перс.png" id="2_dg6v2"]
+[sub_resource type="Gradient" id="Gradient_kiq0p"]
+offsets = PackedFloat32Array(0.0974026, 0.188312)
+colors = PackedColorArray(0, 0, 0, 0.4, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wppjx"]
+gradient = SubResource("Gradient_kiq0p")
+fill = 1
+fill_from = Vector2(0.555046, 0.577982)
+fill_to = Vector2(0.844037, 0.201835)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tqlrd"]
 radius = 6.13004
@@ -13,6 +22,11 @@ radius = 3.16228
 script = ExtResource("1_y2g1n")
 tipy = "Player"
 damage = 25
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-3.2, 2.6)
+scale = Vector2(0.953125, 0.90625)
+texture = SubResource("GradientTexture2D_wppjx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.124939, 0.750061)
@@ -36,5 +50,8 @@ shape = SubResource("CircleShape2D_erawe")
 [node name="Timer3" type="Timer" parent="."]
 autostart = true
 
+[node name="Timer2" type="Timer" parent="."]
+
 [connection signal="timeout" from="Timer" to="." method="call_down"]
 [connection signal="timeout" from="Timer3" to="." method="vis_health"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

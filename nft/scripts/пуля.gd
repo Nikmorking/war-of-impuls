@@ -28,6 +28,7 @@ func _on_body_entered(body: Node2D) -> void:
 			stop = true
 			print("gg")
 			body.health -= damage
+			body.vis_health()
 			if(body.health <= 0):
 				body.queue_free()
 				Gg.get_papa(2, self).kill()

@@ -1,8 +1,6 @@
-extends "res://scripts/воин.gd"
+extends "res://scripts/хиллер.gd"
 
 func _ready() -> void:
-	get_player()
-	nav = $NavigationAgent2D
 	player = self
 
 # Called when the node enters the scene tree for the first time.
@@ -18,11 +16,19 @@ func _process(delta: float) -> void:
 		#$CollisionPolygon2D.disabled = true
 		
 	pass
-	
+
+
+
 func baf(body: Node2D) -> void:
-	if body.tipy != "хиллер":
-		player = body
-		if !body.top:
-			body.damage += 10
-			body.top = true
+	player = body
+	if !body.top:
+		body.damage += 10
+		body.SPEED += 10
+		body.top = true
+		print("baf")
 	pass
+
+
+func topr(body: Node2D) -> void:
+	body.top = false
+	pass # Replace with function body.
