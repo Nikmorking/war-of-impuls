@@ -37,7 +37,6 @@ radius = 100.0
 max_neighbors = 20
 avoidance_layers = 3
 avoidance_mask = 3
-debug_enabled = true
 
 [node name="call_down" type="Timer" parent="."]
 
