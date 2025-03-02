@@ -2,11 +2,12 @@ extends "res://scripts/Entity.gd"
 
 var move
 var dep = false
-var call = 2
 var pulla = 0
 var vampr = false
 var xzz = false
 var nhf = false
+var lapka = 0
+var play = true
 
 signal restart
 
@@ -15,17 +16,27 @@ signal restart
 @onready var black = ui.get_node("black") 
 
 func _input(_event: InputEvent) -> void:
+	if Input.is_action_just_released("mouse_right"):
+		if lapka != 2 and lapka != 3:
+			shoot()
+			if lapka == 1:
+				lapka = 3
+				$Icon.texture = load("res://asset/импульс/импульс3.png")
+			if lapka == 0:
+				lapka = 2
+				$Icon.texture = load("res://asset/импульс/импульс.png")
 	if Input.is_action_just_released("mouse_left"):
-		if call == 2:
-			shoot(get_global_mouse_position())
-			$Icon.texture = load("res://asset/импульс.png")
-			call = 1
-		if call == 1:
-			$Timer2.start()
-			call = 0
-	if Input.is_action_just_released("devlog"):
-		ui.get_nodea("TextEdit").visible = true
-		dep = true
+		if lapka != 1 and lapka != 3:
+			shoot()
+			if lapka == 2:
+				lapka = 3
+				$Icon.texture = load("res://asset/импульс/импульс3.png")
+			if lapka == 0:
+				lapka = 1
+				$Icon.texture = load("res://asset/импульс/импульс2.png")
+	#if Input.is_action_just_released("devlog"):
+		#ui.get_node("TextEdit").visible = true
+		#dep = true
 	if Input.is_action_just_released("ui_accept"):
 		if dep:
 			var texter = ui.get_node("TextEdit").text
@@ -46,9 +57,8 @@ func move_player() -> void:
 	pass
 
 func _physics_process(_delta: float) -> void:
-	move_player()
-	if health >= max_health:
-		health = max_health
+	if play:
+		move_player()
 	if(health <= 0):
 		die()
 	move_and_slide()
@@ -56,11 +66,17 @@ func _physics_process(_delta: float) -> void:
 
 func die()->void:
 	print("die")
-	#black.visible = true
-	$Timer.start()
+	black.visible = true
+	$Timer2.start()
 	health = max_health
 	Enemy.play = false
 	get_parent().schot = 0
+	play = false
+	lapka = 0
+	var pyli = get_parent().get_node("Пули").get_children()
+	for i in pyli.size():
+		pyli[i].queue_free()
+	$Icon.texture = load("res://asset/импульс/перс.png")
 	pass
 
 
@@ -75,7 +91,7 @@ func shoot(vector: Vector2) -> void:
 	get_tree().root.get_node("Node2D/Пули").add_child(pyl)
 	pyl.vamp = get_path()
 	pyl.global_position = position
-	pyl.pos = vector
+	pyl.pos = get_global_mouse_position()
 	pyl.damage = damage
 	pyl.xz = xzz
 	pyl.nhfa = nhf
@@ -83,19 +99,36 @@ func shoot(vector: Vector2) -> void:
 	pass
 
 func vis_health()->void:
+	var bar: TextureProgressBar = ui.get_node("hot_bar/ProgressBar")
+	bar.max_value = max_health
+	bar.value = health
 	ui.get_node("Label").text = str(health)
 	pass
 
 
 
 func call_down() -> void:
-	#black.visible = false
+	black.visible = false
 	position = start_pos
-	restart.emit()
+	restart.emit() 
+	play = true
 	pass # Replace with function body.
 
 
 func Shoot() -> void:
-	call = 2
-	$Icon.texture = load("res://asset/перс.png")
+	if lapka == 2:
+		$Icon.texture = load("res://asset/импульс/перс.png")
+		lapka = 0
+	if lapka == 1:
+		$Icon.texture = load("res://asset/импульс/перс.png")
+		lapka = 0
+	if lapka == 3:
+		$Icon.texture = load("res://asset/импульс/импульс.png")
+		lapka = 2
+		
+	pass # Replace with function body.
+
+
+func _on_timer_2_timeout() -> void:
+	Gg.get_papa(2, self)._on_lose_button_pressed()
 	pass # Replace with function body.
