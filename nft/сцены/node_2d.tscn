@@ -1,5 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dhkvwif2tn4s3"]
->>>>>>> Nikmor
+[gd_scene load_steps=25 format=3 uid="uid://dhkvwif2tn4s3"]
 
 [ext_resource type="Script" path="res://scripts/schotchik.gd" id="1_eb1ss"]
 [ext_resource type="Texture2D" uid="uid://bkqhwrkhlmeda" path="res://asset/Tile/Grass.png" id="1_gpw7w"]
@@ -8,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://vlknd2cx6mdb" path="res://asset/Tile/Fences.png" id="4_lyodw"]
 [ext_resource type="PackedScene" uid="uid://ciehno2dtgtce" path="res://сцены/player.tscn" id="5_dye2w"]
 [ext_resource type="Script" path="res://scripts/spawner.gd" id="7_kly5t"]
-[ext_resource type="Texture2D" uid="uid://b5mamcyhk8x80" path="res://asset/Чёрный_квадрат.PNG" id="8_twdo3"]
+[ext_resource type="PackedScene" uid="uid://67chr5nrw2bd" path="res://сцены/ui.tscn" id="8_18ble"]
 [ext_resource type="PackedScene" uid="uid://bp34hrsjcwqh5" path="res://сцены/челночки.tscn" id="9_ys2e1"]
 [ext_resource type="PackedScene" uid="uid://b4aehn75ogi26" path="res://сцены/сушки.tscn" id="10_dhvxc"]
 [ext_resource type="PackedScene" uid="uid://wdvne2tixe4v" path="res://сцены/кастеты_бога_фараона.tscn" id="11_o2d8a"]
@@ -19,7 +18,6 @@
 [ext_resource type="PackedScene" uid="uid://4djwuwrs0w6c" path="res://сцены/благословение_разработчиков.tscn" id="16_j0px8"]
 [ext_resource type="PackedScene" uid="uid://clqv6yyoxgnqj" path="res://сцены/плюшка.tscn" id="17_cu5hi"]
 [ext_resource type="PackedScene" uid="uid://7u76mprjcajy" path="res://сцены/бан_банан.tscn" id="18_aq7xu"]
-[ext_resource type="PackedScene" uid="uid://67chr5nrw2bd" path="res://сцены/ui.tscn" id="8_18ble"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5mvxk"]
 texture = ExtResource("1_gpw7w")
@@ -257,11 +255,6 @@ radius = 10.0
 vertices = PackedVector2Array(226, 303, 264, 304, 262, 294, 237, 294, 237, 270, 263, 272, 263, 261, 225, 261)
 affect_navigation_mesh = true
 
-[node name="StaticBody2D" type="StaticBody2D" parent="TileMap"]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TileMap/StaticBody2D"]
-polygon = PackedVector2Array(-63.0058, -55.9008, -57.0052, -62.9102, 87.0079, -60.137, 96.0087, -59.1512, 95.0087, 44.8504, -59.0054, 45.0929, -58.0053, -87.9087, -117.011, -56.8157, -101.009, 72.1591, 135.012, 72.7874, 128.012, 0.798401, 122.011, -61.1921, 90.0082, -86.1417, 58.0053, -85.0913, 23.0021, -78.0362, -53.0049, -90.9165, -70.0064, -65.8898)
-
 [node name="Player" parent="." instance=ExtResource("5_dye2w")]
 position = Vector2(302, 268)
 scale = Vector2(0.8, 0.8)
@@ -289,45 +282,13 @@ affect_navigation_mesh = true
 radius = 10.0
 vertices = PackedVector2Array(767, 274, 807, 274, 806, 208, 838, 209, 838, 199, 800, 199, 801, 265, 767, 265)
 affect_navigation_mesh = true
+
 [node name="Spawn_pos" type="Node2D" parent="."]
 position = Vector2(291, 264)
 
 [node name="Spawner" type="Node2D" parent="."]
 position = Vector2(301, 305)
 script = ExtResource("7_kly5t")
-[node name="UI" type="CanvasLayer" parent="."]
-
-[node name="Label" type="Label" parent="UI"]
-offset_left = 782.0
-offset_top = 528.0
-offset_right = 1116.0
-offset_bottom = 605.0
-text = "Молодец!"
-label_settings = SubResource("LabelSettings_tea7f")
-
-[node name="black" type="Sprite2D" parent="UI"]
-visible = false
-z_index = 1
-position = Vector2(573, 299)
-scale = Vector2(1.92813, 1.175)
-texture = ExtResource("8_twdo3")
-
-[node name="Label2" type="Label" parent="UI"]
-offset_left = 773.0
-offset_top = 444.0
-offset_right = 1107.0
-offset_bottom = 521.0
-text = "Убито:"
-label_settings = SubResource("LabelSettings_tea7f")
-
-[node name="Label3" type="Label" parent="UI"]
-offset_left = 963.0
-offset_top = 445.0
-offset_right = 1297.0
-offset_bottom = 522.0
-text = "0
-"
-label_settings = SubResource("LabelSettings_tea7f")
 
 [node name="челночки" parent="." instance=ExtResource("9_ys2e1")]
 position = Vector2(751, 388)
@@ -359,6 +320,5 @@ position = Vector2(801, 312)
 
 [node name="бан-банан" parent="." instance=ExtResource("18_aq7xu")]
 position = Vector2(695, 289)
-=======
+
 [node name="UI" parent="." instance=ExtResource("8_18ble")]
->>>>>>> Nikmor
