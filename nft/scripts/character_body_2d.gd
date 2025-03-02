@@ -80,7 +80,7 @@ func die()->void:
 	pass
 
 
-func shoot(vector: Vector2) -> void:
+func shoot() -> void:
 	var pyl
 	if pulla == 0:
 		pyl = load("res://сцены/Пуля.tscn").instantiate()
@@ -88,7 +88,7 @@ func shoot(vector: Vector2) -> void:
 		pyl = load("res://сцены/Тапок.tscn").instantiate()
 	if pulla == 2:
 		pyl = load("res://сцены/Тапок.tscn").instantiate()
-	get_tree().root.get_node("Node2D/Пули").add_child(pyl)
+	get_parent().get_node("Пули").add_child(pyl)
 	pyl.vamp = get_path()
 	pyl.global_position = position
 	pyl.pos = get_global_mouse_position()
