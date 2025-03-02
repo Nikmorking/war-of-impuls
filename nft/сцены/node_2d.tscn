@@ -1,4 +1,3 @@
-
 [gd_scene load_steps=15 format=3 uid="uid://dhkvwif2tn4s3"]
 
 [ext_resource type="Script" path="res://scripts/schotchik.gd" id="1_eb1ss"]
@@ -245,6 +244,11 @@ navigation_polygon = SubResource("NavigationPolygon_8vbh3")
 radius = 10.0
 vertices = PackedVector2Array(226, 303, 264, 304, 262, 294, 237, 294, 237, 270, 263, 272, 263, 261, 225, 261)
 affect_navigation_mesh = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="TileMap"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TileMap/StaticBody2D"]
+polygon = PackedVector2Array(-63.0058, -55.9008, -57.0052, -62.9102, 87.0079, -60.137, 96.0087, -59.1512, 95.0087, 44.8504, -59.0054, 45.0929, -58.0053, -87.9087, -117.011, -56.8157, -101.009, 72.1591, 135.012, 72.7874, 128.012, 0.798401, 122.011, -61.1921, 90.0082, -86.1417, 58.0053, -85.0913, 23.0021, -78.0362, -53.0049, -90.9165, -70.0064, -65.8898)
 
 [node name="Player" parent="." instance=ExtResource("5_dye2w")]
 position = Vector2(302, 268)

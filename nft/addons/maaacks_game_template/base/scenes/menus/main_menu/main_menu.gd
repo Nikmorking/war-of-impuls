@@ -77,6 +77,7 @@ func _ready():
 
 func _on_new_game_button_pressed():
 	new_game()
+	#Input.set_custom_mouse_cursor(load("res://asset/Могила 1.png"))
 	#get_tree().get_root().add_child(load("res://сцены/node_2d.tscn").instantiate())
 
 func _on_options_button_pressed():

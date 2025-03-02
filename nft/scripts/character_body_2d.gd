@@ -116,5 +116,5 @@ func Shoot() -> void:
 
 
 func _on_timer_2_timeout() -> void:
-	SceneLoader.reload_current_scene()
+	Gg.get_papa(2, self)._on_lose_button_pressed()
 	pass # Replace with function body.

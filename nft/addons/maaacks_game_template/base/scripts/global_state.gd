@@ -1,3 +1,4 @@
+
 class_name GlobalState
 extends Node
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c6k5nnpbypshi"]
+[gd_scene load_steps=16 format=3 uid="uid://c6k5nnpbypshi"]
 
 [ext_resource type="Script" path="res://addons/maaacks_game_template/base/scenes/menus/main_menu/main_menu.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://hmx6o472ropw" path="res://addons/maaacks_game_template/base/scenes/menus/options_menu/master_options_menu_with_tabs.tscn" id="2_qvrrd"]
@@ -8,7 +8,18 @@
 [ext_resource type="Script" path="res://addons/maaacks_game_template/base/scripts/ui_sound_controller.gd" id="6_bs342"]
 [ext_resource type="Script" path="res://addons/maaacks_game_template/base/scenes/menus/main_menu/config_version_label.gd" id="6_pdiij"]
 [ext_resource type="Script" path="res://addons/maaacks_game_template/base/scenes/menus/main_menu/config_name_label.gd" id="7_j7612"]
+[ext_resource type="Texture2D" uid="uid://bkvvhwvnbm4p5" path="res://asset/Menu/Выйти.png" id="9_5ujlv"]
 [ext_resource type="Texture2D" uid="uid://b3ggasrsxoe2m" path="res://asset/Menu/Начать.png" id="9_w3x8u"]
+[ext_resource type="Texture2D" uid="uid://yruxpocfduqd" path="res://asset/Menu/Настройки.png" id="12_nt3vw"]
+[ext_resource type="Texture2D" uid="uid://dmsd1pj4socqh" path="res://asset/Menu/Заново.png" id="13_qbvht"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_scwn4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_60x27"]
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_x4h8n"]
+font_size = 30
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -20,6 +31,7 @@ grow_vertical = 2
 script = ExtResource("1")
 options_packed_scene = ExtResource("2_qvrrd")
 credits_packed_scene = ExtResource("3_5dhvp")
+metadata/_edit_vertical_guides_ = [420.0]
 
 [node name="UISoundController" type="Node" parent="."]
 script = ExtResource("6_bs342")
@@ -64,7 +76,8 @@ offset_left = -88.0
 offset_top = -26.0
 grow_horizontal = 0
 grow_vertical = 0
-text = "v0.0.0"
+text = "v0.1"
+label_settings = SubResource("LabelSettings_scwn4")
 horizontal_alignment = 2
 script = ExtResource("6_pdiij")
 
@@ -92,7 +105,8 @@ anchor_right = 1.0
 offset_bottom = 67.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 48
-text = "NFT"
+text = "war of Ipmuls"
+label_settings = SubResource("LabelSettings_60x27")
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("7_j7612")
@@ -113,6 +127,7 @@ offset_bottom = 34.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 24
 text = "Subtitle"
+label_settings = SubResource("LabelSettings_x4h8n")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -126,10 +141,9 @@ theme_override_constants/margin_bottom = 8
 layout_mode = 2
 mouse_filter = 2
 
-[node name="MenuButtonsBoxContainer" type="BoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer"]
+[node name="MenuButtonsBoxContainer" type="Control" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer"]
 unique_name_in_owner = true
 layout_mode = 1
-anchors_preset = -1
 anchor_left = 0.5
 anchor_top = 0.226
 anchor_right = 0.545
@@ -142,35 +156,73 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.8694, 1.39758)
 size_flags_horizontal = 4
-theme_override_constants/separation = 16
-alignment = 1
-vertical = true
 script = ExtResource("4_l1ebe")
 
 [node name="NewGameButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-icon = ExtResource("9_w3x8u")
+offset_left = 7.48903
+offset_top = 147.398
+offset_right = 110.489
+offset_bottom = 173.398
+scale = Vector2(1.60759, 1.39132)
 flat = true
 icon_alignment = 1
 
 [node name="OptionsButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(128, 40)
+clip_contents = true
 layout_mode = 2
-text = "Options"
+offset_left = 177.062
+offset_top = 129.51
+offset_right = 236.062
+offset_bottom = 194.51
+scale = Vector2(0.813433, 0.984615)
+text = "
+"
+flat = true
 
 [node name="CreditsButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(128, 40)
 layout_mode = 2
+offset_left = 12.3034
+offset_top = 381.374
+offset_right = 199.303
+offset_bottom = 421.374
 text = "Credits"
 
 [node name="ExitButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(128, 40)
 layout_mode = 2
-text = "Exit"
+offset_left = 9.68643
+offset_top = 214.904
+offset_right = 171.686
+offset_bottom = 254.904
+flat = true
+
+[node name="Выйти" type="Sprite2D" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer"]
+texture_filter = 1
+position = Vector2(94.8343, 234.613)
+scale = Vector2(2, 2)
+texture = ExtResource("9_5ujlv")
+
+[node name="Начать" type="Sprite2D" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer"]
+texture_filter = 1
+position = Vector2(91.489, 167.155)
+scale = Vector2(2, 2)
+texture = ExtResource("9_w3x8u")
+
+[node name="Настройки" type="Sprite2D" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer"]
+position = Vector2(202.204, 162.424)
+scale = Vector2(1, 1.181)
+texture = ExtResource("12_nt3vw")
+
+[node name="Заново" type="Sprite2D" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer"]
+position = Vector2(202.204, 230.398)
+scale = Vector2(1, 1.206)
+texture = ExtResource("13_qbvht")
 
 [node name="OptionsContainer" type="MarginContainer" parent="."]
 unique_name_in_owner = true

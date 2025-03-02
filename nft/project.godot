@@ -10,7 +10,8 @@ config_version=5
 
 [application]
 
-config/name="NFT"
+config/name="war of Ipmuls"
+config/version="0.1"
 run/main_scene="res://addons/maaacks_game_template/examples/scenes/opening/opening_with_logo.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 boot_splash/show_image=false
@@ -27,6 +28,7 @@ AppConfig="*res://addons/maaacks_game_template/base/scenes/autoloads/app_config.
 SceneLoader="*res://addons/maaacks_game_template/base/scenes/autoloads/scene_loader.tscn"
 ProjectMusicController="*res://addons/maaacks_game_template/base/scenes/autoloads/project_music_controller.tscn"
 ProjectUISoundController="*res://addons/maaacks_game_template/base/scenes/autoloads/project_ui_sound_controller.tscn"
+FileSave="*res://scripts/Saves.gd"
 
 [display]
 
@@ -36,10 +38,6 @@ window/stretch/mode="viewport"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/maaacks_game_template/plugin.cfg")
-
-[display]
-
-window/stretch/mode="viewport"
 
 [input]
 

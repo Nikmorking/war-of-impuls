@@ -13,9 +13,6 @@ func _on_win_button_pressed():
 
 func _ready():
 	level_state = GameStateExample.get_level_state(scene_file_path)
-	%ColorPickerButton.color = level_state.color
-	%BackgroundColor.color = level_state.color
-
 func _on_color_picker_button_color_changed(color):
 	%BackgroundColor.color = color
 	level_state.color = color

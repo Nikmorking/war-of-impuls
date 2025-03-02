@@ -1,6 +1,7 @@
 class_name PauseMenu
 extends OverlaidMenu
-
+const Game_status : String = "GameStateExample"
+const FILE_PATH = "res://addons/maaacks_game_template/examples/scripts/game_state.gd"
 @export var options_packed_scene : PackedScene
 @export_file("*.tscn") var main_menu_scene : String
 
@@ -51,6 +52,7 @@ func _ready():
 		%ExitButton.hide()
 	_setup_options()
 	_setup_main_menu()
+	FileSave.load_game()
 
 func _on_restart_button_pressed():
 	%ConfirmRestart.popup_centered()
@@ -73,6 +75,8 @@ func _on_confirm_restart_confirmed():
 
 func _on_confirm_main_menu_confirmed():
 	_load_scene(main_menu_scene)
+	
 
 func _on_confirm_exit_confirmed():
 	get_tree().quit()
+	GlobalState.save()
