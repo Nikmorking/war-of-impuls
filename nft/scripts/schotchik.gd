@@ -3,7 +3,7 @@ extends Node2D
 
 var schot = 0
 @export var nid = 10
-@export var win = 40
+@export var win = 10
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
