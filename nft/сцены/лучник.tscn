@@ -1,27 +1,28 @@
-[gd_scene load_steps=4 format=3 uid="uid://b088uqy5qe8w0"]
+[gd_scene load_steps=6 format=3 uid="uid://b088uqy5qe8w0"]
 
-[ext_resource type="Texture2D" uid="uid://c5mfpqfbm6mr4" path="res://asset/лучник.png" id="1_0qstw"]
+[ext_resource type="Texture2D" uid="uid://c5mfpqfbm6mr4" path="res://asset/враги/лучник.png" id="1_0qstw"]
 [ext_resource type="Script" path="res://scripts/лучник.gd" id="1_a1ml1"]
+[ext_resource type="PackedScene" uid="uid://0uc8e6pla322" path="res://сцены/hot_bar.tscn" id="3_ka1la"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6etvj"]
 radius = 78.6882
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_cvivx"]
+radius = 4.28571
+
 [node name="Лучник" type="CharacterBody2D"]
 scale = Vector2(0.7, 0.7)
 collision_layer = 2
-collision_mask = 3
+collision_mask = 2
 script = ExtResource("1_a1ml1")
-health = 80
+max_health = 90
 SPEED = 60
 tipy = "Лучник"
-damage = 15
+damage = 5
 
 [node name="Лучник" type="Sprite2D" parent="."]
 texture_filter = 1
 texture = ExtResource("1_0qstw")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-7.14286, -8.57143, -5.71429, -4.28571, -6, 2, -5.71429, 4.28571, -2.85714, 7.14286, 2.85714, 7.14286, 4.28571, 2.85714, 4.28571, 0, 5.71429, -10, 1.42857, -1.42857, -5.71429, -8.57143)
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -32,22 +33,31 @@ shape = SubResource("CircleShape2D_6etvj")
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 path_desired_distance = 0.1
 avoidance_enabled = true
-radius = 41.14
-neighbor_distance = 15298.9
+radius = 100.0
 max_neighbors = 20
+avoidance_layers = 3
 avoidance_mask = 3
-debug_enabled = true
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.4
+[node name="call_down" type="Timer" parent="."]
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 target_position = Vector2(0, 0)
 
-[node name="Timer2" type="Timer" parent="."]
-wait_time = 0.5
+[node name="move" type="Timer" parent="."]
+wait_time = 0.2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2.85714)
+shape = SubResource("CircleShape2D_cvivx")
+
+[node name="hot_bar" parent="." instance=ExtResource("3_ka1la")]
+
+[node name="tik" type="Timer" parent="."]
+wait_time = 0.7
+autostart = true
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
-[connection signal="timeout" from="Timer" to="." method="call_down"]
-[connection signal="timeout" from="Timer2" to="." method="move_"]
+[connection signal="timeout" from="call_down" to="." method="call_down"]
+[connection signal="timeout" from="move" to="." method="move_"]
+[connection signal="timeout" from="tik" to="." method="tik"]

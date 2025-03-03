@@ -1,10 +1,6 @@
 extends "res://scripts/Basic_enemy.gd"
 
 var down = true
-
-func _ready() -> void:
-	get_player()
-	nav = $NavigationAgent2D
 	
 
 # Called when the node enters the scene tree for the first time.
@@ -18,7 +14,6 @@ func _process(delta: float) -> void:
 		else:
 			hit_player()
 		#$CollisionPolygon2D.disabled = true
-		
 	pass
 
 func hit_player()->void:

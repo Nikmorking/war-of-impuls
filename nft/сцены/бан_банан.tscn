@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://7u76mprjcajy"]
+
+[ext_resource type="Script" path="res://scripts/бан_банан.gd" id="1_tnoxo"]
+[ext_resource type="Texture2D" uid="uid://bqmul5hx2soob" path="res://icon.svg" id="2_gy1kx"]
+
+[node name="бан-банан" type="Area2D"]
+scale = Vector2(0.1, 0.1)
+script = ExtResource("1_tnoxo")
+
+[node name="Icon" type="Sprite2D" parent="."]
+texture = ExtResource("2_gy1kx")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-64, -54, -52, -64, 53, -64, 64, -53, 64, 53, 52, 64, -54, 64, -64, 52)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
