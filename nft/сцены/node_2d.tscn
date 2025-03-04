@@ -293,7 +293,7 @@ position = Vector2(756, 365)
 position = Vector2(799, 367)
 
 [node name="Sonic mode" parent="." instance=ExtResource("13_8r8dv")]
-position = Vector2(348, 281)
+position = Vector2(685, 321)
 Speed_ap = 50
 
 [node name="кто ты воин" parent="." instance=ExtResource("14_ibb4f")]
@@ -306,13 +306,13 @@ position = Vector2(732, 365)
 position = Vector2(689, 251)
 
 [node name="Плюшка" parent="." instance=ExtResource("17_cu5hi")]
-position = Vector2(801, 312)
+position = Vector2(724, 299)
 
 [node name="бан-банан" parent="." instance=ExtResource("18_aq7xu")]
-position = Vector2(695, 289)
+position = Vector2(707, 271)
 
 [node name="UI" parent="." instance=ExtResource("8_18ble")]
 
 [node name="AnimatedSprite2D" parent="." instance=ExtResource("19_2rpn0")]
 texture_filter = 1
-position = Vector2(946, 417.5)
+position = Vector2(641, 289)
