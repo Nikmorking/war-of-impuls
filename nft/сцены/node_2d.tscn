@@ -306,7 +306,7 @@ position = Vector2(732, 365)
 position = Vector2(689, 251)
 
 [node name="Плюшка" parent="." instance=ExtResource("17_cu5hi")]
-position = Vector2(724, 299)
+position = Vector2(705, 304)
 
 [node name="бан-банан" parent="." instance=ExtResource("18_aq7xu")]
 position = Vector2(707, 271)
@@ -315,4 +315,4 @@ position = Vector2(707, 271)
 
 [node name="AnimatedSprite2D" parent="." instance=ExtResource("19_2rpn0")]
 texture_filter = 1
-position = Vector2(641, 289)
+position = Vector2(680, 277)
