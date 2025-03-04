@@ -21,7 +21,7 @@ func _input(event: InputEvent) -> void:
 	if mob:
 		get_parent().add_child(mob)
 		mob.global_position = global_position
-	pass
+		mob.add_to_group("Enemys")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass

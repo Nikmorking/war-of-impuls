@@ -7,8 +7,7 @@ func _on_body_entered(body: Node2D) -> void:
 			body.vampr = false
 			body.xzz = false
 			body.damage *= 70
-			body.SPEED = 1000
-			body.pulla = false
+			body.pulla = 0
 			print("благо")
 			queue_free()
 pass

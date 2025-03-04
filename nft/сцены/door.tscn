@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://bfll4fq7s6i5t"]
+
+[ext_resource type="Texture2D" uid="uid://s70gl81i4sra" path="res://asset/Tile/Doors.png" id="1_3dkkt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbp6j"]
+atlas = ExtResource("1_3dkkt")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_btkw7"]
+atlas = ExtResource("1_3dkkt")
+region = Rect2(0, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o2a1d"]
+atlas = ExtResource("1_3dkkt")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_njvea"]
+atlas = ExtResource("1_3dkkt")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vnuhb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jbp6j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_btkw7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o2a1d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_njvea")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rqtpi"]
+size = Vector2(16.8889, 16.8421)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+position = Vector2(295, 102.5)
+scale = Vector2(1.125, 1.1875)
+sprite_frames = SubResource("SpriteFrames_vnuhb")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Coll" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-0.444445, 0.421062)
+shape = SubResource("RectangleShape2D_rqtpi")
