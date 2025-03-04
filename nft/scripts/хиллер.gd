@@ -2,13 +2,15 @@ extends "res://scripts/воин.gd"
 
 var bodys: Array
 @export var add_health = 5
+@export var playe:bool
 
 func _ready() -> void:
 	get_player()
 	nav = $NavigationAgent2D
 	top = true
-	player = self
-	bodys.append(self)
+	if playe:
+		player = self
+	pass
 
 # Called when the node enters the scene tree for the first time.
 
@@ -37,7 +39,7 @@ func hill() -> void:
 		if bodys[i] != null:
 			bodys[i].vis_health()
 			print(bodys[i].tipy)
-			if (bodys[i].health <= bodys[i].max_health):
+			if (bodys[i].health < bodys[i].max_health):
 				bodys[i].health += add_health 
 				print("хил")
 			else:

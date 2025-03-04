@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://t53sol1p1p4"]
 
 [ext_resource type="Texture2D" uid="uid://bqmul5hx2soob" path="res://icon.svg" id="1_1ba8l"]
-[ext_resource type="Script" path="res://сцены/кто_ты_воин.gd" id="1_li6gk"]
+[ext_resource type="Script" path="res://сцены/scripts/кто_ты_воин.gd" id="1_li6gk"]
 
 [node name="кто ты воин" type="Area2D"]
 scale = Vector2(0.7, 0.7)
