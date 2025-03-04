@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://0uc8e6pla322"]
+
+[sub_resource type="Gradient" id="Gradient_8jbnk"]
+colors = PackedColorArray(1, 0.041864, 0.0125976, 1, 1, 0.174173, 0.127215, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_gidea"]
+gradient = SubResource("Gradient_8jbnk")
+width = 85
+height = 219
+fill = 1
+
+[sub_resource type="Gradient" id="Gradient_i5yq8"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_x7x0a"]
+gradient = SubResource("Gradient_i5yq8")
+
+[node name="hot_bar" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -991.429
+offset_top = -600.0
+offset_right = 181.571
+offset_bottom = 110.0
+scale = Vector2(0.980474, 0.943859)
+
+[node name="ProgressBar" type="TextureProgressBar" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 989.0
+offset_top = 611.0
+offset_right = 1034.0
+offset_bottom = 615.0
+value = 100.0
+nine_patch_stretch = true
+texture_progress = SubResource("GradientTexture2D_gidea")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1011.68, 612.909)
+scale = Vector2(0.749, 0.115881)
+texture = SubResource("GradientTexture2D_x7x0a")

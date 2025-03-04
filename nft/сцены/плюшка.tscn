@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://clqv6yyoxgnqj"]
+
+[ext_resource type="Script" path="res://scripts/плюшка.gd" id="1_qhsy4"]
+[ext_resource type="Texture2D" uid="uid://bqmul5hx2soob" path="res://icon.svg" id="2_84gkh"]
+
+[node name="Плюшка" type="Area2D"]
+scale = Vector2(0.1, 0.1)
+script = ExtResource("1_qhsy4")
+
+[node name="Icon" type="Sprite2D" parent="."]
+texture = ExtResource("2_84gkh")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-54, -64, -64, -53, -64, 54, -53, 64, 52, 64, 64, 53, 64, -54, 53, -64)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,90 @@
+[gd_scene load_steps=9 format=3 uid="uid://1l5mxwahi5km"]
+
+[ext_resource type="Script" path="res://scripts/хиллер.gd" id="1_1y525"]
+[ext_resource type="Texture2D" uid="uid://brgqrefftbq2v" path="res://asset/враги/хилер.png" id="2_1rupd"]
+[ext_resource type="PackedScene" uid="uid://0uc8e6pla322" path="res://сцены/hot_bar.tscn" id="3_4xlgy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ourww"]
+radius = 57.2142
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c1qyd"]
+radius = 4.28571
+height = 11.4286
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_03w2j"]
+lifetime_randomness = 0.15
+gravity = Vector3(-12, -120, 0)
+radial_accel_min = -75.27
+radial_accel_max = 23.66
+tangential_accel_min = -87.1
+tangential_accel_max = -2.23517e-06
+
+[sub_resource type="Gradient" id="Gradient_dpocx"]
+offsets = PackedFloat32Array(0, 0.220779)
+colors = PackedColorArray(0.283023, 0.629978, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_0cfkk"]
+gradient = SubResource("Gradient_dpocx")
+fill = 1
+fill_from = Vector2(0.513761, 0.518349)
+
+[node name="хиллер" type="CharacterBody2D"]
+scale = Vector2(0.7, 0.7)
+collision_layer = 4
+collision_mask = 6
+script = ExtResource("1_1y525")
+add_health = 2
+playe = true
+max_health = 60
+SPEED = 60
+tipy = "хиллер"
+damage = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+path_desired_distance = 0.1
+avoidance_enabled = true
+radius = 100.0
+avoidance_layers = 3
+avoidance_mask = 3
+debug_enabled = true
+
+[node name="Area2D2" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+shape = SubResource("CircleShape2D_ourww")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2.85714)
+shape = SubResource("CapsuleShape2D_c1qyd")
+
+[node name="Воин" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_1rupd")
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="hot_bar" parent="." instance=ExtResource("3_4xlgy")]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(-1.42857, -15.7143)
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_03w2j")
+texture = SubResource("GradientTexture2D_0cfkk")
+local_coords = true
+
+[node name="tik" type="Timer" parent="."]
+wait_time = 0.7
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="call_down"]
+[connection signal="body_entered" from="Area2D2" to="." method="add"]
+[connection signal="body_exited" from="Area2D2" to="." method="remove"]
+[connection signal="timeout" from="Timer2" to="." method="hill"]
+[connection signal="timeout" from="tik" to="." method="tik"]

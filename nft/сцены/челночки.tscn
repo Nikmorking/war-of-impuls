@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bp34hrsjcwqh5"]
+
+[ext_resource type="Script" path="res://scripts/челночки.gd" id="1_nwojb"]
+[ext_resource type="Texture2D" uid="uid://c3higvfk1rfr4" path="res://asset/chelnochek_posolskiy_na_razves_250_g.png" id="2_u7c06"]
+
+[node name="челночки" type="Area2D"]
+scale = Vector2(0.1, 0.1)
+script = ExtResource("1_nwojb")
+
+[node name="ChelnochekPosolskiyNaRazves250G" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_u7c06")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(0.25, 0.25)
+polygon = PackedVector2Array(-492, 148, -228, 292, -52, 200, 48, 264, 324, 228, 536, 40, 540, -8, 224, -220, 156, -208, 40, -252, -16, -284, -88, -288, -380, -164, -472, -140, -556, -44, -492, 84)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://t53sol1p1p4"]
+
+[ext_resource type="Texture2D" uid="uid://bqmul5hx2soob" path="res://icon.svg" id="1_1ba8l"]
+[ext_resource type="Script" path="res://сцены/scripts/кто_ты_воин.gd" id="1_li6gk"]
+
+[node name="кто ты воин" type="Area2D"]
+scale = Vector2(0.7, 0.7)
+script = ExtResource("1_li6gk")
+
+[node name="Icon" type="Sprite2D" parent="."]
+modulate = Color(0.40228, 0.476593, 0.0481922, 1)
+position = Vector2(17, 30)
+texture = ExtResource("1_1ba8l")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-28, -30, -51, 92, 71, 89, 68, -33)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
