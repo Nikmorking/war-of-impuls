@@ -2,9 +2,9 @@ extends "res://scripts/лучник.gd"
 
 
 func _ready() -> void:
-	nav = $NavigationAgent2D
 	get_player()
 	$RayCast2D.target_position.x = $Area2D/CollisionShape2D.shape.radius
+
 
 func _process(delta: float) -> void:
 	if play:
@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 			else:
 				if coll:
 					movi = true
-					$Timer2.start()
+					$move.start()
 					coll = false
 	pass
 

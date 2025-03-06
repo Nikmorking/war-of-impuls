@@ -1,0 +1,98 @@
+[gd_scene load_steps=10 format=3 uid="uid://67chr5nrw2bd"]
+
+[ext_resource type="Texture2D" uid="uid://xcaswa6m3jmo" path="res://asset/1_002.png" id="1_11r4w"]
+[ext_resource type="Texture2D" uid="uid://curb4aj7ek84m" path="res://asset/умер.png" id="2_vd8p0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tea7f"]
+font_size = 56
+
+[sub_resource type="Gradient" id="Gradient_olvew"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_8qhhn"]
+gradient = SubResource("Gradient_olvew")
+
+[sub_resource type="Gradient" id="Gradient_pm46s"]
+colors = PackedColorArray(1, 0.041864, 0.0125976, 1, 1, 0.174173, 0.127215, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_pqrum"]
+gradient = SubResource("Gradient_pm46s")
+width = 85
+height = 219
+fill = 1
+
+[sub_resource type="Gradient" id="Gradient_ouiu3"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_vnx1g"]
+gradient = SubResource("Gradient_ouiu3")
+
+[node name="UI" type="CanvasLayer"]
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 773.0
+offset_top = 444.0
+offset_right = 1107.0
+offset_bottom = 521.0
+text = "Убито:"
+label_settings = SubResource("LabelSettings_tea7f")
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 963.0
+offset_top = 445.0
+offset_right = 1297.0
+offset_bottom = 522.0
+text = "0
+"
+label_settings = SubResource("LabelSettings_tea7f")
+
+[node name="Label" type="Label" parent="."]
+z_index = 2
+offset_left = 731.0
+offset_top = 521.0
+offset_right = 1065.0
+offset_bottom = 598.0
+text = "10
+"
+label_settings = SubResource("LabelSettings_tea7f")
+
+[node name="black" type="Sprite2D" parent="."]
+visible = false
+z_index = 4
+position = Vector2(556, 316)
+scale = Vector2(19.4847, 11.2192)
+texture = SubResource("GradientTexture2D_8qhhn")
+
+[node name="black2" type="Sprite2D" parent="black"]
+z_index = 4
+position = Vector2(0.502621, 0.0500755)
+scale = Vector2(0.0245718, 0.0450357)
+texture = ExtResource("1_11r4w")
+
+[node name="Умер" type="Sprite2D" parent="black/black2"]
+texture_filter = 1
+position = Vector2(-100.002, 26.6873)
+scale = Vector2(19.7214, 24.6301)
+texture = ExtResource("2_vd8p0")
+
+[node name="hot_bar" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 644.0
+
+[node name="ProgressBar" type="TextureProgressBar" parent="hot_bar"]
+z_index = 1
+layout_mode = 0
+offset_left = 726.0
+offset_top = 525.0
+offset_right = 1081.0
+offset_bottom = 599.0
+value = 100.0
+nine_patch_stretch = true
+texture_progress = SubResource("GradientTexture2D_pqrum")
+
+[node name="Sprite2D" type="Sprite2D" parent="hot_bar"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(903, 563)
+scale = Vector2(5.90625, 1.5625)
+texture = SubResource("GradientTexture2D_vnx1g")

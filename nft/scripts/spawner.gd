@@ -14,6 +14,10 @@ func _input(event: InputEvent) -> void:
 		mob = load("res://сцены/лучник.tscn").instantiate()
 	if Input.is_action_just_pressed("spawn_3"):
 		mob = load("res://сцены/Маг.tscn").instantiate()
+	if Input.is_action_just_pressed("spawn_4"):
+		mob = load("res://сцены/баффер.tscn").instantiate()
+	if Input.is_action_just_pressed("spawn_5"):
+		mob = load("res://сцены/хиллер.tscn").instantiate()
 	if mob:
 		get_parent().add_child(mob)
 		mob.global_position = global_position

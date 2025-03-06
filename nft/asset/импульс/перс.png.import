@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfo25fa3qyjii"
-path="res://.godot/imported/перс.png-0906ba86a40fdb27de460c91f3e1000f.ctex"
+path="res://.godot/imported/перс.png-40bc2a5e14d675acbd1651b6b8517d5a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Импульс/перс.png"
-dest_files=["res://.godot/imported/перс.png-0906ba86a40fdb27de460c91f3e1000f.ctex"]
+source_file="res://asset/импульс/перс.png"
+dest_files=["res://.godot/imported/перс.png-40bc2a5e14d675acbd1651b6b8517d5a.ctex"]
 
 [params]
 
