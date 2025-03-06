@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://s70gl81i4sra" path="res://asset/Tile/Doors.png" id="3_kga8w"]
 [ext_resource type="Texture2D" uid="uid://vlknd2cx6mdb" path="res://asset/Tile/Fences.png" id="4_i1d2h"]
 [ext_resource type="Texture2D" uid="uid://cqe4kcqudd2gw" path="res://asset/Simple_Milk_and_grass_item.png" id="4_i6pwp"]
-[ext_resource type="Texture2D" uid="uid://cpvm5vb5v3udf" path="res://asset/Могила 1.png" id="5_02j8x"]
+[ext_resource type="Texture2D" uid="uid://b0ebu7rshs0ku" path="res://asset/Могила 1.png" id="5_02j8x"]
 [ext_resource type="Texture2D" uid="uid://bhkos5e1h5nkp" path="res://asset/Basic_Furniture.png" id="10_m8dof"]
 [ext_resource type="Texture2D" uid="uid://dhw15h6vqprtr" path="res://asset/Basic_tools_and_meterials.png" id="11_xo87f"]
 [ext_resource type="Texture2D" uid="uid://b1nvd8ynqk126" path="res://asset/Chest.png" id="12_n1dhr"]
@@ -124,9 +124,13 @@ texture = ExtResource("4_i6pwp")
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ouj1b"]
 texture = ExtResource("5_02j8x")
 0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r35po"]
 texture = ExtResource("3_kga8w")
@@ -318,10 +322,13 @@ texture = ExtResource("2_3v4su")
 texture = ExtResource("3_51e4i")
 0:0/0 = 0
 0:0/0/terrain_set = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
 1:0/0/terrain_set = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:0/0 = 0
 2:0/0/terrain_set = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:0/0 = 0
 3:0/0/terrain_set = 0
 3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
