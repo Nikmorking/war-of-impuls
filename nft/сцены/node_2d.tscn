@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://4djwuwrs0w6c" path="res://сцены/благословение_разработчиков.tscn" id="16_j0px8"]
 [ext_resource type="PackedScene" uid="uid://clqv6yyoxgnqj" path="res://сцены/плюшка.tscn" id="17_cu5hi"]
 [ext_resource type="PackedScene" uid="uid://7u76mprjcajy" path="res://сцены/бан_банан.tscn" id="18_aq7xu"]
+[ext_resource type="PackedScene" uid="uid://b7uhx10lrhkix" path="res://сцены/живая липёшка.tscn" id="19_ub8gm"]
 [ext_resource type="PackedScene" uid="uid://bfll4fq7s6i5t" path="res://сцены/door.tscn" id="19_2rpn0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5mvxk"]
@@ -312,7 +313,8 @@ position = Vector2(705, 304)
 position = Vector2(707, 271)
 
 [node name="UI" parent="." instance=ExtResource("8_18ble")]
-
+[node name="Плюшка2" parent="." instance=ExtResource("19_ub8gm")]
+position = Vector2(359, 289)
 [node name="AnimatedSprite2D" parent="." instance=ExtResource("19_2rpn0")]
 texture_filter = 1
 position = Vector2(680, 277)

@@ -1,11 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://1l5mxwahi5km"]
+[gd_scene load_steps=9 format=3 uid="uid://b01p1kogn4yw1"]
 
-[ext_resource type="Script" path="res://scripts/хиллер.gd" id="1_1y525"]
-[ext_resource type="Texture2D" uid="uid://brgqrefftbq2v" path="res://asset/враги/хилер.png" id="2_1rupd"]
-[ext_resource type="PackedScene" uid="uid://0uc8e6pla322" path="res://сцены/hot_bar.tscn" id="3_4xlgy"]
+[ext_resource type="Script" path="res://scripts/хиллер.gd" id="1_carrl"]
+[ext_resource type="Texture2D" uid="uid://brgqrefftbq2v" path="res://asset/враги/хилер.png" id="2_4kg85"]
+[ext_resource type="PackedScene" uid="uid://0uc8e6pla322" path="res://сцены/hot_bar.tscn" id="3_xllpx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ourww"]
-radius = 57.2142
+radius = 35.7143
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c1qyd"]
 radius = 4.28571
@@ -21,23 +21,22 @@ tangential_accel_max = -2.23517e-06
 
 [sub_resource type="Gradient" id="Gradient_dpocx"]
 offsets = PackedFloat32Array(0, 0.220779)
-colors = PackedColorArray(0.283023, 0.629978, 0, 1, 0, 0, 0, 0)
+colors = PackedColorArray(0.282353, 0.631373, 1, 1, 0.28485, 0.28485, 0.28485, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_0cfkk"]
 gradient = SubResource("Gradient_dpocx")
 fill = 1
 fill_from = Vector2(0.513761, 0.518349)
 
-[node name="хиллер" type="CharacterBody2D"]
+[node name="лепёшка" type="CharacterBody2D"]
 scale = Vector2(0.7, 0.7)
 collision_layer = 4
 collision_mask = 6
-script = ExtResource("1_1y525")
+script = ExtResource("1_carrl")
 add_health = 2
-playe = true
 max_health = 60
 SPEED = 60
-tipy = "хиллер"
+tipy = "леп"
 damage = 1
 
 [node name="Timer" type="Timer" parent="."]
@@ -52,8 +51,6 @@ avoidance_mask = 3
 debug_enabled = true
 
 [node name="Area2D2" type="Area2D" parent="."]
-collision_layer = 2
-collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
 shape = SubResource("CircleShape2D_ourww")
@@ -63,14 +60,15 @@ position = Vector2(0, 2.85714)
 shape = SubResource("CapsuleShape2D_c1qyd")
 
 [node name="Воин" type="Sprite2D" parent="."]
+modulate = Color(0, 0.503066, 0.966168, 1)
 texture_filter = 1
-texture = ExtResource("2_1rupd")
+texture = ExtResource("2_4kg85")
 
 [node name="Timer2" type="Timer" parent="."]
 wait_time = 2.0
 autostart = true
 
-[node name="hot_bar" parent="." instance=ExtResource("3_4xlgy")]
+[node name="hot_bar" parent="." instance=ExtResource("3_xllpx")]
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 position = Vector2(-1.42857, -15.7143)

@@ -26,6 +26,8 @@ func _on_body_entered(body: Node2D) -> void:
 				body.Shoot()
 				queue_free()
 		if body is Enemy:
+			if body.tipy == "леп":
+				return
 			body.health -= damage
 			if body.tipy =="враг":
 				if xz == true:
