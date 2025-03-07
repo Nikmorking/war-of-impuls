@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b7uhx10lrhkix"]
+[gd_scene load_steps=4 format=3 uid="uid://b7uhx10lrhkix"]
 
 [ext_resource type="Script" path="res://asset/живая_липёшка.gd" id="1_cv5s4"]
 [ext_resource type="Texture2D" uid="uid://bqmul5hx2soob" path="res://icon.svg" id="2_m4kuc"]
+[ext_resource type="LabelSettings" uid="uid://cs8r7esmmlr1u" path="res://asset/new_label_settings.tres" id="3_c5jpi"]
 
 [node name="Плюшка" type="Area2D"]
 scale = Vector2(0.1, 0.1)
@@ -13,5 +14,15 @@ texture = ExtResource("2_m4kuc")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-54, -64, -64, -53, -64, 54, -53, 64, 52, 64, 64, 53, 64, -54, 53, -64)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -238.0
+offset_top = -213.0
+offset_right = 269.0
+offset_bottom = -85.0
+text = "Живая лепёшка.
+Хиллер, регенерирует ХП игрока, 
+тратит своё, бегает за игроком."
+label_settings = ExtResource("3_c5jpi")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

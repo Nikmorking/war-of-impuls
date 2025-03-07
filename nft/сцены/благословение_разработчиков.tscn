@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://4djwuwrs0w6c"]
+[gd_scene load_steps=4 format=3 uid="uid://4djwuwrs0w6c"]
 
 [ext_resource type="Script" path="res://scripts/благословение_разработчиков.gd" id="1_11uc5"]
 [ext_resource type="Texture2D" uid="uid://cjiiysiupacuk" path="res://asset/Плюшки/благословение разработчиков.png" id="2_ehw7c"]
+[ext_resource type="LabelSettings" uid="uid://cs8r7esmmlr1u" path="res://asset/new_label_settings.tres" id="3_3fg2q"]
 
 [node name="Благословение разработчиков" type="Area2D"]
 scale = Vector2(0.1, 0.1)
@@ -14,5 +15,15 @@ polygon = PackedVector2Array(-64, -53, -64, 54, -53, 64, 52, 64, 64, 54, 64, -54
 texture_filter = 1
 scale = Vector2(3.75, 3.75)
 texture = ExtResource("2_ehw7c")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -270.0
+offset_top = -200.0
+offset_right = 312.0
+offset_bottom = -72.0
+text = "Даёт бессмертие и бесконечный
+ боезопас, нопри этом
+ уничтожаеть все остальные плюшки."
+label_settings = ExtResource("3_3fg2q")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

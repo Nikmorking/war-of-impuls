@@ -1,18 +1,41 @@
-[gd_scene load_steps=3 format=3 uid="uid://b5pconoux0nrw"]
+[gd_scene load_steps=5 format=3 uid="uid://b5pconoux0nrw"]
 
 [ext_resource type="Script" path="res://scripts/тапок_алексей_сергеевича.gd" id="1_s80lq"]
 [ext_resource type="Texture2D" uid="uid://b8pewlpg641o4" path="res://asset/Плюшки/тапок_вид_какбафф.png" id="2_6qnqo"]
 
+[sub_resource type="FontVariation" id="FontVariation_hwf4v"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5s6lw"]
+line_spacing = 1.0
+font = SubResource("FontVariation_hwf4v")
+font_size = 30
+font_color = Color(1, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 1)
+
 [node name="Тапок Алексей Сергеевича" type="Area2D"]
 texture_filter = 1
+scale = Vector2(0.1, 0.1)
 script = ExtResource("1_s80lq")
 damage_up = 10
 
 [node name="ТапокВидКакбафф" type="Sprite2D" parent="."]
 position = Vector2(-1, 4)
+scale = Vector2(10, 10)
 texture = ExtResource("2_6qnqo")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-4, 10, 2, 10, 4, 8, 4, -4, 6, -7, 3, -9, -5, -9, -8, -7, -6, -4, -6, 8)
+position = Vector2(9, -35)
+scale = Vector2(10, 10)
+polygon = PackedVector2Array(-4, 10, 2, 10, 4, 8, 4, -4, 5.1, -6.8, 3, -9, -5, -9, -7.3, -6.7, -6, -4, -6, 8)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -199.0
+offset_top = -261.0
+offset_right = 216.0
+offset_bottom = -133.0
+text = "Тапок Алексей Сергеевича.
+пробиваемость врагов,
+добавляет урон"
+label_settings = SubResource("LabelSettings_5s6lw")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

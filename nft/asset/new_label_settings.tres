@@ -1,0 +1,10 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://cs8r7esmmlr1u"]
+
+[sub_resource type="FontVariation" id="FontVariation_fq3fu"]
+
+[resource]
+line_spacing = 1.0
+font = SubResource("FontVariation_fq3fu")
+font_size = 30
+font_color = Color(1, 0, 0.15, 1)
+shadow_color = Color(0, 0, 0, 0.780392)

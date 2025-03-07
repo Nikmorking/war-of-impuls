@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://wdvne2tixe4v"]
+[gd_scene load_steps=4 format=3 uid="uid://wdvne2tixe4v"]
 
 [ext_resource type="Script" path="res://scripts/кастеты_бога_фараона.gd" id="1_oht7c"]
 [ext_resource type="Texture2D" uid="uid://bqmul5hx2soob" path="res://icon.svg" id="1_wbi04"]
+[ext_resource type="LabelSettings" uid="uid://cs8r7esmmlr1u" path="res://asset/new_label_settings.tres" id="3_y0tv4"]
 
 [node name="Кастеты бога фараона" type="Area2D"]
 scale = Vector2(0.1, 0.1)
@@ -12,5 +13,15 @@ texture = ExtResource("1_wbi04")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-60, 60, 60, 60, 60, -60, -60, -60)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 210.0
+offset_bottom = -72.0
+text = "Кастет бога фараона.
+Увиличает уран 
+и пробивают противников"
+label_settings = ExtResource("3_y0tv4")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

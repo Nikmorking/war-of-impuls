@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bqjsy2bjxycrc"]
+[gd_scene load_steps=4 format=3 uid="uid://bqjsy2bjxycrc"]
 
 [ext_resource type="Texture2D" uid="uid://bqmul5hx2soob" path="res://icon.svg" id="1_b5scp"]
 [ext_resource type="Script" path="res://scripts/sonic_mode.gd" id="1_iq7go"]
+[ext_resource type="LabelSettings" uid="uid://cs8r7esmmlr1u" path="res://asset/new_label_settings.tres" id="3_3f02i"]
 
 [node name="Sonic mode" type="Area2D"]
 scale = Vector2(0.1, 0.1)
@@ -15,5 +16,16 @@ polygon = PackedVector2Array(234, 85, 234, 192, 246, 202, 353, 201, 362, 189, 36
 modulate = Color(0.634576, 0.992534, 0.912946, 1)
 position = Vector2(46, 68)
 texture = ExtResource("1_b5scp")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -100.0
+offset_top = -150.0
+offset_right = 175.0
+offset_bottom = -22.0
+text = "Sonic mode.
+Делает скорость и 
+замедляет врагов
+"
+label_settings = ExtResource("3_3f02i")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

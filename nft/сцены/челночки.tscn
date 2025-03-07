@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bp34hrsjcwqh5"]
+[gd_scene load_steps=4 format=3 uid="uid://bp34hrsjcwqh5"]
 
 [ext_resource type="Script" path="res://scripts/челночки.gd" id="1_nwojb"]
 [ext_resource type="Texture2D" uid="uid://c3higvfk1rfr4" path="res://asset/chelnochek_posolskiy_na_razves_250_g.png" id="2_u7c06"]
+[ext_resource type="LabelSettings" uid="uid://cs8r7esmmlr1u" path="res://asset/new_label_settings.tres" id="3_ucnkg"]
 
 [node name="челночки" type="Area2D"]
 scale = Vector2(0.1, 0.1)
@@ -15,4 +16,17 @@ texture = ExtResource("2_u7c06")
 scale = Vector2(0.25, 0.25)
 polygon = PackedVector2Array(-492, 148, -228, 292, -52, 200, 48, 264, 324, 228, 536, 40, 540, -8, 224, -220, 156, -208, 40, -252, -16, -284, -88, -288, -380, -164, -472, -140, -556, -44, -492, 84)
 
+[node name="Label" type="Label" parent="."]
+z_index = 8
+offset_left = -300.0
+offset_top = -210.0
+offset_right = 314.0
+offset_bottom = -82.0
+text = "Челноченочёк.
+Максимальное хп увеличивает в 2 раза.
+Максимальный хил."
+label_settings = ExtResource("3_ucnkg")
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="mouse_shape_entered" from="." to="." method="_on_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="." to="." method="_on_mouse_shape_exited"]

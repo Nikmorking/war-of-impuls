@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://clqv6yyoxgnqj"]
+[gd_scene load_steps=4 format=3 uid="uid://clqv6yyoxgnqj"]
 
 [ext_resource type="Script" path="res://scripts/плюшка.gd" id="1_qhsy4"]
 [ext_resource type="Texture2D" uid="uid://bqmul5hx2soob" path="res://icon.svg" id="2_84gkh"]
+[ext_resource type="LabelSettings" uid="uid://cs8r7esmmlr1u" path="res://asset/new_label_settings.tres" id="3_kps5p"]
 
 [node name="Плюшка" type="Area2D"]
 scale = Vector2(0.1, 0.1)
@@ -12,5 +13,14 @@ texture = ExtResource("2_84gkh")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-54, -64, -64, -53, -64, 54, -53, 64, 52, 64, 64, 53, 64, -54, 53, -64)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -170.0
+offset_top = -190.0
+offset_right = 204.0
+offset_bottom = -17.0
+text = "Восстанавливает хиты и
+ увеличивает урон."
+label_settings = ExtResource("3_kps5p")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
