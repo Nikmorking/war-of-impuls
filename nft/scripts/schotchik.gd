@@ -1,9 +1,9 @@
 extends Node2D
 
-
+@onready var door:AnimatedSprite2D = get_node("AnimatedSprite2D")
 var schot = 0
 @export var nid = 10
-@export var win = 40
+@export var win = 10
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -17,7 +17,7 @@ func kill()->void:
 		chel.global_position = get_node("Spawn_pos").position
 		nid *= 2
 		if(schot == win):
-			get_parent()._on_win_button_pressed()
+			Open_door()
 	schot += 1
 	get_node("UI/Label3").text = str(schot)
 	pass
@@ -27,3 +27,13 @@ func kill()->void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+func Open_door():
+	door.play("default")
+	door.get_node("StaticBody2D").queue_free()
+	pass
+
+
+func _on_animated_sprite_2d_animation_finished() -> void:
+	door.stop()
+	pass # Replace with function body.
