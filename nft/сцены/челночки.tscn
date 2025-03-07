@@ -17,6 +17,7 @@ scale = Vector2(0.25, 0.25)
 polygon = PackedVector2Array(-492, 148, -228, 292, -52, 200, 48, 264, 324, 228, 536, 40, 540, -8, 224, -220, 156, -208, 40, -252, -16, -284, -88, -288, -380, -164, -472, -140, -556, -44, -492, 84)
 
 [node name="Label" type="Label" parent="."]
+visible = false
 z_index = 8
 offset_left = -300.0
 offset_top = -210.0
@@ -28,5 +29,6 @@ text = "Челноченочёк.
 label_settings = ExtResource("3_ucnkg")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_shape_entered" from="." to="." method="_on_mouse_shape_entered"]
 [connection signal="mouse_shape_exited" from="." to="." method="_on_mouse_shape_exited"]

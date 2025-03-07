@@ -38,7 +38,8 @@ func _on_body_entered(body: Node2D) -> void:
 			stop = true
 			print("gg")
 			if vampirism == true:
-				get_tree().root.get_node(vamp).health += 10
+				if get_tree().root.get_node(vamp).health < get_tree().root.get_node(vamp).max_health:
+					get_tree().root.get_node(vamp).health += 10
 			body.health -= damage
 			body.vis_health()
 			if(body.health <= 0):

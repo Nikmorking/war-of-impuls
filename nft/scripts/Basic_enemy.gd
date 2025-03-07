@@ -50,6 +50,8 @@ func get_player() -> void:
 
 func tik() -> void:
 	$hot_bar.visible = false
+	if health <= 0:
+		queue_free()
 	if($GPUParticles2D != null):
 		$GPUParticles2D.emitting = false
 	pass # Replace with function body.

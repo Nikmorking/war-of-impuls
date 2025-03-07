@@ -23,3 +23,8 @@ func _on_mouse_shape_exited(shape_idx: int) -> void:
 	$Label.visible = false
 	print("EEEy6uty")
 	pass # Replace with function body.
+
+func _on_mouse_entered() -> void:
+	$Label.visible = true
+	print("EEEy6uty")
+	pass # Replace with function body.
