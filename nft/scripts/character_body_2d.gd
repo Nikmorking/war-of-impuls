@@ -87,7 +87,7 @@ func shoot() -> void:
 	if pulla == 1:
 		pyl = load("res://сцены/Тапок.tscn").instantiate()
 	if pulla == 2:
-		pyl = load("res://сцены/Тапок.tscn").instantiate()
+		pyl = load("res://сцены/банан.tscn").instantiate()
 	get_parent().get_node("Пули").add_child(pyl)
 	pyl.vamp = get_path()
 	pyl.global_position = position
@@ -130,5 +130,5 @@ func Shoot() -> void:
 
 
 func _on_timer_2_timeout() -> void:
-	Gg.get_papa(2, self)._on_lose_button_pressed()
+	#Gg.get_papa(2, self)._on_lose_button_pressed()
 	pass # Replace with function body.

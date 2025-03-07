@@ -9,11 +9,9 @@ func _on_body_entered(body: Node2D) -> void:
 			print("xx")
 			if(body.max_health != body.health):
 				xp = body.health
-				xp = xp / 100.0
-				print(xp)
-				xp=xp*22
+				xp *= 0.22
+				xp = round(xp) 
 				body.health = body.health + xp
-				body.health = body.health/1
 				body.vis_health()
 				queue_free()
 	pass

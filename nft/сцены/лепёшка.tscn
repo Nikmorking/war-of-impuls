@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://0uc8e6pla322" path="res://сцены/hot_bar.tscn" id="3_xllpx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ourww"]
-radius = 57.2142
+radius = 35.7143
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c1qyd"]
 radius = 4.28571
@@ -21,7 +21,7 @@ tangential_accel_max = -2.23517e-06
 
 [sub_resource type="Gradient" id="Gradient_dpocx"]
 offsets = PackedFloat32Array(0, 0.220779)
-colors = PackedColorArray(0.282353, 0.631373, 1, 1, 0, 0, 0, 0)
+colors = PackedColorArray(0.282353, 0.631373, 1, 1, 0.28485, 0.28485, 0.28485, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_0cfkk"]
 gradient = SubResource("Gradient_dpocx")
