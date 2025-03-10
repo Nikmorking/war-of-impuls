@@ -1,5 +1,4 @@
-extends Area2D
-
+extends Pluha
 @export var vampirism = 10
 
 

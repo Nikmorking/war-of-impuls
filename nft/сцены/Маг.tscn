@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://c07orr4dvp474"]
 
 [ext_resource type="Texture2D" uid="uid://cqcvb3eymgtxv" path="res://asset/враги/маг.png" id="1_eufb3"]
-[ext_resource type="Script" path="res://scripts/маг.gd" id="1_recxx"]
+[ext_resource type="Script" uid="uid://irq03msf603e" path="res://scripts/маг.gd" id="1_recxx"]
 [ext_resource type="PackedScene" uid="uid://0uc8e6pla322" path="res://сцены/hot_bar.tscn" id="3_wa10y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hih16"]

@@ -37,3 +37,8 @@ func Open_door():
 func _on_animated_sprite_2d_animation_finished() -> void:
 	door.stop()
 	pass # Replace with function body.
+
+
+func _on_button_button_down() -> void:
+	visible = false
+	pass # Replace with function body.

@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://cclgniu6713f1"]
 
-[ext_resource type="Script" path="res://scripts/schotchik.gd" id="1_4x28k"]
+[ext_resource type="Script" uid="uid://cvm68rnphqup8" path="res://scripts/schotchik.gd" id="1_4x28k"]
 [ext_resource type="PackedScene" uid="uid://ciehno2dtgtce" path="res://сцены/player.tscn" id="1_ryomp"]
 [ext_resource type="PackedScene" uid="uid://67chr5nrw2bd" path="res://сцены/ui.tscn" id="2_yctm1"]
-[ext_resource type="Script" path="res://scripts/spawner.gd" id="3_v660h"]
+[ext_resource type="Script" uid="uid://dww5rlw26uo0c" path="res://scripts/spawner.gd" id="3_v660h"]
 [ext_resource type="PackedScene" uid="uid://c80agmnknnt3a" path="res://сцены/portal.tscn" id="4_hr8hk"]
 [ext_resource type="PackedScene" uid="uid://m7id8i2fut7e" path="res://сцены/New_ location2.tscn" id="4_khoe1"]
 [ext_resource type="PackedScene" uid="uid://b5pconoux0nrw" path="res://сцены/тапок_алексей_сергеевича.tscn" id="6_eppjq"]

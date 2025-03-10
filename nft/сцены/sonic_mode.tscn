@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bqjsy2bjxycrc"]
 
 [ext_resource type="Texture2D" uid="uid://bqmul5hx2soob" path="res://icon.svg" id="1_b5scp"]
-[ext_resource type="Script" path="res://scripts/sonic_mode.gd" id="1_iq7go"]
+[ext_resource type="Script" uid="uid://c0lo84j010syp" path="res://scripts/sonic_mode.gd" id="1_iq7go"]
 [ext_resource type="LabelSettings" uid="uid://cs8r7esmmlr1u" path="res://asset/new_label_settings.tres" id="3_3f02i"]
 
 [node name="Sonic mode" type="Area2D"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b7uhx10lrhkix"]
 
-[ext_resource type="Script" path="res://asset/живая_липёшка.gd" id="1_cv5s4"]
+[ext_resource type="Script" uid="uid://p3mbjmq78pej" path="res://asset/живая_липёшка.gd" id="1_cv5s4"]
 [ext_resource type="Texture2D" uid="uid://bqmul5hx2soob" path="res://icon.svg" id="2_m4kuc"]
 [ext_resource type="LabelSettings" uid="uid://cs8r7esmmlr1u" path="res://asset/new_label_settings.tres" id="3_c5jpi"]
 
@@ -8,14 +8,17 @@
 scale = Vector2(0.1, 0.1)
 script = ExtResource("1_cv5s4")
 
-[node name="Icon" type="Sprite2D" parent="."]
-modulate = Color(1, 0, 1, 1)
-texture = ExtResource("2_m4kuc")
-
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(1, 1)
 polygon = PackedVector2Array(-54, -64, -64, -53, -64, 54, -53, 64, 52, 64, 64, 53, 64, -54, 53, -64)
 
+[node name="Icon" type="Sprite2D" parent="."]
+modulate = Color(1, 0, 1, 1)
+z_index = 1
+texture = ExtResource("2_m4kuc")
+
 [node name="Label" type="Label" parent="."]
+visible = false
 offset_left = -238.0
 offset_top = -213.0
 offset_right = 269.0
@@ -25,4 +28,13 @@ text = "Живая лепёшка.
 тратит своё, бегает за игроком."
 label_settings = ExtResource("3_c5jpi")
 
+[node name="Button" type="Button" parent="."]
+offset_left = -60.0
+offset_top = -60.0
+offset_right = 60.0
+offset_bottom = 60.0
+flat = true
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="mouse_entered" from="Button" to="." method="_mouse_enter"]
+[connection signal="mouse_exited" from="Button" to="." method="_mouse_exit"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://1l5mxwahi5km"]
 
-[ext_resource type="Script" path="res://scripts/хиллер.gd" id="1_1y525"]
+[ext_resource type="Script" uid="uid://cresyju63ldqv" path="res://scripts/хиллер.gd" id="1_1y525"]
 [ext_resource type="Texture2D" uid="uid://brgqrefftbq2v" path="res://asset/враги/хилер.png" id="2_1rupd"]
 [ext_resource type="PackedScene" uid="uid://0uc8e6pla322" path="res://сцены/hot_bar.tscn" id="3_4xlgy"]
 

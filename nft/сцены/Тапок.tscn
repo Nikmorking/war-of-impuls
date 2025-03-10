@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://mk4sb7fag675"]
 
-[ext_resource type="Script" path="res://scripts/пуля.gd" id="1_j2v0r"]
+[ext_resource type="Script" uid="uid://bd7fs137o81vd" path="res://scripts/пуля.gd" id="1_j2v0r"]
 [ext_resource type="Texture2D" uid="uid://drcqim48i1g04" path="res://asset/лапа импульса с тапком.png" id="2_lhrip"]
 
 [node name="Тапок" type="Area2D"]

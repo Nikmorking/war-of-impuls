@@ -1,4 +1,4 @@
-extends Area2D
+extends Pluha
 
 @export var Speed_ap = 500
 @export var Speed_down = 0.1

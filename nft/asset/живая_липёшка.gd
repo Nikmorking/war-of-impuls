@@ -1,4 +1,4 @@
-extends Area2D
+extends Pluha
 
 
 @export var damage_up = 5

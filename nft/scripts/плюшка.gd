@@ -1,4 +1,4 @@
-extends Area2D
+extends Pluha
 
 @export var vost_xp = 10
 var xp

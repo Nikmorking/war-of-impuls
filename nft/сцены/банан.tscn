@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bbonfsa5m32a5"]
 
-[ext_resource type="Script" path="res://scripts/пуля.gd" id="1_j3h65"]
+[ext_resource type="Script" uid="uid://bd7fs137o81vd" path="res://scripts/пуля.gd" id="1_j3h65"]
 [ext_resource type="Texture2D" uid="uid://dglw0iari2vc2" path="res://asset/Плюшки/бан-банан.png" id="2_0ys71"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2fmtn"]

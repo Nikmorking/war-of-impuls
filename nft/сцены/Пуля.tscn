@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dy00tgqfpnr0o"]
 
-[ext_resource type="Script" path="res://scripts/пуля.gd" id="1_qs21c"]
+[ext_resource type="Script" uid="uid://bd7fs137o81vd" path="res://scripts/пуля.gd" id="1_qs21c"]
 [ext_resource type="Texture2D" uid="uid://5vdp3doi7o1e" path="res://asset/лапа импульса.png" id="2_i1i4b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2fmtn"]

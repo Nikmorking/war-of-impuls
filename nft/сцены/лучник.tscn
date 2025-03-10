@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://b088uqy5qe8w0"]
 
 [ext_resource type="Texture2D" uid="uid://c5mfpqfbm6mr4" path="res://asset/враги/лучник.png" id="1_0qstw"]
-[ext_resource type="Script" path="res://scripts/лучник.gd" id="1_a1ml1"]
+[ext_resource type="Script" uid="uid://cmjmgsooorbjm" path="res://scripts/лучник.gd" id="1_a1ml1"]
 [ext_resource type="PackedScene" uid="uid://0uc8e6pla322" path="res://сцены/hot_bar.tscn" id="3_ka1la"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6etvj"]

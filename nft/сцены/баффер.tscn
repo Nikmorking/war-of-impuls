@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://djngqv8khyndx"]
 
-[ext_resource type="Script" path="res://scripts/баффер.gd" id="1_0qyse"]
+[ext_resource type="Script" uid="uid://x0mo42hhkcvp" path="res://scripts/баффер.gd" id="1_0qyse"]
 [ext_resource type="Texture2D" uid="uid://dft2x6pbywysk" path="res://asset/враги/баффер.png" id="2_78eo3"]
 [ext_resource type="PackedScene" uid="uid://0uc8e6pla322" path="res://сцены/hot_bar.tscn" id="3_u2q6t"]
 

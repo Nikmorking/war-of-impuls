@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bp34hrsjcwqh5"]
 
-[ext_resource type="Script" path="res://scripts/челночки.gd" id="1_nwojb"]
+[ext_resource type="Script" uid="uid://cygm5ucod3bka" path="res://scripts/челночки.gd" id="1_nwojb"]
 [ext_resource type="Texture2D" uid="uid://c3higvfk1rfr4" path="res://asset/chelnochek_posolskiy_na_razves_250_g.png" id="2_u7c06"]
 [ext_resource type="LabelSettings" uid="uid://cs8r7esmmlr1u" path="res://asset/new_label_settings.tres" id="3_ucnkg"]
 

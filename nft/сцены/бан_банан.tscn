@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://7u76mprjcajy"]
 
-[ext_resource type="Script" path="res://scripts/бан_банан.gd" id="1_tnoxo"]
+[ext_resource type="Script" uid="uid://enpig1bpmil8" path="res://scripts/бан_банан.gd" id="1_tnoxo"]
 [ext_resource type="Texture2D" uid="uid://bqmul5hx2soob" path="res://icon.svg" id="2_gy1kx"]
 [ext_resource type="LabelSettings" uid="uid://cs8r7esmmlr1u" path="res://asset/new_label_settings.tres" id="3_e12h7"]
 

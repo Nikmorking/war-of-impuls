@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://b5pconoux0nrw"]
 
-[ext_resource type="Script" path="res://scripts/тапок_алексей_сергеевича.gd" id="1_s80lq"]
+[ext_resource type="Script" uid="uid://ds8ndpcayddhk" path="res://scripts/тапок_алексей_сергеевича.gd" id="1_s80lq"]
 [ext_resource type="Texture2D" uid="uid://b8pewlpg641o4" path="res://asset/Плюшки/тапок_вид_какбафф.png" id="2_6qnqo"]
 
 [sub_resource type="FontVariation" id="FontVariation_hwf4v"]

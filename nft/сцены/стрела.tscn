@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cwyvd8mk3x2j8"]
 
-[ext_resource type="Script" path="res://scripts/стрела.gd" id="1_6r4hr"]
+[ext_resource type="Script" uid="uid://xp6x17lklx6x" path="res://scripts/стрела.gd" id="1_6r4hr"]
 [ext_resource type="Texture2D" uid="uid://dsaw0twid18ra" path="res://asset/стрела.png" id="2_viajs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6r68a"]

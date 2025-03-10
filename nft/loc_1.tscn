@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bxw8domsqb8r1"]
 
-[ext_resource type="Script" path="res://scripts/schotchik.gd" id="1_y0aeb"]
+[ext_resource type="Script" uid="uid://cvm68rnphqup8" path="res://scripts/schotchik.gd" id="1_y0aeb"]
 [ext_resource type="PackedScene" uid="uid://m7id8i2fut7e" path="res://сцены/New_ location2.tscn" id="2_xpcoo"]
 
 [node name="Node2D" type="Node2D"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://4djwuwrs0w6c"]
 
-[ext_resource type="Script" path="res://scripts/благословение_разработчиков.gd" id="1_11uc5"]
+[ext_resource type="Script" uid="uid://dcrq5hoo6m20w" path="res://scripts/благословение_разработчиков.gd" id="1_11uc5"]
 [ext_resource type="Texture2D" uid="uid://cjiiysiupacuk" path="res://asset/Плюшки/благословение разработчиков.png" id="2_ehw7c"]
 [ext_resource type="LabelSettings" uid="uid://cs8r7esmmlr1u" path="res://asset/new_label_settings.tres" id="3_3fg2q"]
 
