@@ -412,6 +412,10 @@ unique_name_in_owner = true
 visible = false
 custom_minimum_size = Vector2(128, 40)
 layout_mode = 2
+offset_left = -142.827
+offset_top = 163.855
+offset_right = -14.8266
+offset_bottom = 203.855
 text = "Level Select"
 
 [node name="OptionsButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="3"]
@@ -456,4 +460,3 @@ theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 32
 
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/ContinueGameButton" to="." method="_on_continue_game_button_pressed"]
-[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/LevelSelectButton" to="." method="_on_level_select_button_pressed"]

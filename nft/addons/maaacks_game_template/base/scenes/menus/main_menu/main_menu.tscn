@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://c6k5nnpbypshi"]
+[gd_scene load_steps=17 format=3 uid="uid://c6k5nnpbypshi"]
 
 [ext_resource type="Script" path="res://addons/maaacks_game_template/base/scenes/menus/main_menu/main_menu.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://hmx6o472ropw" path="res://addons/maaacks_game_template/base/scenes/menus/options_menu/master_options_menu_with_tabs.tscn" id="2_qvrrd"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bkvvhwvnbm4p5" path="res://asset/Menu/Выйти.png" id="9_5ujlv"]
 [ext_resource type="Texture2D" uid="uid://b3ggasrsxoe2m" path="res://asset/Menu/Начать.png" id="9_w3x8u"]
 [ext_resource type="Texture2D" uid="uid://yruxpocfduqd" path="res://asset/Menu/Настройки.png" id="12_nt3vw"]
+[ext_resource type="Texture2D" uid="uid://lhhxvm51y80a" path="res://asset/Menu/Фон 1.png" id="13_jwtbk"]
 [ext_resource type="Texture2D" uid="uid://dmsd1pj4socqh" path="res://asset/Menu/Заново.png" id="13_qbvht"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_scwn4"]
@@ -87,6 +88,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -316.0
+offset_right = -316.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -169,6 +172,12 @@ scale = Vector2(1.60759, 1.39132)
 flat = true
 icon_alignment = 1
 
+[node name="Начать" type="Sprite2D" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/NewGameButton"]
+texture_filter = 1
+position = Vector2(52.2521, 14.2002)
+scale = Vector2(1.2441, 1.43748)
+texture = ExtResource("9_w3x8u")
+
 [node name="OptionsButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer"]
 unique_name_in_owner = true
 clip_contents = true
@@ -182,14 +191,19 @@ text = "
 "
 flat = true
 
+[node name="Настройки" type="Sprite2D" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/OptionsButton"]
+position = Vector2(30.9085, 33.4283)
+scale = Vector2(1.22936, 1.19945)
+texture = ExtResource("12_nt3vw")
+
 [node name="CreditsButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(128, 40)
 layout_mode = 2
-offset_left = 12.3034
-offset_top = 381.374
-offset_right = 199.303
-offset_bottom = 421.374
+offset_left = 363.753
+offset_top = 147.398
+offset_right = 550.753
+offset_bottom = 187.398
 text = "Credits"
 
 [node name="ExitButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer"]
@@ -202,22 +216,11 @@ offset_right = 171.686
 offset_bottom = 254.904
 flat = true
 
-[node name="Выйти" type="Sprite2D" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer"]
+[node name="Выйти" type="Sprite2D" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/ExitButton"]
 texture_filter = 1
-position = Vector2(94.8343, 234.613)
+position = Vector2(85.1479, 19.709)
 scale = Vector2(2, 2)
 texture = ExtResource("9_5ujlv")
-
-[node name="Начать" type="Sprite2D" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer"]
-texture_filter = 1
-position = Vector2(91.489, 167.155)
-scale = Vector2(2, 2)
-texture = ExtResource("9_w3x8u")
-
-[node name="Настройки" type="Sprite2D" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer"]
-position = Vector2(202.204, 162.424)
-scale = Vector2(1, 1.181)
-texture = ExtResource("12_nt3vw")
 
 [node name="Заново" type="Sprite2D" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer"]
 position = Vector2(202.204, 230.398)
@@ -271,6 +274,13 @@ offset_top = -40.0
 offset_right = 62.0
 grow_vertical = 0
 text = "Back"
+
+[node name="Фон1" type="Sprite2D" parent="."]
+z_index = -1
+texture_filter = 1
+position = Vector2(576, 324)
+scale = Vector2(9, 7.36364)
+texture = ExtResource("13_jwtbk")
 
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/NewGameButton" to="." method="_on_new_game_button_pressed"]
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]

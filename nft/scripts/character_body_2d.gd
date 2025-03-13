@@ -34,7 +34,8 @@ func _input(_event: InputEvent) -> void:
 			if lapka == 0:
 				lapka = 1
 				$Icon.texture = load("res://asset/импульс/импульс2.png")
-	#if Input.is_action_just_released("devlog"):
+	if Input.is_action_just_released("devlog"):
+		Gg.get_papa(2, self).win()
 		#ui.get_node("TextEdit").visible = true
 		#dep = true
 	if Input.is_action_just_released("ui_accept"):
