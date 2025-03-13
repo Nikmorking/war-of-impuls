@@ -12,7 +12,7 @@ var play = true
 signal restart
 
 @onready var start_pos = get_parent().get_node("Spawn_pos").position
-@onready var ui = Gg.get_papa(1, self).get_node("UI")
+@onready var ui = get_node("UI")
 @onready var black = ui.get_node("black") 
 
 func _input(_event: InputEvent) -> void:
