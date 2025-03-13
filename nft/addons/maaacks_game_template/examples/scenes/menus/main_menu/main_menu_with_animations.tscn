@@ -430,19 +430,10 @@ offset_top = 230.645
 offset_right = 173.826
 offset_bottom = 270.645
 
-[node name="Выйти" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="6"]
-position = Vector2(96.974, 250.354)
-
-[node name="Начать" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="7"]
-position = Vector2(90.9541, 130.663)
-
-[node name="Настройки" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="8"]
-position = Vector2(204.687, 167.171)
-
-[node name="Заново" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="9"]
+[node name="Заново" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="6"]
 position = Vector2(204.687, 235.145)
 
-[node name="Продолжить2" type="Sprite2D" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="10"]
+[node name="Продолжить2" type="Sprite2D" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="7"]
 texture_filter = 1
 position = Vector2(89.3335, 190.329)
 scale = Vector2(2, 2)

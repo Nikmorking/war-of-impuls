@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://j6oehfe0lyn4"]
 
-[ext_resource type="Script" path="res://scripts/воин.gd" id="1_17h4j"]
-[ext_resource type="Texture2D" uid="uid://dipbxlyv4cqq0" path="res://asset/враги/воин.png" id="1_bma60"]
-[ext_resource type="PackedScene" uid="uid://0uc8e6pla322" path="res://сцены/hot_bar.tscn" id="3_kivil"]
+[ext_resource type="Script" path="res://scripts/воин.gd" id="1_6458y"]
+[ext_resource type="Texture2D" uid="uid://dipbxlyv4cqq0" path="res://asset/враги/воин.png" id="2_lmmeq"]
+[ext_resource type="PackedScene" uid="uid://0uc8e6pla322" path="res://сцены/hot_bar.tscn" id="3_jlkgc"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_aqp5a"]
 radius = 4.28571
@@ -12,14 +12,14 @@ height = 11.4286
 scale = Vector2(0.7, 0.7)
 collision_layer = 2
 collision_mask = 3
-script = ExtResource("1_17h4j")
+script = ExtResource("1_6458y")
 max_health = 160
 SPEED = 70
 tipy = "враг"
 
 [node name="Воин" type="Sprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("1_bma60")
+texture = ExtResource("2_lmmeq")
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -45,7 +45,7 @@ autostart = true
 position = Vector2(0, 2.85714)
 shape = SubResource("CapsuleShape2D_aqp5a")
 
-[node name="hot_bar" parent="." instance=ExtResource("3_kivil")]
+[node name="hot_bar" parent="." instance=ExtResource("3_jlkgc")]
 visible = false
 offset_top = -601.429
 offset_bottom = 108.571

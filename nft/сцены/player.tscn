@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://ciehno2dtgtce"]
+[gd_scene load_steps=8 format=3 uid="uid://ciehno2dtgtce"]
 
 [ext_resource type="Script" path="res://scripts/character_body_2d.gd" id="1_y2g1n"]
 [ext_resource type="Texture2D" uid="uid://bfo25fa3qyjii" path="res://asset/импульс/перс.png" id="2_dg6v2"]
+[ext_resource type="PackedScene" uid="uid://67chr5nrw2bd" path="res://сцены/ui.tscn" id="3_j224j"]
 
 [sub_resource type="Gradient" id="Gradient_kiq0p"]
 offsets = PackedFloat32Array(0.0974026, 0.188312)
@@ -52,6 +53,19 @@ shape = SubResource("CircleShape2D_erawe")
 autostart = true
 
 [node name="Timer2" type="Timer" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-1.25, 0)
+rotation = -3.08372
+scale = Vector2(1.1267, -390.149)
+zoom = Vector2(4, 4)
+
+[node name="UI" parent="." instance=ExtResource("3_j224j")]
+offset_left = -193.0
+offset_top = -112.0
+offset_right = -193.0
+offset_bottom = -112.0
+scale = Vector2(0.3, 0.3)
 
 [connection signal="timeout" from="Timer" to="." method="call_down"]
 [connection signal="timeout" from="Timer3" to="." method="vis_health"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqe4kcqudd2gw"
-path="res://.godot/imported/Simple_Milk_and_grass_item.png-b975bb1e6d373d0834fad8904f4cafc5.ctex"
+uid="uid://bhkos5e1h5nkp"
+path="res://.godot/imported/Basic_Furniture.png-2d27bd69bbe0acc3b260275835b751ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Simple_Milk_and_grass_item.png"
-dest_files=["res://.godot/imported/Simple_Milk_and_grass_item.png-b975bb1e6d373d0834fad8904f4cafc5.ctex"]
+source_file="res://asset/Tile/Basic_Furniture.png"
+dest_files=["res://.godot/imported/Basic_Furniture.png-2d27bd69bbe0acc3b260275835b751ca.ctex"]
 
 [params]
 
