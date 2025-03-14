@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://b4aehn75ogi26"]
 
-[ext_resource type="Script" uid="uid://bx1ecc3nl5dtx" path="res://scripts/сушки.gd" id="1_76ika"]
+[ext_resource type="Script" path="res://scripts/сушки.gd" id="1_76ika"]
 [ext_resource type="Texture2D" uid="uid://d235r7w6ile7k" path="res://asset/biosladiya-304-chaynaya-s-makom-_3_.png" id="1_ocyyw"]
 
 [sub_resource type="FontVariation" id="FontVariation_12bs0"]
@@ -12,24 +12,36 @@ font_color = Color(1, 0, 0, 1)
 shadow_color = Color(0, 0, 0, 1)
 
 [node name="Сушки" type="Area2D"]
-scale = Vector2(0.025, 0.025)
 script = ExtResource("1_76ika")
 
 [node name="Biosladiya-304-chaynaya-s-makom-3" type="Sprite2D" parent="."]
+scale = Vector2(0.025, 0.025)
 texture = ExtResource("1_ocyyw")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2(-13, -13)
-scale = Vector2(45, 45)
-polygon = PackedVector2Array(-0.377778, -7.66667, 3.82222, -6.06667, 4.51111, -3.06667, 8.31111, -2.82222, 11, -2, 12, 0, 12, 2, 9.55556, 4.91111, 6.91111, 5.66667, 2.31111, 5.4, -0.866667, 6.51111, -2.46667, 8.04444, -4.62222, 8.95556, -6.46667, 8.84444, -8.86667, 8.55556, -10.5111, 7.4, -11.4, 4.82222, -10.2667, 2.06667, -6.62222, 0.866667, -4.97778, 0.511111, -6.91111, -2.02222, -5.06667, -5.55556)
+scale = Vector2(0.025, 0.025)
+polygon = PackedVector2Array(-520, 160, -480, 280, -400, 360, -240, 400, -80, 320, 0, 200, 80, 200, 160, 240, 320, 240, 520, 120, 520, -40, 400, -120, 240, -120, 120, -320, -120, -320, -280, -200, -320, -80, -240, 0, -400, 40)
 
 [node name="Label" type="Label" parent="."]
-offset_left = -640.0
-offset_top = -720.0
-offset_right = 633.0
-offset_bottom = -333.0
+visible = false
+offset_left = -15.0
+offset_top = -18.0
+offset_right = 1258.0
+offset_bottom = 369.0
+scale = Vector2(0.025, 0.025)
 text = "Сушки.
 Дают вампиризм."
 label_settings = SubResource("LabelSettings_bqef7")
 
+[node name="Button" type="Button" parent="."]
+offset_left = -11.0
+offset_top = -7.0
+offset_right = 12.0
+offset_bottom = 9.0
+flat = true
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Button" to="." method="_mouse_enter"]
+[connection signal="mouse_exited" from="Button" to="." method="_mouse_exit"]

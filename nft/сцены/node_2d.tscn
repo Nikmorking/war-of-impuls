@@ -1,12 +1,12 @@
 [gd_scene load_steps=27 format=3 uid="uid://dhkvwif2tn4s3"]
 
-[ext_resource type="Script" uid="uid://cvm68rnphqup8" path="res://scripts/schotchik.gd" id="1_eb1ss"]
+[ext_resource type="Script" path="res://scripts/schotchik.gd" id="1_eb1ss"]
 [ext_resource type="Texture2D" uid="uid://bkqhwrkhlmeda" path="res://asset/Tile/Grass.png" id="1_gpw7w"]
 [ext_resource type="Texture2D" uid="uid://v8qswn0xclpw" path="res://asset/Tile/Hills.png" id="2_7pj1m"]
 [ext_resource type="Texture2D" uid="uid://2iueix5sfsgr" path="res://asset/Tile/Water.png" id="3_xcmam"]
 [ext_resource type="Texture2D" uid="uid://vlknd2cx6mdb" path="res://asset/Tile/Fences.png" id="4_lyodw"]
 [ext_resource type="PackedScene" uid="uid://ciehno2dtgtce" path="res://сцены/player.tscn" id="5_dye2w"]
-[ext_resource type="Script" uid="uid://dww5rlw26uo0c" path="res://scripts/spawner.gd" id="7_kly5t"]
+[ext_resource type="Script" path="res://scripts/spawner.gd" id="7_kly5t"]
 [ext_resource type="PackedScene" uid="uid://67chr5nrw2bd" path="res://сцены/ui.tscn" id="8_18ble"]
 [ext_resource type="PackedScene" uid="uid://bp34hrsjcwqh5" path="res://сцены/челночки.tscn" id="9_ys2e1"]
 [ext_resource type="PackedScene" uid="uid://b4aehn75ogi26" path="res://сцены/сушки.tscn" id="10_dhvxc"]
@@ -246,7 +246,7 @@ layer_2/name = "Layer2"
 layer_2/tile_data = PackedInt32Array(-131072, 65542, 0, -65536, 6, 1, 0, 65542, 2, 1, 131078, 3, -131071, 131078, 3, 2, 196614, 3, -131070, 196614, 3, -262108, 6, 1, -196572, 6, 1, -327644, 6, 1, -393179, 131078, 3, -393178, 196614, 3, -131037, 131078, 3, -131038, 65542, 3, -131036, 196614, 2, -393180, 65542, 0)
 
 [node name="Player" parent="." instance=ExtResource("5_dye2w")]
-position = Vector2(302, 268)
+position = Vector2(256, 244)
 scale = Vector2(0.8, 0.8)
 SPEED = 100
 
@@ -280,8 +280,11 @@ position = Vector2(291, 264)
 position = Vector2(301, 305)
 script = ExtResource("7_kly5t")
 
-[node name="челночки" parent="." instance=ExtResource("9_ys2e1")]
-position = Vector2(751, 388)
+[node name="UI" parent="." instance=ExtResource("8_18ble")]
+offset_left = 27.0
+offset_top = 23.0
+offset_right = 27.0
+offset_bottom = 23.0
 
 [node name="Сушки" parent="." instance=ExtResource("10_dhvxc")]
 position = Vector2(686, 372)
@@ -293,7 +296,7 @@ position = Vector2(756, 365)
 position = Vector2(799, 367)
 
 [node name="Sonic mode" parent="." instance=ExtResource("13_8r8dv")]
-position = Vector2(685, 321)
+position = Vector2(332, 285)
 Speed_ap = 50
 
 [node name="кто ты воин" parent="." instance=ExtResource("14_ibb4f")]
@@ -311,14 +314,11 @@ position = Vector2(705, 304)
 [node name="бан-банан" parent="." instance=ExtResource("18_aq7xu")]
 position = Vector2(707, 271)
 
-[node name="UI" parent="." instance=ExtResource("8_18ble")]
-offset_left = 35.0
-offset_top = 26.0
-offset_right = 35.0
-offset_bottom = 26.0
+[node name="челночки" parent="." instance=ExtResource("9_ys2e1")]
+position = Vector2(751, 388)
 
 [node name="Плюшка2" parent="." instance=ExtResource("19_ub8gm")]
-position = Vector2(359, 289)
+position = Vector2(680, 328)
 
 [node name="AnimatedSprite2D" parent="." instance=ExtResource("19_2rpn0")]
 texture_filter = 1

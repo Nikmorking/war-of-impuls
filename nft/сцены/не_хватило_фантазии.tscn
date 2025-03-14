@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://btkv3hlg1xbg0"]
 
-[ext_resource type="Script" uid="uid://b613ehaceo243" path="res://scripts/не_хватило_фантазии.gd" id="1_6mgfr"]
+[ext_resource type="Script" path="res://scripts/не_хватило_фантазии.gd" id="1_6mgfr"]
 [ext_resource type="Texture2D" uid="uid://bqmul5hx2soob" path="res://icon.svg" id="2_tp2gi"]
 [ext_resource type="LabelSettings" uid="uid://cs8r7esmmlr1u" path="res://asset/new_label_settings.tres" id="3_kk6k1"]
 
@@ -15,6 +15,7 @@ texture = ExtResource("2_tp2gi")
 polygon = PackedVector2Array(-64, -54, -64, 55, -53, 65, 55, 65, 64, 55, 64, -54, 53, -64, -55, -64)
 
 [node name="Label" type="Label" parent="."]
+visible = false
 offset_left = -160.0
 offset_top = -160.0
 offset_right = 168.0
@@ -23,4 +24,13 @@ text = "Даёт возможность
  ваншотнуть лучника"
 label_settings = ExtResource("3_kk6k1")
 
+[node name="Button" type="Button" parent="."]
+offset_left = -60.0
+offset_top = -60.0
+offset_right = 60.0
+offset_bottom = 60.0
+flat = true
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="mouse_entered" from="Button" to="." method="_mouse_enter"]
+[connection signal="mouse_exited" from="Button" to="." method="_mouse_exit"]

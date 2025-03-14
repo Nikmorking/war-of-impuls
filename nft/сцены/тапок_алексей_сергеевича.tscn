@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://b5pconoux0nrw"]
 
-[ext_resource type="Script" uid="uid://ds8ndpcayddhk" path="res://scripts/тапок_алексей_сергеевича.gd" id="1_s80lq"]
+[ext_resource type="Script" path="res://scripts/тапок_алексей_сергеевича.gd" id="1_s80lq"]
 [ext_resource type="Texture2D" uid="uid://b8pewlpg641o4" path="res://asset/Плюшки/тапок_вид_какбафф.png" id="2_6qnqo"]
 
 [sub_resource type="FontVariation" id="FontVariation_hwf4v"]
@@ -29,6 +29,7 @@ scale = Vector2(10, 10)
 polygon = PackedVector2Array(-4, 10, 2, 10, 4, 8, 4, -4, 5.1, -6.8, 3, -9, -5, -9, -7.3, -6.7, -6, -4, -6, 8)
 
 [node name="Label" type="Label" parent="."]
+visible = false
 offset_left = -199.0
 offset_top = -261.0
 offset_right = 216.0
@@ -38,4 +39,13 @@ text = "Тапок Алексей Сергеевича.
 добавляет урон"
 label_settings = SubResource("LabelSettings_5s6lw")
 
+[node name="Button" type="Button" parent="."]
+offset_left = -50.0
+offset_top = -130.0
+offset_right = 50.0
+offset_bottom = 60.0
+flat = true
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="mouse_entered" from="Button" to="." method="_mouse_enter"]
+[connection signal="mouse_exited" from="Button" to="." method="_mouse_exit"]

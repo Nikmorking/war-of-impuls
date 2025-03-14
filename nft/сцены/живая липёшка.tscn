@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b7uhx10lrhkix"]
 
-[ext_resource type="Script" uid="uid://p3mbjmq78pej" path="res://asset/живая_липёшка.gd" id="1_cv5s4"]
+[ext_resource type="Script" path="res://asset/живая_липёшка.gd" id="1_cv5s4"]
 [ext_resource type="Texture2D" uid="uid://bqmul5hx2soob" path="res://icon.svg" id="2_m4kuc"]
 [ext_resource type="LabelSettings" uid="uid://cs8r7esmmlr1u" path="res://asset/new_label_settings.tres" id="3_c5jpi"]
 
@@ -9,7 +9,6 @@ scale = Vector2(0.1, 0.1)
 script = ExtResource("1_cv5s4")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-scale = Vector2(1, 1)
 polygon = PackedVector2Array(-54, -64, -64, -53, -64, 54, -53, 64, 52, 64, 64, 53, 64, -54, 53, -64)
 
 [node name="Icon" type="Sprite2D" parent="."]
