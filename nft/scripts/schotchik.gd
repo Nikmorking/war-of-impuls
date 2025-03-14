@@ -19,6 +19,9 @@ func kill()->void:
 		if(schot == win):
 			Open_door()
 	schot += 1
+	if schot == 10:
+		$Player.exp += 1
+		print("Никита бесит")
 	get_node("UI/Label3").text = str(schot)
 	pass
 

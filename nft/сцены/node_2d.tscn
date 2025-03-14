@@ -260,6 +260,7 @@ zoom = Vector2(4, 4)
 position = Vector2(0, -2)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+visible = false
 position = Vector2(7, -4)
 navigation_polygon = SubResource("NavigationPolygon_8vbh3")
 
@@ -314,11 +315,11 @@ position = Vector2(705, 304)
 [node name="бан-банан" parent="." instance=ExtResource("18_aq7xu")]
 position = Vector2(707, 271)
 
-[node name="челночки" parent="." instance=ExtResource("9_ys2e1")]
-position = Vector2(751, 388)
-
 [node name="Плюшка2" parent="." instance=ExtResource("19_ub8gm")]
 position = Vector2(680, 328)
+
+[node name="челночки" parent="." instance=ExtResource("9_ys2e1")]
+position = Vector2(751, 388)
 
 [node name="AnimatedSprite2D" parent="." instance=ExtResource("19_2rpn0")]
 texture_filter = 1

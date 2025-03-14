@@ -8,6 +8,7 @@ var xzz = false
 var nhf = false
 var lapka = 5
 var play = true
+var exp = 0
 
 signal restart
 
@@ -128,7 +129,9 @@ func Shoot() -> void:
 		
 	pass # Replace with function body.
 
-
 func _on_timer_2_timeout() -> void:
 	#Gg.get_papa(2, self)._on_lose_button_pressed()
 	pass # Replace with function body.
+
+
+	
