@@ -1,4 +1,5 @@
 extends "res://scripts/Entity.gd"
+class_name Enemies
 
 var player
 var player_position

@@ -31,6 +31,10 @@ ProjectUISoundController="*res://addons/maaacks_game_template/base/scenes/autolo
 FileSave="*res://scripts/Saves.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
+[dialogue_manager]
+
+general/states=["Gg"]
+
 [display]
 
 window/size/initial_position_type=0

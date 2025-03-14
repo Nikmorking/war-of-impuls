@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://ce5mpiiw3anr7"]
+[gd_scene load_steps=9 format=3 uid="uid://ce5mpiiw3anr7"]
 
 [ext_resource type="TileSet" uid="uid://bcclw1ii0vyf" path="res://сцены/tile_1.tres" id="1_hxabb"]
 [ext_resource type="Script" path="res://scripts/schotchik.gd" id="1_tu360"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://scripts/spawner.gd" id="5_ph2gc"]
 [ext_resource type="PackedScene" uid="uid://bbrs4wtkw6mf2" path="res://сцены/враги и другие/челв_чёрном.tscn" id="6_ild12"]
 [ext_resource type="PackedScene" uid="uid://bfll4fq7s6i5t" path="res://сцены/door.tscn" id="6_slcsv"]
+[ext_resource type="PackedScene" uid="uid://cg3em863h60d1" path="res://сцены/враги и другие/маникен.tscn" id="7_xikbq"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_vvrhv"]
 vertices = PackedVector2Array(436.25, 105.523, 436.719, 123, 420.047, 123, 415.781, 104.5, 414.844, 149.852, 422.906, 154.492, 684.063, 80.0625, 685.93, 374.961, 392, 374.031, 461, 152.492, 461, 81.4922, 392, 155.547)
@@ -51,3 +52,9 @@ affect_navigation_mesh = true
 
 [node name="ЧелвЧёрном" parent="." instance=ExtResource("6_ild12")]
 position = Vector2(485, 113)
+
+[node name="Воин" parent="." instance=ExtResource("7_xikbq")]
+visible = false
+position = Vector2(645, 248)
+max_health = 400
+damage = 0

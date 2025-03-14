@@ -45,6 +45,7 @@ func _input(_event: InputEvent) -> void:
 				print("{jhji}")
 	pass
 func _ready() -> void:
+	Gg.connect("_vis_ui",vis_ui)
 	vis_health()
 	pass
 
@@ -133,3 +134,9 @@ func Shoot() -> void:
 func _on_timer_2_timeout() -> void:
 	#Gg.get_papa(2, self)._on_lose_button_pressed()
 	pass # Replace with function body.
+
+
+
+func vis_ui():
+	$UI.visible = true
+	pass
