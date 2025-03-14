@@ -5,4 +5,5 @@ var res = load("res://asset/dialoges/gman.dialogue")
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		DialogueManager.show_dialogue_balloon(res, "start")
+		get_parent().get_node("Player/UI").visible = false
 	pass # Replace with function body.
