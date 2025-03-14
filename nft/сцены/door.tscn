@@ -2,6 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://s70gl81i4sra" path="res://asset/Tile/Doors.png" id="1_3dkkt"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_njvea"]
+atlas = ExtResource("1_3dkkt")
+region = Rect2(0, 0, 16, 16)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_jbp6j"]
 atlas = ExtResource("1_3dkkt")
 region = Rect2(0, 16, 16, 16)
@@ -14,12 +18,16 @@ region = Rect2(0, 48, 16, 16)
 atlas = ExtResource("1_3dkkt")
 region = Rect2(0, 32, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_njvea"]
-atlas = ExtResource("1_3dkkt")
-region = Rect2(0, 0, 16, 16)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_vnuhb"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_njvea")
+}],
+"loop": true,
+"name": &"con",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jbp6j")
@@ -34,7 +42,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_njvea")
 }],
 "loop": true,
-"name": &"default",
+"name": &"ggg",
 "speed": 5.0
 }]
 
@@ -45,6 +53,7 @@ size = Vector2(16.8889, 16.8421)
 position = Vector2(295, 102.5)
 scale = Vector2(1.125, 1.1875)
 sprite_frames = SubResource("SpriteFrames_vnuhb")
+animation = &"con"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 

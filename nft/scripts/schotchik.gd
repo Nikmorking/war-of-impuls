@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var door:AnimatedSprite2D = get_node("AnimatedSprite2D")
+var door:AnimatedSprite2D
 var schot = 0
 @export var nid = 10
 @export var win = 10
@@ -8,6 +8,10 @@ var schot = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	FileSave.save_game()
+	Gg.connect("_open_door",Open_door)
+	Gg.connect("_start_an_go",start_an_go)
+	if get_node("AnimatedSprite2D"):
+		door = get_node("AnimatedSprite2D")
 	pass # Replace with function body.
 
 func kill()->void:
@@ -35,5 +39,23 @@ func Open_door():
 
 
 func _on_animated_sprite_2d_animation_finished() -> void:
-	door.stop()
+	door.play("con")
+	pass # Replace with function body.
+
+func start_an_go():
+	if $AnimationPlayer:
+		$AnimationPlayer.play("go")
+	pass
+
+
+
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	$AnimationPlayer.play("stop")
+	pass # Replace with function body.
+
+
+func _portal(area: Area2D) -> void:
+	if Gg.use_portal:
+		get_parent().win()
 	pass # Replace with function body.
