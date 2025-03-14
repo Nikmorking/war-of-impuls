@@ -19,7 +19,7 @@ func kill()->void:
 		if(schot == win):
 			Open_door()
 	schot += 1
-	get_node("UI/Label3").text = str(schot)
+	get_node("Player/UI/Label3").text = str(schot)
 	pass
 
 

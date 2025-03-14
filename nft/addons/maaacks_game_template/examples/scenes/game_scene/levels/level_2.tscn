@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://3fmmpu012sd7"]
+[gd_scene load_steps=3 format=3 uid="uid://ctpxk1vt1flli"]
 
 [ext_resource type="Script" path="res://addons/maaacks_game_template/examples/scenes/game_scene/levels/level.gd" id="1_p01r0"]
-[ext_resource type="PackedScene" uid="uid://cclgniu6713f1" path="res://loc_2.tscn" id="2_80wen"]
+[ext_resource type="PackedScene" uid="uid://ce5mpiiw3anr7" path="res://start_loc.tscn" id="2_x5opa"]
 
 [node name="Level1" type="Control"]
 layout_mode = 3
@@ -12,5 +12,4 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_p01r0")
 
-[node name="Node2D" parent="." instance=ExtResource("2_80wen")]
-position = Vector2(530, 327)
+[node name="Node2D2" parent="." instance=ExtResource("2_x5opa")]

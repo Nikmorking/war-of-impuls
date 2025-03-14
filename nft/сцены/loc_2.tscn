@@ -35,7 +35,7 @@ position = Vector2(-276, -61)
 scale = Vector2(0.8, 0.8)
 SPEED = 100
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
+[node name="Camera2D2" type="Camera2D" parent="Player"]
 position = Vector2(1.25, -1.25)
 rotation = -3.08372
 scale = Vector2(1.1267, -390.149)

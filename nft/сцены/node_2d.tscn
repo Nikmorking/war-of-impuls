@@ -250,12 +250,6 @@ position = Vector2(302, 268)
 scale = Vector2(0.8, 0.8)
 SPEED = 100
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(-1.25, 0)
-rotation = -3.08372
-scale = Vector2(1.1267, -390.149)
-zoom = Vector2(4, 4)
-
 [node name="Пули" type="Node2D" parent="."]
 position = Vector2(0, -2)
 
