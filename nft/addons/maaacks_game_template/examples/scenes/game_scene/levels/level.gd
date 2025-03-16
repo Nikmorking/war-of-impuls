@@ -21,3 +21,8 @@ func _on_color_picker_button_color_changed(color):
 	%BackgroundColor.color = color
 	level_state.color = color
 	GlobalState.save()
+
+
+func _on_audio_stream_player_finished() -> void:
+	$AudioStreamPlayer.play()
+	pass # Replace with function body.
