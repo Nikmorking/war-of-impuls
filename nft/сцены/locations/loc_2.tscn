@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://67chr5nrw2bd" path="res://сцены/ui.tscn" id="2_yctm1"]
 [ext_resource type="Script" path="res://scripts/spawner.gd" id="3_v660h"]
 [ext_resource type="PackedScene" uid="uid://c80agmnknnt3a" path="res://сцены/portal.tscn" id="4_hr8hk"]
-[ext_resource type="PackedScene" uid="uid://m7id8i2fut7e" path="res://сцены/New_ location2.tscn" id="4_khoe1"]
-[ext_resource type="PackedScene" uid="uid://b5pconoux0nrw" path="res://сцены/тапок_алексей_сергеевича.tscn" id="6_eppjq"]
+[ext_resource type="PackedScene" uid="uid://m7id8i2fut7e" path="res://сцены/locations/New_ location2.tscn" id="4_khoe1"]
+[ext_resource type="PackedScene" uid="uid://b5pconoux0nrw" path="res://сцены/плюшки/тапок_алексей_сергеевича.tscn" id="6_eppjq"]
 [ext_resource type="PackedScene" uid="uid://bfll4fq7s6i5t" path="res://сцены/door.tscn" id="8_mbkjq"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_g62gl"]
