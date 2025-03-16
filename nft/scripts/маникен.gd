@@ -14,4 +14,5 @@ func _process(delta: float) -> void:
 
 func vis_this():
 	show()
+	visible = true
 	pass

@@ -1,0 +1,115 @@
+[gd_scene load_steps=12 format=3 uid="uid://ck4fvlnpbb7ep"]
+
+[ext_resource type="Script" path="res://scripts/start_scene.gd" id="1_so5ny"]
+[ext_resource type="Texture2D" uid="uid://bqmul5hx2soob" path="res://icon.svg" id="2_eofj6"]
+[ext_resource type="Texture2D" uid="uid://c6smn3p1j62vd" path="res://asset/благословение разработчиков.png" id="3_ftu7r"]
+[ext_resource type="Texture2D" uid="uid://bfo25fa3qyjii" path="res://asset/импульс/перс.png" id="4_xkdhk"]
+[ext_resource type="Texture2D" uid="uid://d02tfmsw055pp" path="res://asset/враги/дебаффер.png" id="5_2agpe"]
+[ext_resource type="Texture2D" uid="uid://dft2x6pbywysk" path="res://asset/враги/баффер.png" id="6_faodh"]
+[ext_resource type="Texture2D" uid="uid://dom47wipwvm6r" path="res://asset/враги/чел в чёрном.png" id="7_v6ptj"]
+
+[sub_resource type="Animation" id="Animation_lximt"]
+resource_name = "start"
+length = 15.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["", "Давным-давно были две расы насекомых и животных которые жили в мире какое-то количество времени. Но однажды в мир животных явился незнакомец который, пообещал всем жителям золотые горы замена подчинения. Насекомые сразу согласились на такое предложение, а животное организовали против пришельца в войну. Началась гражданская война в ходе которой животных оттеснили на самые крайние рубежи. В таком мире появляется наш главный герой-импульс без памяти о произошедшем. "]
+}
+
+[sub_resource type="Animation" id="Animation_sw02j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [""]
+}
+
+[sub_resource type="Animation" id="Animation_uqwgh"]
+resource_name = "end"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Давным-давно были две расы насекомых и животных которые жили в мире какое-то количество времени. Но однажды в мир животных явился незнакомец который, пообещал всем жителям золотые горы замена подчинения. Насекомые сразу согласились на такое предложение, а животное организовали против пришельца в войну. Началась гражданская война в ходе которой животных оттеснили на самые крайние рубежи. В таком мире появляется наш главный герой-импульс без памяти о произошедшем. "]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uf10t"]
+_data = {
+"RESET": SubResource("Animation_sw02j"),
+"end": SubResource("Animation_uqwgh"),
+"start": SubResource("Animation_lximt")
+}
+
+[node name="StartScene" type="Node2D"]
+script = ExtResource("1_so5ny")
+
+[node name="Icon" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(601, 330.5)
+scale = Vector2(10.0781, 6.00781)
+texture = ExtResource("2_eofj6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("RichTextLabel")
+libraries = {
+"": SubResource("AnimationLibrary_uf10t")
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="AnimationPlayer"]
+offset_left = 98.0
+offset_top = 338.0
+offset_right = 1081.0
+offset_bottom = 640.0
+
+[node name="БлагословениеРазработчиков" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(572, 162)
+scale = Vector2(10.3438, 7.90625)
+texture = ExtResource("3_ftu7r")
+
+[node name="Перс" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(418, 266)
+scale = Vector2(8.5625, 8.71875)
+texture = ExtResource("4_xkdhk")
+
+[node name="Перс2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(796, 234)
+scale = Vector2(6.78125, 6.51562)
+texture = ExtResource("5_2agpe")
+
+[node name="Перс3" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(905, 152)
+scale = Vector2(6.78125, 6.51562)
+texture = ExtResource("6_faodh")
+
+[node name="Перс4" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(298, 164)
+scale = Vector2(8.5625, 8.71875)
+texture = ExtResource("7_v6ptj")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

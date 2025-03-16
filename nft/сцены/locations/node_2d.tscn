@@ -1,28 +1,28 @@
 [gd_scene load_steps=27 format=3 uid="uid://dhkvwif2tn4s3"]
 
-[ext_resource type="Script" path="res://scripts/schotchik.gd" id="1_eb1ss"]
-[ext_resource type="Texture2D" uid="uid://bkqhwrkhlmeda" path="res://asset/Tile/Grass.png" id="1_gpw7w"]
-[ext_resource type="Texture2D" uid="uid://v8qswn0xclpw" path="res://asset/Tile/Hills.png" id="2_7pj1m"]
-[ext_resource type="Texture2D" uid="uid://2iueix5sfsgr" path="res://asset/Tile/Water.png" id="3_xcmam"]
-[ext_resource type="Texture2D" uid="uid://vlknd2cx6mdb" path="res://asset/Tile/Fences.png" id="4_lyodw"]
-[ext_resource type="PackedScene" uid="uid://ciehno2dtgtce" path="res://сцены/player.tscn" id="5_dye2w"]
-[ext_resource type="Script" path="res://scripts/spawner.gd" id="7_kly5t"]
-[ext_resource type="PackedScene" uid="uid://67chr5nrw2bd" path="res://сцены/ui.tscn" id="8_18ble"]
-[ext_resource type="PackedScene" uid="uid://bp34hrsjcwqh5" path="res://сцены/челночки.tscn" id="9_ys2e1"]
-[ext_resource type="PackedScene" uid="uid://b4aehn75ogi26" path="res://сцены/сушки.tscn" id="10_dhvxc"]
-[ext_resource type="PackedScene" uid="uid://wdvne2tixe4v" path="res://сцены/кастеты_бога_фараона.tscn" id="11_o2d8a"]
-[ext_resource type="PackedScene" uid="uid://b5pconoux0nrw" path="res://сцены/тапок_алексей_сергеевича.tscn" id="12_nnk5g"]
-[ext_resource type="PackedScene" uid="uid://bqjsy2bjxycrc" path="res://сцены/sonic_mode.tscn" id="13_8r8dv"]
-[ext_resource type="PackedScene" uid="uid://t53sol1p1p4" path="res://сцены/кто_ты_воин.tscn" id="14_ibb4f"]
-[ext_resource type="PackedScene" uid="uid://btkv3hlg1xbg0" path="res://сцены/не_хватило_фантазии.tscn" id="15_uoumt"]
-[ext_resource type="PackedScene" uid="uid://4djwuwrs0w6c" path="res://сцены/благословение_разработчиков.tscn" id="16_j0px8"]
-[ext_resource type="PackedScene" uid="uid://clqv6yyoxgnqj" path="res://сцены/плюшка.tscn" id="17_cu5hi"]
-[ext_resource type="PackedScene" uid="uid://7u76mprjcajy" path="res://сцены/бан_банан.tscn" id="18_aq7xu"]
-[ext_resource type="PackedScene" uid="uid://bfll4fq7s6i5t" path="res://сцены/door.tscn" id="19_2rpn0"]
-[ext_resource type="PackedScene" uid="uid://b7uhx10lrhkix" path="res://сцены/живая липёшка.tscn" id="19_ub8gm"]
+[ext_resource type="Script" path="res://scripts/schotchik.gd" id="1_o0v0f"]
+[ext_resource type="Texture2D" uid="uid://bkqhwrkhlmeda" path="res://asset/Tile/Grass.png" id="2_pkmrk"]
+[ext_resource type="Texture2D" uid="uid://v8qswn0xclpw" path="res://asset/Tile/Hills.png" id="3_rrb5s"]
+[ext_resource type="Texture2D" uid="uid://2iueix5sfsgr" path="res://asset/Tile/Water.png" id="4_vhwaa"]
+[ext_resource type="Texture2D" uid="uid://vlknd2cx6mdb" path="res://asset/Tile/Fences.png" id="5_7qgg7"]
+[ext_resource type="PackedScene" uid="uid://ciehno2dtgtce" path="res://сцены/player.tscn" id="6_8ld56"]
+[ext_resource type="Script" path="res://scripts/spawner.gd" id="7_uvpbo"]
+[ext_resource type="PackedScene" uid="uid://bp34hrsjcwqh5" path="res://сцены/плюшки/челночки.tscn" id="8_e07xo"]
+[ext_resource type="PackedScene" uid="uid://b4aehn75ogi26" path="res://сцены/сушки.tscn" id="9_53eqt"]
+[ext_resource type="PackedScene" uid="uid://wdvne2tixe4v" path="res://сцены/плюшки/кастеты_бога_фараона.tscn" id="10_5rxwt"]
+[ext_resource type="PackedScene" uid="uid://b5pconoux0nrw" path="res://сцены/плюшки/тапок_алексей_сергеевича.tscn" id="11_ljkh3"]
+[ext_resource type="PackedScene" uid="uid://bqjsy2bjxycrc" path="res://сцены/плюшки/sonic_mode.tscn" id="12_gvq26"]
+[ext_resource type="PackedScene" uid="uid://t53sol1p1p4" path="res://сцены/плюшки/кто_ты_воин.tscn" id="13_0yv17"]
+[ext_resource type="PackedScene" uid="uid://btkv3hlg1xbg0" path="res://сцены/не_хватило_фантазии.tscn" id="14_3n45i"]
+[ext_resource type="PackedScene" uid="uid://4djwuwrs0w6c" path="res://сцены/плюшки/благословение_разработчиков.tscn" id="15_g36ag"]
+[ext_resource type="PackedScene" uid="uid://clqv6yyoxgnqj" path="res://сцены/плюшка.tscn" id="16_klom6"]
+[ext_resource type="PackedScene" uid="uid://7u76mprjcajy" path="res://сцены/плюшки/бан_банан.tscn" id="17_bsfhl"]
+[ext_resource type="PackedScene" uid="uid://67chr5nrw2bd" path="res://сцены/ui.tscn" id="18_tsi50"]
+[ext_resource type="PackedScene" uid="uid://b7uhx10lrhkix" path="res://сцены/плюшки/живая липёшка.tscn" id="19_err23"]
+[ext_resource type="PackedScene" uid="uid://bfll4fq7s6i5t" path="res://сцены/door.tscn" id="20_aju1j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5mvxk"]
-texture = ExtResource("1_gpw7w")
+texture = ExtResource("2_pkmrk")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -96,7 +96,7 @@ texture = ExtResource("1_gpw7w")
 8:6/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4mman"]
-texture = ExtResource("2_7pj1m")
+texture = ExtResource("3_rrb5s")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -166,7 +166,7 @@ texture = ExtResource("2_7pj1m")
 10:6/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_41f3j"]
-texture = ExtResource("3_xcmam")
+texture = ExtResource("4_vhwaa")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -174,7 +174,7 @@ texture = ExtResource("3_xcmam")
 3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_707wq"]
-texture = ExtResource("4_lyodw")
+texture = ExtResource("5_7qgg7")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-0.736615, -8, -3.1875, -6.5, -3.2653, -3.73811, -3.4375, 2.375, -1.50831, 4.20923, 1.71877, 3.99877, 3.0625, 1.875, 2.98154, -5.96308, 0.947078, -8)
 0:0/0/physics_layer_0/polygon_1/points = PackedVector2Array(-1.08739, 8, 0.876924, 8, 1.08739, 3.57785, -1.08739, 3.78831)
@@ -223,7 +223,7 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Arr
 outlines = Array[PackedVector2Array]([PackedVector2Array(321, 229, 153, 229, 153, 339, 321, 338, 320, 312, 651, 312, 651, 467, 988, 468, 988, 101, 653, 101, 652, 273, 321, 273.52)])
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_eb1ss")
+script = ExtResource("1_o0v0f")
 metadata/_edit_vertical_guides_ = [297.0]
 metadata/_edit_horizontal_guides_ = [324.0]
 
@@ -245,7 +245,7 @@ layer_1/tile_data = PackedInt32Array(65536, 65539, 1, 65537, 65539, 1, 65538, 65
 layer_2/name = "Layer2"
 layer_2/tile_data = PackedInt32Array(-131072, 65542, 0, -65536, 6, 1, 0, 65542, 2, 1, 131078, 3, -131071, 131078, 3, 2, 196614, 3, -131070, 196614, 3, -262108, 6, 1, -196572, 6, 1, -327644, 6, 1, -393179, 131078, 3, -393178, 196614, 3, -131037, 131078, 3, -131038, 65542, 3, -131036, 196614, 2, -393180, 65542, 0)
 
-[node name="Player" parent="." instance=ExtResource("5_dye2w")]
+[node name="Player" parent="." instance=ExtResource("6_8ld56")]
 position = Vector2(302, 268)
 scale = Vector2(0.8, 0.8)
 SPEED = 100
@@ -272,45 +272,45 @@ position = Vector2(291, 264)
 
 [node name="Spawner" type="Node2D" parent="."]
 position = Vector2(301, 305)
-script = ExtResource("7_kly5t")
+script = ExtResource("7_uvpbo")
 
-[node name="челночки" parent="." instance=ExtResource("9_ys2e1")]
+[node name="челночки" parent="." instance=ExtResource("8_e07xo")]
 position = Vector2(751, 388)
 
-[node name="Сушки" parent="." instance=ExtResource("10_dhvxc")]
+[node name="Сушки" parent="." instance=ExtResource("9_53eqt")]
 position = Vector2(688, 373)
 rotation = -5.9769
 
-[node name="Кастеты бога фараона" parent="." instance=ExtResource("11_o2d8a")]
+[node name="Кастеты бога фараона" parent="." instance=ExtResource("10_5rxwt")]
 position = Vector2(756, 365)
 
-[node name="Тапок Алексей Сергеевича" parent="." instance=ExtResource("12_nnk5g")]
+[node name="Тапок Алексей Сергеевича" parent="." instance=ExtResource("11_ljkh3")]
 position = Vector2(799, 367)
 
-[node name="Sonic mode" parent="." instance=ExtResource("13_8r8dv")]
+[node name="Sonic mode" parent="." instance=ExtResource("12_gvq26")]
 position = Vector2(685, 321)
 Speed_ap = 50
 
-[node name="кто ты воин" parent="." instance=ExtResource("14_ibb4f")]
+[node name="кто ты воин" parent="." instance=ExtResource("13_0yv17")]
 position = Vector2(874, 293)
 
-[node name="не хватило фантазии" parent="." instance=ExtResource("15_uoumt")]
+[node name="не хватило фантазии" parent="." instance=ExtResource("14_3n45i")]
 position = Vector2(732, 365)
 
-[node name="Благословение разработчиков" parent="." instance=ExtResource("16_j0px8")]
+[node name="Благословение разработчиков" parent="." instance=ExtResource("15_g36ag")]
 position = Vector2(689, 251)
 
-[node name="Плюшка" parent="." instance=ExtResource("17_cu5hi")]
+[node name="Плюшка" parent="." instance=ExtResource("16_klom6")]
 position = Vector2(705, 304)
 
-[node name="бан-банан" parent="." instance=ExtResource("18_aq7xu")]
+[node name="бан-банан" parent="." instance=ExtResource("17_bsfhl")]
 position = Vector2(707, 271)
 
-[node name="UI" parent="." instance=ExtResource("8_18ble")]
+[node name="UI" parent="." instance=ExtResource("18_tsi50")]
 
-[node name="Плюшка2" parent="." instance=ExtResource("19_ub8gm")]
+[node name="Плюшка2" parent="." instance=ExtResource("19_err23")]
 position = Vector2(359, 289)
 
-[node name="AnimatedSprite2D" parent="." instance=ExtResource("19_2rpn0")]
+[node name="AnimatedSprite2D" parent="." instance=ExtResource("20_aju1j")]
 texture_filter = 1
 position = Vector2(680, 277)

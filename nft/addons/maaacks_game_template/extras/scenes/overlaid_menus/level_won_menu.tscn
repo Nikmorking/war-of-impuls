@@ -29,23 +29,10 @@ text = "
 scroll_active = false
 
 [node name="MenuButtons" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin" index="0"]
+unique_name_in_owner = false
 vertical = false
 
-[node name="RestartButton" type="Button" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons" index="0"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(128, 40)
-layout_mode = 2
-text = "Вернуться"
-
-[node name="CloseButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons" index="1"]
-text = "Continue"
-
-[node name="ConfirmMainMenu" type="ConfirmationDialog" parent="." index="2"]
-auto_translate_mode = 1
-initial_position = 2
-dialog_text = "Go back to main menu?"
-
-[node name="RichTextLabel" type="RichTextLabel" parent="." index="3"]
+[node name="RichTextLabel" type="RichTextLabel" parent="." index="2"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -64,5 +51,9 @@ text = "[center] Вы не взяли плюшку [/center]
 "
 autowrap_mode = 0
 
-[connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons/RestartButton" to="." method="come_back"]
-[connection signal="confirmed" from="ConfirmMainMenu" to="." method="_on_confirm_main_menu_confirmed"]
+[node name="Timer" type="Timer" parent="." index="3"]
+wait_time = 0.1
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
