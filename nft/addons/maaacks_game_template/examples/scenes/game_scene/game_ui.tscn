@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://bde0cbmryrv5s"]
+[gd_scene load_steps=12 format=3 uid="uid://bde0cbmryrv5s"]
 
 [ext_resource type="PackedScene" uid="uid://cnmu4k37qncn8" path="res://addons/maaacks_game_template/examples/scenes/overlaid_menus/pause_menu.tscn" id="2_7mepj"]
 [ext_resource type="Script" path="res://addons/maaacks_game_template/extras/scripts/pause_menu_controller.gd" id="5_fc8fx"]
+[ext_resource type="AudioStream" uid="uid://bfv6otbqy6cmp" path="res://asset/sound/Inspire-ashutosh(chosic.com).mp3" id="5_xan8a"]
 [ext_resource type="Script" path="res://addons/maaacks_game_template/extras/scripts/level_list_loader.gd" id="6_wd8e4"]
 [ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_game_template/base/scenes/music_players/background_music_player.tscn" id="7_yr75v"]
 [ext_resource type="PackedScene" uid="uid://dbuv0htkikcv4" path="res://addons/maaacks_game_template/examples/scenes/loading_screen/level_loading_screen.tscn" id="8_0nt60"]
@@ -27,10 +28,11 @@ focused_viewport = NodePath("../ViewportContainer/ConfigurableSubViewport")
 [node name="LevelLoader" type="Node" parent="." node_paths=PackedStringArray("level_container")]
 script = ExtResource("6_wd8e4")
 level_container = NodePath("../ViewportContainer/ConfigurableSubViewport")
-files = Array[String](["res://addons/maaacks_game_template/examples/scenes/game_scene/levels/level_1.tscn", "res://addons/maaacks_game_template/examples/scenes/game_scene/levels/level_2.tscn", "res://addons/maaacks_game_template/examples/scenes/game_scene/levels/level_3.tscn"])
+files = Array[String](["res://addons/maaacks_game_template/examples/scenes/game_scene/levels/level_1.tscn", "res://addons/maaacks_game_template/examples/scenes/game_scene/levels/level_2.tscn", "res://addons/maaacks_game_template/examples/scenes/game_scene/levels/level_3.tscn", "res://addons/maaacks_game_template/examples/scenes/game_scene/levels/level_4.tscn"])
 directory = "res://addons/maaacks_game_template/examples/scenes/game_scene/levels"
 
 [node name="BackgroundMusicPlayer" parent="." instance=ExtResource("7_yr75v")]
+stream = ExtResource("5_xan8a")
 bus = &"Master"
 
 [node name="LevelLoadingScreen" parent="." instance=ExtResource("8_0nt60")]

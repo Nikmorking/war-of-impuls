@@ -45,6 +45,7 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 func start_an_go():
 	if $AnimationPlayer:
 		$AnimationPlayer.play("go")
+		$Port.play()
 	pass
 
 

@@ -34,6 +34,7 @@ DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 [dialogue_manager]
 
 general/states=["Gg"]
+general/default_csv_locale="ru"
 
 [display]
 
