@@ -2,8 +2,10 @@ extends Node2D
 
 var door:AnimatedSprite2D
 var schot = 0
-@export var nid = 10
-@export var win = 10
+var col = 0
+
+@export var nid:int
+@export var win:int
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,14 +17,14 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 func kill()->void:
+	schot += 1
+	#if(schot == win):
+		#Open_door()
 	if(schot == nid):
 		var chel = load("res://сцены/челночки.tscn").instantiate()
 		add_child(chel)
 		chel.global_position = get_node("Spawn_pos").position
 		nid *= 2
-		if(schot == win):
-			Open_door()
-	schot += 1
 	get_node("Player/UI/Label3").text = str(schot)
 	pass
 
@@ -45,7 +47,6 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 func start_an_go():
 	if $AnimationPlayer:
 		$AnimationPlayer.play("go")
-		$Port.play()
 	pass
 
 
@@ -59,4 +60,25 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 func _portal(area: Area2D) -> void:
 	if Gg.use_portal:
 		get_parent().win()
+	pass # Replace with function body.
+
+
+func col_1(body: Node2D) -> void:
+	if col == 0:
+		$room1.start()
+		col = 1
+	pass # Replace with function body.
+
+
+func col_2(body: Node2D) -> void:
+	if col == 1:
+		$room2.start()
+		col = 2
+	pass # Replace with function body.
+
+
+func col_3(body: Node2D) -> void:
+	if col == 2:
+		$room3.start()
+		col = 3
 	pass # Replace with function body.
