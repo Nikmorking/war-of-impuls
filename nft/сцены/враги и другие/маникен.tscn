@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://cg3em863h60d1"]
+
+[ext_resource type="Script" path="res://scripts/маникен.gd" id="1_mo0fc"]
+[ext_resource type="Texture2D" uid="uid://ck24wu0gcbyl3" path="res://asset/перс1.png" id="2_husfx"]
+[ext_resource type="PackedScene" uid="uid://0uc8e6pla322" path="res://сцены/hot_bar.tscn" id="3_ajbn3"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_aqp5a"]
+radius = 4.28571
+height = 11.4286
+
+[node name="Воин" type="CharacterBody2D"]
+scale = Vector2(1.2, 1.2)
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_mo0fc")
+
+[node name="Воин" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(8.57143, 4.28571)
+texture = ExtResource("2_husfx")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+path_desired_distance = 0.1
+avoidance_enabled = true
+radius = 100.0
+avoidance_layers = 3
+avoidance_mask = 3
+debug_enabled = true
+
+[node name="Tik" type="Timer" parent="."]
+wait_time = 1.8
+autostart = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2.85714)
+shape = SubResource("CapsuleShape2D_aqp5a")
+
+[node name="hot_bar" parent="." instance=ExtResource("3_ajbn3")]
+visible = false
+offset_top = -601.429
+offset_bottom = 108.571
+
+[connection signal="timeout" from="Timer" to="." method="call_down"]
+[connection signal="timeout" from="Tik" to="." method="tik"]

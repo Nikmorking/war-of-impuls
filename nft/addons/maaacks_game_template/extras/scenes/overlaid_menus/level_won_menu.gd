@@ -14,6 +14,7 @@ func _input(event):
 func _on_main_menu_button_pressed():
 	$ConfirmMainMenu.popup_centered()
 
+
 func _on_confirm_main_menu_confirmed():
 	main_menu_pressed.emit()
 	close()
@@ -23,10 +24,16 @@ func _on_restart_button_pressed():
 	close()
 
 func _on_close_button_pressed():
+	print("ddd")
 	continue_pressed.emit()
 	close()
 
 
 func come_back() -> void:
 	visible = false
+	pass # Replace with function body.
+
+
+func _on_timer_timeout() -> void:
+	_on_close_button_pressed()
 	pass # Replace with function body.

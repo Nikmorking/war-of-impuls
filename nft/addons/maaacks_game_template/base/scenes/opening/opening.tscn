@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://sikc02ddepyt"]
 
 [ext_resource type="Script" path="res://addons/maaacks_game_template/base/scenes/opening/opening.gd" id="1_fcjph"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w78in"]
+[ext_resource type="Texture2D" uid="uid://c4iec5ysiue6f" path="res://asset/Menu/логотип.png" id="2_a3n6k"]
 
 [node name="Opening" type="Control"]
+texture_filter = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,7 +13,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_fcjph")
 next_scene = "res://addons/maaacks_game_template/base/scenes/menus/main_menu/main_menu.tscn"
-images = Array[Texture2D]([SubResource("CompressedTexture2D_w78in")])
+images = Array[Texture2D]([ExtResource("2_a3n6k")])
 
 [node name="BackgroundMusicPlayer" type="AudioStreamPlayer" parent="."]
 process_mode = 3
@@ -21,6 +21,7 @@ autoplay = true
 
 [node name="ImagesContainer" type="MarginContainer" parent="."]
 unique_name_in_owner = true
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

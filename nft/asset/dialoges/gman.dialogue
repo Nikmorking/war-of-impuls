@@ -1,4 +1,41 @@
 ~ start
-Человек в чёрном: [[Hi|Hello|Howdy]], this is some dialogue.
-Nathan: Here are some choices.
+Developer: Do you want to read the tutorial?
+- Yes 
+	Developer: Well then, I'll tell you now. 
+	Developer: You can move up by pressing the "W" key.
+	Developer: You can move to the right by pressing the "D" key.
+	Developer: You can move left by pressing the "A" key.
+	Developer: You can move down by pressing the "S" key.
+	Developer: Вы можете стрелять при нажатии левой и правой клавиш мыши.
+- No 
+	Developer: Ну, на нет и суда нет. Удачи! 
 => END
+do Gg.vis_ui()
+do Gg.vis_man()
+=> END
+~ podhod
+Person in black: Приветствую, путник! Ты абсолютно случайно оказался на этом плацу, и тебя совершенно точно никто не крал. 
+Impuls: Привет! Меня зовут Импульс. Я не помню, как здесь оказался,так что поверю на слово.
+Person in black: Приступим к тренировкам! Видишь мишень? Тебе надо будет попасть в них лапками, чтобы овладеть секретной техникой Ханкайских грибов. 
+Impuls: Звучит интересно. Но надо к ним сначала подойти. 
+=> END
+
+~ cont
+Person in black: Тревога! Кто-то перемещается к нам через портал.  
+Impuls: О! Надо посмотреть! Обязательно!  
+do Gg.start_an_go()
+Person in black1: *тяжело дыша* Тревога! Все к оружию! 
+Impuls: Что случилось? Куда бежать? В чём проблема? 
+Person in black1: На школу напали! Все на защиту! 
+Person in black: Идите на разведку, путник,а я пока вылечу его.  
+Impuls: Понял, я бегу!
+do Gg.vis_ui()
+do Gg.use_portal = true
+=> END
+
+~ snova
+Person in black: Что ты делаешь, иди бей маникен 
+Developer: С этим персонажем нельзя разговаривать, пока не будет выполнено текущее задание 
+do Gg.vis_ui()
+=> END
+

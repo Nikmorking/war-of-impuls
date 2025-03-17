@@ -83,10 +83,3 @@ theme_override_constants/separation = 16
 alignment = 1
 vertical = true
 script = ExtResource("2_6ani0")
-
-[node name="CloseButton" type="Button" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons"]
-custom_minimum_size = Vector2(128, 40)
-layout_mode = 2
-text = "Close"
-
-[connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons/CloseButton" to="." method="_on_close_button_pressed"]

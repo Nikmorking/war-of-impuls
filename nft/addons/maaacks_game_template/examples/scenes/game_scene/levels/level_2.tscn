@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://ctpxk1vt1flli"]
+[gd_scene load_steps=4 format=3 uid="uid://ctpxk1vt1flli"]
 
 [ext_resource type="Script" path="res://addons/maaacks_game_template/examples/scenes/game_scene/levels/level.gd" id="1_p01r0"]
 [ext_resource type="PackedScene" uid="uid://ce5mpiiw3anr7" path="res://start_loc.tscn" id="2_x5opa"]
+[ext_resource type="AudioStream" uid="uid://bfv6otbqy6cmp" path="res://asset/sound/Inspire-ashutosh(chosic.com).mp3" id="3_chwi1"]
 
 [node name="Level1" type="Control"]
 layout_mode = 3
@@ -13,3 +14,11 @@ grow_vertical = 2
 script = ExtResource("1_p01r0")
 
 [node name="Node2D2" parent="." instance=ExtResource("2_x5opa")]
+nid = 10
+win = 10
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_chwi1")
+autoplay = true
+
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
