@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://nyaaxjdoh4ob"
+path="res://.godot/imported/gman.dialogue-7397c601ce2cec339bbbf2444b0a00e2.tres"
+
+[deps]
+
+source_file="res://asset/dialoges/gman.dialogue"
+dest_files=["res://.godot/imported/gman.dialogue-7397c601ce2cec339bbbf2444b0a00e2.tres"]
+
+[params]
+
+defaults=true

@@ -8,3 +8,9 @@
 script = ExtResource("2_o57rn")
 options_packed_scene = ExtResource("3_hewsk")
 main_menu_scene = "res://addons/maaacks_game_template/examples/scenes/menus/main_menu/main_menu_with_animations.tscn"
+
+[node name="CloseButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons" index="0"]
+custom_minimum_size = Vector2(128, 40)
+layout_mode = 2
+
+[connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons/CloseButton" to="." method="_on_close_button_pressed"]

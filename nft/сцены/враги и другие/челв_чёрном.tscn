@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://bbrs4wtkw6mf2"]
+
+[ext_resource type="Texture2D" uid="uid://dom47wipwvm6r" path="res://asset/враги/чел в чёрном.png" id="1_sqdab"]
+[ext_resource type="Script" path="res://scripts/челв_чёрном.gd" id="1_vp8kr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sjmgh"]
+size = Vector2(20, 26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_42f2t"]
+
+[node name="ЧелвЧёрном" type="Node2D"]
+script = ExtResource("1_vp8kr")
+
+[node name="ЧелВЧёрном" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(9.90079, 13.6563)
+scale = Vector2(1.2438, 1.60352)
+texture = ExtResource("1_sqdab")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-0.0992126, 0.656319)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_sjmgh")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, 24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_42f2t")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
