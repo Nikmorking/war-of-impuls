@@ -1,9 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://ce5mpiiw3anr7"]
+[gd_scene load_steps=14 format=3 uid="uid://ce5mpiiw3anr7"]
 
 [ext_resource type="TileSet" uid="uid://bcclw1ii0vyf" path="res://сцены/locations/tile_1.tres" id="1_hxabb"]
 [ext_resource type="Script" path="res://scripts/schotchik.gd" id="1_tu360"]
 [ext_resource type="PackedScene" uid="uid://ciehno2dtgtce" path="res://сцены/player.tscn" id="4_3hble"]
-[ext_resource type="Script" path="res://scripts/spawner.gd" id="5_ph2gc"]
 [ext_resource type="PackedScene" uid="uid://bbrs4wtkw6mf2" path="res://сцены/враги и другие/челв_чёрном.tscn" id="6_ild12"]
 [ext_resource type="Texture2D" uid="uid://bhaxq7ncsn3fb" path="res://asset/ПОРТАЛ.png" id="7_nl53c"]
 [ext_resource type="PackedScene" uid="uid://cg3em863h60d1" path="res://сцены/враги и другие/маникен.tscn" id="7_xikbq"]
@@ -96,10 +95,6 @@ shape = SubResource("RectangleShape2D_ysoc5")
 position = Vector2(484, 270)
 SPEED = 100
 
-[node name="Spawn_pos" type="Node2D" parent="."]
-position = Vector2(553, 114)
-script = ExtResource("5_ph2gc")
-
 [node name="Пули" type="Node2D" parent="."]
 position = Vector2(3, 0)
 
@@ -133,6 +128,9 @@ texture_filter = 1
 position = Vector2(-116, -86)
 scale = Vector2(1.2438, 1.60352)
 texture = ExtResource("8_e4q37")
+
+[node name="Spawn_pos" type="Node2D" parent="."]
+position = Vector2(578, 236)
 
 [connection signal="area_entered" from="Портал/Area2D" to="." method="_portal"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

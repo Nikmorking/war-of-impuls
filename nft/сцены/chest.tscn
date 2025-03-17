@@ -1,0 +1,107 @@
+[gd_scene load_steps=13 format=3 uid="uid://cxw0c43wc4y8x"]
+
+[ext_resource type="Texture2D" uid="uid://b1nvd8ynqk126" path="res://asset/Tile/Chest.png" id="1_ex1tu"]
+[ext_resource type="Script" path="res://scripts/chest.gd" id="1_ojxnp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qr6qm"]
+atlas = ExtResource("1_ex1tu")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rqb1c"]
+atlas = ExtResource("1_ex1tu")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r88e7"]
+atlas = ExtResource("1_ex1tu")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ni7md"]
+atlas = ExtResource("1_ex1tu")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_804hm"]
+atlas = ExtResource("1_ex1tu")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fpjhv"]
+atlas = ExtResource("1_ex1tu")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fbvoy"]
+atlas = ExtResource("1_ex1tu")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d3eyd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qr6qm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rqb1c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r88e7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ni7md")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_804hm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fpjhv")
+}],
+"loop": true,
+"name": &"open",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fbvoy")
+}],
+"loop": true,
+"name": &"opened",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1q02r"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_oj3ki"]
+font_size = 15
+
+[node name="chest" type="Node2D"]
+script = ExtResource("1_ojxnp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, 1)
+sprite_frames = SubResource("SpriteFrames_d3eyd")
+animation = &"open"
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-1, 19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_1q02r")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+texture_filter = 1
+offset_left = -17.0
+offset_top = -27.0
+offset_right = 152.0
+offset_bottom = 66.0
+scale = Vector2(0.5, 0.5)
+text = "Press E to 
+open chest"
+label_settings = SubResource("LabelSettings_oj3ki")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

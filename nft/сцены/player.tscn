@@ -58,14 +58,14 @@ autostart = true
 position = Vector2(-1.25, 0)
 rotation = -3.08372
 scale = Vector2(1.1267, -390.149)
-zoom = Vector2(4, 4)
+zoom = Vector2(5, 5)
 
 [node name="UI" parent="." instance=ExtResource("3_j224j")]
-offset_left = -193.0
-offset_top = -112.0
-offset_right = -193.0
-offset_bottom = -112.0
-scale = Vector2(0.3, 0.3)
+offset_left = -108.0
+offset_top = -65.0
+offset_right = -108.0
+offset_bottom = -65.0
+scale = Vector2(0.2, 0.2)
 
 [connection signal="timeout" from="Timer" to="." method="call_down"]
 [connection signal="timeout" from="Timer3" to="." method="vis_health"]
