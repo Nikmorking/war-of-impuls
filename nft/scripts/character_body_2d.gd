@@ -8,6 +8,7 @@ var xzz = false
 var nhf = false
 var lapka = 0
 var play = true
+var key = false
 
 signal restart
 
