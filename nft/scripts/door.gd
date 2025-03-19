@@ -14,9 +14,14 @@ func _process(delta: float) -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D:
 		if body.key:
-			$"ДверьЗакрытая".hide()
-			$"ДверьОткрытая".show()
-			$StaticBody2D/Coll.set_deferred("disabled", true)
-			
+			$OpenDoor.play()
+			body.key = false
 			#$StaticBody2D.hide()
+	pass # Replace with function body.
+
+
+func _on_open_door_finished() -> void:
+	$"ДверьЗакрытая".hide()
+	$"ДверьОткрытая".show()
+	$StaticBody2D/Coll.set_deferred("disabled", true)
 	pass # Replace with function body.

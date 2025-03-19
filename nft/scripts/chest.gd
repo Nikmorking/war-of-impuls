@@ -1,11 +1,15 @@
 extends Node2D
 
+var lot = true
 var open = false
 
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("open"):
 		if open:
-			$AnimatedSprite2D.play("open")
+			if lot:
+				$AnimatedSprite2D.play("open")
+				$OpenChest.play()
+				lot = false
 	pass
 
 func _on_area_2d_body_entered(body: Node2D) -> void:

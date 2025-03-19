@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bfll4fq7s6i5t"]
+[gd_scene load_steps=7 format=3 uid="uid://bfll4fq7s6i5t"]
 
 [ext_resource type="Texture2D" uid="uid://bf4io4huvfoef" path="res://asset/rrr/дверь закрытая.png" id="1_atxhu"]
 [ext_resource type="Script" path="res://scripts/door.gd" id="1_r86dy"]
 [ext_resource type="Texture2D" uid="uid://e836lr6lr8nh" path="res://asset/rrr/дверь открытая.png" id="2_0lw5r"]
+[ext_resource type="AudioStream" uid="uid://bebe8ys2okmgw" path="res://asset/sound/open door.mp3" id="4_ip0cl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rqtpi"]
 size = Vector2(1.77778, 32)
@@ -37,4 +38,10 @@ shape = SubResource("RectangleShape2D_rqtpi")
 position = Vector2(7.11111, -0.842105)
 shape = SubResource("RectangleShape2D_ity3c")
 
+[node name="OpenDoor" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ip0cl")
+volume_db = 10.0
+pitch_scale = 1.8
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="finished" from="OpenDoor" to="." method="_on_open_door_finished"]

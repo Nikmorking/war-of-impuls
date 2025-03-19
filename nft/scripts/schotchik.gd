@@ -4,8 +4,11 @@ var door:AnimatedSprite2D
 var schot = 0
 var col = 0
 
+
 @export var nid:int
 @export var win:int
+
+var res = load("res://asset/dialoges/миб1.dialogue")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -82,4 +85,14 @@ func col_3(body: Node2D) -> void:
 	if col == 2:
 		$room3.start()
 		col = 3
+	pass # Replace with function body.
+
+
+func col_4(body: Node2D) -> void:
+	if col == 3:
+		$door/StaticBody2D/Coll.set_deferred("disabled", false)
+		$"door/ДверьЗакрытая".show()
+		$"door/ДверьОткрытая".hide()
+		DialogueManager.show_dialogue_balloon(res,"in_room")
+		col = 4
 	pass # Replace with function body.

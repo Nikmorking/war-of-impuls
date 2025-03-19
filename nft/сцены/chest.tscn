@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://cxw0c43wc4y8x"]
+[gd_scene load_steps=14 format=3 uid="uid://cxw0c43wc4y8x"]
 
 [ext_resource type="Texture2D" uid="uid://b1nvd8ynqk126" path="res://asset/Tile/Chest.png" id="1_ex1tu"]
 [ext_resource type="Script" path="res://scripts/chest.gd" id="1_ojxnp"]
+[ext_resource type="AudioStream" uid="uid://dcxm8jtba5mg3" path="res://asset/sound/open chest.mp3" id="3_nx3kh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qr6qm"]
 atlas = ExtResource("1_ex1tu")
@@ -101,6 +102,10 @@ scale = Vector2(0.5, 0.5)
 text = "Press E to 
 open chest"
 label_settings = SubResource("LabelSettings_oj3ki")
+
+[node name="OpenChest" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_nx3kh")
+volume_db = -1.937
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
