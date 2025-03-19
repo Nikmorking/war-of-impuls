@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://ce5mpiiw3anr7"]
+[gd_scene load_steps=15 format=3 uid="uid://ce5mpiiw3anr7"]
 
 [ext_resource type="TileSet" uid="uid://bcclw1ii0vyf" path="res://сцены/locations/tile_1.tres" id="1_hxabb"]
 [ext_resource type="Script" path="res://scripts/schotchik.gd" id="1_tu360"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bhaxq7ncsn3fb" path="res://asset/ПОРТАЛ.png" id="7_nl53c"]
 [ext_resource type="PackedScene" uid="uid://cg3em863h60d1" path="res://сцены/враги и другие/маникен.tscn" id="7_xikbq"]
 [ext_resource type="Texture2D" uid="uid://dom47wipwvm6r" path="res://asset/враги/чел в чёрном.png" id="8_e4q37"]
+[ext_resource type="AudioStream" uid="uid://iqlxncs4hi5s" path="res://asset/sound/powerUp.wav" id="8_mltol"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ysoc5"]
 
@@ -132,5 +133,8 @@ texture = ExtResource("8_e4q37")
 [node name="Spawn_pos" type="Node2D" parent="."]
 position = Vector2(578, 236)
 
-[connection signal="area_entered" from="Портал/Area2D" to="." method="_portal"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_mltol")
+
+[connection signal="body_entered" from="Портал/Area2D" to="." method="_portal"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://caq6yfveb0mqh"]
+
+[ext_resource type="AudioStream" uid="uid://bfv6otbqy6cmp" path="res://asset/sound/Inspire-ashutosh(chosic.com).mp3" id="1_hdtuq"]
+
+[node name="Music for game" type="AudioStreamPlayer"]
+stream = ExtResource("1_hdtuq")
+volume_db = -10.306
+autoplay = true

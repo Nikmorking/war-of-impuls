@@ -47,6 +47,7 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 func start_an_go():
 	if $AnimationPlayer:
 		$AnimationPlayer.play("go")
+		$AudioStreamPlayer.play()
 	pass
 
 
@@ -57,7 +58,7 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	pass # Replace with function body.
 
 
-func _portal(area: Area2D) -> void:
+func _portal(body:Node2D) -> void:
 	if Gg.use_portal:
 		get_parent().win()
 	pass # Replace with function body.

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dcxm8jtba5mg3"
+path="res://.godot/imported/open chest.mp3-82434d6ba2a05f7e733ed02358158bda.mp3str"
+
+[deps]
+
+source_file="res://asset/sound/open chest.mp3"
+dest_files=["res://.godot/imported/open chest.mp3-82434d6ba2a05f7e733ed02358158bda.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

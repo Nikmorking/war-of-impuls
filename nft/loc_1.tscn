@@ -69,7 +69,7 @@ script = ExtResource("4_73ovl")
 group = "room1"
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2(376, 327)
+position = Vector2(464, 326)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-86, -4)
@@ -79,7 +79,7 @@ shape = SubResource("RectangleShape2D_llwrg")
 one_shot = true
 
 [node name="Area2D2" type="Area2D" parent="."]
-position = Vector2(461, 347)
+position = Vector2(479, 303)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
 position = Vector2(-3, 56)
@@ -121,7 +121,7 @@ script = ExtResource("4_73ovl")
 group = "room3"
 
 [node name="Area2D3" type="Area2D" parent="."]
-position = Vector2(597, 257)
+position = Vector2(688, 283)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
 position = Vector2(-85, -38)
