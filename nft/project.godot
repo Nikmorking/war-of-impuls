@@ -20,6 +20,10 @@ boot_splash/use_filter=false
 config/icon="res://icon.svg"
 config/windows_native_icon="res://asset/Menu/Меню.ico"
 
+[audio]
+
+buses/default_bus_layout=""
+
 [autoload]
 
 Gg="*res://scripts/gg.gd"

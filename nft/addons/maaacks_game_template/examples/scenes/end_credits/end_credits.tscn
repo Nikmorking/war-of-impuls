@@ -1,15 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://bagraegk311h0"]
+[gd_scene load_steps=6 format=3 uid="uid://bagraegk311h0"]
 
 [ext_resource type="PackedScene" uid="uid://c1g50h2avck3w" path="res://addons/maaacks_game_template/examples/scenes/credits/credits.tscn" id="1_885d8"]
 [ext_resource type="Script" path="res://addons/maaacks_game_template/examples/scenes/end_credits/end_credits.gd" id="2_6pwj4"]
 [ext_resource type="Script" path="res://addons/maaacks_game_template/base/scripts/capture_focus.gd" id="3_aoilo"]
 [ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_game_template/base/scenes/music_players/background_music_player.tscn" id="3_v7acr"]
+[ext_resource type="AudioStream" uid="uid://cfclybyjgj8x3" path="res://asset/sound/DEKADANCE_-_Na_krajj_Zemli_(musmore-VEED.mp3" id="4_qse7i"]
 
 [node name="EndCredits" instance=ExtResource("1_885d8")]
 script = ExtResource("2_6pwj4")
 main_menu_scene = "res://addons/maaacks_game_template/examples/scenes/menus/main_menu/main_menu_with_animations.tscn"
 
 [node name="BackgroundMusicPlayer" parent="." index="0" instance=ExtResource("3_v7acr")]
+stream = ExtResource("4_qse7i")
 bus = &"Master"
 
 [node name="BackgroundColor" type="ColorRect" parent="." index="1"]
@@ -33,6 +35,61 @@ stretch_mode = 5
 
 [node name="ScrollContainer" parent="." index="3"]
 scroll_vertical = 0
+
+[node name="CreditsLabel" parent="ScrollContainer/VBoxContainer" index="1"]
+modulate = Color(1, 1, 1, 1)
+self_modulate = Color(1, 1, 1, 1)
+text = "[center][font_size=48]Collaborators[/font_size]
+
+[font_size=32]Programmer[/font_size]
+[url=https://nikmorking.itch.io/]Nikmorking[/url]  
+Timur62
+
+[font_size=32]Screenwriter[/font_size]
+[url=https://itch.io/profile/ehont]Ehont[/url]
+
+
+[font_size=32]Artist[/font_size]
+[url=https://itch.io/profile/ehont]Ehont[/url]
+Художник
+
+
+[font_size=48]Sourced / Unaffiliated[/font_size]
+[font_size=32]Music[/font_size]
+[font_size=24]Inspire[/font_size]
+Author: [url=https://soundcloud.com/grandakt]ASHUTOSH[/url]  
+Source: [url=https://www.chosic.com/download-audio/27888/]Music promoted by chosic.com[/url]  
+License: [url=https://creativecommons.org/licenses/by/3.0/]Creative Commons Attribution 3.0 Unported License[/url]
+[font_size=32]Tileset[/font_size]
+[font_size=24]Sprout Lands Basic pack[/font_size]
+Author: [url=https://cupnooble.itch.io/]Cup Nooble[/url]  
+Source: [url=https://cupnooble.itch.io/sprout-lands-asset-pack]itch.io[/url]  
+License: [url=read_me.txt]License - Basic Pack[/url]
+
+
+
+[font_size=48]Tools[/font_size]
+[font_size=24]Godot[/font_size]
+Author: [url=https://godotengine.org/contact]Juan Linietsky, Ariel Manzur, and contributors[/url]  
+Source: [url=https://godotengine.org/]godotengine.org[/url]  
+License: [url=https://github.com/godotengine/godot/blob/master/LICENSE.txt]MIT License[/url] 
+
+[font_size=24]Git[/font_size]
+Author: [url=https://github.com/torvalds]Linus Torvalds[/url]  
+Source: [url=https://git-scm.com/downloads]git-scm.com[/url]  
+License: [url=https://opensource.org/licenses/GPL-2.0]GNU General Public License version 2[/url]
+
+[font_size=24]Godot Game Template[/font_size]
+Author: [url=https://github.com/Maaack/Godot-Game-Template/graphs/contributors]Marek Belski and contributors[/url]  
+Source: [url=https://github.com/Maaack/Godot-Game-Template]github: Godot-Game-Template[/url]  
+License: [url=LICENSE.txt]MIT License[/url]
+
+[font_size=24]Dialogue Manager[/font_size]
+Author: [url=https://github.com/nathanhoad]Nathan Hoad[/url]  
+Source: [url=https://github.com/nathanhoad/godot_dialogue_manager]github: godot_dialogue_manager[/url]  
+License: [url=LICENSE.txt]MIT License[/url]
+  
+[/center]"
 
 [node name="CenterContainer" type="CenterContainer" parent="." index="4"]
 layout_mode = 0

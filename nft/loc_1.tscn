@@ -137,17 +137,19 @@ position = Vector2(593, 139)
 [node name="door" parent="." instance=ExtResource("6_5e3sn")]
 position = Vector2(651, 357)
 
-[node name="Миб1" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(771, 362)
-texture = ExtResource("7_srdne")
-
 [node name="Area2D4" type="Area2D" parent="."]
 position = Vector2(773, 362)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4"]
 position = Vector2(-86, -4)
 shape = SubResource("RectangleShape2D_llwrg")
+
+[node name="Миб1" type="Node2D" parent="."]
+
+[node name="Миб" type="Sprite2D" parent="Миб1"]
+texture_filter = 1
+position = Vector2(771, 362)
+texture = ExtResource("7_srdne")
 
 [connection signal="body_entered" from="Area2D" to="." method="col_1"]
 [connection signal="body_entered" from="Area2D2" to="." method="col_2"]

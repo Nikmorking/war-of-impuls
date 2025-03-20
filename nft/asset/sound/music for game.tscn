@@ -4,5 +4,5 @@
 
 [node name="Music for game" type="AudioStreamPlayer"]
 stream = ExtResource("1_hdtuq")
-volume_db = -10.306
 autoplay = true
+bus = &"music"
