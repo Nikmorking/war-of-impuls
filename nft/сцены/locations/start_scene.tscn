@@ -61,6 +61,22 @@ tracks/0/keys = {
 "values": ["", "Long ago, there were two races of insects and animals that lived in peace and harmony for some time. But one day, a Printer appeared in the animal world, promising all the inhabitants technology in exchange for obedience. The naive insects immediately agreed to this proposal, and the animals organized a war for the environment against the alien. A civil war broke out, during which the animals were pushed to the outermost unpolluted frontiers. When the last of the rebels began to despair, a rabbit with no memory of what happened emerges from a suddenly opened portal. And the world shuddered at the mere mention of his name - Impulse."]
 }
 
+[sub_resource type="Animation" id="Animation_lximt"]
+resource_name = "start"
+length = 15.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["", "Давным-давно были две расы насекомых и животных которые жили в мире какое-то количество времени. Но однажды в мир животных явился незнакомец который, пообещал всем жителям золотые горы замена подчинения. Насекомые сразу согласились на такое предложение, а животное организовали против пришельца в войну. Началась гражданская война в ходе которой животных оттеснили на самые крайние рубежи. В таком мире появляется наш главный герой-импульс без памяти о произошедшем. "]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uf10t"]
 _data = {
 "RESET": SubResource("Animation_sw02j"),

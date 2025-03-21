@@ -42,8 +42,11 @@ func _on_body_entered(body: Node2D) -> void:
 			body.health -= damage
 			body.vis_health()
 			if(body.health <= 0):
+				$AudioStreamPlayer2.play()
 				body.queue_free()
 				Gg.get_papa(2, self).kill()
+			else:
+				$AudioStreamPlayer.play()
 	else:
 		stop = true
 	pass 

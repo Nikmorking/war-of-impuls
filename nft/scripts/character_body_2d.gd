@@ -6,8 +6,9 @@ var pulla = 0
 var vampr = false
 var xzz = false
 var nhf = false
-var lapka = 5
+var lapka = 0
 var play = true
+var key = false
 
 signal restart
 

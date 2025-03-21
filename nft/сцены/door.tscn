@@ -1,62 +1,47 @@
-[gd_scene load_steps=8 format=3 uid="uid://bfll4fq7s6i5t"]
+[gd_scene load_steps=7 format=3 uid="uid://bfll4fq7s6i5t"]
 
-[ext_resource type="Texture2D" uid="uid://s70gl81i4sra" path="res://asset/Tile/Doors.png" id="1_3dkkt"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_njvea"]
-atlas = ExtResource("1_3dkkt")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jbp6j"]
-atlas = ExtResource("1_3dkkt")
-region = Rect2(0, 16, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_btkw7"]
-atlas = ExtResource("1_3dkkt")
-region = Rect2(0, 48, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_o2a1d"]
-atlas = ExtResource("1_3dkkt")
-region = Rect2(0, 32, 16, 16)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_vnuhb"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_njvea")
-}],
-"loop": true,
-"name": &"con",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jbp6j")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_btkw7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_o2a1d")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_njvea")
-}],
-"loop": true,
-"name": &"ggg",
-"speed": 5.0
-}]
+[ext_resource type="Texture2D" uid="uid://bf4io4huvfoef" path="res://asset/rrr/дверь закрытая.png" id="1_atxhu"]
+[ext_resource type="Script" path="res://scripts/door.gd" id="1_r86dy"]
+[ext_resource type="Texture2D" uid="uid://e836lr6lr8nh" path="res://asset/rrr/дверь открытая.png" id="2_0lw5r"]
+[ext_resource type="AudioStream" uid="uid://bebe8ys2okmgw" path="res://asset/sound/open door.mp3" id="4_ip0cl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rqtpi"]
-size = Vector2(16.8889, 16.8421)
+size = Vector2(1.77778, 32)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
-position = Vector2(295, 102.5)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ity3c"]
+size = Vector2(13.5556, 13.3684)
+
+[node name="door" type="Node2D"]
 scale = Vector2(1.125, 1.1875)
-sprite_frames = SubResource("SpriteFrames_vnuhb")
-animation = &"con"
+script = ExtResource("1_r86dy")
+
+[node name="ДверьЗакрытая" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_atxhu")
+
+[node name="ДверьОткрытая" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(0.888889, 0)
+scale = Vector2(0.465278, 0.5)
+texture = ExtResource("2_0lw5r")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="Coll" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-0.444445, 0.421062)
+position = Vector2(15.1111, 4.01547e-07)
 shape = SubResource("RectangleShape2D_rqtpi")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Coll" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(7.11111, -0.842105)
+shape = SubResource("RectangleShape2D_ity3c")
+
+[node name="OpenDoor" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ip0cl")
+pitch_scale = 1.8
+bus = &"SFX"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="finished" from="OpenDoor" to="." method="_on_open_door_finished"]

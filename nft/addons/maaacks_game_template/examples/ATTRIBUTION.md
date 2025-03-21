@@ -1,25 +1,32 @@
 # Attribution
 ## Collaborators
 
-### Role
-Мордвинов Никита
-Пожиратель душ - Тимур
-Ehont
+### Programmer
+[Nikmorking](https://nikmorking.itch.io/)  
+Timur62
+
+### Screenwriter
+[Ehont](https://itch.io/profile/ehont)
+
+
+### Artist
+[Ehont](https://itch.io/profile/ehont)
 Художник
-[Person w/ Link]()  
 
 
 ## Sourced / Unaffiliated
-### Asset Type
-#### Use Case
-Author: [Name]()  
-Source: [Domain : webpage.html]()  
-License: [License]()
+### Music
+#### Inspire
+Author: [ASHUTOSH](https://soundcloud.com/grandakt)  
+Source: [Music promoted by chosic.com](https://www.chosic.com/download-audio/27888/)  
+License: [Creative Commons Attribution 3.0 Unported License](https://creativecommons.org/licenses/by/3.0/)
+### Tileset
+#### Sprout Lands Basic pack
+Author: [Cup Nooble](https://cupnooble.itch.io/)  
+Source: [itch.io](https://cupnooble.itch.io/sprout-lands-asset-pack)  
+License: [License - Basic Pack](read_me.txt)
 
-#### Godot Engine Logo
-Author: Andrea Calabró  
-Source: [godotengine.org : press](https://godotengine.org/press/)  
-License: [CC BY 4.0 International](https://github.com/godotengine/godot/blob/master/LOGO_LICENSE.txt) 
+
 
 ## Tools
 #### Godot
@@ -35,4 +42,10 @@ License: [GNU General Public License version 2](https://opensource.org/licenses/
 #### Godot Game Template
 Author: [Marek Belski and contributors](https://github.com/Maaack/Godot-Game-Template/graphs/contributors)  
 Source: [github: Godot-Game-Template](https://github.com/Maaack/Godot-Game-Template)  
-License: [MIT License](LICENSE.txt)  
+License: [MIT License](LICENSE.txt)
+
+#### Dialogue Manager
+Author: [Nathan Hoad](https://github.com/nathanhoad)  
+Source: [github: godot_dialogue_manager](https://github.com/nathanhoad/godot_dialogue_manager)  
+License: [MIT License](LICENSE.txt)
+  
