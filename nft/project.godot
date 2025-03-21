@@ -22,7 +22,7 @@ config/windows_native_icon="res://asset/Menu/Меню.ico"
 
 [audio]
 
-buses/default_bus_layout=""
+buses/default_bus_layout="res://ууу.tres"
 
 [autoload]
 
@@ -34,6 +34,10 @@ ProjectMusicController="*res://addons/maaacks_game_template/base/scenes/autoload
 ProjectUISoundController="*res://addons/maaacks_game_template/base/scenes/autoloads/project_ui_sound_controller.tscn"
 FileSave="*res://scripts/Saves.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+
+[debug]
+
+shapes/navigation/agent_path_color=Color(1, 0, 0, 0)
 
 [dialogue_manager]
 
@@ -150,5 +154,6 @@ disable_plugin_dialogues=true
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"
 textures/vram_compression/import_etc2_astc=true
