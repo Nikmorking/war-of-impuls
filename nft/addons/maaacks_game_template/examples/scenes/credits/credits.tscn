@@ -12,25 +12,32 @@ modulate = Color(0, 0, 0, 1)
 self_modulate = Color(0, 0, 0, 1)
 text = "[center][font_size=48]Collaborators[/font_size]
 
-[font_size=32]Role[/font_size]
-Мордвинов Никита
-Пожиратель душ - Тимур
-Ehont
+[font_size=32]Programmer[/font_size]
+[url=https://nikmorking.itch.io/]Nikmorking[/url]  
+Timur62
+
+[font_size=32]Screenwriter[/font_size]
+[url=https://itch.io/profile/ehont]Ehont[/url]
+
+
+[font_size=32]Artist[/font_size]
+[url=https://itch.io/profile/ehont]Ehont[/url]
 Художник
-[url=]Person w/ Link[/url]  
 
 
 [font_size=48]Sourced / Unaffiliated[/font_size]
-[font_size=32]Asset Type[/font_size]
-[font_size=24]Use Case[/font_size]
-Author: [url=]Name[/url]  
-Source: [url=]Domain : webpage.html[/url]  
-License: [url=]License[/url]
+[font_size=32]Music[/font_size]
+[font_size=24]Inspire[/font_size]
+Author: [url=https://soundcloud.com/grandakt]ASHUTOSH[/url]  
+Source: [url=https://www.chosic.com/download-audio/27888/]Music promoted by chosic.com[/url]  
+License: [url=https://creativecommons.org/licenses/by/3.0/]Creative Commons Attribution 3.0 Unported License[/url]
+[font_size=32]Tileset[/font_size]
+[font_size=24]Sprout Lands Basic pack[/font_size]
+Author: [url=https://cupnooble.itch.io/]Cup Nooble[/url]  
+Source: [url=https://cupnooble.itch.io/sprout-lands-asset-pack]itch.io[/url]  
+License: [url=read_me.txt]License - Basic Pack[/url]
 
-[font_size=24]Godot Engine Logo[/font_size]
-Author: Andrea Calabró  
-Source: [url=https://godotengine.org/press/]godotengine.org : press[/url]  
-License: [url=https://github.com/godotengine/godot/blob/master/LOGO_LICENSE.txt]CC BY 4.0 International[/url] 
+
 
 [font_size=48]Tools[/font_size]
 [font_size=24]Godot[/font_size]
@@ -46,5 +53,11 @@ License: [url=https://opensource.org/licenses/GPL-2.0]GNU General Public License
 [font_size=24]Godot Game Template[/font_size]
 Author: [url=https://github.com/Maaack/Godot-Game-Template/graphs/contributors]Marek Belski and contributors[/url]  
 Source: [url=https://github.com/Maaack/Godot-Game-Template]github: Godot-Game-Template[/url]  
-License: [url=LICENSE.txt]MIT License[/url]  
+License: [url=LICENSE.txt]MIT License[/url]
+
+[font_size=24]Dialogue Manager[/font_size]
+Author: [url=https://github.com/nathanhoad]Nathan Hoad[/url]  
+Source: [url=https://github.com/nathanhoad/godot_dialogue_manager]github: godot_dialogue_manager[/url]  
+License: [url=LICENSE.txt]MIT License[/url]
+  
 [/center]"
