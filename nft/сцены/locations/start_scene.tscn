@@ -1,12 +1,16 @@
-[gd_scene load_steps=12 format=3 uid="uid://ck4fvlnpbb7ep"]
+[gd_scene load_steps=16 format=3 uid="uid://ck4fvlnpbb7ep"]
 
 [ext_resource type="Script" path="res://scripts/start_scene.gd" id="1_so5ny"]
-[ext_resource type="Texture2D" uid="uid://bqmul5hx2soob" path="res://icon.svg" id="2_eofj6"]
+[ext_resource type="Texture2D" uid="uid://dm5314xo61ab3" path="res://asset/фон для заставки.png" id="2_ckink"]
 [ext_resource type="Texture2D" uid="uid://c6smn3p1j62vd" path="res://asset/благословение разработчиков.png" id="3_ftu7r"]
 [ext_resource type="Texture2D" uid="uid://bfo25fa3qyjii" path="res://asset/импульс/перс.png" id="4_xkdhk"]
 [ext_resource type="Texture2D" uid="uid://d02tfmsw055pp" path="res://asset/враги/дебаффер.png" id="5_2agpe"]
 [ext_resource type="Texture2D" uid="uid://dft2x6pbywysk" path="res://asset/враги/баффер.png" id="6_faodh"]
 [ext_resource type="Texture2D" uid="uid://dom47wipwvm6r" path="res://asset/враги/чел в чёрном.png" id="7_v6ptj"]
+[ext_resource type="Texture2D" uid="uid://dipbxlyv4cqq0" path="res://asset/враги/воин.png" id="8_ikjxo"]
+[ext_resource type="Texture2D" uid="uid://c5mfpqfbm6mr4" path="res://asset/враги/лучник.png" id="9_maygu"]
+[ext_resource type="Texture2D" uid="uid://dcrvvdnja7sbe" path="res://asset/манекен.png" id="10_2dwn1"]
+[ext_resource type="Texture2D" uid="uid://xcaswa6m3jmo" path="res://asset/1_002.png" id="10_pfnm1"]
 
 [sub_resource type="Animation" id="Animation_sw02j"]
 length = 0.001
@@ -17,7 +21,7 @@ tracks/0/path = NodePath(".:text")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
+"times": PackedFloat32Array(-0.133333),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [""]
@@ -35,7 +39,26 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": ["Давным-давно были две расы насекомых и животных которые жили в мире какое-то количество времени. Но однажды в мир животных явился незнакомец который, пообещал всем жителям золотые горы замена подчинения. Насекомые сразу согласились на такое предложение, а животное организовали против пришельца в войну. Началась гражданская война в ходе которой животных оттеснили на самые крайние рубежи. В таком мире появляется наш главный герой-импульс без памяти о произошедшем. "]
+"values": ["Long ago, there were two races of insects and animals that lived in peace and harmony for some time.
+But one day, a Printer appeared in the animal world, promising all the inhabitants technology in exchange for obedience.
+The naive insects immediately agreed to this proposal, and the animals organized a war for the environment against the alien. A civil war broke out, during which the animals were pushed to the outermost unpolluted frontiers.
+When the last of the rebels began to despair, a rabbit with no memory of what happened emerges from a suddenly opened portal. And the world shuddered at the mere mention of his name - Impulse."]
+}
+
+[sub_resource type="Animation" id="Animation_lximt"]
+resource_name = "start"
+length = 15.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["", "Long ago, there were two races of insects and animals that lived in peace and harmony for some time. But one day, a Printer appeared in the animal world, promising all the inhabitants technology in exchange for obedience. The naive insects immediately agreed to this proposal, and the animals organized a war for the environment against the alien. A civil war broke out, during which the animals were pushed to the outermost unpolluted frontiers. When the last of the rebels began to despair, a rabbit with no memory of what happened emerges from a suddenly opened portal. And the world shuddered at the mere mention of his name - Impulse."]
 }
 
 [sub_resource type="Animation" id="Animation_lximt"]
@@ -62,13 +85,8 @@ _data = {
 }
 
 [node name="StartScene" type="Node2D"]
+position = Vector2(-6, -2)
 script = ExtResource("1_so5ny")
-
-[node name="Icon" type="Sprite2D" parent="."]
-modulate = Color(0, 0, 0, 1)
-position = Vector2(601, 330.5)
-scale = Vector2(10.0781, 6.00781)
-texture = ExtResource("2_eofj6")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("RichTextLabel")
@@ -83,34 +101,63 @@ offset_top = 338.0
 offset_right = 1081.0
 offset_bottom = 640.0
 
+[node name="Icon" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(583, 329)
+scale = Vector2(35.75, 20.2969)
+texture = ExtResource("2_ckink")
+
 [node name="БлагословениеРазработчиков" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(572, 162)
+position = Vector2(574, 309)
 scale = Vector2(10.3438, 7.90625)
 texture = ExtResource("3_ftu7r")
 
 [node name="Перс" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(418, 266)
+position = Vector2(365, 489)
 scale = Vector2(8.5625, 8.71875)
 texture = ExtResource("4_xkdhk")
 
 [node name="Перс2" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(796, 234)
+position = Vector2(1077, 515)
 scale = Vector2(6.78125, 6.51562)
 texture = ExtResource("5_2agpe")
 
 [node name="Перс3" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(905, 152)
+position = Vector2(897, 556)
 scale = Vector2(6.78125, 6.51562)
 texture = ExtResource("6_faodh")
 
 [node name="Перс4" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(298, 164)
+position = Vector2(172, 594)
 scale = Vector2(8.5625, 8.71875)
 texture = ExtResource("7_v6ptj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(793, 406)
+scale = Vector2(5.78125, 5.71875)
+texture = ExtResource("8_ikjxo")
+
+[node name="Лучник" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(939.25, 161)
+scale = Vector2(5.95312, 5.75)
+texture = ExtResource("9_maygu")
+
+[node name="Манекен" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(151.5, 144.75)
+scale = Vector2(5.28125, 5.35938)
+texture = ExtResource("10_2dwn1")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.631373)
+position = Vector2(282, 532)
+texture = ExtResource("10_pfnm1")
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

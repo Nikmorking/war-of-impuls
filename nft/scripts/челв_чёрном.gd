@@ -3,7 +3,8 @@ extends Node2D
 var res = load("res://asset/dialoges/gman.dialogue")
 var manik = 0
 
-func _process(delta: float) -> void:
+func _ready() -> void:
+	DialogueManager.show_dialogue_balloon(res, "start")
 	pass
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
@@ -12,7 +13,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			DialogueManager.show_dialogue_balloon(res, "snova")
 		if manik == 0:
 			manik = 1
-			DialogueManager.show_dialogue_balloon(res, "start")
+			DialogueManager.show_dialogue_balloon(res, "podhod")
 			
 		if manik == 2:
 			DialogueManager.show_dialogue_balloon(res, "cont")
