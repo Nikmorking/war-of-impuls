@@ -1,25 +1,41 @@
 ~ start
-Импульс:Привет! Меня зовут Импульс. Я не помню, как здесь оказался,так что поверю на слово.  
-Человек в Чёрном:Приступим к тренировкам! Видишь мишень? Тебе надо будет попасть в них лапками, чтобы овладеть секретной техникой Ханкайских грибов.  
-Импульс:Звучит интересно. Но надо к ним сначала подойти  
+Developer: Do you want to read the tutorial?
+- Yes 
+	Developer: Well then, I'll tell you now. 
+	Developer: You can move up by pressing the "W" key.
+	Developer: You can move to the right by pressing the "D" key.
+	Developer: You can move left by pressing the "A" key.
+	Developer: You can move down by pressing the "S" key.
+	Developer: You can shoot by pressing the left and right mouse buttons.
+- No 
+	Developer: Well, no problem. Good luck! 
+=> END
 do Gg.vis_ui()
 do Gg.vis_man()
 => END
+~ podhod
+Person in black: Hello, traveler! You ended up on this parade ground by pure chance, and no one has stolen you. 
+Impuls: Hello! My name is Impuls. I don't remember how I ended up here, so I'll believe it.
+Person in black: Let's get to training! See the target? You'll need to hit them with your paws to master the secret technique of the Khankai mushrooms. 
+Impuls: Sounds interesting. But I need to approach them first. 
+=> END
 
 ~ cont
-Человек в Чёрном:Тревога! Кто-то перемещается к нам через портал.  
-Импульс:О! Надо посмотреть! Обязательно!  
+Person in black: Alert! Someone is moving towards us through the portal.  
+Impuls: О!I Must see! Definitely!  
 do Gg.start_an_go()
-Человек в Чёрном1:*тяжело дыша* Тревога! Все к оружию!  
-Импульс:Что случилось? Куда бежать? В чём проблема?  
-Человек в Чёрном1:На школу напали! Все на защиту!  ля печати на кож
-Чел в Чёрном: Идите на разведку, путник,а я пока вылечу его.  
-Импульс:Понял, я бегу!
+Person in black1: *breathing heavily* Alert! All to arms! 
+Impuls: What happened? Where to run? What's the problem? 
+Person in black1: The school is under attack! Everyone to the defense! 
+Person in black: Go and explore, traveler, and I'll heal him in the meantime.  
+Impuls: Got it, I'm running!
 do Gg.vis_ui()
 do Gg.use_portal = true
 => END
 
 ~ snova
-Человек в Чёрном: Что ты делаешь, иди бей маникен
+Person in black: What are you doing, go hit the mannequin. 
+Developer: This character cannot be spoken to until the current quest is completed. 
 do Gg.vis_ui()
 => END
+
