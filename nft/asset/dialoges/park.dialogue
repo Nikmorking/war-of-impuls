@@ -1,0 +1,18 @@
+~ start
+Impuls: Where did I end up? It looks like a forest.
+Inhabitant: This is a park. All the forces of the former kingdom of Hikiliya, now in ruins, are located here.
+Impuls: What kingdom?
+Inhabitant: It doesn't matter. Will you help us regain control of all the lands and restore the former order?
+Impuls: Of course. Who to kill?
+Inhabitant: You must first collect shells to create weapons and armor.
+Impuls: Okay. Where is my folding piano? There it is, in the bushes!
+Inhabitant: May Saint Frost protect you. *walks away, whispering* What kind of piano is there, there aren’t even any bushes there.
+=> END
+~ podhod
+Impuls: Hello! What will be the tasks?
+Inhabitant: Hello!
+Ж: Привет! Надо собрать ракушки для нашей армии.
+И: Прекрасно! Сколько?
+Ж: 20 штук.
+И: Понял. Уже бегу!
+=> END

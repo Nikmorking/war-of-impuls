@@ -1,11 +1,24 @@
-~ this_is_a_node_title
-Nathan: [[Hi|Hello|Howdy]], this is some dialogue.
-Nathan: Here are some choices.
-- First one
-	Nathan: You picked the first one.
-- Second one
-	Nathan: You picked the second one.
-- Start again => this_is_a_node_title
-- End the conversation => END
-Nathan: For more information see the online documentation.
+~ start
+Impuls: There you are, you devil's crab! Fear me, if anything happens I'll knock on your door!
+MiB: Uhhhhh... What, excuse me?
+Impuls: Are you deaf?! Get out of here before I stuff you in my pocket and sell you for five bucks to the nearest granny on a bench near the entrance!
+MiB: Do you even realize who you're talking to?
+Impuls: Yeah, just a giant talking crab with a sharp claw, so what?
+MiB: And you're not afraid of me?
+Impuls: What's the point? I'll knock you down in no time.
+MiB: Oh you...Defend yourself, you hunched over dog!
+Impuls: Actually, I'm a rabbit, oh well.
+MiB: АААААААААААА!
+Impuls: B, also a vitamin.
+MiB: How dare you?! Defend yourself!
+=> END
+~ win
+Impuls: I told you so.
+MiB: Cough...*dies*
+Impuls: *when he approaches the door, he knocks* Is anyone alive?
+Inhabitant: What are you yelling about? I'm coming, I'm coming! *opens door*
+Impuls: Hello. Sorry to bother you, but may I know how I can get back to the parade ground?
+Inhabitant: I don’t know, but from here there is only one way - to the park, and even then it’s a one-way portal.
+Impuls: Where are you from?
+Inhabitant: I don't remember. Let's go to the portal - we'll find out the answers to some of the questions, the rest - later.
 => END
