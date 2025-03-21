@@ -1,12 +1,12 @@
 extends "res://scripts/Basic_enemy.gd"
 
 var down = true
-
-func _ready() -> void:
-	play = false
-	pass
-
+@export var mib = false
 # Called when the node enters the scene tree for the first time.
+
+func _enter_tree():
+	play = !mib
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -17,6 +17,8 @@ func _process(delta: float) -> void:
 		else:
 			hit_player()
 		#$CollisionPolygon2D.disabled = true
+	else:
+		health = max_health
 	pass
 
 func hit_player()->void:

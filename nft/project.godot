@@ -144,9 +144,8 @@ open={
 
 [internationalization]
 
-
 locale/translations=PackedStringArray("res://addons/maaacks_game_template/base/translations/menus_translations.en.translation", "res://addons/maaacks_game_template/base/translations/menus_translations.fr.translation", "res://asset/dialoges/gmanper.en.translation")
-locale/translations_pot_files=PackedStringArray("res://asset/dialoges/gman.dialogue", "res://asset/dialoges/Mib1.dialogue", "res://asset/dialoges/park.dialogue")
+locale/translations_pot_files=PackedStringArray("res://asset/dialoges/gman.dialogue", "res://asset/dialoges/Mib1.dialogue", "res://asset/dialoges/park.dialogue", "res://asset/dialoges/миб1.dialogue")
 
 [maaacks_game_template]
 

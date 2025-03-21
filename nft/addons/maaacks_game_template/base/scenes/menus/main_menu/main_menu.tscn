@@ -9,7 +9,7 @@
 [ext_resource type="Script" path="res://addons/maaacks_game_template/base/scenes/menus/main_menu/config_version_label.gd" id="6_pdiij"]
 [ext_resource type="AudioStream" uid="uid://dwhdyurii4f1f" path="res://asset/sound/music for scene.mp3" id="6_sff3d"]
 [ext_resource type="Script" path="res://addons/maaacks_game_template/base/scenes/menus/main_menu/config_name_label.gd" id="7_j7612"]
-[ext_resource type="Texture2D" uid="uid://846u7n8pbg1o" path="res://asset/Menu/begin.png" id="10_eralk"]
+[ext_resource type="Texture2D" uid="uid://cuv4m0afym3xb" path="res://asset/Menu/begin.png" id="10_eralk"]
 [ext_resource type="Texture2D" uid="uid://yruxpocfduqd" path="res://asset/Menu/Настройки.png" id="12_nt3vw"]
 [ext_resource type="Texture2D" uid="uid://2wfl1iftbo7x" path="res://asset/Menu/quit.png" id="12_wmeg1"]
 [ext_resource type="Texture2D" uid="uid://lhhxvm51y80a" path="res://asset/Menu/Фон 1.png" id="13_jwtbk"]
