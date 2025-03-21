@@ -1,11 +1,15 @@
 extends "res://scripts/Basic_enemy.gd"
 
 var down = true
+var res = load("res://asset/dialoges/Mib1.dialogue")
+
 @export var mib = false
 # Called when the node enters the scene tree for the first time.
 
 func _enter_tree():
 	play = !mib
+	Gg.connect("_start_bos", start)
+	Gg.connect("_win_bos", win)
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -17,6 +21,9 @@ func _process(delta: float) -> void:
 		else:
 			hit_player()
 		#$CollisionPolygon2D.disabled = true
+		if health < 100 and mib:
+			play = false
+			DialogueManager.show_dialogue_balloon(res, "win")
 	else:
 		health = max_health
 	pass
@@ -38,6 +45,18 @@ func hit_player()->void:
 func call_down() -> void:
 	hit = true
 	pass # Replace with function body.
+
+func win():
+	queue_free()
+	pass
+
+func start():
+	play = true
+	if $GPUParticles2D:
+		$GPUParticles2D.emitting = true
+	if $ff:
+		$ff.emitting = true
+	pass
 
 
 func _on_player_restart() -> void:

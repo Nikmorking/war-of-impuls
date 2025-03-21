@@ -11,11 +11,14 @@ Impuls: Actually, I'm a rabbit, oh well.
 MiB: АААААААААААА!
 Impuls: B, also a vitamin.
 MiB: How dare you?! Defend yourself!
+do Gg.start_bos()
 => END
 ~ win
 Impuls: I told you so.
 MiB: Cough...*dies*
+do Gg.win_bos()
 Impuls: *when he approaches the door, he knocks* Is anyone alive?
+do Gg.opendoor()
 Inhabitant: What are you yelling about? I'm coming, I'm coming! *opens door*
 Impuls: Hello. Sorry to bother you, but may I know how I can get back to the parade ground?
 Inhabitant: I don’t know, but from here there is only one way - to the park, and even then it’s a one-way portal.

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bxw8domsqb8r1"]
+[gd_scene load_steps=17 format=3 uid="uid://bxw8domsqb8r1"]
 
 [ext_resource type="Script" path="res://scripts/schotchik.gd" id="1_y0aeb"]
 [ext_resource type="PackedScene" uid="uid://m7id8i2fut7e" path="res://сцены/locations/New_ location2.tscn" id="2_xpcoo"]
@@ -7,14 +7,56 @@
 [ext_resource type="PackedScene" uid="uid://bfll4fq7s6i5t" path="res://сцены/door.tscn" id="6_5e3sn"]
 [ext_resource type="PackedScene" uid="uid://cxw0c43wc4y8x" path="res://сцены/chest.tscn" id="6_n3ido"]
 [ext_resource type="PackedScene" uid="uid://befrnnj3h1yhu" path="res://сцены/враги и другие/Миб1.tscn" id="7_3e2gt"]
+[ext_resource type="Texture2D" uid="uid://bhaxq7ncsn3fb" path="res://asset/ПОРТАЛ.png" id="8_scce4"]
+[ext_resource type="PackedScene" uid="uid://cagst42qt7qu7" path="res://сцены/scripts/door.tscn" id="9_6tj6s"]
+[ext_resource type="Texture2D" uid="uid://ck24wu0gcbyl3" path="res://asset/перс1.png" id="10_p03cx"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_rt2ub"]
-vertices = PackedVector2Array(733.359, 236, 698.891, 236, 670.633, 231.656, 732.359, 219.047, 571.953, 176.391, 556.727, 125.102, 668, 133.812, 588.93, 170.156, 583.938, 220.078, 587.328, 234.297, 572.656, 233.273, 445.453, 170.539, 392.75, 172.609, 390.258, 68.9219, 507.906, 79.1484, 460.344, 168.578, 667.398, 286.469, 699.859, 323.438, 557.758, 327.641, 585.672, 282.508, 505.594, 267.797, 513.359, 393.07, 386.773, 393.922, 396.289, 266.797, 458.633, 266.797, 444.781, 265.773, 456.312, 232, 442.258, 233, 507.094, 170.57, 439.812, 213.812, 458.656, 219, 668, 87.7891, 620, 88.7812, 620, -18.9219, 731.07, -18.0703, 731.922, 88, 686.328, 88, 683.867, 105.156, 395, 233, 395, 214.781, 518.117, 232, 573.328, 219, 697.148, 168.172, 698.102, 109.32)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7), PackedInt32Array(8, 3, 2, 9, 10), PackedInt32Array(11, 12, 13, 14, 15), PackedInt32Array(16, 2, 1, 17), PackedInt32Array(16, 17, 18, 19), PackedInt32Array(19, 18, 10, 9), PackedInt32Array(20, 21, 22, 23, 24), PackedInt32Array(24, 23, 25), PackedInt32Array(26, 24, 25, 27), PackedInt32Array(14, 28, 15), PackedInt32Array(27, 29, 11, 15, 30, 26), PackedInt32Array(31, 32, 33, 34), PackedInt32Array(31, 34, 35, 36), PackedInt32Array(31, 36, 37, 6), PackedInt32Array(27, 38, 39, 29), PackedInt32Array(40, 26, 30, 41), PackedInt32Array(10, 40, 41, 8), PackedInt32Array(7, 8, 41, 4), PackedInt32Array(42, 7, 6), PackedInt32Array(43, 42, 6, 37)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(380, 58, 383, 183, 434, 181, 431, 204, 385, 205, 385, 243, 433, 243, 434, 256, 387, 257, 376, 404, 524, 403, 515, 258, 468, 257, 467, 242, 518, 242, 561, 243, 546, 338, 749, 332, 736, 110, 695, 98, 742, 98, 741, -28, 610, -29, 610, 99, 658, 98, 658, 123, 543, 114, 562, 178, 563, 209, 518, 209, 469, 209, 470, 179, 517, 181, 518, 70)])
+vertices = PackedVector2Array(787.688, 264, 750.859, 264, 755.68, 205.133, 924.039, 325.07, 783.539, 326.156, 924.953, 126, 747.359, 126, 749.828, 203.828, 670.633, 231.656, 723.031, 234.078, 698.898, 237.227, 571.953, 176.391, 556.727, 125.102, 668, 133.812, 588.93, 170.156, 667.398, 286.469, 699.906, 326.797, 557.711, 327.898, 585.672, 282.508, 587.328, 234.297, 572.656, 233.273, 583.938, 220.078, 724.898, 219.102, 445.453, 170.539, 392.75, 172.609, 390.258, 68.9219, 507.906, 79.1484, 460.344, 168.578, 505.594, 267.797, 513.359, 393.07, 386.773, 393.922, 396.289, 266.797, 458.633, 266.797, 444.781, 265.773, 456.312, 232, 442.258, 233, 507.094, 170.57, 439.812, 213.812, 458.656, 219, 668, 87.7891, 620, 88.7812, 620, -18.9219, 730.93, -18.0703, 730.07, 105.227, 698.148, 106.328, 697.148, 168.172, 573.328, 219, 518.117, 232, 395, 233, 395, 214.781)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 4, 0, 5), PackedInt32Array(6, 5, 0, 2), PackedInt32Array(6, 2, 7), PackedInt32Array(8, 9, 10), PackedInt32Array(11, 12, 13, 14), PackedInt32Array(15, 8, 10, 16), PackedInt32Array(15, 16, 17, 18), PackedInt32Array(19, 18, 17, 20, 21), PackedInt32Array(21, 22, 9, 8), PackedInt32Array(21, 8, 19), PackedInt32Array(23, 24, 25, 26, 27), PackedInt32Array(28, 29, 30, 31, 32), PackedInt32Array(32, 31, 33), PackedInt32Array(34, 32, 33, 35), PackedInt32Array(26, 36, 27), PackedInt32Array(35, 37, 23, 27, 38, 34), PackedInt32Array(39, 40, 41, 42), PackedInt32Array(39, 42, 43, 44), PackedInt32Array(13, 39, 44, 45), PackedInt32Array(13, 45, 14), PackedInt32Array(11, 14, 21, 46), PackedInt32Array(38, 46, 21, 20, 47), PackedInt32Array(38, 47, 34), PackedInt32Array(35, 48, 49, 37)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(380, 58, 383, 183, 434, 181, 431, 204, 385, 205, 385, 243, 433, 243, 434, 256, 387, 257, 376, 404, 524, 403, 515, 258, 468, 257, 467, 242, 518, 242, 561, 243, 546, 338, 934, 335, 935, 116, 740, 116, 741, -28, 610, -29, 610, 99, 658, 98, 658, 123, 543, 114, 562, 178, 563, 209, 518, 209, 469, 209, 470, 179, 517, 181, 518, 70)])
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_llwrg"]
 size = Vector2(27, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vkcfy"]
+
+[sub_resource type="Animation" id="Animation_gf75x"]
+resource_name = "go"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2.13333, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(691, 442), Vector2(685, 402), Vector2(723, 404), Vector2(733, 421)]
+}
+
+[sub_resource type="Animation" id="Animation_fiv0j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(691, 442)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p5nl5"]
+_data = {
+"RESET": SubResource("Animation_fiv0j"),
+"go": SubResource("Animation_gf75x")
+}
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(0, -1)
@@ -53,7 +95,7 @@ affect_navigation_mesh = true
 
 [node name="NavigationObstacle2D3" type="NavigationObstacle2D" parent="NavigationRegion2D"]
 radius = 10.0
-vertices = PackedVector2Array(740, 274, 777, 274, 773, 334, 710, 334, 709, 246, 737, 246)
+vertices = PackedVector2Array(740, 274, 777, 274, 773, 334, 710, 334, 709, 246, 732, 243, 736, 211, 745, 213)
 affect_navigation_mesh = true
 
 [node name="room1" type="Timer" parent="." groups=["room1"]]
@@ -146,8 +188,39 @@ shape = SubResource("RectangleShape2D_llwrg")
 
 [node name="Миб1" parent="." instance=ExtResource("7_3e2gt")]
 position = Vector2(765, 369)
+max_health = 3
+
+[node name="Door" parent="." instance=ExtResource("9_6tj6s")]
+position = Vector2(674, 415)
+scale = Vector2(1, 0.978)
+
+[node name="Портал" type="Sprite2D" parent="."]
+z_index = -100
+texture_filter = 1
+position = Vector2(683, 436)
+scale = Vector2(1, 0.978)
+texture = ExtResource("8_scce4")
+
+[node name="Area2D" type="Area2D" parent="Портал"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Портал/Area2D"]
+shape = SubResource("RectangleShape2D_vkcfy")
+
+[node name="Anim" type="AnimationPlayer" parent="."]
+root_node = NodePath("op")
+libraries = {
+"": SubResource("AnimationLibrary_p5nl5")
+}
+
+[node name="op" type="Sprite2D" parent="Anim"]
+visible = false
+texture_filter = 1
+position = Vector2(691, 442)
+texture = ExtResource("10_p03cx")
 
 [connection signal="body_entered" from="Area2D" to="." method="col_1"]
 [connection signal="body_entered" from="Area2D2" to="." method="col_2"]
 [connection signal="body_entered" from="Area2D3" to="." method="col_3"]
 [connection signal="body_entered" from="Area2D4" to="." method="col_4"]
+[connection signal="body_entered" from="Портал/Area2D" to="." method="_portal"]
+[connection signal="animation_finished" from="Anim" to="." method="_on_animation_finished"]

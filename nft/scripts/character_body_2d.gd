@@ -133,7 +133,7 @@ func Shoot() -> void:
 
 
 func _on_timer_2_timeout() -> void:
-	#Gg.get_papa(2, self)._on_lose_button_pressed()
+	Gg.get_papa(2, self)._on_lose_button_pressed()
 	pass # Replace with function body.
 
 

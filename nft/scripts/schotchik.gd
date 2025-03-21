@@ -8,7 +8,7 @@ var col = 0
 @export var nid:int
 @export var win:int
 
-var res = load("res://asset/dialoges/миб1.dialogue")
+var res = load("res://asset/dialoges/Mib1.dialogue")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -93,6 +93,11 @@ func col_4(body: Node2D) -> void:
 		$door/StaticBody2D/Coll.set_deferred("disabled", false)
 		$"door/ДверьЗакрытая".show()
 		$"door/ДверьОткрытая".hide()
-		DialogueManager.show_dialogue_balloon(res,"in_room")
+		DialogueManager.show_dialogue_balloon(res,"start")
 		col = 4
+	pass # Replace with function body.
+
+
+func _on_animation_finished(anim_name: StringName) -> void:
+	Gg.use_portal = true
 	pass # Replace with function body.
