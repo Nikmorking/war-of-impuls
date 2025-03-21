@@ -9,15 +9,17 @@ Developer: Do you want to read the tutorial?
 	Developer: You can shoot by pressing the left and right mouse buttons.
 - No 
 	Developer: Well, no problem. Good luck! 
-=> END
 do Gg.vis_ui()
-do Gg.vis_man()
+=> END
+
 => END
 ~ podhod
 Person in black: Hello, traveler! You ended up on this parade ground by pure chance, and no one has stolen you. 
 Impuls: Hello! My name is Impuls. I don't remember how I ended up here, so I'll believe it.
 Person in black: Let's get to training! See the target? You'll need to hit them with your paws to master the secret technique of the Khankai mushrooms. 
 Impuls: Sounds interesting. But I need to approach them first. 
+do Gg.vis_man()
+do Gg.vis_ui()
 => END
 
 ~ cont

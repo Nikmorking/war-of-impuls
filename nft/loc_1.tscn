@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://scripts/spawner.gd" id="4_73ovl"]
 [ext_resource type="PackedScene" uid="uid://bfll4fq7s6i5t" path="res://сцены/door.tscn" id="6_5e3sn"]
 [ext_resource type="PackedScene" uid="uid://cxw0c43wc4y8x" path="res://сцены/chest.tscn" id="6_n3ido"]
-[ext_resource type="Texture2D" uid="uid://c33u03xt8xd1" path="res://asset/враги/миб1.png" id="7_srdne"]
+[ext_resource type="PackedScene" uid="uid://befrnnj3h1yhu" path="res://сцены/враги и другие/Миб1.tscn" id="7_3e2gt"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_rt2ub"]
 vertices = PackedVector2Array(733.359, 236, 698.891, 236, 670.633, 231.656, 732.359, 219.047, 571.953, 176.391, 556.727, 125.102, 668, 133.812, 588.93, 170.156, 583.938, 220.078, 587.328, 234.297, 572.656, 233.273, 445.453, 170.539, 392.75, 172.609, 390.258, 68.9219, 507.906, 79.1484, 460.344, 168.578, 667.398, 286.469, 699.859, 323.438, 557.758, 327.641, 585.672, 282.508, 505.594, 267.797, 513.359, 393.07, 386.773, 393.922, 396.289, 266.797, 458.633, 266.797, 444.781, 265.773, 456.312, 232, 442.258, 233, 507.094, 170.57, 439.812, 213.812, 458.656, 219, 668, 87.7891, 620, 88.7812, 620, -18.9219, 731.07, -18.0703, 731.922, 88, 686.328, 88, 683.867, 105.156, 395, 233, 395, 214.781, 518.117, 232, 573.328, 219, 697.148, 168.172, 698.102, 109.32)
@@ -144,12 +144,8 @@ position = Vector2(773, 362)
 position = Vector2(-86, -4)
 shape = SubResource("RectangleShape2D_llwrg")
 
-[node name="Миб1" type="Node2D" parent="."]
-
-[node name="Миб" type="Sprite2D" parent="Миб1"]
-texture_filter = 1
-position = Vector2(771, 362)
-texture = ExtResource("7_srdne")
+[node name="Миб1" parent="." instance=ExtResource("7_3e2gt")]
+position = Vector2(765, 369)
 
 [connection signal="body_entered" from="Area2D" to="." method="col_1"]
 [connection signal="body_entered" from="Area2D2" to="." method="col_2"]

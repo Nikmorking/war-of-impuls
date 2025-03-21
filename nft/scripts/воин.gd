@@ -1,7 +1,10 @@
 extends "res://scripts/Basic_enemy.gd"
 
 var down = true
-	
+
+func _ready() -> void:
+	play = false
+	pass
 
 # Called when the node enters the scene tree for the first time.
 

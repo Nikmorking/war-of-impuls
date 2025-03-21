@@ -1,5 +1,7 @@
 extends Enemies
 
+var eni = 60
+
 func _ready() -> void:
 	Gg.connect("_vis_man",vis_this)
 	health = max_health
@@ -9,7 +11,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if health <= 40:
 		get_parent().get_node("ЧелвЧёрном").manik = 2
-		queue_free()
+		health = eni
 	pass
 
 func vis_this():
