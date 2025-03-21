@@ -8,6 +8,8 @@ script = ExtResource("2_q7msw")
 attribution_file_path = "res://addons/maaacks_game_template/examples/ATTRIBUTION.md"
 
 [node name="CreditsLabel" parent="ScrollContainer/VBoxContainer" index="1"]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
 text = "[center][font_size=48]Collaborators[/font_size]
 
 [font_size=32]Role[/font_size]

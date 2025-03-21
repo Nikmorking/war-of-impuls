@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://c7dulcifaeg7g"
+path="res://.godot/imported/миб1.dialogue-bbf50bf677bd8484eab1953a67c3c0b2.tres"
+
+[deps]
+
+source_file="res://asset/dialoges/миб1.dialogue"
+dest_files=["res://.godot/imported/миб1.dialogue-bbf50bf677bd8484eab1953a67c3c0b2.tres"]
+
+[params]
+
+defaults=true
