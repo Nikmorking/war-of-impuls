@@ -47,6 +47,10 @@ func call_down() -> void:
 	pass # Replace with function body.
 
 func win():
+	if mib:
+		var lep = load("res://сцены/плюшки/челночки.tscn").instantiate()
+		get_parent().add_child(lep)
+		lep.position = position
 	queue_free()
 	pass
 

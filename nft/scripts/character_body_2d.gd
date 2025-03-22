@@ -47,6 +47,7 @@ func _input(_event: InputEvent) -> void:
 	pass
 func _ready() -> void:
 	Gg.connect("_vis_ui",vis_ui)
+	health = max_health
 	vis_health()
 	pass
 

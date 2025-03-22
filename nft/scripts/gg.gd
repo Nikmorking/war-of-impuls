@@ -8,6 +8,7 @@ signal _start_an_go
 signal _start_bos
 signal _win_bos
 signal open_door_
+signal _start_bos_2
 
 func get_papa(col: float, sel: Node) -> Node:
 	for i in col:
@@ -21,6 +22,7 @@ func vis_ui():
 func opendoor():
 	open_door_.emit()
 	pass
+	
 
 func open_door():
 	_open_door.emit()
@@ -37,6 +39,12 @@ func start_an_go():
 func start_bos():
 	_start_bos.emit()
 	pass
+
+
+func start_bos_2():
+	_start_bos_2.emit()
+	pass
+
 
 func win_bos():
 	_win_bos.emit()

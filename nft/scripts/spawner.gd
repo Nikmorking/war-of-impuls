@@ -1,6 +1,7 @@
 extends Node2D
 
 var mob
+@export var spaw_mob =  load("res://сцены/враги и другие/Воин.tscn")
 
 @export var group:String
 
@@ -31,7 +32,7 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_timer_timeout() -> void:
-	mob = load("res://сцены/враги и другие/Воин.tscn").instantiate()
+	mob = spaw_mob.instantiate()
 	get_parent().add_child(mob)
 	mob.global_position = global_position
 	pass # Replace with function body.
