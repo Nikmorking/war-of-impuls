@@ -42,7 +42,6 @@ texture = ExtResource("2_3jhim")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, -8.57143)
-scale = Vector2(1, 1)
 shape = SubResource("CapsuleShape2D_aqp5a")
 
 [node name="Timer" type="Timer" parent="."]
@@ -65,7 +64,6 @@ offset_top = -601.429
 offset_bottom = 108.571
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-scale = Vector2(1, 1)
 polygon = PackedVector2Array(14.2857, 4.28571, 15.7143, -15.7143, 8.57143, -15.7143, 7.14286, 0, -5.71429, 0, -7.14286, -15.7143, -15.7143, -15.7143, -15.7143, 0, -8.57143, 2.85714, -4.28571, 15.7143, 5.71429, 14.2857)
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
