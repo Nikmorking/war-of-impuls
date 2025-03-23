@@ -1,14 +1,15 @@
-[gd_scene load_steps=26 format=3 uid="uid://fis57w60doyj"]
+[gd_scene load_steps=32 format=3 uid="uid://fis57w60doyj"]
 
 [ext_resource type="TileSet" uid="uid://bcclw1ii0vyf" path="res://сцены/locations/tile_1.tres" id="1_ib34o"]
 [ext_resource type="Script" path="res://scripts/schotchik.gd" id="1_j7ur8"]
 [ext_resource type="Texture2D" uid="uid://b7yvhnweo7ynu" path="res://asset/враги/миб2(вещь).png" id="2_14ic5"]
-[ext_resource type="Resource" uid="uid://dn5lm37rktka4" path="res://asset/dialoges/park.dialogue" id="2_dld66"]
+[ext_resource type="Resource" uid="uid://d3f5hyn4tywub" path="res://asset/dialoges/printer.dialogue" id="2_x5wcj"]
 [ext_resource type="PackedScene" uid="uid://bfll4fq7s6i5t" path="res://сцены/door.tscn" id="3_0v727"]
 [ext_resource type="PackedScene" uid="uid://cxw0c43wc4y8x" path="res://сцены/chest.tscn" id="4_23rd6"]
 [ext_resource type="PackedScene" uid="uid://ciehno2dtgtce" path="res://сцены/player.tscn" id="5_wvh2l"]
 [ext_resource type="PackedScene" uid="uid://cagst42qt7qu7" path="res://сцены/scripts/door.tscn" id="6_7gghu"]
 [ext_resource type="Texture2D" uid="uid://bhaxq7ncsn3fb" path="res://asset/ПОРТАЛ.png" id="7_dqomc"]
+[ext_resource type="Script" path="res://scripts/printer.gd" id="9_hic73"]
 [ext_resource type="Texture2D" uid="uid://cnqs4nik3vkjr" path="res://asset/враги/миб2(думает).png" id="9_udkgi"]
 [ext_resource type="Texture2D" uid="uid://catiu4kjqes4t" path="res://asset/враги/миб2(живой).png" id="10_fjd0p"]
 [ext_resource type="Texture2D" uid="uid://dipbxlyv4cqq0" path="res://asset/враги/воин.png" id="11_rhucc"]
@@ -18,20 +19,24 @@
 [ext_resource type="PackedScene" uid="uid://b7uhx10lrhkix" path="res://сцены/плюшки/живая липёшка.tscn" id="17_tjl4g"]
 [ext_resource type="PackedScene" uid="uid://b5pconoux0nrw" path="res://сцены/плюшки/тапок_алексей_сергеевича.tscn" id="17_tlete"]
 [ext_resource type="Script" path="res://scripts/spawner.gd" id="18_1tsum"]
+[ext_resource type="Script" path="res://scripts/воин.gd" id="18_7ujcw"]
 [ext_resource type="PackedScene" uid="uid://b088uqy5qe8w0" path="res://сцены/враги и другие/лучник.tscn" id="19_f8b7c"]
+[ext_resource type="PackedScene" uid="uid://0uc8e6pla322" path="res://сцены/hot_bar.tscn" id="19_h6gae"]
+[ext_resource type="PackedScene" uid="uid://t53sol1p1p4" path="res://сцены/плюшки/кто_ты_воин.tscn" id="21_001ch"]
+[ext_resource type="Script" path="res://сцены/scripts/room_5.gd" id="24_k1hqo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y4ebo"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_5pomj"]
-vertices = PackedVector2Array(145.023, 59.3672, 507.477, 56.1094, 506.922, 59.1562, 1067.45, 134.727, 1070.78, 198, 146.867, 198, 1111.6, 51.0078, 1112.35, 135.867, 627.688, -73, 630.656, 24.3672, 514.82, 17.5, 569, -38, 142.75, -111.047, 302.711, -114.75, 302.102, -91.9062, 301.367, -91.1797, 144.539, 23.7266, 298.648, -81, 299.469, -25.5781, 297.43, 19.2734, 301.367, -70.8438, 301.539, -70.6562, 300.727, -40.0938, 628.273, -92.1172, 628.82, -73, 569, -92.8672, 335.031, -23.4922, 541.68, -38.0703, 541.68, -38, 339.969, 22.0391, 550.438, -38, 560, -37.9219, 560, -38, 513.781, 22.9531, 663.562, 18.8828, 660.406, -53.5781, 661.93, -53.3516, 911.992, 16, 663.031, -231.922, 1109.08, -231.023, 1111.3, 17.9922, 543.281, -88.6016, 338.023, -76.0469, 339.352, -81, 153.633, -229.82, 154.461, -232.953, 632.117, -231.977, 630.172, -121.883, 544.312, -120.891, 328.758, -154.68, 142.078, -160.859, 141.281, -221.062, 146.18, -222.367, 336.633, -91.1797, 330.18, -97.6094)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 4, 5, 0, 2), PackedInt32Array(3, 2, 6, 7), PackedInt32Array(8, 9, 10, 11), PackedInt32Array(12, 13, 14, 15, 16), PackedInt32Array(16, 15, 17), PackedInt32Array(18, 19, 16, 17, 20), PackedInt32Array(18, 20, 21, 22), PackedInt32Array(23, 24, 8, 25), PackedInt32Array(26, 18, 22, 27, 28), PackedInt32Array(10, 29, 26, 28, 30, 31), PackedInt32Array(11, 25, 8), PackedInt32Array(31, 32, 11), PackedInt32Array(31, 11, 10), PackedInt32Array(29, 10, 33), PackedInt32Array(34, 35, 36, 37), PackedInt32Array(38, 39, 40, 37, 36), PackedInt32Array(41, 42, 43), PackedInt32Array(44, 45, 46, 47, 48, 49), PackedInt32Array(49, 50, 51, 52), PackedInt32Array(49, 52, 44), PackedInt32Array(53, 54, 49, 48, 41), PackedInt32Array(53, 41, 43)])
+vertices = PackedVector2Array(533.602, -90.8906, 338.094, -76.2969, 339.352, -81, 627.688, -73, 630.648, 24.1406, 542.438, 17.1328, 569, -38, 1067.45, 134.727, 1070.78, 198, 146.867, 198, 144.977, 56.9531, 544.492, 58.1172, 142.75, -111.047, 302.711, -114.75, 302.102, -91.9063, 301.367, -91.1797, 144.43, 15.1172, 298.648, -81, 299.469, -25.5781, 297.453, 18.7578, 301.367, -70.8438, 301.539, -70.6563, 300.727, -39.9531, 1111.6, 51.0078, 1112.35, 135.867, 531, 55.9688, 531, 23.0469, 335.031, -23.4922, 526.719, -41.0391, 628.273, -92.1172, 628.82, -73, 569, -92.8672, 541.68, -38, 339.969, 22.0391, 544.313, -120.891, 154.461, -232.953, 632.117, -231.977, 630.172, -121.883, 153.633, -229.82, 328.758, -154.68, 142.078, -160.859, 141.281, -221.063, 146.18, -222.367, 336.633, -91.1797, 330.18, -97.6094, 663.563, 18.8828, 660.406, -53.5781, 661.93, -53.3516, 911.992, 16, 663.031, -231.922, 1109.08, -231.023, 1111.3, 17.9922)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 4, 5, 6), PackedInt32Array(7, 8, 9, 10, 11), PackedInt32Array(12, 13, 14, 15, 16), PackedInt32Array(16, 15, 17), PackedInt32Array(18, 19, 16, 17, 20), PackedInt32Array(18, 20, 21, 22), PackedInt32Array(23, 24, 7, 11), PackedInt32Array(11, 10, 25), PackedInt32Array(5, 11, 25, 26), PackedInt32Array(27, 18, 22, 28), PackedInt32Array(29, 30, 3, 31), PackedInt32Array(6, 31, 3), PackedInt32Array(32, 6, 5), PackedInt32Array(5, 26, 33, 27, 28, 32), PackedInt32Array(34, 32, 28, 0), PackedInt32Array(35, 36, 37, 34), PackedInt32Array(38, 35, 34, 0, 39), PackedInt32Array(39, 40, 41, 42), PackedInt32Array(39, 42, 38), PackedInt32Array(39, 0, 2, 43), PackedInt32Array(39, 43, 44), PackedInt32Array(45, 46, 47, 48), PackedInt32Array(49, 50, 51, 48, 47)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(131, -243, 137, 208, 1123, 208, 1119, -241)])
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ghqlw"]
 size = Vector2(28.5, 75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u0fdq"]
-size = Vector2(31.2353, 26.4449)
+size = Vector2(31.2353, 22.826)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rqlb0"]
 size = Vector2(27, 32)
@@ -39,9 +44,12 @@ size = Vector2(27, 32)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cr02j"]
 size = Vector2(27, 32)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_teyvf"]
+size = Vector2(38, 37)
+
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_j7ur8")
-res = ExtResource("2_dld66")
+res = ExtResource("2_x5wcj")
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
@@ -59,6 +67,7 @@ position = Vector2(655, 168)
 
 [node name="chest" parent="." instance=ExtResource("4_23rd6")]
 position = Vector2(197, 154)
+key = ExtResource("17_tjl4g")
 
 [node name="Player" parent="." instance=ExtResource("5_wvh2l")]
 z_index = 1
@@ -98,13 +107,13 @@ affect_navigation_mesh = true
 [node name="NavigationObstacle2D2" type="NavigationObstacle2D" parent="NavigationRegion2D"]
 position = Vector2(-455, -331)
 radius = 10.0
-vertices = PackedVector2Array(593, 180, 595, 210, 768, 206, 766, 281, 1005, 283, 1005, 252, 776, 266, 774, 186)
+vertices = PackedVector2Array(593, 180, 595, 210, 768, 206, 766, 281, 973, 280, 977, 251, 776, 266, 774, 186)
 affect_navigation_mesh = true
 
 [node name="NavigationObstacle2D3" type="NavigationObstacle2D" parent="NavigationRegion2D"]
 position = Vector2(136, -240)
 radius = 10.0
-vertices = PackedVector2Array(514, 177, 502, 177, 505, 275, 387, 268, 383, 289, 976, 281, 976, 268, 776, 266, 518, 269)
+vertices = PackedVector2Array(514, 177, 502, 177, 505, 275, 417, 268, 418, 288, 976, 281, 976, 268, 776, 266, 518, 269)
 affect_navigation_mesh = true
 
 [node name="NavigationObstacle2D4" type="NavigationObstacle2D" parent="NavigationRegion2D"]
@@ -134,7 +143,7 @@ position = Vector2(594, 190)
 rotation = 1.58572
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2(-6.87241, 36.6523)
+position = Vector2(-5.47704, 35.5148)
 shape = SubResource("RectangleShape2D_u0fdq")
 
 [node name="room1" type="Timer" parent="." groups=["room1"]]
@@ -158,82 +167,230 @@ position = Vector2(-86, -4)
 shape = SubResource("RectangleShape2D_cr02j")
 
 [node name="Printer" type="Node2D" parent="."]
+texture_filter = 1
+script = ExtResource("9_hic73")
 
 [node name="Миб2(думает)" type="Sprite2D" parent="Printer"]
 visible = false
-position = Vector2(768, 132)
-scale = Vector2(2.09375, 1.96875)
+texture_filter = 1
+position = Vector2(771, 137)
+scale = Vector2(1.5, 1.41)
 texture = ExtResource("9_udkgi")
 
 [node name="Миб2(живой)" type="Sprite2D" parent="Printer"]
 visible = false
-position = Vector2(768, 132)
-scale = Vector2(2.09375, 1.96875)
+texture_filter = 1
+position = Vector2(771, 137)
+scale = Vector2(1.5, 1.5)
 texture = ExtResource("10_fjd0p")
 
 [node name="Миб2(воин)" type="Sprite2D" parent="Printer"]
 visible = false
-position = Vector2(768, 132)
-scale = Vector2(2.09375, 1.96875)
+texture_filter = 1
+position = Vector2(771, 136)
+scale = Vector2(1.5, 1.5)
 texture = ExtResource("9_udkgi")
 
 [node name="Воин" type="Sprite2D" parent="Printer/Миб2(воин)"]
+texture_filter = 1
 position = Vector2(11.4627, -11.6825)
 scale = Vector2(0.343284, 0.31746)
 texture = ExtResource("11_rhucc")
 
 [node name="Миб2(вещь)" type="Sprite2D" parent="Printer"]
+texture_filter = 1
 position = Vector2(769, 157)
 texture = ExtResource("2_14ic5")
 
 [node name="Миб2(стрелок)" type="Sprite2D" parent="Printer"]
 visible = false
-position = Vector2(768, 132)
-scale = Vector2(2.09375, 1.96875)
+texture_filter = 1
+position = Vector2(771, 136)
+scale = Vector2(1.5, 1.41)
 texture = ExtResource("9_udkgi")
 
 [node name="Воин" type="Sprite2D" parent="Printer/Миб2(стрелок)"]
+texture_filter = 1
 position = Vector2(11.4627, -11.6825)
 scale = Vector2(0.343284, 0.31746)
 texture = ExtResource("13_3sxor")
 
 [node name="Миб2(маг)" type="Sprite2D" parent="Printer"]
 visible = false
-position = Vector2(768, 132)
-scale = Vector2(2.09375, 1.96875)
+texture_filter = 1
+position = Vector2(771, 136)
+scale = Vector2(1.5, 1.41)
 texture = ExtResource("9_udkgi")
 
 [node name="Воин" type="Sprite2D" parent="Printer/Миб2(маг)"]
+texture_filter = 1
 position = Vector2(11.4627, -11.6825)
 scale = Vector2(0.343284, 0.31746)
 texture = ExtResource("14_gn1bv")
 
 [node name="Миб2(хиллер)" type="Sprite2D" parent="Printer"]
 visible = false
-position = Vector2(768, 132)
-scale = Vector2(2.09375, 1.96875)
+texture_filter = 1
+position = Vector2(771, 136)
+scale = Vector2(1.5, 1.41)
 texture = ExtResource("9_udkgi")
 
 [node name="Воин" type="Sprite2D" parent="Printer/Миб2(хиллер)"]
+texture_filter = 1
 position = Vector2(11.4627, -11.6825)
 scale = Vector2(0.343284, 0.31746)
 texture = ExtResource("15_04was")
 
-[node name="Плюшка" parent="." instance=ExtResource("17_tjl4g")]
-position = Vector2(216, 156)
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Printer"]
+position = Vector2(766, 163)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("18_7ujcw")
+mib = true
+max_health = 993
+
+[node name="Timer" type="Timer" parent="Printer/CharacterBody2D"]
+autostart = true
+
+[node name="Tik" type="Timer" parent="Printer/CharacterBody2D"]
+wait_time = 7.0
+autostart = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Printer/CharacterBody2D"]
+position = Vector2(3, -21)
+shape = SubResource("RectangleShape2D_teyvf")
+
+[node name="hot_bar" parent="Printer/CharacterBody2D" instance=ExtResource("19_h6gae")]
+visible = false
+offset_left = -990.0
+offset_top = -624.0
+offset_right = 183.0
+offset_bottom = 86.0
+
+[node name="room5" type="Node" parent="Printer"]
+script = ExtResource("24_k1hqo")
+
+[node name="Spawner13" type="Marker2D" parent="Printer/room5" groups=["room1"]]
+position = Vector2(823, 222)
+script = ExtResource("18_1tsum")
+group = "room5"
+col = 3
+
+[node name="Spawner14" type="Marker2D" parent="Printer/room5" groups=["room1"]]
+position = Vector2(828, 68)
+script = ExtResource("18_1tsum")
+group = "room5"
+col = 3
+
+[node name="Spawner15" type="Marker2D" parent="Printer/room5" groups=["room1"]]
+position = Vector2(1071, 76)
+script = ExtResource("18_1tsum")
+group = "room5"
+col = 3
+
+[node name="Spawner16" type="Marker2D" parent="Printer/room5" groups=["room1"]]
+position = Vector2(1047, 206)
+script = ExtResource("18_1tsum")
+group = "room5"
+col = 3
+
+[node name="Spawner17" type="Marker2D" parent="Printer/room5" groups=["room1"]]
+position = Vector2(958, 79)
+script = ExtResource("18_1tsum")
+group = "room5"
+col = 3
+
+[node name="Spawner18" type="Marker2D" parent="Printer/room5" groups=["room1"]]
+position = Vector2(934, 209)
+script = ExtResource("18_1tsum")
+group = "room5"
+col = 3
+
+[node name="room5" type="Node" parent="Printer/room5"]
+script = ExtResource("24_k1hqo")
 
 [node name="Тапок Алексей Сергеевича" parent="." instance=ExtResource("17_tlete")]
 position = Vector2(522, 87)
+damage_up = 5
+
+[node name="Spawner4" type="Node2D" parent="." groups=["room1"]]
+position = Vector2(414, 105)
+script = ExtResource("18_1tsum")
+group = "room1"
 
 [node name="Spawner" type="Node2D" parent="." groups=["room1"]]
 position = Vector2(383, 63)
 script = ExtResource("18_1tsum")
 group = "room1"
 
-[node name="Spawner2" type="Node2D" parent="." groups=["room1"]]
-position = Vector2(433, 115)
+[node name="Spawner3" type="Node2D" parent="." groups=["room1"]]
+position = Vector2(606, 61)
 script = ExtResource("18_1tsum")
 spaw_mob = ExtResource("19_f8b7c")
 group = "room1"
 
+[node name="Spawner2" type="Node2D" parent="." groups=["room1"]]
+position = Vector2(500, 121)
+script = ExtResource("18_1tsum")
+spaw_mob = ExtResource("19_f8b7c")
+group = "room1"
+
+[node name="Spawner5" type="Node2D" parent="." groups=["room1"]]
+position = Vector2(558, 225)
+script = ExtResource("18_1tsum")
+group = "room2"
+
+[node name="Spawner6" type="Node2D" parent="." groups=["room1"]]
+position = Vector2(415, 228)
+script = ExtResource("18_1tsum")
+spaw_mob = ExtResource("19_f8b7c")
+group = "room2"
+
+[node name="chest2" parent="." instance=ExtResource("4_23rd6")]
+position = Vector2(632, 177)
+key = ExtResource("21_001ch")
+
+[node name="Spawner7" type="Node2D" parent="." groups=["room1"]]
+position = Vector2(226, 152)
+script = ExtResource("18_1tsum")
+spaw_mob = ExtResource("19_f8b7c")
+group = "room3"
+
+[node name="Spawner8" type="Node2D" parent="." groups=["room1"]]
+position = Vector2(196, 209)
+script = ExtResource("18_1tsum")
+spaw_mob = ExtResource("19_f8b7c")
+group = "room2"
+
+[node name="Spawner9" type="Node2D" parent="." groups=["room1"]]
+position = Vector2(270, 148)
+script = ExtResource("18_1tsum")
+spaw_mob = ExtResource("19_f8b7c")
+group = "room3"
+
+[node name="Spawner10" type="Node2D" parent="." groups=["room1"]]
+position = Vector2(198, 239)
+script = ExtResource("18_1tsum")
+spaw_mob = ExtResource("19_f8b7c")
+group = "room3"
+
+[node name="Spawner11" type="Node2D" parent="." groups=["room1"]]
+position = Vector2(264, 197)
+script = ExtResource("18_1tsum")
+group = "room3"
+
+[node name="Spawner12" type="Node2D" parent="." groups=["room1"]]
+position = Vector2(262, 242)
+script = ExtResource("18_1tsum")
+group = "room3"
+
+[node name="room3_5" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="body_entered" from="Портал/Area2D" to="." method="_portal"]
 [connection signal="body_entered" from="Area2D" to="." method="col_1"]
+[connection signal="body_entered" from="Area2D2" to="." method="col_2"]
+[connection signal="body_entered" from="Area2D3" to="." method="col_3"]
+[connection signal="body_entered" from="Area2D4" to="." method="col_4"]
+[connection signal="timeout" from="Printer/CharacterBody2D/Timer" to="Printer" method="_on_invis"]
+[connection signal="timeout" from="Printer/CharacterBody2D/Tik" to="Printer" method="_on_tik_timeout"]

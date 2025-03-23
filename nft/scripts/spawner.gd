@@ -2,13 +2,13 @@ extends Node2D
 
 var mob
 @export var spaw_mob =  load("res://сцены/враги и другие/Воин.tscn")
-
 @export var group:String
+@export var col:int = 1
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var main = get_parent()
-	main.get_node(group).connect("timeout",_on_timer_timeout)
+	get_parent().get_node(group).connect("timeout",_on_timer_timeout)
 	pass # Replace with function body.
 
 func _input(event: InputEvent) -> void:
@@ -33,6 +33,6 @@ func _process(delta: float) -> void:
 
 func _on_timer_timeout() -> void:
 	mob = spaw_mob.instantiate()
-	get_parent().add_child(mob)
+	Gg.get_papa(col,self).add_child(mob)
 	mob.global_position = global_position
 	pass # Replace with function body.

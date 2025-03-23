@@ -11,6 +11,7 @@ script = ExtResource("1_cv5s4")
 polygon = PackedVector2Array(-54, -64, -64, -53, -64, 54, -53, 64, 52, 64, 64, 53, 64, -54, 53, -64)
 
 [node name="Icon" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(100, 80)
 scale = Vector2(11.1738, 11.2824)
 texture = ExtResource("2_dudjk")

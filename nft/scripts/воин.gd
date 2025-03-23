@@ -3,6 +3,7 @@ extends "res://scripts/Basic_enemy.gd"
 var down = true
 var res = load("res://asset/dialoges/Mib1.dialogue")
 
+@export var pri = false
 @export var mib = false
 # Called when the node enters the scene tree for the first time.
 
@@ -25,7 +26,8 @@ func _process(delta: float) -> void:
 			play = false
 			DialogueManager.show_dialogue_balloon(res, "win")
 	else:
-		health = max_health
+		if !pri:
+			health = max_health
 	pass
 
 func hit_player()->void:

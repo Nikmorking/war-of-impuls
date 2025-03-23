@@ -12,6 +12,7 @@ MiB: АААААААААААА!
 Impuls: B, also a vitamin.
 MiB: How dare you?! Defend yourself!
 do Gg.start_bos()
+do Gg.vis_ui()
 => END
 ~ win
 Impuls: I told you so.
@@ -24,4 +25,5 @@ Impuls: Hello. Sorry to bother you, but may I know how I can get back to the par
 Inhabitant: I don’t know, but from here there is only one way - to the park, and even then it’s a one-way portal.
 Impuls: Where are you from?
 Inhabitant: I don't remember. Let's go to the portal - we'll find out the answers to some of the questions, the rest - later.
+do Gg.vis_ui()
 => END

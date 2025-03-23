@@ -82,18 +82,25 @@ func col_2(body: Node2D) -> void:
 
 
 func col_3(body: Node2D) -> void:
-	if col == 2:
+	if col == 2 or col == 5:
 		$room3.start()
 		col = 3
 	pass # Replace with function body.
 
+func col_3_5():
+	if col == 2:
+		$room3_5.start()
+		col = 5
+	pass
+
 
 func col_4(body: Node2D) -> void:
-	if col == 3:
+	if col == 3 or col == 5 or col == 2:
 		$door/StaticBody2D/Coll.set_deferred("disabled", false)
 		$"door/ДверьЗакрытая".show()
 		$"door/ДверьОткрытая".hide()
 		DialogueManager.show_dialogue_balloon(res,"start")
+		$Player/UI.hide()
 		col = 4
 	pass # Replace with function body.
 

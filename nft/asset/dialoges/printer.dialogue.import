@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://d3f5hyn4tywub"
+path="res://.godot/imported/printer.dialogue-878baf4c7e41f21379245a259a198a25.tres"
+
+[deps]
+
+source_file="res://asset/dialoges/printer.dialogue"
+dest_files=["res://.godot/imported/printer.dialogue-878baf4c7e41f21379245a259a198a25.tres"]
+
+[params]
+
+defaults=true
