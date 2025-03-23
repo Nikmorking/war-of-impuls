@@ -32,7 +32,8 @@ func add(body: Node2D) -> void:
 		player = body
 	else:
 		if body is CharacterBody2D:
-			bodys.append(player)
+			if body.tipy != "хиллер":
+				bodys.append(player)
 	pass
 
 

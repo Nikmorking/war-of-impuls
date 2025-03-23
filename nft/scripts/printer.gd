@@ -16,6 +16,9 @@ func start():
 	$"Миб2(живой)".hide()
 	$"Миб2(думает)".show()
 	$CharacterBody2D.pri = true
+	$CharacterBody2D/Tik.start()
+	$CharacterBody2D/Timer.start()
+	_on_tik_timeout()
 	pass
 
 func vis():
@@ -33,6 +36,9 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if $CharacterBody2D:
+		if $CharacterBody2D.health < 50:
+			Gg.get_papa(2, self).win()
 	pass
 
 

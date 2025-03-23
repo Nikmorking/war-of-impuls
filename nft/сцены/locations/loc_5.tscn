@@ -250,11 +250,10 @@ mib = true
 max_health = 993
 
 [node name="Timer" type="Timer" parent="Printer/CharacterBody2D"]
-autostart = true
+wait_time = 3.0
 
 [node name="Tik" type="Timer" parent="Printer/CharacterBody2D"]
 wait_time = 7.0
-autostart = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Printer/CharacterBody2D"]
 position = Vector2(3, -21)
@@ -347,7 +346,7 @@ spaw_mob = ExtResource("19_f8b7c")
 group = "room2"
 
 [node name="chest2" parent="." instance=ExtResource("4_23rd6")]
-position = Vector2(632, 177)
+position = Vector2(475, 321)
 key = ExtResource("21_001ch")
 
 [node name="Spawner7" type="Node2D" parent="." groups=["room1"]]

@@ -38,10 +38,6 @@ offset_bottom = 16.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PanelColor" type="ColorRect" parent="MenuPanelContainer"]
-layout_mode = 2
-color = Color(0, 0, 0, 1)
-
 [node name="MarginContainer" type="MarginContainer" parent="MenuPanelContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 16
@@ -76,6 +72,7 @@ layout_mode = 2
 
 [node name="MenuButtons" type="BoxContainer" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin"]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(128, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 3
@@ -83,3 +80,9 @@ theme_override_constants/separation = 16
 alignment = 1
 vertical = true
 script = ExtResource("2_6ani0")
+
+[node name="CloseButton" type="Button" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons"]
+layout_mode = 2
+text = "Close"
+
+[connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons/CloseButton" to="." method="_on_close_button_pressed"]
