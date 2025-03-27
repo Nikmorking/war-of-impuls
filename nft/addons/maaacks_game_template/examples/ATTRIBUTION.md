@@ -3,7 +3,7 @@
 
 ### Programmer
 [Nikmorking](https://nikmorking.itch.io/)  
-Timur62
+[Timur62](https://itch.io/profile/anime62)
 
 ### Screenwriter
 [Ehont](https://itch.io/profile/ehont)

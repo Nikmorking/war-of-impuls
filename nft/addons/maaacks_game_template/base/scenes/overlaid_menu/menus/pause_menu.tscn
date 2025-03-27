@@ -11,6 +11,10 @@ options_packed_scene = ExtResource("3_kv70e")
 main_menu_scene = "res://addons/maaacks_game_template/base/scenes/menus/main_menu/main_menu.tscn"
 pauses_game = true
 
+[node name="PanelColor" type="ColorRect" parent="MenuPanelContainer" index="0"]
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
 [node name="MarginContainer" parent="MenuPanelContainer" index="1"]
 theme_override_constants/margin_left = 64
 theme_override_constants/margin_right = 64
@@ -21,6 +25,9 @@ text = "Paused"
 [node name="MenuButtonsMargin" parent="MenuPanelContainer/MarginContainer/BoxContainer" index="2"]
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_bottom = 16
+
+[node name="MenuButtons" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin" index="0"]
+custom_minimum_size = Vector2(0, 0)
 
 [node name="RestartButton" type="Button" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons" index="0"]
 custom_minimum_size = Vector2(128, 40)

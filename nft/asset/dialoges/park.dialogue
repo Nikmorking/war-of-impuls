@@ -7,6 +7,7 @@ Impuls: Of course. Who to kill?
 Inhabitant: You must first collect shells to create weapons and armor.
 Impuls: Okay. Where is my folding piano? There it is, in the bushes!
 Inhabitant: May Saint Frost protect you. *walks away, whispering* What kind of piano is there, there aren’t even any bushes there.
+do Gg.start_bos_2()
 => END
 ~ podhod
 Impuls: Hello! What will be the tasks?

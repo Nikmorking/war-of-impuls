@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://b01p1kogn4yw1"]
 
 [ext_resource type="Script" path="res://scripts/хиллер.gd" id="1_carrl"]
-[ext_resource type="Texture2D" uid="uid://brgqrefftbq2v" path="res://asset/враги/хилер.png" id="2_4kg85"]
+[ext_resource type="Texture2D" uid="uid://ctqvttojgbrr7" path="res://asset/живаялепёшка.png" id="2_18p3w"]
 [ext_resource type="PackedScene" uid="uid://0uc8e6pla322" path="res://сцены/hot_bar.tscn" id="3_xllpx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ourww"]
@@ -60,9 +60,9 @@ position = Vector2(0, 2.85714)
 shape = SubResource("CapsuleShape2D_c1qyd")
 
 [node name="Воин" type="Sprite2D" parent="."]
-modulate = Color(0, 0.503066, 0.966168, 1)
 texture_filter = 1
-texture = ExtResource("2_4kg85")
+position = Vector2(10, 10)
+texture = ExtResource("2_18p3w")
 
 [node name="Timer2" type="Timer" parent="."]
 wait_time = 2.0
