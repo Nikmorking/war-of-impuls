@@ -11,9 +11,8 @@ do Gg.start_bos_2()
 => END
 ~ podhod
 Impuls: Hello! What will be the tasks?
-Inhabitant: Hello!
-Ж: Привет! Надо собрать ракушки для нашей армии.
-И: Прекрасно! Сколько?
-Ж: 20 штук.
-И: Понял. Уже бегу!
+Inhabitant: Hi! We need to collect shells for our army.
+И: Excellent! How much?
+Ж: 20 things.
+И: Got it. I'm running already!
 => END
