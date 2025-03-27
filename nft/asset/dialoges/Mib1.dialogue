@@ -28,5 +28,11 @@ Inhabitant: I don't remember. Let's go to the portal - we'll find out the answer
 => END
 ~ lose
 Impuls: And you...*cough*...turned out to be stronger...*cough*...than I thought.
+Person in black: *enters the room and snaps his fingers*
+MiB: *dies*
+Impuls: Is that really all?
+Person in black: No, you'll get another try. You can do it. Close your eyes.
+Impuls: *closes eyes* What will happen to me?
+Person in black: You'll see.*incomprehensible whisper*
 do Gg.vis_ui()
 => END

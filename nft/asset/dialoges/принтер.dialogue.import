@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://dcd8u2ybblu2l"
+path="res://.godot/imported/принтер.dialogue-716570f9f6ead90ed7e288caec8a5464.tres"
+
+[deps]
+
+source_file="res://asset/dialoges/принтер.dialogue"
+dest_files=["res://.godot/imported/принтер.dialogue-716570f9f6ead90ed7e288caec8a5464.tres"]
+
+[params]
+
+defaults=true
