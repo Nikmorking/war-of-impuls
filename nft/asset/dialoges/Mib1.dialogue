@@ -1,4 +1,4 @@
-~ start
+~ in_room
 Impuls: There you are, you devil's crab! Fear me, if anything happens I'll knock on your door!
 MiB: Uhhhhh... What, excuse me?
 Impuls: Are you deaf?! Get out of here before I stuff you in my pocket and sell you for five bucks to the nearest granny on a bench near the entrance!
@@ -12,7 +12,7 @@ MiB: АААААААААААА!
 Impuls: B, also a vitamin.
 MiB: How dare you?! Defend yourself!
 => END
-~ win
+~ win_mib
 Impuls: I told you so.
 MiB: Cough...*dies*
 Impuls: *when he approaches the door, he knocks* Is anyone alive?
@@ -21,4 +21,7 @@ Impuls: Hello. Sorry to bother you, but may I know how I can get back to the par
 Inhabitant: I don’t know, but from here there is only one way - to the park, and even then it’s a one-way portal.
 Impuls: Where are you from?
 Inhabitant: I don't remember. Let's go to the portal - we'll find out the answers to some of the questions, the rest - later.
+=> END
+~ lose
+Impuls: And you...*cough*...turned out to be stronger...*cough*...than I thought.
 => END

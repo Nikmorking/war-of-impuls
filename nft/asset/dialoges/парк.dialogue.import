@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://dtmc43aeao38w"
+path="res://.godot/imported/парк.dialogue-49d45b180046ee04119406dac0e1ab11.tres"
+
+[deps]
+
+source_file="res://asset/dialoges/парк.dialogue"
+dest_files=["res://.godot/imported/парк.dialogue-49d45b180046ee04119406dac0e1ab11.tres"]
+
+[params]
+
+defaults=true

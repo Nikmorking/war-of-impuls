@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://bxwpeiaqeh647"
+path="res://.godot/imported/начало.dialogue-810c541a413c4cf4722894fdec56033b.tres"
+
+[deps]
+
+source_file="res://asset/dialoges/начало.dialogue"
+dest_files=["res://.godot/imported/начало.dialogue-810c541a413c4cf4722894fdec56033b.tres"]
+
+[params]
+
+defaults=true
