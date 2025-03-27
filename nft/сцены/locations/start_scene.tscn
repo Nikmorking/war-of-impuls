@@ -95,6 +95,7 @@ libraries = {
 }
 
 [node name="RichTextLabel" type="RichTextLabel" parent="AnimationPlayer"]
+texture_filter = 1
 offset_left = 98.0
 offset_top = 338.0
 offset_right = 1081.0
