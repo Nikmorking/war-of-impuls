@@ -115,7 +115,6 @@ func _on_level_won():
 		_load_win_screen_or_ending()
 	else:
 		_load_level_complete_screen_or_next_level()
-
 func _connect_level_signals():
 	_try_connecting_signal_to_level(&"level_won", _on_level_won)
 	_try_connecting_signal_to_level(&"level_lost", _on_level_lost)

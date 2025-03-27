@@ -1,0 +1,14 @@
+~ start
+Impuls: Everybody stand still! I will protect the ecosystem!
+do Gg.vis_bos()
+Printer: Hello, who are you and why did you come here?
+Impuls: Ah! I forgot to introduce myself! Hello, my name is Impuls.
+Printer: Nice to meet you, I am Robert Printer.
+Impuls: Do you happen to know of an evil printer that uses printed insects to destroy the ecosystem piece by piece?
+Printer: So this is me.
+Impuls: In that case, I'm sorry, but I have to kill you.
+Printer: Ok, try it.
+Impuls: Thanks for the permission.
+do Gg.start_bos_2()
+do Gg.vis_ui()
+=> END

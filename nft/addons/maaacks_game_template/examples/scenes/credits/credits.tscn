@@ -7,14 +7,18 @@
 script = ExtResource("2_q7msw")
 attribution_file_path = "res://addons/maaacks_game_template/examples/ATTRIBUTION.md"
 
+[node name="HeaderSpace" parent="ScrollContainer/VBoxContainer" index="0"]
+custom_minimum_size = Vector2(0, 576)
+
 [node name="CreditsLabel" parent="ScrollContainer/VBoxContainer" index="1"]
 modulate = Color(0, 0, 0, 1)
 self_modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(1024, 0)
 text = "[center][font_size=48]Collaborators[/font_size]
 
 [font_size=32]Programmer[/font_size]
 [url=https://nikmorking.itch.io/]Nikmorking[/url]  
-Timur62
+[url=https://itch.io/profile/anime62]Timur62[/url]
 
 [font_size=32]Screenwriter[/font_size]
 [url=https://itch.io/profile/ehont]Ehont[/url]
@@ -61,3 +65,6 @@ Source: [url=https://github.com/nathanhoad/godot_dialogue_manager]github: godot_
 License: [url=LICENSE.txt]MIT License[/url]
   
 [/center]"
+
+[node name="FooterSpace" parent="ScrollContainer/VBoxContainer" index="2"]
+custom_minimum_size = Vector2(0, 576)

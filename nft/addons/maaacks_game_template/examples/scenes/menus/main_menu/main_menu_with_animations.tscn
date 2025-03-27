@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://addons/maaacks_game_template/examples/scenes/menus/main_menu/main_menu_with_animations.gd" id="2_ncvk7"]
 [ext_resource type="PackedScene" uid="uid://bdvdf5v87mmrr" path="res://addons/maaacks_game_template/examples/scenes/menus/options_menu/master_options_menu_with_tabs.tscn" id="3_tuy3s"]
 [ext_resource type="PackedScene" uid="uid://c1g50h2avck3w" path="res://addons/maaacks_game_template/examples/scenes/credits/credits.tscn" id="4_lwsll"]
-[ext_resource type="Texture2D" uid="uid://bju3ncsl75yex" path="res://asset/Menu/Продолжить.png" id="5_r0qr2"]
+[ext_resource type="Texture2D" uid="uid://bk2kgrvfi1vnh" path="res://asset/Menu/continue.png" id="5_h7f0c"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "Intro"
@@ -392,20 +392,26 @@ modulate = Color(1, 1, 1, 0)
 lock = true
 
 [node name="NewGameButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="0"]
-offset_left = 6.95411
-offset_top = 110.906
-offset_right = 109.954
-offset_bottom = 136.906
+offset_left = 10.1637
+offset_top = 145.47
+offset_right = 113.164
+offset_bottom = 171.47
 
 [node name="ContinueGameButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="1"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(128, 40)
 layout_mode = 2
-offset_left = 6.0
-offset_top = 166.0
-offset_right = 168.0
-offset_bottom = 206.0
+offset_left = 12.3034
+offset_top = 210.583
+offset_right = 174.303
+offset_bottom = 250.583
 flat = true
+
+[node name="Продолжить2" type="Sprite2D" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/ContinueGameButton" index="0"]
+texture_filter = 1
+position = Vector2(83.3335, 24.329)
+scale = Vector2(2, 2)
+texture = ExtResource("5_h7f0c")
 
 [node name="LevelSelectButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="2"]
 unique_name_in_owner = true
@@ -425,19 +431,13 @@ offset_right = 238.545
 offset_bottom = 199.257
 
 [node name="ExitButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="5"]
-offset_left = 11.8261
-offset_top = 230.645
-offset_right = 173.826
-offset_bottom = 270.645
+offset_left = 17.1178
+offset_top = 275.695
+offset_right = 179.118
+offset_bottom = 315.695
 
 [node name="Заново" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="6"]
 position = Vector2(204.687, 235.145)
-
-[node name="Продолжить2" type="Sprite2D" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="7"]
-texture_filter = 1
-position = Vector2(89.3335, 190.329)
-scale = Vector2(2, 2)
-texture = ExtResource("5_r0qr2")
 
 [node name="LevelSelectContainer" type="MarginContainer" parent="." index="9"]
 unique_name_in_owner = true

@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://mk4sb7fag675"]
+[gd_scene load_steps=5 format=3 uid="uid://mk4sb7fag675"]
 
 [ext_resource type="Script" path="res://scripts/пуля.gd" id="1_j2v0r"]
 [ext_resource type="Texture2D" uid="uid://drcqim48i1g04" path="res://asset/лапа импульса с тапком.png" id="2_lhrip"]
+[ext_resource type="AudioStream" uid="uid://cftqhg0trnugq" path="res://asset/sound/hitHurt.wav" id="3_1ep6q"]
+[ext_resource type="AudioStream" uid="uid://birk3l7mjmm0f" path="res://asset/sound/sound.wav" id="4_0al27"]
 
 [node name="Тапок" type="Area2D"]
 texture_filter = 1
@@ -21,6 +23,12 @@ autostart = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-12, 5, -12, -1, -6, -7, -3, -8, -3, -10, 4, -10, 5, -8, 7, -8, 8, -3, 11, -3, 11, 0, 9, 7, 6, 10, 2, 10, 2, 5)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_1ep6q")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_0al27")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

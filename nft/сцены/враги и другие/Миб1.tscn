@@ -1,0 +1,86 @@
+[gd_scene load_steps=6 format=3 uid="uid://befrnnj3h1yhu"]
+
+[ext_resource type="Script" path="res://scripts/воин.gd" id="1_wxpim"]
+[ext_resource type="Texture2D" uid="uid://c33u03xt8xd1" path="res://asset/враги/миб1.png" id="2_3jhim"]
+[ext_resource type="PackedScene" uid="uid://0uc8e6pla322" path="res://сцены/hot_bar.tscn" id="3_t2lj0"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_aqp5a"]
+radius = 22.8571
+height = 65.7143
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_pdoea"]
+particle_flag_disable_z = true
+angle_min = 255.5
+angle_max = 255.5
+inherit_velocity_ratio = 1.305
+spread = 101.629
+flatness = 0.87
+angular_velocity_min = -278.71
+angular_velocity_max = -278.71
+orbit_velocity_min = 0.0220001
+orbit_velocity_max = 0.0220001
+radial_velocity_min = 21.51
+radial_velocity_max = 21.51
+gravity = Vector3(0, 98, 0)
+
+[node name="Миб1" type="CharacterBody2D"]
+scale = Vector2(0.9, 0.9)
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_wxpim")
+mib = true
+max_health = 400
+SPEED = 35
+tipy = "враг"
+damage = 15
+
+[node name="Воин" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_3jhim")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -8.57143)
+shape = SubResource("CapsuleShape2D_aqp5a")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+path_desired_distance = 0.1
+avoidance_enabled = true
+radius = 100.0
+avoidance_layers = 3
+avoidance_mask = 3
+
+[node name="Tik" type="Timer" parent="."]
+wait_time = 1.8
+autostart = true
+
+[node name="hot_bar" parent="." instance=ExtResource("3_t2lj0")]
+visible = false
+offset_top = -601.429
+offset_bottom = 108.571
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(14.2857, 4.28571, 15.7143, -15.7143, 8.57143, -15.7143, 7.14286, 0, -5.71429, 0, -7.14286, -15.7143, -15.7143, -15.7143, -15.7143, 0, -8.57143, 2.85714, -4.28571, 15.7143, 5.71429, 14.2857)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+modulate = Color(0.434878, 0, 0.183568, 1)
+position = Vector2(-11.4286, -17.1429)
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_pdoea")
+lifetime = 0.7
+
+[node name="ff" type="GPUParticles2D" parent="."]
+modulate = Color(0.434878, 0, 0.183568, 1)
+position = Vector2(11.4286, -18.5714)
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_pdoea")
+lifetime = 0.7
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="call_down"]
+[connection signal="timeout" from="Tik" to="." method="tik"]

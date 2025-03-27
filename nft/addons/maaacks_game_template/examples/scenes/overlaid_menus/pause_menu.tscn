@@ -8,3 +8,7 @@
 script = ExtResource("2_o57rn")
 options_packed_scene = ExtResource("3_hewsk")
 main_menu_scene = "res://addons/maaacks_game_template/examples/scenes/menus/main_menu/main_menu_with_animations.tscn"
+
+[node name="PanelColor2" type="ColorRect" parent="MenuPanelContainer" index="0"]
+layout_mode = 2
+color = Color(0, 0, 0, 1)

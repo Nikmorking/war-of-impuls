@@ -48,11 +48,11 @@ scale = Vector2(1.1267, -390.149)
 zoom = Vector2(5, 5)
 
 [node name="UI" parent="." instance=ExtResource("3_j224j")]
-offset_left = -108.0
-offset_top = -65.0
-offset_right = -108.0
-offset_bottom = -65.0
-scale = Vector2(0.2, 0.2)
+offset_left = -66.0
+offset_top = -41.0
+offset_right = -66.0
+offset_bottom = -41.0
+scale = Vector2(0.15, 0.15)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.124939, 0.750061)
