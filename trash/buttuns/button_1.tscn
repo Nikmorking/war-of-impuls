@@ -1,0 +1,65 @@
+[gd_scene load_steps=6 format=3 uid="uid://ckcesh864vc78"]
+
+[ext_resource type="Script" path="res://buttuns/button.gd" id="1_mb2q1"]
+[ext_resource type="Texture2D" uid="uid://dndqvb0i0u53u" path="res://buttuns/texture/Кнопка 1.png" id="1_t3iyi"]
+[ext_resource type="Texture2D" uid="uid://c30gqbyxris7a" path="res://buttuns/texture/Кнопка 2.png" id="2_t5bhj"]
+[ext_resource type="Texture2D" uid="uid://bbn651l8ggq6e" path="res://buttuns/texture/Кнопка 3.png" id="3_2c8y3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wanoa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_t3iyi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_t3iyi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_t5bhj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_2c8y3")
+}],
+"loop": false,
+"name": &"down",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_2c8y3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_t5bhj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_t3iyi")
+}],
+"loop": false,
+"name": &"up",
+"speed": 5.0
+}]
+
+[node name="Button1" type="Node2D"]
+position = Vector2(91, 70)
+scale = Vector2(2, 2)
+script = ExtResource("1_mb2q1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-1, -12)
+sprite_frames = SubResource("SpriteFrames_wanoa")
+
+[node name="Button" type="Button" parent="."]
+offset_left = -10.0
+offset_top = -11.0
+offset_right = 9.0
+offset_bottom = 2.0
+flat = true
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
