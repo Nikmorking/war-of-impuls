@@ -1,0 +1,265 @@
+[gd_scene load_steps=16 format=3 uid="uid://bxtgwbqw860er"]
+
+[ext_resource type="Texture2D" uid="uid://cqlikg0ojcsq8" path="res://rooms/image/вход.png" id="1_78quo"]
+[ext_resource type="Script" path="res://rooms/script/work.gd" id="1_cwsvv"]
+[ext_resource type="Texture2D" uid="uid://codf4v15vpkmy" path="res://rooms/image/work_room_2.png" id="2_yacw7"]
+[ext_resource type="Texture2D" uid="uid://chume2aljeara" path="res://rooms/image/work_room_1.png" id="3_kq47i"]
+[ext_resource type="Script" path="res://rooms/script/player.gd" id="4_t6vss"]
+[ext_resource type="PackedScene" uid="uid://ckcesh864vc78" path="res://buttuns/button_1.tscn" id="6_2hd2u"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h8f6d"]
+height = 42.0
+
+[sub_resource type="Animation" id="Animation_wbgr0"]
+resource_name = "1"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(119, 255), Vector2(551, 254)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.172833, 0.172833, 0.172833, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_b6ao1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../work_1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Вход2:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_3w5qc"]
+resource_name = "2"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(551, 254), Vector2(1003, 255)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../work_1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.273873, 0.273873, 0.273873, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_77baw"]
+resource_name = "3"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1003, 255), Vector2(551, 254)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Вход2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.223103, 0.223103, 0.223103, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1hk8u"]
+_data = {
+"1": SubResource("Animation_wbgr0"),
+"2": SubResource("Animation_3w5qc"),
+"3": SubResource("Animation_77baw"),
+"RESET": SubResource("Animation_b6ao1")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tm3lk"]
+size = Vector2(20, 133)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sw8cg"]
+size = Vector2(39.9999, 17.9942)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_35k36"]
+size = Vector2(23, 190)
+
+[node name="Work" type="Node2D"]
+script = ExtResource("1_cwsvv")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(119, 236)
+script = ExtResource("4_t6vss")
+SPEED = 100.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+z_index = 3
+position = Vector2(-19, 3)
+shape = SubResource("CapsuleShape2D_h8f6d")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("Вход")
+libraries = {
+"": SubResource("AnimationLibrary_1hk8u")
+}
+
+[node name="Вход" type="Sprite2D" parent="AnimationPlayer"]
+texture_filter = 1
+position = Vector2(121, 257)
+scale = Vector2(7, 7)
+texture = ExtResource("1_78quo")
+
+[node name="Camera2D" type="Camera2D" parent="AnimationPlayer"]
+z_index = 4
+position = Vector2(119, 255)
+zoom = Vector2(2.7, 3)
+position_smoothing_enabled = true
+position_smoothing_speed = 20.0
+
+[node name="Вход2" type="Sprite2D" parent="AnimationPlayer"]
+texture_filter = 1
+position = Vector2(1013, 260)
+scale = Vector2(7, 7)
+texture = ExtResource("2_yacw7")
+
+[node name="work_1" type="Sprite2D" parent="AnimationPlayer"]
+texture_filter = 1
+position = Vector2(564, 258)
+scale = Vector2(7, 7)
+texture = ExtResource("3_kq47i")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(130, 244, 173, 230, 338, 229, 338, 222, 161, 221, 131, 235)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(3, 54)
+polygon = PackedVector2Array(132, 260, 337, 257, 336, 225, 175, 226, 134, 248)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(355, 254)
+shape = SubResource("RectangleShape2D_tm3lk")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(325, 246)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+z_index = 3
+position = Vector2(4.99136, 3.99716)
+rotation = 1.56793
+shape = SubResource("RectangleShape2D_sw8cg")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(380, 258)
+rotation = 1.97076
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2(772, 232)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+z_index = 3
+position = Vector2(3.5, 45)
+shape = SubResource("RectangleShape2D_35k36")
+
+[node name="Area2D3" type="Area2D" parent="."]
+position = Vector2(800, 232)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
+z_index = 3
+position = Vector2(3.5, 45)
+shape = SubResource("RectangleShape2D_35k36")
+
+[node name="Marker2D2" type="Marker2D" parent="."]
+position = Vector2(912, 271)
+rotation = 1.97076
+
+[node name="Marker2D3" type="Marker2D" parent="."]
+position = Vector2(727, 273)
+rotation = 1.97076
+
+[node name="Button1" parent="." instance=ExtResource("6_2hd2u")]
+position = Vector2(419, 225)
+
+[node name="Button2" parent="." instance=ExtResource("6_2hd2u")]
+position = Vector2(510, 224)
+
+[node name="Button3" parent="." instance=ExtResource("6_2hd2u")]
+position = Vector2(593, 226)
+
+[node name="Button4" parent="." instance=ExtResource("6_2hd2u")]
+position = Vector2(666, 225)
+
+[node name="Button5" parent="." instance=ExtResource("6_2hd2u")]
+position = Vector2(737, 226)
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_1_anim_finished"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_col_1"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_col_2"]
+[connection signal="body_entered" from="Area2D3" to="." method="_on_col_3"]

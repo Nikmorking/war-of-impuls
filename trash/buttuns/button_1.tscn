@@ -41,12 +41,13 @@ animations = [{
 }],
 "loop": false,
 "name": &"up",
-"speed": 5.0
+"speed": 13.0
 }]
 
 [node name="Button1" type="Node2D"]
-position = Vector2(91, 70)
-scale = Vector2(2, 2)
+z_index = 1
+position = Vector2(0, 1)
+scale = Vector2(1.5, 1.5)
 script = ExtResource("1_mb2q1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
