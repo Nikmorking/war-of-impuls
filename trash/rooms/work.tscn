@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bxtgwbqw860er"]
+[gd_scene load_steps=23 format=3 uid="uid://bxtgwbqw860er"]
 
 [ext_resource type="Texture2D" uid="uid://cqlikg0ojcsq8" path="res://rooms/image/back/вход.png" id="1_78quo"]
 [ext_resource type="Script" path="res://rooms/script/work.gd" id="1_cwsvv"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dcypjm50vn2cq" path="res://rooms/image/table.png" id="6_t70lc"]
 [ext_resource type="Script" path="res://rooms/script/schot.gd" id="7_sf4mf"]
 [ext_resource type="Texture2D" uid="uid://cmpqkaju5vtc1" path="res://rooms/image/monitor.png" id="8_x8jxt"]
+[ext_resource type="Texture2D" uid="uid://cpcb1qt48q0yl" path="res://rooms/image/427.png" id="10_r4u6w"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h8f6d"]
 height = 42.0
@@ -73,16 +74,19 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tm3lk"]
-size = Vector2(20, 222)
+size = Vector2(22, 184)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gyrwj"]
 size = Vector2(873, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k813g"]
+size = Vector2(636.5, 29)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sw8cg"]
 size = Vector2(39.9999, 17.9942)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_35k36"]
-size = Vector2(23, 177)
+size = Vector2(23, 149.5)
 
 [sub_resource type="LabelSettings" id="LabelSettings_cxqym"]
 font_size = 32
@@ -145,12 +149,20 @@ position = Vector2(3, 54)
 polygon = PackedVector2Array(132, 260, 337, 257, 336, 225, 175, 226, 134, 248)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(351, 258)
+position = Vector2(352, 257)
 shape = SubResource("RectangleShape2D_tm3lk")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(798.5, 167)
 shape = SubResource("RectangleShape2D_gyrwj")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(678.75, 354.5)
+shape = SubResource("RectangleShape2D_k813g")
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(1240, 261)
+polygon = PackedVector2Array(-47, -72, -46, 63, -55, 82, -157, 83, -157, 112, -3, 112, -3, -73)
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(325, 246)
@@ -170,7 +182,7 @@ position = Vector2(772, 232)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
 z_index = 3
-position = Vector2(3.5, 45)
+position = Vector2(6, 32)
 shape = SubResource("RectangleShape2D_35k36")
 
 [node name="Area2D3" type="Area2D" parent="."]
@@ -178,7 +190,7 @@ position = Vector2(800, 232)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
 z_index = 3
-position = Vector2(3, 45)
+position = Vector2(3, 31.25)
 shape = SubResource("RectangleShape2D_35k36")
 
 [node name="Marker2D2" type="Marker2D" parent="."]
@@ -220,6 +232,7 @@ label_settings = SubResource("LabelSettings_cxqym")
 metadata/_edit_use_anchors_ = true
 
 [node name="not" type="Label" parent="Table/Monitor"]
+visible = false
 texture_filter = 1
 offset_left = -2.75099
 offset_top = -2.75991
@@ -231,6 +244,11 @@ pressed"
 label_settings = SubResource("LabelSettings_cxqym")
 
 [node name="Timer" type="Timer" parent="Table"]
+
+[node name="427" type="Sprite2D" parent="."]
+position = Vector2(1113, 355)
+scale = Vector2(3, 3)
+texture = ExtResource("10_r4u6w")
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_1_anim_finished"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_col_1"]
