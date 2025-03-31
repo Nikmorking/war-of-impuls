@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bxtgwbqw860er"]
+[gd_scene load_steps=24 format=3 uid="uid://bxtgwbqw860er"]
 
 [ext_resource type="Texture2D" uid="uid://cqlikg0ojcsq8" path="res://rooms/image/back/вход.png" id="1_78quo"]
 [ext_resource type="Script" path="res://rooms/script/work.gd" id="1_cwsvv"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" path="res://rooms/script/schot.gd" id="7_sf4mf"]
 [ext_resource type="Texture2D" uid="uid://cmpqkaju5vtc1" path="res://rooms/image/monitor.png" id="8_x8jxt"]
 [ext_resource type="Texture2D" uid="uid://cpcb1qt48q0yl" path="res://rooms/image/427.png" id="10_r4u6w"]
+[ext_resource type="Texture2D" uid="uid://kpsyaeu4ylx2" path="res://rooms/image/back/work_room_3t.png" id="11_ie8m7"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h8f6d"]
 height = 42.0
@@ -249,6 +250,13 @@ label_settings = SubResource("LabelSettings_cxqym")
 position = Vector2(1113, 355)
 scale = Vector2(3, 3)
 texture = ExtResource("10_r4u6w")
+
+[node name="work_3" type="Sprite2D" parent="."]
+z_index = -1
+texture_filter = 1
+position = Vector2(1013, 481)
+scale = Vector2(7, 7)
+texture = ExtResource("11_ie8m7")
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_1_anim_finished"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_col_1"]
