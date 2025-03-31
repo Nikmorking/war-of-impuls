@@ -44,3 +44,21 @@ func _on_col_3(body):
 		$CharacterBody2D.position = $Marker2D3.position
 		room = 1
 	pass # Replace with function body.
+
+
+func _on_col_4(body):
+	if room == 2:
+		$AnimationPlayer.play("4")
+		$CharacterBody2D.play = false
+		$CharacterBody2D.position = $Marker2D4.position
+		room = 3
+	pass # Replace with function body.
+
+
+func _on_col_5(body):
+	if room == 3:
+		$AnimationPlayer.play("5")
+		$CharacterBody2D.play = false
+		$CharacterBody2D.position = $Marker2D5.position
+		room = 2
+	pass # Replace with function body.

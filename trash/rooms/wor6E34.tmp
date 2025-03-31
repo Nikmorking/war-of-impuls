@@ -318,7 +318,7 @@ text = "00"
 label_settings = SubResource("LabelSettings_cxqym")
 metadata/_edit_use_anchors_ = true
 
-[node name="_" type="Label" parent="Table"]
+[node name="min2" type="Label" parent="Table"]
 texture_filter = 1
 offset_left = 0.261683
 offset_top = -5.73333
