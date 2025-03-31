@@ -25,8 +25,6 @@ func _on_col_1(area):
 
 func _on_1_anim_finished(anim_name):
 	$CharacterBody2D.play = true
-	if anim_name != "RESET":
-		$AnimationPlayer.play("RESET")
 	pass # Replace with function body.
 
 

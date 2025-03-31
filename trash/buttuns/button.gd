@@ -1,5 +1,9 @@
 extends Node2D
 
+signal down
+signal up
+
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,9 +17,11 @@ func _process(delta):
 
 func _on_button_button_down():
 	$AnimatedSprite2D.play("down")
+	down.emit()
 	pass # Replace with function body.
 
 
 func _on_button_button_up():
 	$AnimatedSprite2D.play("up")
+	up.emit()
 	pass # Replace with function body.
