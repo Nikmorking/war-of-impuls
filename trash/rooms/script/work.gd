@@ -3,10 +3,13 @@ extends Node2D
 
 var room = 0
 
+var stop = load("res://dialogues/Запрет.dialogue")
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
+	$AnimationPlayer.play("start")
+	$CharacterBody2D.play = false
 	pass # Replace with function body.
 
 
@@ -61,4 +64,10 @@ func _on_col_5(body):
 		$CharacterBody2D.play = false
 		$CharacterBody2D.position = $Marker2D5.position
 		room = 2
+	pass # Replace with function body.
+
+
+func _on_col_go_out(body):
+	if body is CharacterBody2D:
+		DialogueManager.show_dialogue_balloon(stop, "go_out")
 	pass # Replace with function body.

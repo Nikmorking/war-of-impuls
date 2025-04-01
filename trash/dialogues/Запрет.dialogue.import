@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://brb6grur6ybrb"
+path="res://.godot/imported/Запрет.dialogue-5d386ee930cb8a47eb439946d5387f34.tres"
+
+[deps]
+
+source_file="res://dialogues/Запрет.dialogue"
+dest_files=["res://.godot/imported/Запрет.dialogue-5d386ee930cb8a47eb439946d5387f34.tres"]
+
+[params]
+
+defaults=true

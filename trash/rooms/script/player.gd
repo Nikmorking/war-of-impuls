@@ -3,6 +3,11 @@ extends CharacterBody2D
 var play = true
 @export var SPEED = 300.0
 
+func _ready():
+	Gs.connect("play_", _play)
+	Gs.connect("stop_", _stop)
+	pass
+
 func _process(delta):
 
 	# Get the input direction and handle the movement/deceleration.
@@ -16,3 +21,10 @@ func _process(delta):
 			velocity.y = move_toward(velocity.y, 0, SPEED)
 
 	move_and_slide()
+
+func _play():
+	play = true
+	pass
+func _stop():
+	play = false
+	pass

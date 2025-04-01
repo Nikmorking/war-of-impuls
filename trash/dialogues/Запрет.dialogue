@@ -1,0 +1,5 @@
+~ go_out
+do Gs._stop()
+Narrator: Go work!
+do Gs._play()
+=> END
