@@ -1,15 +1,15 @@
-[gd_scene load_steps=42 format=3 uid="uid://bxtgwbqw860er"]
+[gd_scene load_steps=43 format=3 uid="uid://bxtgwbqw860er"]
 
 [ext_resource type="Texture2D" uid="uid://cqlikg0ojcsq8" path="res://rooms/image/back/вход.png" id="1_78quo"]
 [ext_resource type="Script" path="res://rooms/script/work.gd" id="1_cwsvv"]
 [ext_resource type="Texture2D" uid="uid://chume2aljeara" path="res://rooms/image/back/work_room_1.png" id="3_kq47i"]
 [ext_resource type="Script" path="res://rooms/script/player.gd" id="4_t6vss"]
+[ext_resource type="Texture2D" uid="uid://codf4v15vpkmy" path="res://rooms/image/back/work_room_2.png" id="5_gs6oa"]
 [ext_resource type="PackedScene" uid="uid://ckcesh864vc78" path="res://buttuns/button_1.tscn" id="6_2hd2u"]
 [ext_resource type="Texture2D" uid="uid://dcypjm50vn2cq" path="res://rooms/image/table.png" id="6_t70lc"]
 [ext_resource type="Script" path="res://rooms/script/schot.gd" id="7_sf4mf"]
 [ext_resource type="Texture2D" uid="uid://cmpqkaju5vtc1" path="res://rooms/image/monitor.png" id="8_x8jxt"]
 [ext_resource type="Texture2D" uid="uid://cpcb1qt48q0yl" path="res://rooms/image/427.png" id="10_r4u6w"]
-[ext_resource type="Texture2D" uid="uid://kpsyaeu4ylx2" path="res://rooms/image/back/work_room_3t.png" id="11_ie8m7"]
 [ext_resource type="Texture2D" uid="uid://bubgbyjx7gxon" path="res://rooms/image/ekran.png" id="12_k4q6x"]
 [ext_resource type="Texture2D" uid="uid://chwaxnpp54pq4" path="res://rooms/image/stool.png" id="13_83qxy"]
 [ext_resource type="Texture2D" uid="uid://cevtss3tendur" path="res://rooms/image/Pixilart_App.png" id="13_afyup"]
@@ -214,6 +214,9 @@ shadow_size = 0
 font_size = 60
 shadow_size = 0
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cc4rm"]
+load_path = "res://.godot/imported/work_room_3t.png-fe268461561dc4f3553d05588901649a.ctex"
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b5a34"]
 size = Vector2(25.9067, 24.0085)
 
@@ -336,7 +339,7 @@ z_index = -1
 texture_filter = 1
 position = Vector2(1009, 258)
 scale = Vector2(7, 7)
-texture = ExtResource("11_ie8m7")
+texture = ExtResource("5_gs6oa")
 flip_h = true
 flip_v = true
 
@@ -440,7 +443,7 @@ z_index = -1
 texture_filter = 1
 position = Vector2(1011, 479)
 scale = Vector2(7, 7)
-texture = ExtResource("11_ie8m7")
+texture = SubResource("CompressedTexture2D_cc4rm")
 
 [node name="Area2D4" type="Area2D" parent="."]
 position = Vector2(974, 346)
