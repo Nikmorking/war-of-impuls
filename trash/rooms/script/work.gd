@@ -2,14 +2,17 @@ extends Node2D
 
 
 var room = 0
+var event = ""
 
 var stop = load("res://dialogues/Запрет.dialogue")
+var rand = load("res://dialogues/Random.dialogue")
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$AnimationPlayer.play("start")
 	$CharacterBody2D.play = false
+	DialogueManager.show_dialogue_balloon(rand, "start")
 	pass # Replace with function body.
 
 
@@ -22,6 +25,7 @@ func _on_col_1(area):
 		$AnimationPlayer.play("1")
 		$CharacterBody2D.play = false
 		$CharacterBody2D.position = $Marker2D.position
+		
 		room = 1
 	pass # Replace with function body.
 
@@ -50,7 +54,7 @@ func _on_col_3(body):
 
 
 func _on_col_4(body):
-	if room == 2:
+	if room == 2 and event == "meeting":
 		$AnimationPlayer.play("4")
 		$CharacterBody2D.play = false
 		$CharacterBody2D.position = $Marker2D4.position

@@ -23,7 +23,6 @@ height = 42.0
 
 [sub_resource type="Animation" id="Animation_wbgr0"]
 resource_name = "1"
-length = 1.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -31,7 +30,7 @@ tracks/0/path = NodePath("../AnimationPlayer/Camera2D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(122, 257), Vector2(565, 258)]
@@ -39,7 +38,6 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_3w5qc"]
 resource_name = "2"
-length = 1.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -47,7 +45,7 @@ tracks/0/path = NodePath("../AnimationPlayer/Camera2D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(565, 258), Vector2(1008, 263)]
@@ -55,7 +53,6 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_77baw"]
 resource_name = "3"
-length = 1.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -63,7 +60,7 @@ tracks/0/path = NodePath("../AnimationPlayer/Camera2D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(1008, 263), Vector2(562, 254)]
@@ -273,9 +270,10 @@ z_index = 4
 position = Vector2(122, 257)
 zoom = Vector2(2.7, 3)
 position_smoothing_enabled = true
-position_smoothing_speed = 20.0
+position_smoothing_speed = 100.0
 
 [node name="ColorRect" type="ColorRect" parent="AnimationPlayer/Camera2D"]
+visible = false
 offset_left = -210.0
 offset_top = -112.0
 offset_right = 217.0
@@ -313,7 +311,7 @@ shape = SubResource("RectangleShape2D_k813g")
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
 position = Vector2(1240, 261)
-polygon = PackedVector2Array(-47, -72, -46, 63, -55, 82, -160, 85, -159, 139, -3, 141, -3, -73)
+polygon = PackedVector2Array(-47, -72, -46, 63, -55, 82, -217, 80, -217, 137, -3, 141, -3, -73)
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(812.5, 484)
@@ -336,7 +334,7 @@ shape = SubResource("RectangleShape2D_o11ke")
 [node name="work_2" type="Sprite2D" parent="."]
 z_index = -1
 texture_filter = 1
-position = Vector2(1011, 258)
+position = Vector2(1009, 258)
 scale = Vector2(7, 7)
 texture = ExtResource("11_ie8m7")
 flip_h = true

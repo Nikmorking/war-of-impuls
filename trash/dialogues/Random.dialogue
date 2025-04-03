@@ -1,0 +1,13 @@
+~ start
+%3 => meeting
+%2 => nothing
+=> END
+
+~ meeting
+Narrator: You need go to leaving room
+set event = "meeting"
+=> END
+
+~ nothing
+Narrator: Today nothing to do
+=> END
