@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cevtss3tendur"
-path="res://.godot/imported/Pixilart_App.png-8c10866d673d8cf114ef46282600432b.ctex"
+uid="uid://b8evq3npqvqd7"
+path="res://.godot/imported/424.png-b86d50f473303c1191c8c022788ad0ad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://rooms/image/Pixilart_App.png"
-dest_files=["res://.godot/imported/Pixilart_App.png-8c10866d673d8cf114ef46282600432b.ctex"]
+source_file="res://rooms/image/tablichka/424.png"
+dest_files=["res://.godot/imported/424.png-b86d50f473303c1191c8c022788ad0ad.ctex"]
 
 [params]
 

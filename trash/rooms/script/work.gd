@@ -75,3 +75,13 @@ func _on_col_go_out(body):
 	if body is CharacterBody2D:
 		DialogueManager.show_dialogue_balloon(stop, "go_out")
 	pass # Replace with function body.
+
+
+func _on_col_6(body):
+	if room == 3:
+		$AnimationPlayer.play("6")
+		$CharacterBody2D.play = false
+		room = 4
+	pass # Replace with function body.
+
+

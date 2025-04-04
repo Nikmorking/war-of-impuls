@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpcb1qt48q0yl"
-path="res://.godot/imported/427.png-fa2dda6733904090945cfaa2ffe02cd6.ctex"
+uid="uid://dcth6nv8cfvkb"
+path="res://.godot/imported/women.png-56b36af621d37736b7f32f91f5824ac6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://rooms/image/427.png"
-dest_files=["res://.godot/imported/427.png-fa2dda6733904090945cfaa2ffe02cd6.ctex"]
+source_file="res://rooms/image/tablichka/women.png"
+dest_files=["res://.godot/imported/women.png-56b36af621d37736b7f32f91f5824ac6.ctex"]
 
 [params]
 
