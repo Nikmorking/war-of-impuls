@@ -1,13 +1,27 @@
 ~ start
-%3 => meeting
-%2 => nothing
+if Gs.day == 1
+	=> meeting_1
+else
+	%3 => meeting
+	%2 => nothing
+=> END
+
+~ meeting_1
+do Gs._stop()
+Narrator: You should meet your new colleagues
+set event = "1_meeting"
+do Gs._play()
 => END
 
 ~ meeting
+do Gs._stop()
 Narrator: You need go to leaving room
 set event = "meeting"
+do Gs._play()
 => END
 
 ~ nothing
+do Gs._stop()
 Narrator: Today nothing to do
+do Gs._play()
 => END

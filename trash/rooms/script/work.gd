@@ -10,9 +10,12 @@ var rand = load("res://dialogues/Random.dialogue")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	if Gs.day == 0:
+		$AnimationPlayer/Camera2D/ColorRect/Label.text = "This is your first day \nat new work !"
+	else:
+		$AnimationPlayer/Camera2D/ColorRect/Label.text = "You come to work as usual."
 	$AnimationPlayer.play("start")
 	$CharacterBody2D.play = false
-	DialogueManager.show_dialogue_balloon(rand, "start")
 	pass # Replace with function body.
 
 
@@ -25,7 +28,8 @@ func _on_col_1(area):
 		$AnimationPlayer.play("1")
 		$CharacterBody2D.play = false
 		$CharacterBody2D.position = $Marker2D.position
-		
+		Gs.day += 1
+		DialogueManager.show_dialogue_balloon(rand, "start")
 		room = 1
 	pass # Replace with function body.
 
@@ -54,7 +58,7 @@ func _on_col_3(body):
 
 
 func _on_col_4(body):
-	if room == 2 and event == "meeting":
+	if room == 2 and (event == "meeting" or event == "1_meeting"):
 		$AnimationPlayer.play("4")
 		$CharacterBody2D.play = false
 		$CharacterBody2D.position = $Marker2D4.position
@@ -80,8 +84,16 @@ func _on_col_go_out(body):
 func _on_col_6(body):
 	if room == 3:
 		$AnimationPlayer.play("6")
-		$CharacterBody2D.play = false
 		room = 4
+	else:
+		$AnimationPlayer.play("7")
+		room = 3
+	$CharacterBody2D.play = false
 	pass # Replace with function body.
 
 
+
+
+func _women(body):
+	DialogueManager.show_dialogue_balloon(stop, "women")
+	pass # Replace with function body.
