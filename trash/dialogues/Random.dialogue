@@ -9,19 +9,20 @@ else
 ~ meeting_1
 do Gs._stop()
 Narrator: You should meet your new colleagues
-set event = "1_meeting"
+set Gs.event = "1_meeting"
 do Gs._play()
 => END
 
 ~ meeting
 do Gs._stop()
 Narrator: You need go to leaving room
-set event = "meeting"
+set Gs.event = "meeting"
 do Gs._play()
 => END
 
 ~ nothing
 do Gs._stop()
 Narrator: Today nothing to do
+set Gs.event = ""
 do Gs._play()
 => END

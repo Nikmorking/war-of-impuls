@@ -4,6 +4,31 @@ Narrator: Go work!
 do Gs._play()
 => END
 
+~ no_go_1
+do Gs._stop()
+Narrator: Today you mustn't go there
+do Gs._play()
+=> END
+
+~ no_go_2
+do Gs._stop()
+Narrator: I said: TODAY YOU MUST NOT GO THERE
+do Gs._play()
+=> END
+
+~ no_go_3
+do Gs._stop()
+Narrator: I know, you need to go toilet
+do tp_toilet()
+do Gs._play()
+=> END
+
+~ go_work
+do Gs._stop()
+Narrator: Now go work
+do Gs._play()
+=> END
+
 ~ women
 do Gs._stop()
 Narrator: You're a vulgar person

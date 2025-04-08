@@ -9,7 +9,10 @@ func _ready():
 	pass
 
 func _process(delta):
-
+	if Input.is_action_just_pressed("add_day"):
+		Gs.day += 1
+		print(Gs.day)
+		DialogueManager.show_dialogue_balloon(load("res://dialogues/Random.dialogue"), "start")
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	if play:
@@ -22,9 +25,12 @@ func _process(delta):
 
 	move_and_slide()
 
+
 func _play():
 	play = true
 	pass
+
+
 func _stop():
 	play = false
 	pass

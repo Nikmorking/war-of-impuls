@@ -566,10 +566,6 @@ rotation = 1.97076
 position = Vector2(1037, 315)
 rotation = 1.97076
 
-[node name="Marker2D6" type="Marker2D" parent="."]
-position = Vector2(1316, 698)
-rotation = 1.97076
-
 [node name="Ekran" type="Sprite2D" parent="."]
 position = Vector2(548.75, 170)
 scale = Vector2(6.71875, 4.25)

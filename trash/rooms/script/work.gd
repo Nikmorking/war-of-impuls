@@ -2,7 +2,8 @@ extends Node2D
 
 
 var room = 0
-var event = ""
+var no_go = 1
+
 
 var stop = load("res://dialogues/Запрет.dialogue")
 var rand = load("res://dialogues/Random.dialogue")
@@ -17,6 +18,12 @@ func _ready():
 	$AnimationPlayer.play("start")
 	$CharacterBody2D.play = false
 	pass # Replace with function body.
+
+
+func tp_toilet():
+	$CharacterBody2D.position = $Marker2D6.position
+	$AnimationPlayer/Camera2D.position = $Marker2D6.position + Vector2(133, 0)
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -58,11 +65,19 @@ func _on_col_3(body):
 
 
 func _on_col_4(body):
-	if room == 2 and (event == "meeting" or event == "1_meeting"):
+	if room == 2 and (Gs.event == "meeting" or Gs.event == "1_meeting"):
 		$AnimationPlayer.play("4")
 		$CharacterBody2D.play = false
 		$CharacterBody2D.position = $Marker2D4.position
 		room = 3
+	else:
+		if no_go == 1:
+			DialogueManager.show_dialogue_balloon(stop, "no_go_1")
+		if no_go == 2:
+			DialogueManager.show_dialogue_balloon(stop, "no_go_2")
+		if no_go == 3:
+			DialogueManager.show_dialogue_balloon(stop, "no_go_3")
+		no_go += 1
 	pass # Replace with function body.
 
 
@@ -77,7 +92,7 @@ func _on_col_5(body):
 
 func _on_col_go_out(body):
 	if body is CharacterBody2D:
-		DialogueManager.show_dialogue_balloon(stop, "go_out")
+		DialogueManager.show_dialogue_balloon(stop, "go_out_1")
 	pass # Replace with function body.
 
 
@@ -97,3 +112,23 @@ func _on_col_6(body):
 func _women(body):
 	DialogueManager.show_dialogue_balloon(stop, "women")
 	pass # Replace with function body.
+
+
+func _on_col_7(body):
+	if room == 4:
+		$AnimationPlayer.play("8")
+		room = 5
+	else:
+		if room == 5:
+			$AnimationPlayer.play("9")
+			room = 4
+		else:
+			go_work()
+	pass # Replace with function body.
+
+
+func go_work():
+	DialogueManager.show_dialogue_balloon(stop, "go_work")
+	$CharacterBody2D.position = $Marker2D5.position
+	$AnimationPlayer.play("5")
+	pass
