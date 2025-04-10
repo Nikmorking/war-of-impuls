@@ -17,6 +17,14 @@ func _process(delta):
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	if play:
 		var direction = Input.get_vector("ui_left","ui_right","ui_up","ui_down")
+		if direction.x <0:
+			$AnimatedSprite2D.play("left")
+		if direction.x >0:
+			$AnimatedSprite2D.play("right")
+		if direction.y <0:
+			$AnimatedSprite2D.play("up")
+		if direction.y >0:
+			$AnimatedSprite2D.play("down")
 		if direction.x or direction.y:
 			velocity = direction * SPEED
 		else:
