@@ -1,4 +1,4 @@
-[gd_scene load_steps=88 format=3 uid="uid://bxtgwbqw860er"]
+[gd_scene load_steps=89 format=3 uid="uid://bxtgwbqw860er"]
 
 [ext_resource type="Texture2D" uid="uid://cqlikg0ojcsq8" path="res://rooms/image/back/вход.png" id="1_78quo"]
 [ext_resource type="Script" path="res://rooms/script/work.gd" id="1_cwsvv"]
@@ -46,6 +46,7 @@
 [ext_resource type="Texture2D" uid="uid://b5udv1bag5s3g" path="res://rooms/image/back/pixel_art.png" id="29_d22ym"]
 [ext_resource type="Texture2D" uid="uid://bfd6q4gfak2ch" path="res://rooms/image/tablichka/422.png" id="29_nyp1l"]
 [ext_resource type="Texture2D" uid="uid://ba5v57pnb1yil" path="res://rooms/image/back/pixel_art (2).png" id="30_7ir56"]
+[ext_resource type="Texture2D" uid="uid://p6asnssns7gy" path="res://rooms/image/toilet/Стол 1.png" id="30_ureey"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h8f6d"]
 height = 40.0
@@ -317,6 +318,22 @@ tracks/3/keys = {
 "values": [Color(1, 1, 1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_mvbhn"]
+resource_name = "logo"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimationPlayer/Camera2D/R/ColorRect2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_a514s"]
 resource_name = "start"
 length = 4.0
@@ -355,22 +372,6 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(122, 257)]
-}
-
-[sub_resource type="Animation" id="Animation_mvbhn"]
-resource_name = "logo"
-length = 3.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../AnimationPlayer/Camera2D/R/ColorRect2:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 2, 3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1hk8u"]
@@ -542,6 +543,7 @@ script = ExtResource("18_6tdn7")
 
 [node name="Button" type="Button" parent="AnimationPlayer/Camera2D/R/ColorRect"]
 modulate = Color(0, 0, 0, 1)
+layout_mode = 0
 offset_left = 6.90654
 offset_right = 24.9065
 offset_bottom = 31.0
@@ -550,6 +552,7 @@ flat = true
 
 [node name="Button2" type="Button" parent="AnimationPlayer/Camera2D/R/ColorRect"]
 modulate = Color(0, 0, 0, 1)
+layout_mode = 0
 offset_left = 122.014
 offset_right = 140.014
 offset_bottom = 31.0
@@ -568,9 +571,9 @@ label_settings = SubResource("LabelSettings_1y2pc")
 
 [node name="Button" type="Button" parent="AnimationPlayer/Camera2D/R"]
 offset_left = -442.0
-offset_top = 75.0
+offset_top = 71.6511
 offset_right = -217.0
-offset_bottom = 129.0
+offset_bottom = 125.651
 flat = true
 
 [node name="Button2" type="Button" parent="AnimationPlayer/Camera2D/R"]
@@ -596,8 +599,8 @@ offset_bottom = 360.0
 color = Color(0.439049, 0.439049, 0.439049, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="AnimationPlayer/Camera2D/R/ColorRect2"]
-position = Vector2(492.209, 344.581)
-scale = Vector2(19.7122, 20.093)
+position = Vector2(492.209, 354.628)
+scale = Vector2(15.8993, 20.093)
 texture = ExtResource("19_pgj0v")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -843,6 +846,11 @@ texture = ExtResource("13_in3hm")
 position = Vector2(861.5, 439)
 scale = Vector2(1.9375, 1.875)
 texture = ExtResource("13_83qxy")
+
+[node name="Стол1" type="Sprite2D" parent="."]
+position = Vector2(894.5, 482)
+scale = Vector2(3.53125, 2.25)
+texture = ExtResource("30_ureey")
 
 [node name="Stool3" type="Sprite2D" parent="."]
 position = Vector2(857.5, 521)

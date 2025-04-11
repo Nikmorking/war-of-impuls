@@ -9,9 +9,6 @@ func _ready():
 	pass
 
 func _process(delta):
-	if Input.is_action_just_pressed("add_day"):
-		get_parent().new_day()
-		print(Gs.day)
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	if play:

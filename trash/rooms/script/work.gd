@@ -45,6 +45,7 @@ func _on_col_1(area):
 
 func _on_1_anim_finished(anim_name):
 	$CharacterBody2D.play = true
+	$AnimationPlayer/Camera2D/R/ColorRect2.hide()
 	pass # Replace with function body.
 
 
@@ -97,7 +98,7 @@ func _on_col_5(body):
 
 func _on_col_go_out(body):
 	if body is CharacterBody2D:
-		DialogueManager.show_dialogue_balloon(stop, "go_out_1")
+		DialogueManager.show_dialogue_balloon(stop, "go_out")
 	pass # Replace with function body.
 
 
