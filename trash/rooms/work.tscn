@@ -452,82 +452,66 @@ size = Vector2(19, 44.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2x61p"]
 size = Vector2(29, 6.5)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_wolc0"]
+atlas = ExtResource("48_tiuom")
+region = Rect2(0, 48, 16, 16)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_702ux"]
 atlas = ExtResource("48_tiuom")
 region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jdpjj"]
-atlas = ExtResource("48_tiuom")
-region = Rect2(0, 16, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2ltg7"]
-atlas = ExtResource("48_tiuom")
-region = Rect2(16, 16, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hnbje"]
-atlas = ExtResource("48_tiuom")
-region = Rect2(32, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t8n4b"]
 atlas = ExtResource("48_tiuom")
 region = Rect2(16, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_k1hi7"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_jdpjj"]
 atlas = ExtResource("48_tiuom")
-region = Rect2(32, 0, 16, 16)
+region = Rect2(0, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kxc31"]
 atlas = ExtResource("48_tiuom")
 region = Rect2(0, 32, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ltg7"]
+atlas = ExtResource("48_tiuom")
+region = Rect2(16, 16, 16, 16)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_g0dfk"]
 atlas = ExtResource("48_tiuom")
 region = Rect2(32, 32, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wolc0"]
-atlas = ExtResource("48_tiuom")
-region = Rect2(0, 48, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_knipe"]
-atlas = ExtResource("48_tiuom")
-region = Rect2(16, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dlvyr"]
 atlas = ExtResource("48_tiuom")
 region = Rect2(32, 48, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_hnbje"]
+atlas = ExtResource("48_tiuom")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k1hi7"]
+atlas = ExtResource("48_tiuom")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_knipe"]
+atlas = ExtResource("48_tiuom")
+region = Rect2(16, 48, 16, 16)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_v15qu"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wolc0")
+}],
+"loop": true,
+"name": &"RICHARD",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_702ux")
 }],
 "loop": true,
-"name": &"Ж_1",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jdpjj")
-}],
-"loop": true,
-"name": &"Ж_2",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2ltg7")
-}],
-"loop": true,
-"name": &"Ж_3",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hnbje")
-}],
-"loop": true,
-"name": &"Ж_4",
+"name": &"БУХГАЛТЕР",
 "speed": 5.0
 }, {
 "frames": [{
@@ -535,15 +519,15 @@ animations = [{
 "texture": SubResource("AtlasTexture_t8n4b")
 }],
 "loop": true,
-"name": &"М_1",
+"name": &"ДИРЕКТОР",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_k1hi7")
+"texture": SubResource("AtlasTexture_jdpjj")
 }],
 "loop": true,
-"name": &"М_2",
+"name": &"ЗАМЕСТИТЕЛЬ ДИРЕКТОРА",
 "speed": 5.0
 }, {
 "frames": [{
@@ -551,7 +535,15 @@ animations = [{
 "texture": SubResource("AtlasTexture_kxc31")
 }],
 "loop": true,
-"name": &"М_3",
+"name": &"МЕНЕДЖЕР",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ltg7")
+}],
+"loop": true,
+"name": &"МЕТОДИСТ",
 "speed": 5.0
 }, {
 "frames": [{
@@ -559,23 +551,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_g0dfk")
 }],
 "loop": true,
-"name": &"М_4",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wolc0")
-}],
-"loop": true,
-"name": &"М_5",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_knipe")
-}],
-"loop": true,
-"name": &"М_6",
+"name": &"ОХРАННИК",
 "speed": 5.0
 }, {
 "frames": [{
@@ -583,7 +559,31 @@ animations = [{
 "texture": SubResource("AtlasTexture_dlvyr")
 }],
 "loop": true,
-"name": &"М_7",
+"name": &"СЕКРЕТАРЬ",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hnbje")
+}],
+"loop": true,
+"name": &"СОТРУДНИК",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k1hi7")
+}],
+"loop": true,
+"name": &"УБОРЩИК",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_knipe")
+}],
+"loop": true,
+"name": &"ЭКОНОМИСТ",
 "speed": 5.0
 }]
 
@@ -1197,38 +1197,38 @@ texture = ExtResource("30_7ir56")
 position = Vector2(891, 412)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_v15qu")
-animation = &"М_5"
+animation = &"RICHARD"
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
 position = Vector2(883, 500)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_v15qu")
-animation = &"М_3"
+animation = &"МЕНЕДЖЕР"
 
 [node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
 position = Vector2(929, 431)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_v15qu")
-animation = &"М_1"
+animation = &"УБОРЩИК"
 
 [node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="."]
 position = Vector2(945, 522)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_v15qu")
-animation = &"М_2"
+animation = &"УБОРЩИК"
 
 [node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="."]
 position = Vector2(1051, 521)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_v15qu")
-animation = &"Ж_3"
+animation = &"МЕТОДИСТ"
 flip_h = true
 
 [node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="."]
 position = Vector2(1043, 396)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_v15qu")
-animation = &"М_7"
+animation = &"СЕКРЕТАРЬ"
 flip_h = true
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_1_anim_finished"]
