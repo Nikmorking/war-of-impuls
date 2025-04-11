@@ -1,4 +1,4 @@
-[gd_scene load_steps=89 format=3 uid="uid://bxtgwbqw860er"]
+[gd_scene load_steps=102 format=3 uid="uid://bxtgwbqw860er"]
 
 [ext_resource type="Texture2D" uid="uid://cqlikg0ojcsq8" path="res://rooms/image/back/вход.png" id="1_78quo"]
 [ext_resource type="Script" path="res://rooms/script/work.gd" id="1_cwsvv"]
@@ -47,6 +47,7 @@
 [ext_resource type="Texture2D" uid="uid://bfd6q4gfak2ch" path="res://rooms/image/tablichka/422.png" id="29_nyp1l"]
 [ext_resource type="Texture2D" uid="uid://ba5v57pnb1yil" path="res://rooms/image/back/pixel_art (2).png" id="30_7ir56"]
 [ext_resource type="Texture2D" uid="uid://p6asnssns7gy" path="res://rooms/image/toilet/Стол 1.png" id="30_ureey"]
+[ext_resource type="Texture2D" uid="uid://cxligw3h6m5m6" path="res://anim/Office_Characters.png" id="48_tiuom"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h8f6d"]
 height = 40.0
@@ -451,6 +452,141 @@ size = Vector2(19, 44.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2x61p"]
 size = Vector2(29, 6.5)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_702ux"]
+atlas = ExtResource("48_tiuom")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jdpjj"]
+atlas = ExtResource("48_tiuom")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ltg7"]
+atlas = ExtResource("48_tiuom")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hnbje"]
+atlas = ExtResource("48_tiuom")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t8n4b"]
+atlas = ExtResource("48_tiuom")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k1hi7"]
+atlas = ExtResource("48_tiuom")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kxc31"]
+atlas = ExtResource("48_tiuom")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g0dfk"]
+atlas = ExtResource("48_tiuom")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wolc0"]
+atlas = ExtResource("48_tiuom")
+region = Rect2(0, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_knipe"]
+atlas = ExtResource("48_tiuom")
+region = Rect2(16, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dlvyr"]
+atlas = ExtResource("48_tiuom")
+region = Rect2(32, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v15qu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_702ux")
+}],
+"loop": true,
+"name": &"Ж_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jdpjj")
+}],
+"loop": true,
+"name": &"Ж_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ltg7")
+}],
+"loop": true,
+"name": &"Ж_3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hnbje")
+}],
+"loop": true,
+"name": &"Ж_4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t8n4b")
+}],
+"loop": true,
+"name": &"М_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k1hi7")
+}],
+"loop": true,
+"name": &"М_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kxc31")
+}],
+"loop": true,
+"name": &"М_3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g0dfk")
+}],
+"loop": true,
+"name": &"М_4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wolc0")
+}],
+"loop": true,
+"name": &"М_5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_knipe")
+}],
+"loop": true,
+"name": &"М_6",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dlvyr")
+}],
+"loop": true,
+"name": &"М_7",
+"speed": 5.0
+}]
+
 [node name="Work" type="Node2D"]
 script = ExtResource("1_cwsvv")
 day_1 = ExtResource("2_3v1ee")
@@ -838,13 +974,13 @@ label_settings = SubResource("LabelSettings_f3y4v")
 metadata/_edit_use_anchors_ = true
 
 [node name="Stool5" type="Sprite2D" parent="."]
-position = Vector2(967, 435)
-scale = Vector2(2.0625, 1.8125)
+position = Vector2(973.5, 446.088)
+scale = Vector2(1.5, 1.318)
 texture = ExtResource("13_in3hm")
 
 [node name="Stool" type="Sprite2D" parent="."]
-position = Vector2(861.5, 439)
-scale = Vector2(1.9375, 1.875)
+position = Vector2(868, 450.088)
+scale = Vector2(1.5, 1.318)
 texture = ExtResource("13_83qxy")
 
 [node name="Стол1" type="Sprite2D" parent="."]
@@ -854,12 +990,12 @@ texture = ExtResource("30_ureey")
 
 [node name="Stool3" type="Sprite2D" parent="."]
 position = Vector2(857.5, 521)
-scale = Vector2(1.9375, 1.875)
+scale = Vector2(1.5, 1.451)
 texture = ExtResource("14_1ml0v")
 
 [node name="Stool2" type="Sprite2D" parent="."]
 position = Vector2(916.5, 493)
-scale = Vector2(1.9375, 1.875)
+scale = Vector2(1.5, 1.451)
 texture = ExtResource("15_jsv5e")
 
 [node name="PixilartApp" type="Sprite2D" parent="."]
@@ -1056,6 +1192,44 @@ texture = ExtResource("30_7ir56")
 position = Vector2(1270, 755)
 scale = Vector2(0.609375, 0.65625)
 texture = ExtResource("30_7ir56")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(891, 412)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_v15qu")
+animation = &"М_5"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(883, 500)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_v15qu")
+animation = &"М_3"
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
+position = Vector2(929, 431)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_v15qu")
+animation = &"М_1"
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="."]
+position = Vector2(945, 522)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_v15qu")
+animation = &"М_2"
+
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="."]
+position = Vector2(1051, 521)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_v15qu")
+animation = &"Ж_3"
+flip_h = true
+
+[node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="."]
+position = Vector2(1043, 396)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_v15qu")
+animation = &"М_7"
+flip_h = true
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_1_anim_finished"]
 [connection signal="button_down" from="AnimationPlayer/Camera2D/R/ColorRect/Button" to="AnimationPlayer/Camera2D/R/ColorRect" method="_on_button_button_down"]
