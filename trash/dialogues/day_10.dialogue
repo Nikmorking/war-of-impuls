@@ -1,0 +1,38 @@
+~ start
+do Gs._stop()
+Narrator: You need go to meeting room
+set Gs.event = "meeting"
+do Gs._play()
+=> END
+
+~ meet
+do Gs._stop()
+Director: A plan?
+Analyst: Yes!
+director: Money?
+economist: Yes!
+director: Salary?
+accountant: Not issued!
+director: Sauna?
+manager: Heated!
+director: Drinks?
+Methodologist: Ordered and on the way!
+director: Cake?
+Employee: In the fridge, what's under lock and key!
+director: Music?
+janitor: Set up!
+director: Neighbors?
+Security guard: We moved out a couple of weeks ago!
+Richard: And what's going on?
+the deputy director: Call him in half an hour.
+* after half an hour*
+Richard: Where are you taking me? Zach...
+Everyone: Happy birthday!!!
+=> end_meet
+=> END
+
+~ end_meet
+Narrator: This is the end of game !
+do end()
+do Gs._play()
+=> END

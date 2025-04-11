@@ -1,0 +1,29 @@
+~ start
+do Gs._stop()
+Narrator: You should meet your new colleagues
+set Gs.event = "meeting"
+do Gs._play()
+=> END
+
+~ meet
+do Gs._stop()
+Director: We are late with the execution of the plan! Everyone speed up 1003 times!
+secretary: But today is the first working day!
+Analyst: If we start right now, we will overtake our competitors in just 152 years.
+Deputy Director: Exactly! all for the shawarma!
+Economist: 17 times a day?! It will bankrupt the...
+accountant: At my expense!
+The guard: I won't believe you!
+the accountant: Damn! I forgot that I have no money!
+Manager: And when is the salary?
+Director: The ruble has fallen!
+Richard: I see.
+Director: Let's get to work!
+=> end_meet
+=> END
+
+~ end_meet
+Narrator: That's the end of the meeting, and the assignment for today is on your screen.
+do vis()
+do Gs._play()
+=> END

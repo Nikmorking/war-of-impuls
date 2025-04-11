@@ -1,0 +1,35 @@
+~ start
+do Gs._stop()
+Narrator: You need go to meeting room
+set Gs.event = "meeting"
+do Gs._play()
+=> END
+
+~ meet
+do Gs._stop()
+Methodologist: I have developed a new methodology for selling our new product.
+Richard: And what kind of product is it?
+methodologist: I present to your attention a completely relevant product that will be sold to the last unit!
+director: Don't Tom, introduce your bike already!
+Employee: * drumming on the table with a shot *
+methodologist: Devourer of air!
+Director: ...
+Richard: ...
+secretary: ...
+security guard: This is A MASTERPIECE!!!
+manager: This is...
+Richard: Unnecessary...
+employee: Empty...
+secretary: Outdated...
+economist: Expensive...
+accountant: Sophisticated...
+director: Great idea! We're starting to release!
+Janitor: Great! Get out of here, I need to wash up.
+=> end_meet
+=> END
+
+~ end_meet
+Narrator: That's the end of the meeting, and the assignment for today is on your screen.
+do vis()
+do Gs._play()
+=> END

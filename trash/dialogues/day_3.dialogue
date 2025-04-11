@@ -1,0 +1,29 @@
+~ start
+do Gs._stop()
+Narrator: You need go to meeting room
+set Gs.event = "meeting"
+do Gs._play()
+=> END
+
+~ meet
+do Gs._stop()
+Richard: And where is my salary?
+director: Where's my car?
+Secretary: Where are my glasses?
+Deputy Director: Where's the plaque?
+Richard: So where's my salary?
+director: First, tell me where my car is.
+Secretary: No, first tell me where my glasses are.
+Deputy Director: The most important question is, where is the plaque?
+Richard: The plaque is under repair.
+Director: Salary in Switzerland.
+Secretary: The car is in Siberia.
+Deputy Director: Gypsies have glasses.
+=> end_meet
+=> END
+
+~ end_meet
+Narrator: That's the end of the meeting, and the assignment for today is on your screen.
+do Gs._play()
+do vis()
+=> END

@@ -1,0 +1,29 @@
+~ start
+do Gs._stop()
+Narrator: You need go to meeting room
+set Gs.event = "meeting"
+do Gs._play()
+=> END
+
+~ meet
+do Gs._stop()
+Security guard: The New Year is coming soon!
+Director: No!
+Richard: What's "no"?
+Director: No one will get the award!
+Guard: And why?
+Deputy Director: Because we have only 4 million allocated for the implementation of the plan, and we cannot spend it on bonuses and salaries.
+Analyst: 4 million?! Not 2?!
+Secretary: 2 million?! Not a million?!
+Economist: a million?! Not 500 thousand?!
+manager: 500 thousand?! Not 200?!
+Richard: Was money allocated for this?!
+* And silence...*
+=> end_meet
+=> END
+
+~ end_meet
+Narrator: That's the end of the meeting, and the assignment for today is on your screen.
+do Gs._play()
+do vis()
+=> END

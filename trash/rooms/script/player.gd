@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var play = true
+var play = false
 @export var SPEED = 300.0
 
 func _ready():
@@ -10,9 +10,8 @@ func _ready():
 
 func _process(delta):
 	if Input.is_action_just_pressed("add_day"):
-		Gs.day += 1
+		get_parent().new_day()
 		print(Gs.day)
-		DialogueManager.show_dialogue_balloon(load("res://dialogues/Random.dialogue"), "start")
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	if play:
@@ -40,5 +39,6 @@ func _play():
 
 
 func _stop():
+	$AnimatedSprite2D.play("down")
 	play = false
 	pass

@@ -1,0 +1,6 @@
+~ start
+do Gs._stop()
+Narrator: You and your colleagues celebrated the new year well.
+do Gs.new_day()
+do Gs._play()
+=> END

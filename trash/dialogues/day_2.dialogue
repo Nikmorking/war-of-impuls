@@ -1,0 +1,12 @@
+~ start
+do Gs._stop()
+Narrator: There are no meetings today
+do vis()
+set Gs.event = ""
+do Gs._play()
+=> END
+
+~ end_meet
+Narrator: The assignment for today is on your screen.
+do Gs._play()
+=> END

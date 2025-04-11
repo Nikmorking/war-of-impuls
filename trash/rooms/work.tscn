@@ -1,16 +1,26 @@
-[gd_scene load_steps=72 format=3 uid="uid://bxtgwbqw860er"]
+[gd_scene load_steps=88 format=3 uid="uid://bxtgwbqw860er"]
 
 [ext_resource type="Texture2D" uid="uid://cqlikg0ojcsq8" path="res://rooms/image/back/вход.png" id="1_78quo"]
 [ext_resource type="Script" path="res://rooms/script/work.gd" id="1_cwsvv"]
+[ext_resource type="Resource" uid="uid://c2kvephwd0g62" path="res://dialogues/day_1.dialogue" id="2_3v1ee"]
 [ext_resource type="Texture2D" uid="uid://chume2aljeara" path="res://rooms/image/back/work_room_1.png" id="3_kq47i"]
+[ext_resource type="Resource" uid="uid://dokl0i8k00ihe" path="res://dialogues/day_2.dialogue" id="3_qbd0c"]
 [ext_resource type="Texture2D" uid="uid://cs4ww0qakhk54" path="res://anim/Office_Character_3.png" id="4_4xmst"]
+[ext_resource type="Resource" uid="uid://gju4pg8p2xl8" path="res://dialogues/day_3.dialogue" id="4_42mgr"]
 [ext_resource type="Script" path="res://rooms/script/player.gd" id="4_t6vss"]
+[ext_resource type="Resource" uid="uid://0xu6pcvgd6kr" path="res://dialogues/day_4.dialogue" id="5_a86t4"]
 [ext_resource type="Texture2D" uid="uid://codf4v15vpkmy" path="res://rooms/image/back/work_room_2.png" id="5_gs6oa"]
 [ext_resource type="PackedScene" uid="uid://ckcesh864vc78" path="res://buttuns/button_1.tscn" id="6_2hd2u"]
 [ext_resource type="Texture2D" uid="uid://dcypjm50vn2cq" path="res://rooms/image/table.png" id="6_t70lc"]
+[ext_resource type="Resource" uid="uid://cdnr6rv1lvs6n" path="res://dialogues/day_5.dialogue" id="6_ybbub"]
+[ext_resource type="Resource" uid="uid://ll12l4gh0bl8" path="res://dialogues/day_6.dialogue" id="7_bmb81"]
 [ext_resource type="Script" path="res://rooms/script/schot.gd" id="7_sf4mf"]
 [ext_resource type="Texture2D" uid="uid://cmpqkaju5vtc1" path="res://rooms/image/monitor.png" id="8_x8jxt"]
+[ext_resource type="Resource" uid="uid://c4ic0r2scfmq5" path="res://dialogues/day_7.dialogue" id="8_ys557"]
+[ext_resource type="Resource" uid="uid://chq6462v2cxwi" path="res://dialogues/day_8.dialogue" id="9_5jwov"]
+[ext_resource type="Resource" uid="uid://mvjyy7n4v0" path="res://dialogues/day_9.dialogue" id="10_066xp"]
 [ext_resource type="Texture2D" uid="uid://cpcb1qt48q0yl" path="res://rooms/image/tablichka/427.png" id="10_r4u6w"]
+[ext_resource type="Resource" uid="uid://dl3ojnus5d5mk" path="res://dialogues/day_10.dialogue" id="11_cimg2"]
 [ext_resource type="Texture2D" uid="uid://clf5wu7ucxk6c" path="res://rooms/image/back/work_room_3.png" id="11_gptyj"]
 [ext_resource type="Texture2D" uid="uid://bubgbyjx7gxon" path="res://rooms/image/ekran.png" id="12_k4q6x"]
 [ext_resource type="Texture2D" uid="uid://chwaxnpp54pq4" path="res://rooms/image/stool.png" id="13_83qxy"]
@@ -18,8 +28,12 @@
 [ext_resource type="Texture2D" uid="uid://bcbng8oprujl0" path="res://rooms/image/stool5.png" id="13_in3hm"]
 [ext_resource type="Texture2D" uid="uid://cwfmbokned5bx" path="res://rooms/image/stool2.png" id="14_1ml0v"]
 [ext_resource type="Texture2D" uid="uid://cnjramiywyatb" path="res://rooms/image/stool4.png" id="15_jsv5e"]
+[ext_resource type="Texture2D" uid="uid://c1diph1p3exbv" path="res://main menu/R.jpeg" id="16_pjsxv"]
+[ext_resource type="Script" path="res://rooms/menu.gd" id="17_0a0jt"]
 [ext_resource type="Texture2D" uid="uid://c1ficootvx5tm" path="res://rooms/image/tablichka/door.png" id="17_dui7d"]
+[ext_resource type="Script" path="res://main menu/ColorRect.gd" id="18_6tdn7"]
 [ext_resource type="Texture2D" uid="uid://ci7ksmcbq81t6" path="res://rooms/image/tablichka/426.png" id="19_eb5fm"]
+[ext_resource type="Texture2D" uid="uid://bhg66njneo3xv" path="res://main menu/логотип.png" id="19_pgj0v"]
 [ext_resource type="Texture2D" uid="uid://cq3rdjyuilrnm" path="res://rooms/image/tablichka/door1.png" id="20_ldvhs"]
 [ext_resource type="Texture2D" uid="uid://5effou7me6sg" path="res://rooms/image/back/work_room_4.png" id="21_lgtpp"]
 [ext_resource type="Texture2D" uid="uid://d35iytnr0lds2" path="res://rooms/image/back/toilet_room.png" id="21_x3pop"]
@@ -290,6 +304,18 @@ tracks/2/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../AnimationPlayer/Camera2D/R/ColorRect2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_a514s"]
 resource_name = "start"
@@ -318,6 +344,34 @@ tracks/1/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../AnimationPlayer/Camera2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(122, 257)]
+}
+
+[sub_resource type="Animation" id="Animation_mvbhn"]
+resource_name = "logo"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimationPlayer/Camera2D/R/ColorRect2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1hk8u"]
 _data = {
@@ -331,11 +385,15 @@ _data = {
 "8": SubResource("Animation_v47cq"),
 "9": SubResource("Animation_xdmt8"),
 "RESET": SubResource("Animation_b6ao1"),
+"logo": SubResource("Animation_mvbhn"),
 "start": SubResource("Animation_a514s")
 }
 
 [sub_resource type="LabelSettings" id="LabelSettings_5pjcr"]
 font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_1y2pc"]
+font_size = 25
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nsnep"]
 size = Vector2(21.0287, 222)
@@ -394,6 +452,16 @@ size = Vector2(29, 6.5)
 
 [node name="Work" type="Node2D"]
 script = ExtResource("1_cwsvv")
+day_1 = ExtResource("2_3v1ee")
+day_2 = ExtResource("3_qbd0c")
+day_3 = ExtResource("4_42mgr")
+day_4 = ExtResource("5_a86t4")
+day_5 = ExtResource("6_ybbub")
+day_6 = ExtResource("7_bmb81")
+day_7 = ExtResource("8_ys557")
+day_8 = ExtResource("9_5jwov")
+day_9 = ExtResource("10_066xp")
+day_10 = ExtResource("11_cimg2")
 metadata/_edit_horizontal_guides_ = [552.0]
 
 [node name="Вход" type="Sprite2D" parent="."]
@@ -402,6 +470,9 @@ texture_filter = 1
 position = Vector2(121, 257)
 scale = Vector2(7, 7)
 texture = ExtResource("1_78quo")
+
+[node name="Marker" type="Marker2D" parent="."]
+position = Vector2(128, 292)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 position = Vector2(128, 292)
@@ -440,7 +511,6 @@ position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 
 [node name="ColorRect" type="ColorRect" parent="AnimationPlayer/Camera2D"]
-visible = false
 offset_left = -210.0
 offset_top = -112.0
 offset_right = 217.0
@@ -455,6 +525,81 @@ offset_bottom = 117.0
 text = "You come to work as usual."
 label_settings = SubResource("LabelSettings_5pjcr")
 
+[node name="R" type="Sprite2D" parent="AnimationPlayer/Camera2D" node_paths=PackedStringArray("main")]
+position = Vector2(-4.00002, 0.5)
+scale = Vector2(0.434375, 0.298611)
+texture = ExtResource("16_pjsxv")
+script = ExtResource("17_0a0jt")
+main = NodePath("../../..")
+
+[node name="ColorRect" type="ColorRect" parent="AnimationPlayer/Camera2D/R"]
+visible = false
+offset_left = -451.0
+offset_top = -28.0
+offset_right = -299.0
+offset_bottom = 12.0
+script = ExtResource("18_6tdn7")
+
+[node name="Button" type="Button" parent="AnimationPlayer/Camera2D/R/ColorRect"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 6.90654
+offset_right = 24.9065
+offset_bottom = 31.0
+text = "+"
+flat = true
+
+[node name="Button2" type="Button" parent="AnimationPlayer/Camera2D/R/ColorRect"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 122.014
+offset_right = 140.014
+offset_bottom = 31.0
+text = "-"
+flat = true
+
+[node name="Label" type="Label" parent="AnimationPlayer/Camera2D/R/ColorRect"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 32.0073
+offset_top = -0.465105
+offset_right = 92.0073
+offset_bottom = 34.5349
+text = "0"
+label_settings = SubResource("LabelSettings_1y2pc")
+
+[node name="Button" type="Button" parent="AnimationPlayer/Camera2D/R"]
+offset_left = -442.0
+offset_top = 75.0
+offset_right = -217.0
+offset_bottom = 129.0
+flat = true
+
+[node name="Button2" type="Button" parent="AnimationPlayer/Camera2D/R"]
+offset_left = -447.0
+offset_top = 132.0
+offset_right = -265.0
+offset_bottom = 246.0
+text = "+"
+flat = true
+
+[node name="Button3" type="Button" parent="AnimationPlayer/Camera2D/R"]
+offset_left = -444.0
+offset_top = 263.0
+offset_right = -380.0
+offset_bottom = 317.0
+flat = true
+
+[node name="ColorRect2" type="ColorRect" parent="AnimationPlayer/Camera2D/R"]
+offset_left = -483.0
+offset_top = -363.0
+offset_right = 500.0
+offset_bottom = 360.0
+color = Color(0.439049, 0.439049, 0.439049, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimationPlayer/Camera2D/R/ColorRect2"]
+position = Vector2(492.209, 344.581)
+scale = Vector2(19.7122, 20.093)
+texture = ExtResource("19_pgj0v")
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
@@ -465,6 +610,7 @@ position = Vector2(3, 54)
 polygon = PackedVector2Array(132, 260, 337, 257, 336, 225, 175, 226, 134, 248)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
 position = Vector2(352, 259)
 shape = SubResource("RectangleShape2D_nsnep")
 
@@ -495,7 +641,7 @@ shape = SubResource("RectangleShape2D_o11ke")
 
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="StaticBody2D"]
 position = Vector2(1582, 451)
-polygon = PackedVector2Array(102, 99, -160, 95, -159, 48, -195, 48, -195, 95, -217, 101, -216, 140, 102, 138)
+polygon = PackedVector2Array(102, 99, 100, -48, 64, -48, 65.2706, 98.4392, -160, 95, -159, 48, -195, 48, -195, 95, -215, 95, -216, 140, 102, 138)
 
 [node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PackedVector2Array(834, 551, 1215, 547, 1214, 500, 1255, 499, 1255, 547, 1293, 548, 1294, 592, 1292, 646, 1251, 646, 1250, 801, 1441, 801, 1442, 814, 1238, 816, 1238.49, 591.758, 835, 590)
@@ -516,6 +662,15 @@ flip_v = true
 position = Vector2(325, 246)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+z_index = 3
+position = Vector2(4.99136, 3.99716)
+rotation = 1.56793
+shape = SubResource("RectangleShape2D_sw8cg")
+
+[node name="Area2D10" type="Area2D" parent="."]
+position = Vector2(962, 483)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D10"]
 z_index = 3
 position = Vector2(4.99136, 3.99716)
 rotation = 1.56793
@@ -650,6 +805,7 @@ scale = Vector2(6.71875, 4.25)
 texture = ExtResource("12_k4q6x")
 
 [node name="min" type="Label" parent="Ekran"]
+visible = false
 texture_filter = 1
 offset_left = -6.8093
 offset_top = -3.29412
@@ -667,13 +823,14 @@ scale = Vector2(7.60937, 4.25)
 texture = ExtResource("12_k4q6x")
 
 [node name="min" type="Label" parent="Ekran2"]
+visible = false
 texture_filter = 1
 offset_left = -6.8093
 offset_top = -3.29412
 offset_right = 229.19
 offset_bottom = 106.706
 scale = Vector2(0.1, 0.1)
-text = "for 30 seconds"
+text = "for 20 seconds"
 label_settings = SubResource("LabelSettings_f3y4v")
 metadata/_edit_use_anchors_ = true
 
@@ -893,7 +1050,13 @@ scale = Vector2(0.609375, 0.65625)
 texture = ExtResource("30_7ir56")
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_1_anim_finished"]
+[connection signal="button_down" from="AnimationPlayer/Camera2D/R/ColorRect/Button" to="AnimationPlayer/Camera2D/R/ColorRect" method="_on_button_button_down"]
+[connection signal="button_down" from="AnimationPlayer/Camera2D/R/ColorRect/Button2" to="AnimationPlayer/Camera2D/R/ColorRect" method="_on_button_2_button_down"]
+[connection signal="button_down" from="AnimationPlayer/Camera2D/R/Button" to="AnimationPlayer/Camera2D/R" method="_on_button_button_down"]
+[connection signal="button_down" from="AnimationPlayer/Camera2D/R/Button2" to="AnimationPlayer/Camera2D/R" method="_on_button_2_button_down"]
+[connection signal="button_down" from="AnimationPlayer/Camera2D/R/Button3" to="AnimationPlayer/Camera2D/R" method="_on_button_3_button_down"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_col_1"]
+[connection signal="body_entered" from="Area2D10" to="." method="_on_start_meeting"]
 [connection signal="body_entered" from="Area2D2" to="." method="_on_col_2"]
 [connection signal="body_entered" from="Area2D3" to="." method="_on_col_3"]
 [connection signal="down" from="Table/Button1" to="Table" method="_on_button_down"]

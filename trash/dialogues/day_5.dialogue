@@ -1,0 +1,26 @@
+~ start
+do Gs._stop()
+Narrator: You need go to meeting room
+set Gs.event = "meeting"
+do Gs._play()
+=> END
+
+~ meet
+do Gs._stop()
+Director: Tomorrow is the New Year, and we need to take stock.
+Analyst: We made 500 nail boxes in a year.
+secretary: You can also now knock on the director's door.
+Richard: * mentally* We should try it.
+Economist: We have successfully completed the plan by 705.6 percent.
+Manager: All the real estate in the area is now ours.
+Security guard: Security has improved by 1234567,890 percent.
+Director: Thank you, everyone's free!
+Janitor: Yes, go to hell!
+=> end_meet
+=> END
+
+~ end_meet
+Narrator: That's the end of the meeting, and the assignment for today is on your screen.
+do Gs._play()
+do vis()
+=> END

@@ -1,0 +1,36 @@
+~ start
+do Gs._stop()
+Narrator: You need go to meeting room
+set Gs.event = "meeting"
+do Gs._play()
+=> END
+
+~ meet
+do Gs._stop()
+Janitor: Where's the director?
+Richard: How should I know?
+Deputy director: He went to another city on business.
+The guard: That's why we don't have a single penny in our office. I'll run to look for him!*
+the methodologist runs away: The director is a bastard! He stole everything and left!
+Secretary: You're a brute!  The last scum!  It's not enough to kill!
+Manager: No one is allowed to leave the premises! If he comes back, we'll tie him up and hand him over!
+Janitor: I'm going to kill this thing with my own hands!
+analyst: I'll tear it up on the spot!
+Accountant: I won't let you bury him!
+Economist: I'll destroy him and scatter his ashes!
+Director: * enters from the toilet * Guys, where's the money? Where's the guard? Why are you so angry?
+Richard: A security guard? He's gone to look for you...
+director: Why are you looking for me? I decided to go to the bathroom on the way ...
+* Meanwhile, in the Maldives *
+the guard: Well, at least I took a vacation for the first time in 75 years of service.
+employee: That's right...
+the guard: And where are you from here?
+Employee: Got through as luggage.
+=> end_meet
+=> END
+
+~ end_meet
+Narrator: That's the end of the meeting, and the assignment for today is on your screen.
+do vis()
+do Gs._play()
+=> END

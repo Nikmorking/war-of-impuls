@@ -34,3 +34,16 @@ do Gs._stop()
 Narrator: You're a vulgar person
 do Gs._play()
 => END
+
+~ end_meet
+do Gs._stop()
+Narrator: The meeting is over
+do Gs._play()
+=> END
+
+~ work_good
+do Gs._stop()
+Narrator: This is end of working day
+do Gs.new_day()
+do Gs._play()
+=> END

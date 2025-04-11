@@ -1,0 +1,65 @@
+~ start
+do Gs._stop()
+Narrator: You need go to meeting room
+set Gs.event = "meeting"
+do Gs._play()
+=> END
+
+~ meet
+do Gs._stop()
+Director: I have a small announcement!
+employee: What is it? Have the dinosaurs escaped again? Have the aliens stopped trading again? 
+Director: Better!
+Secretary: Did the President raise salaries? 
+Director: No, it's not! Even better!
+Methodologist: Has Malakhov retired?
+director: Even better!
+Richard: Have the roads been built properly?
+Director: No, not that well. It's time to give you your salary.
+* Long pause *
+Economist: Excuse me?
+Director: It's time to pay your salary. Come one at a time.
+Employee: *hesitantly approaches* What's my salary?
+Economist: Like $150.
+Director: * with obvious reluctance, he hands the employee a wad of money* They're yours. Next!
+Employee: * departs *
+Manager: * approaches* I remember! My salary is $200.
+Director: I won't give it to you, you remember. Next!
+Methodologist: You can pay...
+manager: It's not fair! I honestly worked for 4 years without a salary, without days off and without delays! Give me a salary.
+The guard: * hits the manager on the head and drags the body out the door * Let him breathe.
+The methodologist: So I can have a salary, please.
+Director: Okay, here's your $200. * holds out money* Next!
+The methodologist: * departs* Thank you...
+Analyst: *suitable*Give me my salary!
+Director: * gives him a dryer* Next!
+accountant: Major!
+Analyst: * hides the dryer and walks away *
+Accountant: * fits* And my salary.
+Director: Your $350. * Gives the money back *
+accountant: * walks away, quietly * It won't be enough.
+Secretary: *suitable* And I need to, too.
+Director: Okay, your $500. * Hands over the money *
+the secretary: * departs *
+the deputy director: I have already received my $1300.
+Security guard: You have already given me a salary of 2 million.
+Janitor: How much?! I only have $100.
+Director: Everyone who has received a salary, go to work.
+*Everyone except Richard and the director leave*
+Director: Why are you sitting there?
+Richard: I'm waiting for my 3 drying sessions.
+Director: It's expensive. Maybe 2.3 drying?
+Richard: No, 3 drying sessions.
+Director: 2.5!
+Richard: 2.9!
+director: 2.65!
+Richard: 2.8!
+Director: Agreed! *Provides 3 drying methods*
+=> end_meet
+=> END
+
+~ end_meet
+Narrator: That's the end of the meeting, and the assignment for today is on your screen.
+do vis()
+do Gs._play()
+=> END

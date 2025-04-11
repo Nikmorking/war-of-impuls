@@ -15,189 +15,191 @@ do Gs._play()
 
 ~ meet01
 do Gs._stop()
-директор: Мы опаздываем с выполнением плана! Всем ускориться в 1003 раза!
-секретарь: Но сегодня же первый рабочий день!
-аналитик: Если мы прямо сейчас начнём, то всего-то через 152 года обгоним конкурентов.
-заместитель директора: Точно! все за шаурмой!
-экономист: В 17 раз за день?! Это обанкротит на...
-бухгалтер: За мой счёт!
-охранник: Я тебе в долг не поверю!
-бухгалтер: Блин! Я забыл, что у меня нет денег!
-менеджер: А когда зарплата?
-директор: Рубль упал!
-Richard: Понятно.
-директор: Все за работу!
+Director: We are late with the execution of the plan! Everyone speed up 1003 times!
+secretary: But today is the first working day!
+Analyst: If we start right now, we will overtake our competitors in just 152 years.
+Deputy Director: Exactly! all for the shawarma!
+Economist: 17 times a day?! It will bankrupt the...
+accountant: At my expense!
+The guard: I won't believe you!
+the accountant: Damn! I forgot that I have no money!
+Manager: And when is the salary?
+Director: The ruble has fallen!
+Richard: I see.
+Director: Let's get to work!
 do Gs._play()
 => END
 ~ meet02
 do Gs._stop()
-Richard: А где моя зарпллата?
-директор: А где моя машина?
-секретарь: А где мои очки?
-заместитель директора: А где табличка?
-Richard: Так где  моя зарплата?
-директор: Вы сначала ответьте, где моя машина.
-секретарь: Нет, сначала вы ответьте, где мои очки.
-заместитель директора: Самый важный вопрос - где табличка?
-Richard: Табличка в ремонте.
-директор: Зарплата в Швейцарии.
-секретарь: Машина в Сибири.
-заместитель директора: Очки у цыган.
+Richard: And where is my salary?
+director: Where's my car?
+Secretary: Where are my glasses?
+Deputy Director: Where's the plaque?
+Richard: So where's my salary?
+director: First, tell me where my car is.
+Secretary: No, first tell me where my glasses are.
+Deputy Director: The most important question is, where is the plaque?
+Richard: The plaque is under repair.
+Director: Salary in Switzerland.
+Secretary: The car is in Siberia.
+Deputy Director: Gypsies have glasses.
 do Gs._play()
 => END
 ~ meet03
 do Gs._stop()
-охранник: Скоро Новый год!
-директор: Нет!
-Richard: Что "нет"?
-директор: Премии никто не получит!
-охранник: А почему?
-заместитель директора: Потому что у нас всего 4 миллиона выделено на выполнение плана, и мы не можем их тратить на премии и зарплаты.
-аналитик: 4 миллиона?! Не 2?!
-секретарь: 2 миллиона?! Не миллион?!
-экономист: миллион?! Не 500 тысяч?!
-менеджер: 500 тысяч?! Не 200?!
-Richard: На это деньги выделялись?!
-*И тишина...*
+Security guard: The New Year is coming soon!
+Director: No!
+Richard: What's "no"?
+Director: No one will get the award!
+Guard: And why?
+Deputy Director: Because we have only 4 million allocated for the implementation of the plan, and we cannot spend it on bonuses and salaries.
+Analyst: 4 million?! Not 2?!
+Secretary: 2 million?! Not a million?!
+Economist: a million?! Not 500 thousand?!
+manager: 500 thousand?! Not 200?!
+Richard: Was money allocated for this?!
+* And silence...*
 do Gs._play()
 => END
 ~ meet04
 do Gs._stop()
-директор: Завтра Новый год, и надо подвести итоги.
-аналитик: За год мы сделали 500 коробок для ногтей.
-секретарь: Также теперь можно стучаться в дверь директора.
-Richard: *мысленнно* Надо попробовать.
-экономист: Мы успешно выполнили план на 705,6 процентов.
-менеджер: Вся недвижимость в округе теперь наша.
-охранник: Безопасность улучшилась на 1234567890 процентов.
-директор: Всем спасибо, все  свободны!
-уборщик: Да, катитесь все к  чёрту!
+Director: Tomorrow is the New Year, and we need to take stock.
+Analyst: We made 500 nail boxes in a year.
+secretary: You can also now knock on the director's door.
+Richard: * mentally* We should try it.
+Economist: We have successfully completed the plan by 705.6 percent.
+Manager: All the real estate in the area is now ours.
+Security guard: Security has improved by 1234567,890 percent.
+Director: Thank you, everyone's free!
+Janitor: Yes, go to hell!
 do Gs._play()
 => END
 ~ meet05
 do Gs._stop()
-методист: Я разработал новую методику для продажи нашего нового товара.
-Richard: И что же это за товар?
-методист: Представляю вашему вниманию совершенно актуальный товар, который будет продан до последней единицы!
-директор: Не томи, представляй уже свой велосипед!
-сотрудник: *барабанит по столу дробью*
-методист: Пожиратель воздуха!
-директор: ...
+Methodologist: I have developed a new methodology for selling our new product.
+Richard: And what kind of product is it?
+methodologist: I present to your attention a completely relevant product that will be sold to the last unit!
+director: Don't Tom, introduce your bike already!
+Employee: * drumming on the table with a shot *
+methodologist: Devourer of air!
+Director: ...
 Richard: ...
-секретарь: ...
-охранник: Это ШЕДЕВР!!!
-менеджер: Это...
-Richard: Ненужная...
-сотрудник: Пустая...
-секретарь: Устаревшая...
-экономист: Дорогая...
-бухгалтер: Замудрённая...
-директор: Отличная идея! Начинаем выпускать!
-уборщик: Прекрасно! Идите все отсюда, мне помыть надо.
+secretary: ...
+security guard: This is A MASTERPIECE!!!
+manager: This is...
+Richard: Unnecessary...
+employee: Empty...
+secretary: Outdated...
+economist: Expensive...
+accountant: Sophisticated...
+director: Great idea! We're starting to release!
+Janitor: Great! Get out of here, I need to wash up.
 do Gs._play()
 => END
 ~ meet06
 do Gs._stop()
-уборщик: А где директор?
-Richard: А я откуда знаю?
-заместитель директора: Уехал по делам в другой город.
-охранник: То-то у нас в конторе нет  ни единой копейки. Я побегу его искать!*убегает*
-методист: Директор - гад! Своровал всё и уехал!
-секретарь: Вообще скотина!  Мразь последняя!  Убить мало!
-менеджер: Никому не покидать помещения! Вернётся - повяжем и сдадим!
-уборщик: Эту тварь я прибъю собственными руками!
-аналитик: Да я его порву на месте!
-бухгалтер: Хоронить я его не позволю!
-экономист: Уничтожу и прах развею!
-директор: *входит со стороны туалета* Ребят, а где деньги? Где охранник? Почему вы такие злые?
-Richard: Охранник? Он же вас искать уехал...
-директор: Да что меня искать? Я решил на дорогу в туалет сходить...
-*Тем временем на Мальдивах*
-охранник: Ну хоть отпуск себе устроил впервые за 75 лет службы.
-сотрудник: Это да...
-охранник: А ты здесь откуда?
-сотрудник: Пролез в качестве багажа.
+Janitor: Where's the director?
+Richard: How should I know?
+Deputy director: He went to another city on business.
+The guard: That's why we don't have a single penny in our office. I'll run to look for him!*
+the methodologist runs away: The director is a bastard! He stole everything and left!
+Secretary: You're a brute!  The last scum!  It's not enough to kill!
+Manager: No one is allowed to leave the premises! If he comes back, we'll tie him up and hand him over!
+Janitor: I'm going to kill this thing with my own hands!
+analyst: I'll tear it up on the spot!
+Accountant: I won't let you bury him!
+Economist: I'll destroy him and scatter his ashes!
+Director: * enters from the toilet * Guys, where's the money? Where's the guard? Why are you so angry?
+Richard: A security guard? He's gone to look for you...
+director: Why are you looking for me? I decided to go to the bathroom on the way ...
+* Meanwhile, in the Maldives *
+the guard: Well, at least I took a vacation for the first time in 75 years of service.
+employee: That's right...
+the guard: And where are you from here?
+Employee: Got through as luggage.
 do Gs._play()
 => END
 ~ meet07
 do Gs._stop()
-директор: У меня небольшое  объявление!
-сотрудник: Что такое? Динозавры опять сбежали? Инопланетяне опять торговать перестали? 
-директор: Лучше!
-секретарь: Президент повысил зарплаты? 
-директор: Да нет же! Ещё лучше!
-мд: Малахов на пенсию ушёл?
-директор: Ещё Лучше!
-Richard: Дороги нормальные построили?
-директор: Не, не настолько хорошо. Пришло время вам отдать зарплату.
-*Продолжительная пауза*
-экономист: Что,простите?
-директор: Пришло время вам выплатить зарплату. Подходи по одному.
-сотрудник: *неуверенно подходит* А какая у меня зарплата?
-экономист: Вроде $150.
-директор: *с явной неохотой протягивает сотруднику пачку денег* Они твои. Следующий!
-сотрудник: *отходит*
-менеджер: *подходит* Я помню! У меня зарплата - $200.
-директор: Тебе не дам, ты помнишь. Следующий!
-мд: Можно зарпла...
-менеджер: Нечестно! Я же честно работал 4 года без зарплаты, без выходных и без опазданий! Дайте мне зарплату.
-охранник: * бъёт менеджера по голове и уволакивает тело за дверь* Пускай подышит.
-мд: Так можно мне зарплату, пожалуста.
-директор: Хорошо, вот твои $200. *протягивает деньги* Следующий!
-мд: *отходит* Ссспасибо...
-аналитик: *подходит*Дайте мне мою зарплату!
-директор: *даёт ему сушку* Следующий!
-бухгалтер: Мажор!
-аналитик: *прячет сушку и отходит*
-бухгалтер: *подходит* И мне зарплату.
-директор: Твои $350. *Отдаёт деньги*
-бухгалтер: *отходит, тихо* Маловато будет.
-секретарь: *подходит* И мне тоже надо.
-директор: Хорошо, твои $500. *Отдаёт деньги*
-секретарь: *отходит*
-заместитель директора: Я уже получил,свои $1300.
-охранник: Вы мне зарплату в 2 сушки уже выдали.
-уборщик: Сколько?! Мне только $100.
-директор: Все, кто получил зарплату, идите работать.
-*все, кроме Richard и директора,уходят*
-директор: А ты что сидишь?
-Richard: Жду свои 3 сушки.
-директор: Дорого. Может, 2.3 сушки?
-Richard: Нет, 3 сушки.
-директор: 2.5!
+Director: I have a small announcement!
+employee: What is it? Have the dinosaurs escaped again? Have the aliens stopped trading again? 
+Director: Better!
+Secretary: Did the President raise salaries? 
+Director: No, it's not! Even better!
+Methodologist: Has Malakhov retired?
+director: Even better!
+Richard: Have the roads been built properly?
+Director: No, not that well. It's time to give you your salary.
+* Long pause *
+Economist: Excuse me?
+Director: It's time to pay your salary. Come one at a time.
+Employee: *hesitantly approaches* What's my salary?
+Economist: Like $150.
+Director: * with obvious reluctance, he hands the employee a wad of money* They're yours. Next!
+Employee: * departs *
+Manager: * approaches* I remember! My salary is $200.
+Director: I won't give it to you, you remember. Next!
+Methodologist: You can pay...
+manager: It's not fair! I honestly worked for 4 years without a salary, without days off and without delays! Give me a salary.
+The guard: * hits the manager on the head and drags the body out the door * Let him breathe.
+The methodologist: So I can have a salary, please.
+Director: Okay, here's your $200. * holds out money* Next!
+The methodologist: * departs* Thank you...
+Analyst: *suitable*Give me my salary!
+Director: * gives him a dryer* Next!
+accountant: Major!
+Analyst: * hides the dryer and walks away *
+Accountant: * fits* And my salary.
+Director: Your $350. * Gives the money back *
+accountant: * walks away, quietly * It won't be enough.
+Secretary: *suitable* And I need to, too.
+Director: Okay, your $500. * Hands over the money *
+the secretary: * departs *
+the deputy director: I have already received my $1300.
+Security guard: You have already given me a salary of 2 million.
+Janitor: How much?! I only have $100.
+Director: Everyone who has received a salary, go to work.
+*Everyone except Richard and the director leave*
+Director: Why are you sitting there?
+Richard: I'm waiting for my 3 drying sessions.
+Director: It's expensive. Maybe 2.3 drying?
+Richard: No, 3 drying sessions.
+Director: 2.5!
 Richard: 2.9!
-директор: 2.65!
+director: 2.65!
 Richard: 2.8!
-директор: Договорились! *выдаёт 3 сушки*
+Director: Agreed! *Provides 3 drying methods*
 do Gs._play()
 => END
 ~ meet08
 do Gs._stop()
-директор: План?
-аналитик: Есть!
-директор: Деньги?
-экономист: Есть!
-директор: Зарплата?
-бухгалтер: Не выдаётся!
-директор: Баня?
-менеджер: Топится!
-директор: Напитки?
-мд: Заказаны и уже в пути!
-директор: Торт?
-сотрудник: В холодильнике, что под замком!
-директор: Музыка?
-уборщик: Настроена!
-директор: Соседи?
-охранник: Съехали пару недель назад!
-Richard: А что происходит?
-секретарь: Импульс умер!/ ст: Иди своей дорогой.
-Richard: *уходит*
-заместитель директора: Позови его через полчаса.
-*спустя полчаса*
-Richard: Куда ты ведёшь меня? Зач...
-Все: С днём рождения!!!
+Director: A plan?
+Analyst: Yes!
+director: Money?
+economist: Yes!
+director: Salary?
+accountant: Not issued!
+director: Sauna?
+manager: Heated!
+director: Drinks?
+Methodologist: Ordered and on the way!
+director: Cake?
+Employee: In the fridge, what's under lock and key!
+director: Music?
+janitor: Set up!
+director: Neighbors?
+Security guard: We moved out a couple of weeks ago!
+Richard: And what's going on?
+Secretary: The impulse is dead!/ st: Go your own way.
+Richard: *leaves*
+the deputy director: Call him in half an hour.
+* after half an hour*
+Richard: Where are you taking me? Zach...
+Everyone: Happy birthday!!!
 do Gs._play()
 => END
+
+
 ~ meeting
 do Gs._stop()
 Narrator: You need go to leaving room
@@ -209,5 +211,10 @@ do Gs._play()
 do Gs._stop()
 Narrator: Today nothing to do
 set Gs.event = ""
+do Gs._play()
+=> END
+
+~ end_meet
+Narrator: That's the end of the meeting, and the assignment for today is on your screen.
 do Gs._play()
 => END
