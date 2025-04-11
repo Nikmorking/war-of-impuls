@@ -24,11 +24,21 @@ janitor: Set up!
 director: Neighbors?
 Security guard: We moved out a couple of weeks ago!
 Richard: And what's going on?
+% => Impuls
+% => no
 the deputy director: Call him in half an hour.
 * after half an hour*
-Richard: Where are you taking me? Zach...
+Richard: Where are you taking me? Wh...
 Everyone: Happy birthday!!!
 => end_meet
+=> END
+
+~ Impuls
+secretary: The impuls died!
+=> END
+
+~ no
+secretary: Go your own way.
 => END
 
 ~ end_meet

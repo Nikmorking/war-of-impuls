@@ -16,8 +16,7 @@ func _on_button_up():
 	else:
 		min = 0
 		sec = 0
-		$min.text = str(min) 
-		$sec.text = str(sec)
+	wis()
 	pass # Replace with function body.
 
 
@@ -26,6 +25,10 @@ func _on_timeout():
 	if sec == 60:
 		min += 1
 		sec = 0
+	wis()
+	pass # Replace with function body.
+
+func wis():
 	$min.text = str(min) 
 	$sec.text = str(sec)
-	pass # Replace with function body.
+	pass

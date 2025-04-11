@@ -49,81 +49,6 @@
 [ext_resource type="Texture2D" uid="uid://p6asnssns7gy" path="res://rooms/image/toilet/Стол 1.png" id="30_ureey"]
 [ext_resource type="Texture2D" uid="uid://cxligw3h6m5m6" path="res://anim/Office_Characters.png" id="48_tiuom"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h8f6d"]
-height = 40.0
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pmhwt"]
-atlas = ExtResource("4_4xmst")
-region = Rect2(32, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yve0i"]
-atlas = ExtResource("4_4xmst")
-region = Rect2(16, 32, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ta0bg"]
-atlas = ExtResource("4_4xmst")
-region = Rect2(0, 32, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wu21c"]
-atlas = ExtResource("4_4xmst")
-region = Rect2(0, 16, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7xy70"]
-atlas = ExtResource("4_4xmst")
-region = Rect2(16, 16, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_t8wi6"]
-atlas = ExtResource("4_4xmst")
-region = Rect2(0, 48, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_om47f"]
-atlas = ExtResource("4_4xmst")
-region = Rect2(16, 48, 16, 16)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_3gdpe"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pmhwt")
-}],
-"loop": true,
-"name": &"down",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yve0i")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ta0bg")
-}],
-"loop": true,
-"name": &"left",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wu21c")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7xy70")
-}],
-"loop": true,
-"name": &"right",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_t8wi6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_om47f")
-}],
-"loop": false,
-"name": &"up",
-"speed": 5.0
-}]
-
 [sub_resource type="Animation" id="Animation_wbgr0"]
 resource_name = "1"
 length = 0.5
@@ -587,6 +512,81 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h8f6d"]
+height = 40.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pmhwt"]
+atlas = ExtResource("4_4xmst")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yve0i"]
+atlas = ExtResource("4_4xmst")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ta0bg"]
+atlas = ExtResource("4_4xmst")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wu21c"]
+atlas = ExtResource("4_4xmst")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7xy70"]
+atlas = ExtResource("4_4xmst")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t8wi6"]
+atlas = ExtResource("4_4xmst")
+region = Rect2(0, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_om47f"]
+atlas = ExtResource("4_4xmst")
+region = Rect2(16, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3gdpe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pmhwt")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yve0i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ta0bg")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wu21c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7xy70")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t8wi6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_om47f")
+}],
+"loop": false,
+"name": &"up",
+"speed": 5.0
+}]
+
 [node name="Work" type="Node2D"]
 script = ExtResource("1_cwsvv")
 day_1 = ExtResource("2_3v1ee")
@@ -610,22 +610,6 @@ texture = ExtResource("1_78quo")
 
 [node name="Marker" type="Marker2D" parent="."]
 position = Vector2(128, 292)
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(128, 292)
-script = ExtResource("4_t6vss")
-SPEED = 100.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-z_index = 3
-position = Vector2(-19, 3)
-shape = SubResource("CapsuleShape2D_h8f6d")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
-position = Vector2(-19, -2)
-scale = Vector2(3, 3)
-sprite_frames = SubResource("SpriteFrames_3gdpe")
-animation = &"down"
 
 [node name="work_1" type="Sprite2D" parent="."]
 z_index = -1
@@ -1230,6 +1214,22 @@ scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_v15qu")
 animation = &"М_7"
 flip_h = true
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(128, 292)
+script = ExtResource("4_t6vss")
+SPEED = 100.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+z_index = 3
+position = Vector2(-19, 3)
+shape = SubResource("CapsuleShape2D_h8f6d")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(-19, -2)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_3gdpe")
+animation = &"down"
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_1_anim_finished"]
 [connection signal="button_down" from="AnimationPlayer/Camera2D/R/ColorRect/Button" to="AnimationPlayer/Camera2D/R/ColorRect" method="_on_button_button_down"]
