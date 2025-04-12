@@ -24,6 +24,10 @@ Gs="*res://dialogues/Gs.gd"
 
 general/states=["Gs"]
 
+[display]
+
+window/stretch/mode="viewport"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/copy_context_ai/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg", "res://addons/node_auto_view/plugin.cfg", "res://addons/post_processing/plugin.cfg")

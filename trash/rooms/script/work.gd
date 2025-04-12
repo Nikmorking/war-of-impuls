@@ -73,6 +73,7 @@ func _on_col_4(body):
 		$CharacterBody2D.play = false
 		$CharacterBody2D.position = $Marker2D4.position
 		room = 3
+		
 	else:
 		if Gs.event == "end":
 			DialogueManager.show_dialogue_balloon(stop, "end_meet")

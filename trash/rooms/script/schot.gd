@@ -11,11 +11,8 @@ func _on_button_down():
 
 func _on_button_up():
 	$Timer.stop()
-	if sec == 20:
-		DialogueManager.show_dialogue_balloon(load("res://dialogues/Запрет.dialogue"), "work_good")
-	else:
-		min = 0
-		sec = 0
+	min = 0
+	sec = 0
 	wis()
 	pass # Replace with function body.
 
@@ -25,6 +22,8 @@ func _on_timeout():
 	if sec == 60:
 		min += 1
 		sec = 0
+	if sec == 20:
+		DialogueManager.show_dialogue_balloon(load("res://dialogues/Запрет.dialogue"), "work_good")
 	wis()
 	pass # Replace with function body.
 
