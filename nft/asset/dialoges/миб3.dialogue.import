@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://bdk0a202eofdc"
+path="res://.godot/imported/миб3.dialogue-69a0bd3a502f0d77a9eab4a47ca8b9be.tres"
+
+[deps]
+
+source_file="res://asset/dialoges/миб3.dialogue"
+dest_files=["res://.godot/imported/миб3.dialogue-69a0bd3a502f0d77a9eab4a47ca8b9be.tres"]
+
+[params]
+
+defaults=true
