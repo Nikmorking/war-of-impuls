@@ -1,0 +1,481 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_11fn0"]
+
+[resource]
+script = ExtResource("1_11fn0")
+using_states = PackedStringArray()
+titles = {
+"end_meet": "35",
+"meet": "9",
+"start": "2"
+}
+character_names = PackedStringArray("Narrator", "Director", "Analyst", "director", "economist", "accountant", "manager", "Methodologist", "Employee", "janitor", "Security guard", "Richard", "the deputy director", "Everyone")
+first_title = "2"
+lines = {
+"1": {
+"id": "1",
+"next_id": "2",
+"text": "start",
+"type": &"title"
+},
+"10": {
+"character": "Director",
+"character_replacements": Array[Dictionary]([]),
+"id": "10",
+"next_id": "11",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "A plan?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "A plan?",
+"type": &"dialogue"
+},
+"11": {
+"character": "Analyst",
+"character_replacements": Array[Dictionary]([]),
+"id": "11",
+"next_id": "12",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Yes!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Yes!",
+"type": &"dialogue"
+},
+"12": {
+"character": "director",
+"character_replacements": Array[Dictionary]([]),
+"id": "12",
+"next_id": "13",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Money?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Money?",
+"type": &"dialogue"
+},
+"13": {
+"character": "economist",
+"character_replacements": Array[Dictionary]([]),
+"id": "13",
+"next_id": "14",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Yes!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Yes!",
+"type": &"dialogue"
+},
+"14": {
+"character": "director",
+"character_replacements": Array[Dictionary]([]),
+"id": "14",
+"next_id": "15",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Salary?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Salary?",
+"type": &"dialogue"
+},
+"15": {
+"character": "accountant",
+"character_replacements": Array[Dictionary]([]),
+"id": "15",
+"next_id": "16",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Not issued!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Not issued!",
+"type": &"dialogue"
+},
+"16": {
+"character": "director",
+"character_replacements": Array[Dictionary]([]),
+"id": "16",
+"next_id": "17",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Sauna?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Sauna?",
+"type": &"dialogue"
+},
+"17": {
+"character": "manager",
+"character_replacements": Array[Dictionary]([]),
+"id": "17",
+"next_id": "18",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Heated!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Heated!",
+"type": &"dialogue"
+},
+"18": {
+"character": "director",
+"character_replacements": Array[Dictionary]([]),
+"id": "18",
+"next_id": "19",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Drinks?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Drinks?",
+"type": &"dialogue"
+},
+"19": {
+"character": "Methodologist",
+"character_replacements": Array[Dictionary]([]),
+"id": "19",
+"next_id": "20",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Ordered and on the way!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ordered and on the way!",
+"type": &"dialogue"
+},
+"2": {
+"id": "2",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_stop",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "3",
+"type": &"mutation"
+},
+"20": {
+"character": "director",
+"character_replacements": Array[Dictionary]([]),
+"id": "20",
+"next_id": "21",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Cake?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Cake?",
+"type": &"dialogue"
+},
+"21": {
+"character": "Employee",
+"character_replacements": Array[Dictionary]([]),
+"id": "21",
+"next_id": "22",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "In the fridge, what's under lock and key!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "In the fridge, what's under lock and key!",
+"type": &"dialogue"
+},
+"22": {
+"character": "director",
+"character_replacements": Array[Dictionary]([]),
+"id": "22",
+"next_id": "23",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Music?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Music?",
+"type": &"dialogue"
+},
+"23": {
+"character": "janitor",
+"character_replacements": Array[Dictionary]([]),
+"id": "23",
+"next_id": "24",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Set up!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Set up!",
+"type": &"dialogue"
+},
+"24": {
+"character": "director",
+"character_replacements": Array[Dictionary]([]),
+"id": "24",
+"next_id": "25",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Neighbors?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Neighbors?",
+"type": &"dialogue"
+},
+"25": {
+"character": "Security guard",
+"character_replacements": Array[Dictionary]([]),
+"id": "25",
+"next_id": "26",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "We moved out a couple of weeks ago!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "We moved out a couple of weeks ago!",
+"type": &"dialogue"
+},
+"26": {
+"character": "Richard",
+"character_replacements": Array[Dictionary]([]),
+"id": "26",
+"next_id": "27",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "And what's going on?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "And what's going on?",
+"type": &"dialogue"
+},
+"27": {
+"character": "the deputy director",
+"character_replacements": Array[Dictionary]([]),
+"id": "27",
+"next_id": "28",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Call him in half an hour.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Call him in half an hour.",
+"type": &"dialogue"
+},
+"28": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "28",
+"next_id": "29",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "* after half an hour*",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "* after half an hour*",
+"type": &"dialogue"
+},
+"29": {
+"character": "Richard",
+"character_replacements": Array[Dictionary]([]),
+"id": "29",
+"next_id": "30",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Where are you taking me? Zach...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Where are you taking me? Zach...",
+"type": &"dialogue"
+},
+"3": {
+"character": "Narrator",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "You need go to meeting room",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You need go to meeting room",
+"type": &"dialogue"
+},
+"30": {
+"character": "Everyone",
+"character_replacements": Array[Dictionary]([]),
+"id": "30",
+"next_id": "31",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Happy birthday!!!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Happy birthday!!!",
+"type": &"dialogue"
+},
+"31": {
+"id": "31",
+"is_snippet": false,
+"next_id": "35",
+"type": &"goto"
+},
+"32": {
+"id": "32",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"34": {
+"id": "34",
+"next_id": "35",
+"text": "end_meet",
+"type": &"title"
+},
+"35": {
+"character": "Narrator",
+"character_replacements": Array[Dictionary]([]),
+"id": "35",
+"next_id": "36",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "This is the end of game !",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "This is the end of game !",
+"type": &"dialogue"
+},
+"36": {
+"id": "36",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "end",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "37",
+"type": &"mutation"
+},
+"37": {
+"id": "37",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_play",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "38",
+"type": &"mutation"
+},
+"38": {
+"id": "38",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"4": {
+"id": "4",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "event"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "meeting"
+}]),
+"is_blocking": true
+},
+"next_id": "5",
+"type": &"mutation"
+},
+"5": {
+"id": "5",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_play",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "6",
+"type": &"mutation"
+},
+"6": {
+"id": "6",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"8": {
+"id": "8",
+"next_id": "9",
+"text": "meet",
+"type": &"title"
+},
+"9": {
+"id": "9",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_stop",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "10",
+"type": &"mutation"
+}
+}
+raw_text = "~ start
+do Gs._stop()
+Narrator: You need go to meeting room
+set Gs.event = \"meeting\"
+do Gs._play()
+=> END
+
+~ meet
+do Gs._stop()
+Director: A plan?
+Analyst: Yes!
+director: Money?
+economist: Yes!
+director: Salary?
+accountant: Not issued!
+director: Sauna?
+manager: Heated!
+director: Drinks?
+Methodologist: Ordered and on the way!
+director: Cake?
+Employee: In the fridge, what's under lock and key!
+director: Music?
+janitor: Set up!
+director: Neighbors?
+Security guard: We moved out a couple of weeks ago!
+Richard: And what's going on?
+the deputy director: Call him in half an hour.
+* after half an hour*
+Richard: Where are you taking me? Zach...
+Everyone: Happy birthday!!!
+=> end_meet
+=> END
+
+~ end_meet
+Narrator: This is the end of game !
+do end()
+do Gs._play()
+=> END"
+metadata/dialogue_manager_version = "2.45.0"

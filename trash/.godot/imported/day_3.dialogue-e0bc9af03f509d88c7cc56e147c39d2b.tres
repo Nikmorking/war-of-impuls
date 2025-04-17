@@ -1,0 +1,364 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_chgm2"]
+
+[resource]
+script = ExtResource("1_chgm2")
+using_states = PackedStringArray()
+titles = {
+"end_meet": "26",
+"meet": "9",
+"start": "2"
+}
+character_names = PackedStringArray("Narrator", "Richard", "director", "Secretary", "Deputy Director", "Director")
+first_title = "2"
+lines = {
+"1": {
+"id": "1",
+"next_id": "2",
+"text": "start",
+"type": &"title"
+},
+"10": {
+"character": "Richard",
+"character_replacements": Array[Dictionary]([]),
+"id": "10",
+"next_id": "11",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "And where is my salary?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "And where is my salary?",
+"type": &"dialogue"
+},
+"11": {
+"character": "director",
+"character_replacements": Array[Dictionary]([]),
+"id": "11",
+"next_id": "12",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Where's my car?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Where's my car?",
+"type": &"dialogue"
+},
+"12": {
+"character": "Secretary",
+"character_replacements": Array[Dictionary]([]),
+"id": "12",
+"next_id": "13",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Where are my glasses?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Where are my glasses?",
+"type": &"dialogue"
+},
+"13": {
+"character": "Deputy Director",
+"character_replacements": Array[Dictionary]([]),
+"id": "13",
+"next_id": "14",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Where's the plaque?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Where's the plaque?",
+"type": &"dialogue"
+},
+"14": {
+"character": "Richard",
+"character_replacements": Array[Dictionary]([]),
+"id": "14",
+"next_id": "15",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "So where's my salary?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "So where's my salary?",
+"type": &"dialogue"
+},
+"15": {
+"character": "director",
+"character_replacements": Array[Dictionary]([]),
+"id": "15",
+"next_id": "16",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "First, tell me where my car is.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "First, tell me where my car is.",
+"type": &"dialogue"
+},
+"16": {
+"character": "Secretary",
+"character_replacements": Array[Dictionary]([]),
+"id": "16",
+"next_id": "17",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "No, first tell me where my glasses are.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No, first tell me where my glasses are.",
+"type": &"dialogue"
+},
+"17": {
+"character": "Deputy Director",
+"character_replacements": Array[Dictionary]([]),
+"id": "17",
+"next_id": "18",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "The most important question is, where is the plaque?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "The most important question is, where is the plaque?",
+"type": &"dialogue"
+},
+"18": {
+"character": "Richard",
+"character_replacements": Array[Dictionary]([]),
+"id": "18",
+"next_id": "19",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "The plaque is under repair.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "The plaque is under repair.",
+"type": &"dialogue"
+},
+"19": {
+"character": "Director",
+"character_replacements": Array[Dictionary]([]),
+"id": "19",
+"next_id": "20",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Salary in Switzerland.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Salary in Switzerland.",
+"type": &"dialogue"
+},
+"2": {
+"id": "2",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_stop",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "3",
+"type": &"mutation"
+},
+"20": {
+"character": "Secretary",
+"character_replacements": Array[Dictionary]([]),
+"id": "20",
+"next_id": "21",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "The car is in Siberia.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "The car is in Siberia.",
+"type": &"dialogue"
+},
+"21": {
+"character": "Deputy Director",
+"character_replacements": Array[Dictionary]([]),
+"id": "21",
+"next_id": "22",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Gypsies have glasses.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Gypsies have glasses.",
+"type": &"dialogue"
+},
+"22": {
+"id": "22",
+"is_snippet": false,
+"next_id": "26",
+"type": &"goto"
+},
+"23": {
+"id": "23",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"25": {
+"id": "25",
+"next_id": "26",
+"text": "end_meet",
+"type": &"title"
+},
+"26": {
+"character": "Narrator",
+"character_replacements": Array[Dictionary]([]),
+"id": "26",
+"next_id": "27",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "That's the end of the meeting, and the assignment for today is on your screen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "That's the end of the meeting, and the assignment for today is on your screen.",
+"type": &"dialogue"
+},
+"27": {
+"id": "27",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_play",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "28",
+"type": &"mutation"
+},
+"28": {
+"id": "28",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "vis",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "29",
+"type": &"mutation"
+},
+"29": {
+"id": "29",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"3": {
+"character": "Narrator",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "You need go to meeting room",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You need go to meeting room",
+"type": &"dialogue"
+},
+"4": {
+"id": "4",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "event"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "meeting"
+}]),
+"is_blocking": true
+},
+"next_id": "5",
+"type": &"mutation"
+},
+"5": {
+"id": "5",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_play",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "6",
+"type": &"mutation"
+},
+"6": {
+"id": "6",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"8": {
+"id": "8",
+"next_id": "9",
+"text": "meet",
+"type": &"title"
+},
+"9": {
+"id": "9",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_stop",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "10",
+"type": &"mutation"
+}
+}
+raw_text = "~ start
+do Gs._stop()
+Narrator: You need go to meeting room
+set Gs.event = \"meeting\"
+do Gs._play()
+=> END
+
+~ meet
+do Gs._stop()
+Richard: And where is my salary?
+director: Where's my car?
+Secretary: Where are my glasses?
+Deputy Director: Where's the plaque?
+Richard: So where's my salary?
+director: First, tell me where my car is.
+Secretary: No, first tell me where my glasses are.
+Deputy Director: The most important question is, where is the plaque?
+Richard: The plaque is under repair.
+Director: Salary in Switzerland.
+Secretary: The car is in Siberia.
+Deputy Director: Gypsies have glasses.
+=> end_meet
+=> END
+
+~ end_meet
+Narrator: That's the end of the meeting, and the assignment for today is on your screen.
+do Gs._play()
+do vis()
+=> END"
+metadata/dialogue_manager_version = "2.45.0"

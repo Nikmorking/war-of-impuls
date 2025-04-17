@@ -1,0 +1,582 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_ti8wv"]
+
+[resource]
+script = ExtResource("1_ti8wv")
+using_states = PackedStringArray()
+titles = {
+"end_meet": "39",
+"go_out": "2",
+"go_work": "27",
+"no_go_1": "8",
+"no_go_2": "14",
+"no_go_3": "20",
+"women": "33",
+"work_good": "45"
+}
+character_names = PackedStringArray("Narrator")
+first_title = "2"
+lines = {
+"1": {
+"id": "1",
+"next_id": "2",
+"text": "go_out",
+"type": &"title"
+},
+"10": {
+"id": "10",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_play",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "11",
+"type": &"mutation"
+},
+"11": {
+"id": "11",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"13": {
+"id": "13",
+"next_id": "14",
+"text": "no_go_2",
+"type": &"title"
+},
+"14": {
+"id": "14",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_stop",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "15",
+"type": &"mutation"
+},
+"15": {
+"character": "Narrator",
+"character_replacements": Array[Dictionary]([]),
+"id": "15",
+"next_id": "16",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "I said: TODAY YOU MUST NOT GO THERE",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I said: TODAY YOU MUST NOT GO THERE",
+"type": &"dialogue"
+},
+"16": {
+"id": "16",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_play",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "17",
+"type": &"mutation"
+},
+"17": {
+"id": "17",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"19": {
+"id": "19",
+"next_id": "20",
+"text": "no_go_3",
+"type": &"title"
+},
+"2": {
+"id": "2",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_stop",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "3",
+"type": &"mutation"
+},
+"20": {
+"id": "20",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_stop",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "21",
+"type": &"mutation"
+},
+"21": {
+"character": "Narrator",
+"character_replacements": Array[Dictionary]([]),
+"id": "21",
+"next_id": "22",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "I know, you need to go toilet",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I know, you need to go toilet",
+"type": &"dialogue"
+},
+"22": {
+"id": "22",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "tp_toilet",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "23",
+"type": &"mutation"
+},
+"23": {
+"id": "23",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_play",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "24",
+"type": &"mutation"
+},
+"24": {
+"id": "24",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"26": {
+"id": "26",
+"next_id": "27",
+"text": "go_work",
+"type": &"title"
+},
+"27": {
+"id": "27",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_stop",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "28",
+"type": &"mutation"
+},
+"28": {
+"character": "Narrator",
+"character_replacements": Array[Dictionary]([]),
+"id": "28",
+"next_id": "29",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Now go work",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Now go work",
+"type": &"dialogue"
+},
+"29": {
+"id": "29",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_play",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "30",
+"type": &"mutation"
+},
+"3": {
+"character": "Narrator",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Go work!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Go work!",
+"type": &"dialogue"
+},
+"30": {
+"id": "30",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"32": {
+"id": "32",
+"next_id": "33",
+"text": "women",
+"type": &"title"
+},
+"33": {
+"id": "33",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_stop",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "34",
+"type": &"mutation"
+},
+"34": {
+"character": "Narrator",
+"character_replacements": Array[Dictionary]([]),
+"id": "34",
+"next_id": "35",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "You're a vulgar person",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You're a vulgar person",
+"type": &"dialogue"
+},
+"35": {
+"id": "35",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_play",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "36",
+"type": &"mutation"
+},
+"36": {
+"id": "36",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"38": {
+"id": "38",
+"next_id": "39",
+"text": "end_meet",
+"type": &"title"
+},
+"39": {
+"id": "39",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_stop",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "40",
+"type": &"mutation"
+},
+"4": {
+"id": "4",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_play",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "5",
+"type": &"mutation"
+},
+"40": {
+"character": "Narrator",
+"character_replacements": Array[Dictionary]([]),
+"id": "40",
+"next_id": "41",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "The meeting is over",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "The meeting is over",
+"type": &"dialogue"
+},
+"41": {
+"id": "41",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_play",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "42",
+"type": &"mutation"
+},
+"42": {
+"id": "42",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"44": {
+"id": "44",
+"next_id": "45",
+"text": "work_good",
+"type": &"title"
+},
+"45": {
+"id": "45",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_stop",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "46",
+"type": &"mutation"
+},
+"46": {
+"character": "Narrator",
+"character_replacements": Array[Dictionary]([]),
+"id": "46",
+"next_id": "47",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "This is end of working day",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "This is end of working day",
+"type": &"dialogue"
+},
+"47": {
+"id": "47",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "new_day",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "48",
+"type": &"mutation"
+},
+"48": {
+"id": "48",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_play",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "49",
+"type": &"mutation"
+},
+"49": {
+"id": "49",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"5": {
+"id": "5",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"7": {
+"id": "7",
+"next_id": "8",
+"text": "no_go_1",
+"type": &"title"
+},
+"8": {
+"id": "8",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_stop",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "9",
+"type": &"mutation"
+},
+"9": {
+"character": "Narrator",
+"character_replacements": Array[Dictionary]([]),
+"id": "9",
+"next_id": "10",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Today you mustn't go there",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Today you mustn't go there",
+"type": &"dialogue"
+}
+}
+raw_text = "~ go_out
+do Gs._stop()
+Narrator: Go work!
+do Gs._play()
+=> END
+
+~ no_go_1
+do Gs._stop()
+Narrator: Today you mustn't go there
+do Gs._play()
+=> END
+
+~ no_go_2
+do Gs._stop()
+Narrator: I said: TODAY YOU MUST NOT GO THERE
+do Gs._play()
+=> END
+
+~ no_go_3
+do Gs._stop()
+Narrator: I know, you need to go toilet
+do tp_toilet()
+do Gs._play()
+=> END
+
+~ go_work
+do Gs._stop()
+Narrator: Now go work
+do Gs._play()
+=> END
+
+~ women
+do Gs._stop()
+Narrator: You're a vulgar person
+do Gs._play()
+=> END
+
+~ end_meet
+do Gs._stop()
+Narrator: The meeting is over
+do Gs._play()
+=> END
+
+~ work_good
+do Gs._stop()
+Narrator: This is end of working day
+do Gs.new_day()
+do Gs._play()
+=> END"
+metadata/dialogue_manager_version = "2.45.0"

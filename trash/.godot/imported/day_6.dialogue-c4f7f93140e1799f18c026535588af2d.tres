@@ -1,0 +1,99 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_g5pxg"]
+
+[resource]
+script = ExtResource("1_g5pxg")
+using_states = PackedStringArray()
+titles = {
+"start": "2"
+}
+character_names = PackedStringArray("Narrator")
+first_title = "2"
+lines = {
+"1": {
+"id": "1",
+"next_id": "2",
+"text": "start",
+"type": &"title"
+},
+"2": {
+"id": "2",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_stop",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "3",
+"type": &"mutation"
+},
+"3": {
+"character": "Narrator",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "You and your colleagues celebrated the new year well.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You and your colleagues celebrated the new year well.",
+"type": &"dialogue"
+},
+"4": {
+"id": "4",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "new_day",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "5",
+"type": &"mutation"
+},
+"5": {
+"id": "5",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_play",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "6",
+"type": &"mutation"
+},
+"6": {
+"id": "6",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+}
+}
+raw_text = "~ start
+do Gs._stop()
+Narrator: You and your colleagues celebrated the new year well.
+do Gs.new_day()
+do Gs._play()
+=> END"
+metadata/dialogue_manager_version = "2.45.0"

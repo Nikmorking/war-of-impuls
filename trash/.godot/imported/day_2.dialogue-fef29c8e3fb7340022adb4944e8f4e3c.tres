@@ -1,0 +1,166 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_5p5wv"]
+
+[resource]
+script = ExtResource("1_5p5wv")
+using_states = PackedStringArray()
+titles = {
+"end_meet": "10",
+"start": "2"
+}
+character_names = PackedStringArray("Narrator")
+first_title = "2"
+lines = {
+"1": {
+"id": "1",
+"next_id": "2",
+"text": "start",
+"type": &"title"
+},
+"10": {
+"character": "Narrator",
+"character_replacements": Array[Dictionary]([]),
+"id": "10",
+"next_id": "11",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "The assignment for today is on your screen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "The assignment for today is on your screen.",
+"type": &"dialogue"
+},
+"11": {
+"id": "11",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_play",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "12",
+"type": &"mutation"
+},
+"12": {
+"id": "12",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"2": {
+"id": "2",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_stop",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "3",
+"type": &"mutation"
+},
+"3": {
+"character": "Narrator",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "There are no meetings today",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "There are no meetings today",
+"type": &"dialogue"
+},
+"4": {
+"id": "4",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "vis",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "5",
+"type": &"mutation"
+},
+"5": {
+"id": "5",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "event"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": ""
+}]),
+"is_blocking": true
+},
+"next_id": "6",
+"type": &"mutation"
+},
+"6": {
+"id": "6",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_play",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "7",
+"type": &"mutation"
+},
+"7": {
+"id": "7",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"9": {
+"id": "9",
+"next_id": "10",
+"text": "end_meet",
+"type": &"title"
+}
+}
+raw_text = "~ start
+do Gs._stop()
+Narrator: There are no meetings today
+do vis()
+set Gs.event = \"\"
+do Gs._play()
+=> END
+
+~ end_meet
+Narrator: The assignment for today is on your screen.
+do Gs._play()
+=> END"
+metadata/dialogue_manager_version = "2.45.0"

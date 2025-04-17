@@ -1,0 +1,364 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_j0y42"]
+
+[resource]
+script = ExtResource("1_j0y42")
+using_states = PackedStringArray()
+titles = {
+"end_meet": "26",
+"meet": "9",
+"start": "2"
+}
+character_names = PackedStringArray("Narrator", "Director", "secretary", "Analyst", "Deputy Director", "Economist", "accountant", "The guard", "the accountant", "Manager", "Richard")
+first_title = "2"
+lines = {
+"1": {
+"id": "1",
+"next_id": "2",
+"text": "start",
+"type": &"title"
+},
+"10": {
+"character": "Director",
+"character_replacements": Array[Dictionary]([]),
+"id": "10",
+"next_id": "11",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "We are late with the execution of the plan! Everyone speed up 1003 times!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "We are late with the execution of the plan! Everyone speed up 1003 times!",
+"type": &"dialogue"
+},
+"11": {
+"character": "secretary",
+"character_replacements": Array[Dictionary]([]),
+"id": "11",
+"next_id": "12",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "But today is the first working day!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "But today is the first working day!",
+"type": &"dialogue"
+},
+"12": {
+"character": "Analyst",
+"character_replacements": Array[Dictionary]([]),
+"id": "12",
+"next_id": "13",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "If we start right now, we will overtake our competitors in just 152 years.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "If we start right now, we will overtake our competitors in just 152 years.",
+"type": &"dialogue"
+},
+"13": {
+"character": "Deputy Director",
+"character_replacements": Array[Dictionary]([]),
+"id": "13",
+"next_id": "14",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Exactly! all for the shawarma!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Exactly! all for the shawarma!",
+"type": &"dialogue"
+},
+"14": {
+"character": "Economist",
+"character_replacements": Array[Dictionary]([]),
+"id": "14",
+"next_id": "15",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "17 times a day?! It will bankrupt the...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "17 times a day?! It will bankrupt the...",
+"type": &"dialogue"
+},
+"15": {
+"character": "accountant",
+"character_replacements": Array[Dictionary]([]),
+"id": "15",
+"next_id": "16",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "At my expense!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "At my expense!",
+"type": &"dialogue"
+},
+"16": {
+"character": "The guard",
+"character_replacements": Array[Dictionary]([]),
+"id": "16",
+"next_id": "17",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "I won't believe you!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I won't believe you!",
+"type": &"dialogue"
+},
+"17": {
+"character": "the accountant",
+"character_replacements": Array[Dictionary]([]),
+"id": "17",
+"next_id": "18",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Damn! I forgot that I have no money!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Damn! I forgot that I have no money!",
+"type": &"dialogue"
+},
+"18": {
+"character": "Manager",
+"character_replacements": Array[Dictionary]([]),
+"id": "18",
+"next_id": "19",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "And when is the salary?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "And when is the salary?",
+"type": &"dialogue"
+},
+"19": {
+"character": "Director",
+"character_replacements": Array[Dictionary]([]),
+"id": "19",
+"next_id": "20",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "The ruble has fallen!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "The ruble has fallen!",
+"type": &"dialogue"
+},
+"2": {
+"id": "2",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_stop",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "3",
+"type": &"mutation"
+},
+"20": {
+"character": "Richard",
+"character_replacements": Array[Dictionary]([]),
+"id": "20",
+"next_id": "21",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "I see.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I see.",
+"type": &"dialogue"
+},
+"21": {
+"character": "Director",
+"character_replacements": Array[Dictionary]([]),
+"id": "21",
+"next_id": "22",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Let's get to work!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Let's get to work!",
+"type": &"dialogue"
+},
+"22": {
+"id": "22",
+"is_snippet": false,
+"next_id": "26",
+"type": &"goto"
+},
+"23": {
+"id": "23",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"25": {
+"id": "25",
+"next_id": "26",
+"text": "end_meet",
+"type": &"title"
+},
+"26": {
+"character": "Narrator",
+"character_replacements": Array[Dictionary]([]),
+"id": "26",
+"next_id": "27",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "That's the end of the meeting, and the assignment for today is on your screen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "That's the end of the meeting, and the assignment for today is on your screen.",
+"type": &"dialogue"
+},
+"27": {
+"id": "27",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "vis",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "28",
+"type": &"mutation"
+},
+"28": {
+"id": "28",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_play",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "29",
+"type": &"mutation"
+},
+"29": {
+"id": "29",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"3": {
+"character": "Narrator",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "You should meet your new colleagues",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You should meet your new colleagues",
+"type": &"dialogue"
+},
+"4": {
+"id": "4",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "event"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "meeting"
+}]),
+"is_blocking": true
+},
+"next_id": "5",
+"type": &"mutation"
+},
+"5": {
+"id": "5",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_play",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "6",
+"type": &"mutation"
+},
+"6": {
+"id": "6",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"8": {
+"id": "8",
+"next_id": "9",
+"text": "meet",
+"type": &"title"
+},
+"9": {
+"id": "9",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_stop",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "10",
+"type": &"mutation"
+}
+}
+raw_text = "~ start
+do Gs._stop()
+Narrator: You should meet your new colleagues
+set Gs.event = \"meeting\"
+do Gs._play()
+=> END
+
+~ meet
+do Gs._stop()
+Director: We are late with the execution of the plan! Everyone speed up 1003 times!
+secretary: But today is the first working day!
+Analyst: If we start right now, we will overtake our competitors in just 152 years.
+Deputy Director: Exactly! all for the shawarma!
+Economist: 17 times a day?! It will bankrupt the...
+accountant: At my expense!
+The guard: I won't believe you!
+the accountant: Damn! I forgot that I have no money!
+Manager: And when is the salary?
+Director: The ruble has fallen!
+Richard: I see.
+Director: Let's get to work!
+=> end_meet
+=> END
+
+~ end_meet
+Narrator: That's the end of the meeting, and the assignment for today is on your screen.
+do vis()
+do Gs._play()
+=> END"
+metadata/dialogue_manager_version = "2.45.0"

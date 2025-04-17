@@ -1,0 +1,442 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_4cthq"]
+
+[resource]
+script = ExtResource("1_4cthq")
+using_states = PackedStringArray()
+titles = {
+"end_meet": "32",
+"meet": "9",
+"start": "2"
+}
+character_names = PackedStringArray("Narrator", "Methodologist", "Richard", "methodologist", "director", "Employee", "Director", "secretary", "security guard", "manager", "employee", "economist", "accountant", "Janitor")
+first_title = "2"
+lines = {
+"1": {
+"id": "1",
+"next_id": "2",
+"text": "start",
+"type": &"title"
+},
+"10": {
+"character": "Methodologist",
+"character_replacements": Array[Dictionary]([]),
+"id": "10",
+"next_id": "11",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "I have developed a new methodology for selling our new product.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I have developed a new methodology for selling our new product.",
+"type": &"dialogue"
+},
+"11": {
+"character": "Richard",
+"character_replacements": Array[Dictionary]([]),
+"id": "11",
+"next_id": "12",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "And what kind of product is it?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "And what kind of product is it?",
+"type": &"dialogue"
+},
+"12": {
+"character": "methodologist",
+"character_replacements": Array[Dictionary]([]),
+"id": "12",
+"next_id": "13",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "I present to your attention a completely relevant product that will be sold to the last unit!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I present to your attention a completely relevant product that will be sold to the last unit!",
+"type": &"dialogue"
+},
+"13": {
+"character": "director",
+"character_replacements": Array[Dictionary]([]),
+"id": "13",
+"next_id": "14",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Don't Tom, introduce your bike already!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Don't Tom, introduce your bike already!",
+"type": &"dialogue"
+},
+"14": {
+"character": "Employee",
+"character_replacements": Array[Dictionary]([]),
+"id": "14",
+"next_id": "15",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "* drumming on the table with a shot *",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "* drumming on the table with a shot *",
+"type": &"dialogue"
+},
+"15": {
+"character": "methodologist",
+"character_replacements": Array[Dictionary]([]),
+"id": "15",
+"next_id": "16",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Devourer of air!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Devourer of air!",
+"type": &"dialogue"
+},
+"16": {
+"character": "Director",
+"character_replacements": Array[Dictionary]([]),
+"id": "16",
+"next_id": "17",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "...",
+"type": &"dialogue"
+},
+"17": {
+"character": "Richard",
+"character_replacements": Array[Dictionary]([]),
+"id": "17",
+"next_id": "18",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "...",
+"type": &"dialogue"
+},
+"18": {
+"character": "secretary",
+"character_replacements": Array[Dictionary]([]),
+"id": "18",
+"next_id": "19",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "...",
+"type": &"dialogue"
+},
+"19": {
+"character": "security guard",
+"character_replacements": Array[Dictionary]([]),
+"id": "19",
+"next_id": "20",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "This is A MASTERPIECE!!!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "This is A MASTERPIECE!!!",
+"type": &"dialogue"
+},
+"2": {
+"id": "2",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_stop",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "3",
+"type": &"mutation"
+},
+"20": {
+"character": "manager",
+"character_replacements": Array[Dictionary]([]),
+"id": "20",
+"next_id": "21",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "This is...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "This is...",
+"type": &"dialogue"
+},
+"21": {
+"character": "Richard",
+"character_replacements": Array[Dictionary]([]),
+"id": "21",
+"next_id": "22",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Unnecessary...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Unnecessary...",
+"type": &"dialogue"
+},
+"22": {
+"character": "employee",
+"character_replacements": Array[Dictionary]([]),
+"id": "22",
+"next_id": "23",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Empty...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Empty...",
+"type": &"dialogue"
+},
+"23": {
+"character": "secretary",
+"character_replacements": Array[Dictionary]([]),
+"id": "23",
+"next_id": "24",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Outdated...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Outdated...",
+"type": &"dialogue"
+},
+"24": {
+"character": "economist",
+"character_replacements": Array[Dictionary]([]),
+"id": "24",
+"next_id": "25",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Expensive...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Expensive...",
+"type": &"dialogue"
+},
+"25": {
+"character": "accountant",
+"character_replacements": Array[Dictionary]([]),
+"id": "25",
+"next_id": "26",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Sophisticated...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Sophisticated...",
+"type": &"dialogue"
+},
+"26": {
+"character": "director",
+"character_replacements": Array[Dictionary]([]),
+"id": "26",
+"next_id": "27",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Great idea! We're starting to release!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Great idea! We're starting to release!",
+"type": &"dialogue"
+},
+"27": {
+"character": "Janitor",
+"character_replacements": Array[Dictionary]([]),
+"id": "27",
+"next_id": "28",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Great! Get out of here, I need to wash up.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Great! Get out of here, I need to wash up.",
+"type": &"dialogue"
+},
+"28": {
+"id": "28",
+"is_snippet": false,
+"next_id": "32",
+"type": &"goto"
+},
+"29": {
+"id": "29",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"3": {
+"character": "Narrator",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "You need go to meeting room",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You need go to meeting room",
+"type": &"dialogue"
+},
+"31": {
+"id": "31",
+"next_id": "32",
+"text": "end_meet",
+"type": &"title"
+},
+"32": {
+"character": "Narrator",
+"character_replacements": Array[Dictionary]([]),
+"id": "32",
+"next_id": "33",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "That's the end of the meeting, and the assignment for today is on your screen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "That's the end of the meeting, and the assignment for today is on your screen.",
+"type": &"dialogue"
+},
+"33": {
+"id": "33",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "vis",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "34",
+"type": &"mutation"
+},
+"34": {
+"id": "34",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_play",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "35",
+"type": &"mutation"
+},
+"35": {
+"id": "35",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"4": {
+"id": "4",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "event"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "meeting"
+}]),
+"is_blocking": true
+},
+"next_id": "5",
+"type": &"mutation"
+},
+"5": {
+"id": "5",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_play",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "6",
+"type": &"mutation"
+},
+"6": {
+"id": "6",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"8": {
+"id": "8",
+"next_id": "9",
+"text": "meet",
+"type": &"title"
+},
+"9": {
+"id": "9",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_stop",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "10",
+"type": &"mutation"
+}
+}
+raw_text = "~ start
+do Gs._stop()
+Narrator: You need go to meeting room
+set Gs.event = \"meeting\"
+do Gs._play()
+=> END
+
+~ meet
+do Gs._stop()
+Methodologist: I have developed a new methodology for selling our new product.
+Richard: And what kind of product is it?
+methodologist: I present to your attention a completely relevant product that will be sold to the last unit!
+director: Don't Tom, introduce your bike already!
+Employee: * drumming on the table with a shot *
+methodologist: Devourer of air!
+Director: ...
+Richard: ...
+secretary: ...
+security guard: This is A MASTERPIECE!!!
+manager: This is...
+Richard: Unnecessary...
+employee: Empty...
+secretary: Outdated...
+economist: Expensive...
+accountant: Sophisticated...
+director: Great idea! We're starting to release!
+Janitor: Great! Get out of here, I need to wash up.
+=> end_meet
+=> END
+
+~ end_meet
+Narrator: That's the end of the meeting, and the assignment for today is on your screen.
+do vis()
+do Gs._play()
+=> END"
+metadata/dialogue_manager_version = "2.45.0"

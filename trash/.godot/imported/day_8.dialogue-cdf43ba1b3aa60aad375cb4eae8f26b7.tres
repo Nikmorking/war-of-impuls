@@ -1,0 +1,455 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_87im0"]
+
+[resource]
+script = ExtResource("1_87im0")
+using_states = PackedStringArray()
+titles = {
+"end_meet": "33",
+"meet": "9",
+"start": "2"
+}
+character_names = PackedStringArray("Narrator", "Janitor", "Richard", "Deputy director", "The guard", "the methodologist runs away", "Secretary", "Manager", "analyst", "Accountant", "Economist", "Director", "director", "the guard", "employee", "Employee")
+first_title = "2"
+lines = {
+"1": {
+"id": "1",
+"next_id": "2",
+"text": "start",
+"type": &"title"
+},
+"10": {
+"character": "Janitor",
+"character_replacements": Array[Dictionary]([]),
+"id": "10",
+"next_id": "11",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Where's the director?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Where's the director?",
+"type": &"dialogue"
+},
+"11": {
+"character": "Richard",
+"character_replacements": Array[Dictionary]([]),
+"id": "11",
+"next_id": "12",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "How should I know?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "How should I know?",
+"type": &"dialogue"
+},
+"12": {
+"character": "Deputy director",
+"character_replacements": Array[Dictionary]([]),
+"id": "12",
+"next_id": "13",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "He went to another city on business.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "He went to another city on business.",
+"type": &"dialogue"
+},
+"13": {
+"character": "The guard",
+"character_replacements": Array[Dictionary]([]),
+"id": "13",
+"next_id": "14",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "That's why we don't have a single penny in our office. I'll run to look for him!*",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "That's why we don't have a single penny in our office. I'll run to look for him!*",
+"type": &"dialogue"
+},
+"14": {
+"character": "the methodologist runs away",
+"character_replacements": Array[Dictionary]([]),
+"id": "14",
+"next_id": "15",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "The director is a bastard! He stole everything and left!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "The director is a bastard! He stole everything and left!",
+"type": &"dialogue"
+},
+"15": {
+"character": "Secretary",
+"character_replacements": Array[Dictionary]([]),
+"id": "15",
+"next_id": "16",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "You're a brute!  The last scum!  It's not enough to kill!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You're a brute!  The last scum!  It's not enough to kill!",
+"type": &"dialogue"
+},
+"16": {
+"character": "Manager",
+"character_replacements": Array[Dictionary]([]),
+"id": "16",
+"next_id": "17",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "No one is allowed to leave the premises! If he comes back, we'll tie him up and hand him over!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No one is allowed to leave the premises! If he comes back, we'll tie him up and hand him over!",
+"type": &"dialogue"
+},
+"17": {
+"character": "Janitor",
+"character_replacements": Array[Dictionary]([]),
+"id": "17",
+"next_id": "18",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "I'm going to kill this thing with my own hands!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I'm going to kill this thing with my own hands!",
+"type": &"dialogue"
+},
+"18": {
+"character": "analyst",
+"character_replacements": Array[Dictionary]([]),
+"id": "18",
+"next_id": "19",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "I'll tear it up on the spot!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I'll tear it up on the spot!",
+"type": &"dialogue"
+},
+"19": {
+"character": "Accountant",
+"character_replacements": Array[Dictionary]([]),
+"id": "19",
+"next_id": "20",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "I won't let you bury him!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I won't let you bury him!",
+"type": &"dialogue"
+},
+"2": {
+"id": "2",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_stop",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "3",
+"type": &"mutation"
+},
+"20": {
+"character": "Economist",
+"character_replacements": Array[Dictionary]([]),
+"id": "20",
+"next_id": "21",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "I'll destroy him and scatter his ashes!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I'll destroy him and scatter his ashes!",
+"type": &"dialogue"
+},
+"21": {
+"character": "Director",
+"character_replacements": Array[Dictionary]([]),
+"id": "21",
+"next_id": "22",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "* enters from the toilet * Guys, where's the money? Where's the guard? Why are you so angry?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "* enters from the toilet * Guys, where's the money? Where's the guard? Why are you so angry?",
+"type": &"dialogue"
+},
+"22": {
+"character": "Richard",
+"character_replacements": Array[Dictionary]([]),
+"id": "22",
+"next_id": "23",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "A security guard? He's gone to look for you...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "A security guard? He's gone to look for you...",
+"type": &"dialogue"
+},
+"23": {
+"character": "director",
+"character_replacements": Array[Dictionary]([]),
+"id": "23",
+"next_id": "24",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Why are you looking for me? I decided to go to the bathroom on the way ...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Why are you looking for me? I decided to go to the bathroom on the way ...",
+"type": &"dialogue"
+},
+"24": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "24",
+"next_id": "25",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "* Meanwhile, in the Maldives *",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "* Meanwhile, in the Maldives *",
+"type": &"dialogue"
+},
+"25": {
+"character": "the guard",
+"character_replacements": Array[Dictionary]([]),
+"id": "25",
+"next_id": "26",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Well, at least I took a vacation for the first time in 75 years of service.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Well, at least I took a vacation for the first time in 75 years of service.",
+"type": &"dialogue"
+},
+"26": {
+"character": "employee",
+"character_replacements": Array[Dictionary]([]),
+"id": "26",
+"next_id": "27",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "That's right...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "That's right...",
+"type": &"dialogue"
+},
+"27": {
+"character": "the guard",
+"character_replacements": Array[Dictionary]([]),
+"id": "27",
+"next_id": "28",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "And where are you from here?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "And where are you from here?",
+"type": &"dialogue"
+},
+"28": {
+"character": "Employee",
+"character_replacements": Array[Dictionary]([]),
+"id": "28",
+"next_id": "29",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Got through as luggage.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Got through as luggage.",
+"type": &"dialogue"
+},
+"29": {
+"id": "29",
+"is_snippet": false,
+"next_id": "33",
+"type": &"goto"
+},
+"3": {
+"character": "Narrator",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "You need go to meeting room",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You need go to meeting room",
+"type": &"dialogue"
+},
+"30": {
+"id": "30",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"32": {
+"id": "32",
+"next_id": "33",
+"text": "end_meet",
+"type": &"title"
+},
+"33": {
+"character": "Narrator",
+"character_replacements": Array[Dictionary]([]),
+"id": "33",
+"next_id": "34",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "That's the end of the meeting, and the assignment for today is on your screen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "That's the end of the meeting, and the assignment for today is on your screen.",
+"type": &"dialogue"
+},
+"34": {
+"id": "34",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "vis",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "35",
+"type": &"mutation"
+},
+"35": {
+"id": "35",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_play",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "36",
+"type": &"mutation"
+},
+"36": {
+"id": "36",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"4": {
+"id": "4",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "event"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "meeting"
+}]),
+"is_blocking": true
+},
+"next_id": "5",
+"type": &"mutation"
+},
+"5": {
+"id": "5",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_play",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "6",
+"type": &"mutation"
+},
+"6": {
+"id": "6",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"8": {
+"id": "8",
+"next_id": "9",
+"text": "meet",
+"type": &"title"
+},
+"9": {
+"id": "9",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_stop",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "10",
+"type": &"mutation"
+}
+}
+raw_text = "~ start
+do Gs._stop()
+Narrator: You need go to meeting room
+set Gs.event = \"meeting\"
+do Gs._play()
+=> END
+
+~ meet
+do Gs._stop()
+Janitor: Where's the director?
+Richard: How should I know?
+Deputy director: He went to another city on business.
+The guard: That's why we don't have a single penny in our office. I'll run to look for him!*
+the methodologist runs away: The director is a bastard! He stole everything and left!
+Secretary: You're a brute!  The last scum!  It's not enough to kill!
+Manager: No one is allowed to leave the premises! If he comes back, we'll tie him up and hand him over!
+Janitor: I'm going to kill this thing with my own hands!
+analyst: I'll tear it up on the spot!
+Accountant: I won't let you bury him!
+Economist: I'll destroy him and scatter his ashes!
+Director: * enters from the toilet * Guys, where's the money? Where's the guard? Why are you so angry?
+Richard: A security guard? He's gone to look for you...
+director: Why are you looking for me? I decided to go to the bathroom on the way ...
+* Meanwhile, in the Maldives *
+the guard: Well, at least I took a vacation for the first time in 75 years of service.
+employee: That's right...
+the guard: And where are you from here?
+Employee: Got through as luggage.
+=> end_meet
+=> END
+
+~ end_meet
+Narrator: That's the end of the meeting, and the assignment for today is on your screen.
+do vis()
+do Gs._play()
+=> END"
+metadata/dialogue_manager_version = "2.45.0"

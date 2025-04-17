@@ -1,0 +1,325 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_lcrol"]
+
+[resource]
+script = ExtResource("1_lcrol")
+using_states = PackedStringArray()
+titles = {
+"end_meet": "23",
+"meet": "9",
+"start": "2"
+}
+character_names = PackedStringArray("Narrator", "Director", "Analyst", "secretary", "Richard", "Economist", "Manager", "Security guard", "Janitor")
+first_title = "2"
+lines = {
+"1": {
+"id": "1",
+"next_id": "2",
+"text": "start",
+"type": &"title"
+},
+"10": {
+"character": "Director",
+"character_replacements": Array[Dictionary]([]),
+"id": "10",
+"next_id": "11",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Tomorrow is the New Year, and we need to take stock.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Tomorrow is the New Year, and we need to take stock.",
+"type": &"dialogue"
+},
+"11": {
+"character": "Analyst",
+"character_replacements": Array[Dictionary]([]),
+"id": "11",
+"next_id": "12",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "We made 500 nail boxes in a year.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "We made 500 nail boxes in a year.",
+"type": &"dialogue"
+},
+"12": {
+"character": "secretary",
+"character_replacements": Array[Dictionary]([]),
+"id": "12",
+"next_id": "13",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "You can also now knock on the director's door.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You can also now knock on the director's door.",
+"type": &"dialogue"
+},
+"13": {
+"character": "Richard",
+"character_replacements": Array[Dictionary]([]),
+"id": "13",
+"next_id": "14",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "* mentally* We should try it.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "* mentally* We should try it.",
+"type": &"dialogue"
+},
+"14": {
+"character": "Economist",
+"character_replacements": Array[Dictionary]([]),
+"id": "14",
+"next_id": "15",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "We have successfully completed the plan by 705.6 percent.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "We have successfully completed the plan by 705.6 percent.",
+"type": &"dialogue"
+},
+"15": {
+"character": "Manager",
+"character_replacements": Array[Dictionary]([]),
+"id": "15",
+"next_id": "16",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "All the real estate in the area is now ours.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "All the real estate in the area is now ours.",
+"type": &"dialogue"
+},
+"16": {
+"character": "Security guard",
+"character_replacements": Array[Dictionary]([]),
+"id": "16",
+"next_id": "17",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Security has improved by 1234567,890 percent.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Security has improved by 1234567,890 percent.",
+"type": &"dialogue"
+},
+"17": {
+"character": "Director",
+"character_replacements": Array[Dictionary]([]),
+"id": "17",
+"next_id": "18",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Thank you, everyone's free!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Thank you, everyone's free!",
+"type": &"dialogue"
+},
+"18": {
+"character": "Janitor",
+"character_replacements": Array[Dictionary]([]),
+"id": "18",
+"next_id": "19",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Yes, go to hell!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Yes, go to hell!",
+"type": &"dialogue"
+},
+"19": {
+"id": "19",
+"is_snippet": false,
+"next_id": "23",
+"type": &"goto"
+},
+"2": {
+"id": "2",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_stop",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "3",
+"type": &"mutation"
+},
+"20": {
+"id": "20",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"22": {
+"id": "22",
+"next_id": "23",
+"text": "end_meet",
+"type": &"title"
+},
+"23": {
+"character": "Narrator",
+"character_replacements": Array[Dictionary]([]),
+"id": "23",
+"next_id": "24",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "That's the end of the meeting, and the assignment for today is on your screen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "That's the end of the meeting, and the assignment for today is on your screen.",
+"type": &"dialogue"
+},
+"24": {
+"id": "24",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_play",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "25",
+"type": &"mutation"
+},
+"25": {
+"id": "25",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "vis",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "26",
+"type": &"mutation"
+},
+"26": {
+"id": "26",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"3": {
+"character": "Narrator",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "You need go to meeting room",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You need go to meeting room",
+"type": &"dialogue"
+},
+"4": {
+"id": "4",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "event"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "meeting"
+}]),
+"is_blocking": true
+},
+"next_id": "5",
+"type": &"mutation"
+},
+"5": {
+"id": "5",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_play",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "6",
+"type": &"mutation"
+},
+"6": {
+"id": "6",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"8": {
+"id": "8",
+"next_id": "9",
+"text": "meet",
+"type": &"title"
+},
+"9": {
+"id": "9",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Gs"
+}, {
+"type": "dot"
+}, {
+"function": "_stop",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "10",
+"type": &"mutation"
+}
+}
+raw_text = "~ start
+do Gs._stop()
+Narrator: You need go to meeting room
+set Gs.event = \"meeting\"
+do Gs._play()
+=> END
+
+~ meet
+do Gs._stop()
+Director: Tomorrow is the New Year, and we need to take stock.
+Analyst: We made 500 nail boxes in a year.
+secretary: You can also now knock on the director's door.
+Richard: * mentally* We should try it.
+Economist: We have successfully completed the plan by 705.6 percent.
+Manager: All the real estate in the area is now ours.
+Security guard: Security has improved by 1234567,890 percent.
+Director: Thank you, everyone's free!
+Janitor: Yes, go to hell!
+=> end_meet
+=> END
+
+~ end_meet
+Narrator: That's the end of the meeting, and the assignment for today is on your screen.
+do Gs._play()
+do vis()
+=> END"
+metadata/dialogue_manager_version = "2.45.0"
