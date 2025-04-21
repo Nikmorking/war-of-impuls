@@ -1,14 +1,13 @@
 ~ start
-Impuls: Everybody stand still! I will protect the ecosystem!
+Impuls: *knocks on the door*
 do Gg.vis_bos()
-Printer: Hello, who are you and why did you come here?
-Impuls: Ah! I forgot to introduce myself! Hello, my name is Impuls.
-Printer: Nice to meet you, I am Robert Printer.
-Impuls: Do you happen to know of an evil printer that uses printed insects to destroy the ecosystem piece by piece?
-Printer: So this is me.
-Impuls: In that case, I'm sorry, but I have to kill you.
-Printer: Ok, try it.
-Impuls: Thanks for the permission.
+Printer: Sign in.
+Impuls: *Opens the door* Oh, I'm at the wrong door, I'm so sorry. *closes the door*
+Printer: I forgive you, it happens. Wait... There is only one door in this corridor...
+Impuls: *knocks down the door* Everyone stop, the fisheries inspector is working, I have a rabid rabbit on a leash!
+Printer: So you are a rabbit... And what is this fisheries inspectorate?
+Impuls: It doesn't matter, here are my documents. *kicks Printer*
+Printer: Hooray, fight!
 do Gg.start_bos_2()
 do Gg.vis_ui()
 => END
