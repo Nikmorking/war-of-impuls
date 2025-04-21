@@ -1,22 +1,22 @@
 ~ in_room
 Impuls: There you are, you devil's crab! Fear me, if anything happens I'll knock on your door!
-MiB: Uhhhhh... What, excuse me?
+Crab: Uhhhhh... What, excuse me?
 Impuls: Are you deaf?! Get out of here before I stuff you in my pocket and sell you for five bucks to the nearest granny on a bench near the entrance!
-MiB: Do you even realize who you're talking to?
+Crab: Do you even realize who you're talking to?
 Impuls: Yeah, just a giant talking crab with a sharp claw, so what?
-MiB: And you're not afraid of me?
+Crab: And you're not afraid of me?
 Impuls: What's the point? I'll knock you down in no time.
-MiB: Oh you...Defend yourself, you hunched over dog!
+Crab: Oh you...Defend yourself, you hunched over dog!
 Impuls: Actually, I'm a rabbit, oh well.
-MiB: АААААААААААА!
+Crab: АААААААААААА!
 Impuls: B, also a vitamin.
-MiB: How dare you?! Defend yourself!
+Crab: How dare you?! Defend yourself!
 do Gg.start_bos()
 do Gg.vis_ui()
 => END
 ~ win_mib
 Impuls: I told you so.
-MiB: Cough...*dies*
+Crab: Cough...*dies*
 do Gg.win_bos()
 Impuls: *when he approaches the door, he knocks* Is anyone alive?
 do Gg.opendoor()
@@ -29,7 +29,7 @@ Inhabitant: I don't remember. Let's go to the portal - we'll find out the answer
 ~ lose
 Impuls: And you...*cough*...turned out to be stronger...*cough*...than I thought.
 Person in black: *enters the room and snaps his fingers*
-MiB: *dies*
+Crab: *dies*
 Impuls: Is that really all?
 Person in black: No, you'll get another try. You can do it. Close your eyes.
 Impuls: *closes eyes* What will happen to me?

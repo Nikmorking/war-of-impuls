@@ -11,3 +11,12 @@ Printer: Hooray, fight!
 do Gg.start_bos_2()
 do Gg.vis_ui()
 => END
+~ win
+Impuls: Here you are, the main enemy of the tree race! Go to Hell!
+Printer: Isn't that too... *cough* ...a lot of honor?..*dies*
+Impuls: Said the giant printing machine.
+Inhabitant: *runs in* I found out the answers to all your questions!
+Impuls: So where is the parade ground?
+Inhabitant: The one you described? Only ruins remain. I'll tell you the rest in the park! *runs into the portal*
+Impuls: What a dog! Frying pomegranate dumplings on nails again!
+=> END
