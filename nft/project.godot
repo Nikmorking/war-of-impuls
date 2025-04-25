@@ -36,10 +36,6 @@ ProjectUISoundController="*res://addons/maaacks_game_template/base/scenes/autolo
 FileSave="*res://scripts/Saves.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
-[debug]
-
-shapes/navigation/agent_path_color=Color(1, 0, 0, 0)
-
 [dialogue_manager]
 
 general/states=["Gg"]

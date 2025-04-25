@@ -39,5 +39,6 @@ do Gg.use_portal = true
 Person in black: What are you doing, go hit the mannequin. 
 Developer: This character cannot be spoken to until the current quest is completed. 
 do Gg.vis_ui()
+do Gg.vis_man()
 => END
 

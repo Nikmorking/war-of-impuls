@@ -35,6 +35,7 @@ avoidance_enabled = true
 radius = 100.0
 avoidance_layers = 3
 avoidance_mask = 3
+debug_enabled = true
 
 [node name="Tik" type="Timer" parent="."]
 wait_time = 1.8
