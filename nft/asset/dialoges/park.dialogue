@@ -16,3 +16,57 @@ Impuls: Excellent! How much?
 Inhabitant: 20 things.
 Impuls: Got it. I'm running already!
 => END
+~ podhod2
+Inhabitant: Thank you for the shells! Here's your reward. *gives a tiny purse*
+Impuls: Contact me.
+Inhabitant: Do you want to continue? There is still a lot of work to do.
+Impuls: Of course! Where to run?
+Inhabitant: Okay. We need to buy 60 barrels of beer at the bar.
+Impuls: Got it, went to buy a bar.
+Inhabitant: Wait!.. Okay, go buy a bar if you have enough money.
+=> END
+~ podhod3
+Impuls: Take the device! I waved without looking.
+Inhabitant: Okay, here's your money. *gives a small wallet*
+Impuls: Are there any more tasks?
+Inhabitant: Of course! We need to fill a couple of graves in the cemetery.
+Impuls: Got it, I'm already running to bury all the enemies in the asphalt.
+Inhabitant: Run! *whispering* Are heroes always like this?
+=> END
+~ podhod4
+Impuls: The cemetery is cleared, the bodies are buried, the pots are cut up. What next?
+Inhabitant: Well done! Take the reward. *gives the middle wallet*
+Impuls: Hooray, I'm rich! Can I have more tasks?
+Inhabitant: Yes, of course. We need to buy some things at the store. Here's the list.
+Impuls: I ran!
+Inhabitant: Run already. Wait, you forgot the list! Oh, he can't hear, he's already run away.
+=> END
+~ podhod5
+Impuls: I bought a store!
+Inhabitant: Well done! Did you bring anything from the list?
+Impuls: From what list? Oh, from the list! Yes, that's all you asked for. *gives the bag*
+Inhabitant: Great, here's your reward. *gives a small (larger than average) wallet*
+Impuls: Thank you! So what's the information?
+Inhabitant: The men in black were last mentioned in chronicles more than three hundred years ago.
+Impuls: Bad. What about the school and the portal leading to it?
+Inhabitant: The only school that fits your description was the one that burned down 15 years ago.
+Impuls: And the mannequins?
+Inhabitant: There are plenty of them. Yours in particular cannot be found among hundreds of the same.
+Impuls: Is there anything else useful?
+Inhabitant: There is nothing in the local archives, but maybe something can be found in the church.
+Impuls: Great, I'm heading there.
+Inhabitant: But it's dangerous there!
+Impuls: Well, that's good!Well, that's good!
+Inhabitant: Go already...*whispering* I hope you don't die.
+=> END
+~ fin_podhod
+Impuls: I have opened the way to the church archives!
+Inhabitant: Excellent! Now we can restore the history of our world. Thank you! *gives a large wallet*
+Impuls: What about me?! I'm not from here! I can feel it!
+Inhabitant: Don't know...
+Inhabitant1: I found out! I found out!
+Impuls: What exactly? How to make soup from nuts and scorpion acid using a minefield?
+Inhabitant1: No! There is the Center of the World, where, according to legends, a portal to another world is located.
+Impuls: Hurray! Give me a map of where this ticket home is.
+Inhabitant: Okay. There's a portal over there. Go through it and return...*sobs* to your world.
+=> END

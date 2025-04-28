@@ -101,31 +101,31 @@ navigation_polygon = SubResource("NavigationPolygon_5pomj")
 [node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="NavigationRegion2D"]
 position = Vector2(-7, -468)
 radius = 10.0
-vertices = PackedVector2Array(649, 243, 647, 356, 561, 357, 559, 420, 566, 420, 566, 365, 645, 366, 646, 401, 659, 403, 660, 242)
+vertices = PackedVector2Array(649, 243, 647, 356, 561, 357, 559, 412, 566, 413, 566, 363, 653, 364, 653, 402, 659, 403, 660, 242)
 affect_navigation_mesh = true
 
 [node name="NavigationObstacle2D2" type="NavigationObstacle2D" parent="NavigationRegion2D"]
 position = Vector2(-455, -331)
 radius = 10.0
-vertices = PackedVector2Array(593, 180, 595, 210, 768, 206, 766, 281, 973, 280, 977, 251, 776, 266, 774, 186)
+vertices = PackedVector2Array(593, 185, 593, 199, 769, 196, 766, 281, 977, 279, 976, 266, 776, 266, 774, 186)
 affect_navigation_mesh = true
 
 [node name="NavigationObstacle2D3" type="NavigationObstacle2D" parent="NavigationRegion2D"]
 position = Vector2(136, -240)
 radius = 10.0
-vertices = PackedVector2Array(514, 177, 502, 177, 505, 275, 417, 268, 418, 288, 976, 281, 976, 268, 776, 266, 518, 269)
+vertices = PackedVector2Array(514, 177, 500, 178, 500, 182, 509, 182, 511, 274, 418, 273, 419, 279, 976, 281, 976, 272, 516, 273)
 affect_navigation_mesh = true
 
 [node name="NavigationObstacle2D4" type="NavigationObstacle2D" parent="NavigationRegion2D"]
 position = Vector2(-455, -235)
 radius = 10.0
-vertices = PackedVector2Array(764, 220, 762, 264, 594, 260, 586, 282, 976, 281, 976, 268, 786, 267, 781, 221)
+vertices = PackedVector2Array(770, 221, 768, 267, 592, 265, 593, 276, 977, 277, 976, 268, 776, 267, 775, 225, 785, 225, 785, 221)
 affect_navigation_mesh = true
 
 [node name="NavigationObstacle2D5" type="NavigationObstacle2D" parent="NavigationRegion2D"]
 position = Vector2(319, -81)
 radius = 10.0
-vertices = PackedVector2Array(759, 226, 762, 283, 799, 281, 798, 227)
+vertices = PackedVector2Array(760, 228, 761, 278, 798, 277, 798, 227)
 affect_navigation_mesh = true
 
 [node name="Area2D" type="Area2D" parent="."]

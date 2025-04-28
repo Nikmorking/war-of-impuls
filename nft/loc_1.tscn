@@ -12,9 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://ck24wu0gcbyl3" path="res://asset/перс1.png" id="10_p03cx"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_rt2ub"]
-vertices = PackedVector2Array(787.688, 264, 750.859, 264, 755.68, 205.133, 924.039, 325.07, 783.539, 326.156, 924.953, 126, 747.359, 126, 749.828, 203.828, 670.633, 231.656, 723.031, 234.078, 698.898, 237.227, 571.953, 176.391, 556.727, 125.102, 668, 133.812, 588.93, 170.156, 667.398, 286.469, 699.906, 326.797, 557.711, 327.898, 585.672, 282.508, 587.328, 234.297, 572.656, 233.273, 583.938, 220.078, 724.898, 219.102, 445.453, 170.539, 392.75, 172.609, 390.258, 68.9219, 507.906, 79.1484, 460.344, 168.578, 505.594, 267.797, 513.359, 393.07, 386.773, 393.922, 396.289, 266.797, 458.633, 266.797, 444.781, 265.773, 456.312, 232, 442.258, 233, 507.094, 170.57, 439.812, 213.812, 458.656, 219, 668, 87.7891, 620, 88.7812, 620, -18.9219, 730.93, -18.0703, 730.07, 105.227, 698.148, 106.328, 697.148, 168.172, 573.328, 219, 518.117, 232, 395, 233, 395, 214.781)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 4, 0, 5), PackedInt32Array(6, 5, 0, 2), PackedInt32Array(6, 2, 7), PackedInt32Array(8, 9, 10), PackedInt32Array(11, 12, 13, 14), PackedInt32Array(15, 8, 10, 16), PackedInt32Array(15, 16, 17, 18), PackedInt32Array(19, 18, 17, 20, 21), PackedInt32Array(21, 22, 9, 8), PackedInt32Array(21, 8, 19), PackedInt32Array(23, 24, 25, 26, 27), PackedInt32Array(28, 29, 30, 31, 32), PackedInt32Array(32, 31, 33), PackedInt32Array(34, 32, 33, 35), PackedInt32Array(26, 36, 27), PackedInt32Array(35, 37, 23, 27, 38, 34), PackedInt32Array(39, 40, 41, 42), PackedInt32Array(39, 42, 43, 44), PackedInt32Array(13, 39, 44, 45), PackedInt32Array(13, 45, 14), PackedInt32Array(11, 14, 21, 46), PackedInt32Array(38, 46, 21, 20, 47), PackedInt32Array(38, 47, 34), PackedInt32Array(35, 48, 49, 37)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(380, 58, 383, 183, 434, 181, 431, 204, 385, 205, 385, 243, 433, 243, 434, 256, 387, 257, 376, 404, 524, 403, 515, 258, 468, 257, 467, 242, 518, 242, 561, 243, 546, 338, 934, 335, 935, 116, 740, 116, 741, -28, 610, -29, 610, 99, 658, 98, 658, 123, 543, 114, 562, 178, 563, 209, 518, 209, 469, 209, 470, 179, 517, 181, 518, 70)])
+vertices = PackedVector2Array(787.688, 264, 750.859, 264, 755.68, 205.133, 924.039, 325.07, 783.539, 326.156, 924.953, 126, 747.352, 126, 749.828, 203.828, 667, 273, 667, 234, 698.898, 237.227, 699.906, 326.797, 555.781, 327.922, 588.508, 273, 554.219, 255, 570.891, 255, 583.938, 220.078, 586.461, 234, 571.109, 235.227, 573.328, 219, 724.898, 219.102, 723.031, 234.078, 554.703, 168, 553.344, 124.844, 668, 133.813, 571.68, 168, 439.563, 170.578, 393.281, 172.547, 395.742, 80, 507.906, 80, 460.344, 168.578, 684.578, 127.203, 697.813, 126.906, 697.148, 168.172, 588.93, 170.156, 507.094, 170.57, 458.656, 219, 441.43, 213.781, 505.211, 267.789, 507.758, 380.07, 395.148, 380.922, 396.852, 266.789, 458.633, 266.797, 444.781, 265.773, 456.281, 231.563, 442.258, 233, 668, 87.7891, 620, 88.7813, 620, -18.9219, 730.93, -18.0703, 730.172, 90.2578, 682.391, 89.9219, 517.227, 234, 517.219, 234, 395, 233, 395, 214.781)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 4, 0, 5), PackedInt32Array(6, 5, 0, 2), PackedInt32Array(6, 2, 7), PackedInt32Array(8, 9, 10, 11), PackedInt32Array(8, 11, 12, 13), PackedInt32Array(13, 12, 14, 15), PackedInt32Array(16, 17, 13, 15, 18, 19), PackedInt32Array(16, 20, 21, 10, 9), PackedInt32Array(16, 9, 17), PackedInt32Array(22, 23, 24, 25), PackedInt32Array(26, 27, 28, 29, 30), PackedInt32Array(31, 32, 33, 34, 24), PackedInt32Array(29, 35, 30), PackedInt32Array(26, 30, 36, 37), PackedInt32Array(38, 39, 40, 41, 42), PackedInt32Array(42, 41, 43), PackedInt32Array(44, 42, 43, 45), PackedInt32Array(46, 47, 48, 49), PackedInt32Array(46, 49, 50, 51), PackedInt32Array(24, 46, 51, 31), PackedInt32Array(25, 24, 34), PackedInt32Array(19, 25, 34, 16), PackedInt32Array(36, 19, 18, 52), PackedInt32Array(36, 52, 53, 44), PackedInt32Array(45, 54, 55, 37, 36, 44)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(386, 70, 383, 183, 430, 181, 431, 204, 385, 205, 385, 243, 433, 243, 434, 256, 387, 257, 385, 391, 518, 390, 515, 258, 468, 257, 467, 242, 517, 244, 561, 245, 544, 245, 546, 338, 934, 335, 935, 116, 740, 116, 694, 117, 693, 100, 740.109, 100.34, 741, -28, 610, -29, 610, 99, 658, 98, 658, 123, 543, 114, 545, 178, 562, 178, 563, 209, 518, 209, 469, 209, 470, 179, 517, 181, 518, 70)])
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_llwrg"]
 size = Vector2(27, 32)
@@ -86,7 +86,7 @@ navigation_polygon = SubResource("NavigationPolygon_rt2ub")
 
 [node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="NavigationRegion2D"]
 radius = 10.0
-vertices = PackedVector2Array(597, 244, 596, 273, 658, 276, 660, 242)
+vertices = PackedVector2Array(597, 244, 598, 263, 657, 263, 657, 244)
 affect_navigation_mesh = true
 
 [node name="NavigationObstacle2D2" type="NavigationObstacle2D" parent="NavigationRegion2D"]
@@ -188,7 +188,7 @@ position = Vector2(-86, -4)
 shape = SubResource("RectangleShape2D_llwrg")
 
 [node name="Миб1" parent="." instance=ExtResource("7_3e2gt")]
-position = Vector2(765, 369)
+position = Vector2(779, 354)
 
 [node name="Door" parent="." instance=ExtResource("9_6tj6s")]
 position = Vector2(674, 415)
