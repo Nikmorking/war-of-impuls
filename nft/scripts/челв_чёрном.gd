@@ -1,6 +1,6 @@
 extends Node2D
 
-var res = load("res://asset/dialoges/gman.dialogue")
+var res = load("res://asset/dialoges/начало.dialogue")
 var manik = 0
 
 func _ready() -> void:

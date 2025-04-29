@@ -8,7 +8,7 @@ var col = 0
 @export var nid:int
 @export var win:int
 
-@export var res = load("res://asset/dialoges/Mib1.dialogue")
+@export var res = load("res://asset/dialoges/миб1.dialogue")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

@@ -1,7 +1,7 @@
 extends "res://scripts/Basic_enemy.gd"
 
 var down = true
-var res = load("res://asset/dialoges/Mib1.dialogue")
+var res = load("res://asset/dialoges/миб1.dialogue")
 
 @export var pri = false
 @export var mib = false
