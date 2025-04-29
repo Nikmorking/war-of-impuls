@@ -114,7 +114,6 @@ affect_navigation_mesh = true
 position = Vector2(485, 113)
 
 [node name="Воин" parent="." instance=ExtResource("7_xikbq")]
-visible = false
 position = Vector2(645, 248)
 max_health = 400
 damage = 0

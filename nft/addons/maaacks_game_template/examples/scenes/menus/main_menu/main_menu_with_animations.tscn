@@ -1,10 +1,12 @@
-[gd_scene load_steps=19 format=3 uid="uid://c63y6b25bs4bk"]
+[gd_scene load_steps=21 format=3 uid="uid://c63y6b25bs4bk"]
 
 [ext_resource type="PackedScene" uid="uid://c6k5nnpbypshi" path="res://addons/maaacks_game_template/base/scenes/menus/main_menu/main_menu.tscn" id="1_0i2sc"]
 [ext_resource type="Script" path="res://addons/maaacks_game_template/examples/scenes/menus/main_menu/main_menu_with_animations.gd" id="2_ncvk7"]
 [ext_resource type="PackedScene" uid="uid://bdvdf5v87mmrr" path="res://addons/maaacks_game_template/examples/scenes/menus/options_menu/master_options_menu_with_tabs.tscn" id="3_tuy3s"]
 [ext_resource type="PackedScene" uid="uid://c1g50h2avck3w" path="res://addons/maaacks_game_template/examples/scenes/credits/credits.tscn" id="4_lwsll"]
-[ext_resource type="Texture2D" uid="uid://bk2kgrvfi1vnh" path="res://asset/Menu/continue.png" id="5_h7f0c"]
+[ext_resource type="Texture2D" uid="uid://b3ggasrsxoe2m" path="res://asset/Menu/Начать.png" id="5_rkgc5"]
+[ext_resource type="Texture2D" uid="uid://bju3ncsl75yex" path="res://asset/Menu/Продолжить.png" id="6_isy8e"]
+[ext_resource type="Texture2D" uid="uid://bkvvhwvnbm4p5" path="res://asset/Menu/Выйти.png" id="7_a82g3"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "Intro"
@@ -383,7 +385,10 @@ offset_bottom = 63.0
 modulate = Color(1, 1, 1, 0)
 
 [node name="SubTitleLabel" parent="MenuContainer/SubTitleMargin/SubTitleContainer" index="0"]
-text = "By DND adventure"
+offset_left = 141.0
+offset_right = -8.0
+offset_bottom = 44.0
+text = "Вдохновлено DnD приключением"
 
 [node name="MenuButtonsContainer" parent="MenuContainer/MenuButtonsMargin" index="0"]
 modulate = Color(1, 1, 1, 0)
@@ -396,6 +401,9 @@ offset_left = 10.1637
 offset_top = 145.47
 offset_right = 113.164
 offset_bottom = 171.47
+
+[node name="Начать" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/NewGameButton" index="0"]
+texture = ExtResource("5_rkgc5")
 
 [node name="ContinueGameButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="1"]
 unique_name_in_owner = true
@@ -411,7 +419,7 @@ flat = true
 texture_filter = 1
 position = Vector2(83.3335, 24.329)
 scale = Vector2(2, 2)
-texture = ExtResource("5_h7f0c")
+texture = ExtResource("6_isy8e")
 
 [node name="LevelSelectButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="2"]
 unique_name_in_owner = true
@@ -422,7 +430,7 @@ offset_left = -142.827
 offset_top = 163.855
 offset_right = -14.8266
 offset_bottom = 203.855
-text = "Level Select"
+text = "выбрать уровень"
 
 [node name="OptionsButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="3"]
 offset_left = 179.545
@@ -430,11 +438,18 @@ offset_top = 134.257
 offset_right = 238.545
 offset_bottom = 199.257
 
+[node name="CreditsButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="4"]
+text = "титры
+"
+
 [node name="ExitButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="5"]
 offset_left = 17.1178
 offset_top = 275.695
 offset_right = 179.118
 offset_bottom = 315.695
+
+[node name="Выйти" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/ExitButton" index="0"]
+texture = ExtResource("7_a82g3")
 
 [node name="Заново" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="6"]
 position = Vector2(204.687, 235.145)
@@ -449,5 +464,9 @@ theme_override_constants/margin_left = 16
 theme_override_constants/margin_top = 32
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 32
+
+[node name="BackButton" parent="FlowControlContainer/FlowControl" index="0"]
+text = "назад
+"
 
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/ContinueGameButton" to="." method="_on_continue_game_button_pressed"]

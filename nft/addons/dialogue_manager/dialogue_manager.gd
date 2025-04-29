@@ -371,7 +371,7 @@ func get_line(resource: DialogueResource, key: String, extra_game_states: Array)
 
 	if not resource.lines.has(key):
 		assert(false, DialogueConstants.translate(&"errors.key_not_found").format({ key = key }))
-
+		
 	var data: Dictionary = resource.lines.get(key)
 
 	# This title key points to another title key so we should jump there instead
