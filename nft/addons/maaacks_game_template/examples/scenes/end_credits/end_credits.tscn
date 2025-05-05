@@ -39,6 +39,57 @@ scroll_vertical = 0
 [node name="CreditsLabel" parent="ScrollContainer/VBoxContainer" index="1"]
 modulate = Color(1, 1, 1, 1)
 self_modulate = Color(1, 1, 1, 1)
+text = "[center][font_size=48]Создатели[/font_size]
+
+[font_size=32]Программисты[/font_size]
+[url=https://nikmorking.itch.io/]Nikmorking[/url]  
+[url=https://itch.io/profile/anime62]Timur62[/url]
+
+[font_size=32]Сценарист[/font_size]
+[url=https://itch.io/profile/ehont]Ehont[/url]
+
+
+[font_size=32]Дизайнеры[/font_size]
+[url=https://itch.io/profile/ehont]Ehont[/url]
+Художник
+
+
+[font_size=48]Источники[/font_size]
+[font_size=32]Музыка[/font_size]
+[font_size=24]Вдохновлено[/font_size]
+Автор: [url=https://soundcloud.com/grandakt]ASHUTOSH[/url]  
+Источник: [url=https://www.chosic.com/download-audio/27888/]Музыка создана с помошью chosic.com[/url]  
+Лицензия: [url=https://creativecommons.org/licenses/by/3.0/]Creative Commons Attribution 3.0 Unported License[/url]
+[font_size=32]Tileset[/font_size]
+[font_size=24]Sprout Lands Basic pack[/font_size]
+Author: [url=https://cupnooble.itch.io/]Cup Nooble[/url]  
+Source: [url=https://cupnooble.itch.io/sprout-lands-asset-pack]itch.io[/url]  
+License: [url=read_me.txt]License - Basic Pack[/url]
+
+
+
+[font_size=48]Tools[/font_size]
+[font_size=24]Godot[/font_size]
+Author: [url=https://godotengine.org/contact]Juan Linietsky, Ariel Manzur, and contributors[/url]  
+Source: [url=https://godotengine.org/]godotengine.org[/url]  
+License: [url=https://github.com/godotengine/godot/blob/master/LICENSE.txt]MIT License[/url] 
+
+[font_size=24]Git[/font_size]
+Author: [url=https://github.com/torvalds]Linus Torvalds[/url]  
+Source: [url=https://git-scm.com/downloads]git-scm.com[/url]  
+License: [url=https://opensource.org/licenses/GPL-2.0]GNU General Public License version 2[/url]
+
+[font_size=24]Godot Game Template[/font_size]
+Author: [url=https://github.com/Maaack/Godot-Game-Template/graphs/contributors]Marek Belski and contributors[/url]  
+Source: [url=https://github.com/Maaack/Godot-Game-Template]github: Godot-Game-Template[/url]  
+License: [url=LICENSE.txt]MIT License[/url]
+
+[font_size=24]Dialogue Manager[/font_size]
+Author: [url=https://github.com/nathanhoad]Nathan Hoad[/url]  
+Source: [url=https://github.com/nathanhoad/godot_dialogue_manager]github: godot_dialogue_manager[/url]  
+License: [url=LICENSE.txt]MIT License[/url]
+  
+[/center]"
 
 [node name="CenterContainer" type="CenterContainer" parent="." index="4"]
 layout_mode = 0
@@ -63,7 +114,7 @@ anchor_bottom = 1.0
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Thanks for playing!"
+text = "Благодарим за то, что поиграли!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -84,7 +135,7 @@ custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Exit"
+text = "Выход"
 
 [node name="MenuButton" type="Button" parent="CenterContainer/EndMessagePanel/VBoxContainer/CenterContainer/HBoxContainer" index="1"]
 unique_name_in_owner = true
@@ -92,7 +143,7 @@ custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Menu"
+text = "Меню"
 
 [connection signal="pressed" from="CenterContainer/EndMessagePanel/VBoxContainer/CenterContainer/HBoxContainer/ExitButton" to="." method="_on_ExitButton_pressed"]
 [connection signal="pressed" from="CenterContainer/EndMessagePanel/VBoxContainer/CenterContainer/HBoxContainer/MenuButton" to="." method="_on_MenuButton_pressed"]

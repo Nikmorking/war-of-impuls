@@ -1,51 +1,59 @@
-# Attribution
-## Collaborators
+# Создатели
 
-### Programmer
+### Программисты
 [Nikmorking](https://nikmorking.itch.io/)  
 [Timur62](https://itch.io/profile/anime62)
 
-### Screenwriter
+### Сценарист
 [Ehont](https://itch.io/profile/ehont)
 
 
-### Artist
+### Дизайнеры
 [Ehont](https://itch.io/profile/ehont)
 Художник
 
+### Отдельная благодарность
+ветерану студии - Олегу
+наставнику - Зинькову Алексею Сергеевичу
+главному тестеру - Илье
+Тому самому Максиму
 
-## Sourced / Unaffiliated
-### Music
+
+## Источники
+### Музыка
 #### Inspire
-Author: [ASHUTOSH](https://soundcloud.com/grandakt)  
-Source: [Music promoted by chosic.com](https://www.chosic.com/download-audio/27888/)  
-License: [Creative Commons Attribution 3.0 Unported License](https://creativecommons.org/licenses/by/3.0/)
-### Tileset
+Автор: [ASHUTOSH](https://soundcloud.com/grandakt)  
+Источник: [Music promoted by chosic.com](https://www.chosic.com/download-audio/27888/)  
+Лицензия: [Creative Commons Attribution 3.0 Unported License](https://creativecommons.org/licenses/by/3.0/)
+### Тайлсет
 #### Sprout Lands Basic pack
-Author: [Cup Nooble](https://cupnooble.itch.io/)  
-Source: [itch.io](https://cupnooble.itch.io/sprout-lands-asset-pack)  
-License: [License - Basic Pack](read_me.txt)
+Автор: [Cup Nooble](https://cupnooble.itch.io/)  
+Источник: [itch.io](https://cupnooble.itch.io/sprout-lands-asset-pack)  
+Лицензия: [License - Basic Pack](read_me.txt)
 
 
 
-## Tools
+## Инструменты
 #### Godot
-Author: [Juan Linietsky, Ariel Manzur, and contributors](https://godotengine.org/contact)  
-Source: [godotengine.org](https://godotengine.org/)  
-License: [MIT License](https://github.com/godotengine/godot/blob/master/LICENSE.txt) 
+Автор: [Juan Linietsky, Ariel Manzur, and contributors](https://godotengine.org/contact)  
+Источник: [godotengine.org](https://godotengine.org/)  
+Лицензия: [MIT License](https://github.com/godotengine/godot/blob/master/LICENSE.txt) 
 
 #### Git
-Author: [Linus Torvalds](https://github.com/torvalds)  
-Source: [git-scm.com](https://git-scm.com/downloads)  
-License: [GNU General Public License version 2](https://opensource.org/licenses/GPL-2.0)
+Автор: [Linus Torvalds](https://github.com/torvalds)  
+Источник: [git-scm.com](https://git-scm.com/downloads)  
+Лицензия: [GNU General Public License version 2](https://opensource.org/licenses/GPL-2.0)
 
 #### Godot Game Template
-Author: [Marek Belski and contributors](https://github.com/Maaack/Godot-Game-Template/graphs/contributors)  
-Source: [github: Godot-Game-Template](https://github.com/Maaack/Godot-Game-Template)  
-License: [MIT License](LICENSE.txt)
+Автор: [Marek Belski and contributors](https://github.com/Maaack/Godot-Game-Template/graphs/contributors)  
+Источник: [github: Godot-Game-Template](https://github.com/Maaack/Godot-Game-Template)  
+Лицензия: [MIT License](LICENSE.txt)
 
 #### Dialogue Manager
-Author: [Nathan Hoad](https://github.com/nathanhoad)  
-Source: [github: godot_dialogue_manager](https://github.com/nathanhoad/godot_dialogue_manager)  
-License: [MIT License](LICENSE.txt)
+Автор: [Nathan Hoad](https://github.com/nathanhoad)  
+Источник: [github: godot_dialogue_manager](https://github.com/nathanhoad/godot_dialogue_manager)  
+Лицензия: [MIT License](LICENSE.txt)
   
+#### Aseprite
+Автор: [Igara Studio SA](https://igara.com)
+Источник: [Aseprite](https://www.aseprite.org)
