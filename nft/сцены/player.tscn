@@ -19,8 +19,9 @@ radius = 6.13004
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_y2g1n")
+max_health = 10000
 tipy = "Player"
-damage = 20
+damage = 200
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-3.2, 2.6)

@@ -5,3 +5,26 @@
 
 [node name="LevelLostMenu" instance=ExtResource("1_53wog")]
 script = ExtResource("2_qfo47")
+
+[node name="DescriptionLabel" parent="MenuPanelContainer/MarginContainer/BoxContainer/DescriptionMargin" index="0"]
+text = "[center]Вы проиграли...[/center]"
+
+[node name="ExitButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons" index="0"]
+text = "Выход"
+
+[node name="MainMenuButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons" index="1"]
+text = "Главное меню"
+
+[node name="Button" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons" index="2"]
+text = "Заново"
+
+[node name="CloseButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons" index="3"]
+text = "закрыть"
+
+[node name="ConfirmMainMenu" parent="." index="2"]
+dialog_text = "Выйти в  главное меню?"
+cancel_button_text = "Отмена"
+
+[node name="ConfirmExit" parent="." index="3"]
+dialog_text = "Выйти?"
+cancel_button_text = "Отмена"

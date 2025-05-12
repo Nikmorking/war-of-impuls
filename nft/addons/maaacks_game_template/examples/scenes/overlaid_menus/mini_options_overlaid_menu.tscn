@@ -5,3 +5,9 @@
 
 [node name="MiniOptionsOverlaidMenu" instance=ExtResource("1_nwj8l")]
 menu_scene = ExtResource("2_0xks0")
+
+[node name="TitleLabel" parent="MenuPanelContainer/MarginContainer/BoxContainer/TitleMargin" index="0"]
+text = "Настройки"
+
+[node name="CloseButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons" index="0"]
+text = "Назад"

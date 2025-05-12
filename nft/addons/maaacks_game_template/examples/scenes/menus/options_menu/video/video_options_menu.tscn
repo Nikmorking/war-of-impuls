@@ -1,7 +1,14 @@
 [gd_scene load_steps=3 format=3 uid="uid://b8kb81us6g3kr"]
 
 [ext_resource type="PackedScene" uid="uid://b2numvphf2kau" path="res://addons/maaacks_game_template/base/scenes/menus/options_menu/video/video_options_menu.tscn" id="1_4gigb"]
-[ext_resource type="Script" uid="uid://cgn8jg7g5ylr" path="res://addons/maaacks_game_template/examples/scenes/menus/options_menu/video/video_options_menu.gd" id="2_v2jlu"]
+[ext_resource type="Script" path="res://addons/maaacks_game_template/examples/scenes/menus/options_menu/video/video_options_menu.gd" id="2_v2jlu"]
 
 [node name="Video" instance=ExtResource("1_4gigb")]
 script = ExtResource("2_v2jlu")
+
+[node name="FullscreenControl" parent="VBoxContainer" index="0"]
+option_name = "полный экран"
+
+[node name="ResolutionControl" parent="VBoxContainer" index="1"]
+option_titles = Array[String](["640 x 360", "960 x 540", "1024 x 576", "1152 x 648", "1280 x 720", "1600 x 900", "1920 x 1080", "2048 x 1152", "2560 x 1440", "3200 x 1800", "3840 x 2160"])
+option_name = "разрешение"

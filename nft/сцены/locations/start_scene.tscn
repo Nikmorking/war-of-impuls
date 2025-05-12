@@ -39,10 +39,12 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": ["Long ago, there were two races of insects and animals that lived in peace and harmony for some time.
-But one day, a Printer appeared in the animal world, promising all the inhabitants technology in exchange for obedience.
-The naive insects immediately agreed to this proposal, and the animals organized a war for the environment against the alien. A civil war broke out, during which the animals were pushed to the outermost unpolluted frontiers.
-When the last of the rebels began to despair, a rabbit with no memory of what happened emerges from a suddenly opened portal. And the world shuddered at the mere mention of his name - Impulse."]
+"values": ["Давным-давно были две расы насекомых и животных, которые жили в мире и согласии какое-то количество времени.
+Но однажды в мир животных явился чужеземец, который пообещал всем жителям технологии взамен на подчинение. 
+Наивные насекомые сразу согласились на такое предложение, а животные организовали против пришельца войну за независимость. 
+Началась гражданская война, в ходе которой животных оттеснили на самые крайние рубежи. 
+Когда последние из повстанцев уже начали отчаиваться, из внезапно открывшегося портала выходит кролик без памяти о произошедшем. 
+И мир содрогнулся от одного его имени - Импульс."]
 }
 
 [sub_resource type="Animation" id="Animation_lximt"]

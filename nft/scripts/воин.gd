@@ -24,11 +24,7 @@ func _process(delta: float) -> void:
 		#$CollisionPolygon2D.disabled = true
 		if health < 100 and mib:
 			play = false
-			DialogueManager.show_dialogue_balloon(res, "win")
-	else:
-		if !pri:
-			health = max_health
-	pass
+			DialogueManager.show_dialogue_balloon(res, "win_mib")
 
 func hit_player()->void:
 	if hit:
