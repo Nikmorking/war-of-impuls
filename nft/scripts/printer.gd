@@ -1,6 +1,6 @@
 extends Node2D
 
-var res = load("res://asset/dialoges/printer.dialogue")
+var res = load("res://asset/dialoges/принтер.dialogue")
 var mob1 = load("res://сцены/враги и другие/Воин.tscn")
 var mob2 = load("res://сцены/враги и другие/лучник.tscn")
 var mob3 = load("res://сцены/враги и другие/Маг.tscn")

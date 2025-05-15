@@ -72,8 +72,9 @@ key = ExtResource("17_tjl4g")
 [node name="Player" parent="." instance=ExtResource("5_wvh2l")]
 z_index = 1
 position = Vector2(201, 59)
-max_health = 200
+max_health = 2000
 SPEED = 90
+damage = 200
 
 [node name="Spawn_pos" type="Node2D" parent="."]
 position = Vector2(243, 61)
