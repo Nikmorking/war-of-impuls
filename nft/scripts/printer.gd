@@ -6,7 +6,7 @@ var mob2 = load("res://сцены/враги и другие/лучник.tscn")
 var mob3 = load("res://сцены/враги и другие/Маг.tscn")
 var mob4 = load("res://сцены/враги и другие/хиллер.tscn")
 var vid
-
+@export var mib = false
 
 func _start_dial():
 	DialogueManager.show_dialogue_balloon(res, "start")
@@ -26,11 +26,18 @@ func vis():
 	$"Миб2(вещь)".hide()
 	pass
 
-
+func win():
+	if mib:
+		var lep = load("res://сцены/плюшки/челночки.tscn").instantiate()
+		get_parent().add_child(lep)
+		lep.position = position
+	queue_free()
+	pass
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Gg.connect("_start_bos_2", start)
 	Gg.connect("_vis_bos",vis)
+	Gg.connect("_win_bos", win)
 	pass # Replace with function body.
 
 

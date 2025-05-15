@@ -202,3 +202,4 @@ affect_navigation_mesh = true
 
 [node name="Player" parent="." instance=ExtResource("6_ur03u")]
 position = Vector2(571, 23)
+max_health = 2000
