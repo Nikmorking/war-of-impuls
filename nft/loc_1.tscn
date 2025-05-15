@@ -61,8 +61,6 @@ _data = {
 [node name="Node2D" type="Node2D"]
 position = Vector2(0, -1)
 script = ExtResource("1_y0aeb")
-nid = 20
-win = 15
 
 [node name="NewLocation2" parent="." instance=ExtResource("2_xpcoo")]
 position = Vector2(363, 245)
@@ -71,7 +69,7 @@ layer_1/tile_data = PackedInt32Array(-131074, 65537, 0, -131073, 65537, 0, -1966
 
 [node name="Player" parent="." instance=ExtResource("3_egole")]
 z_index = 1
-position = Vector2(377, 262)
+position = Vector2(377, 229)
 SPEED = 100
 
 [node name="Spawn_pos" type="Node2D" parent="."]
@@ -111,7 +109,6 @@ group = "room1"
 position = Vector2(342, 438)
 script = ExtResource("4_73ovl")
 group = "room1"
-col = 0
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(464, 326)

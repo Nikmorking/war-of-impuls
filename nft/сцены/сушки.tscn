@@ -5,6 +5,7 @@
 
 [node name="Сушки" type="Area2D"]
 script = ExtResource("1_76ika")
+vampirism = 100
 
 [node name="Biosladiya-304-chaynaya-s-makom-3" type="Sprite2D" parent="."]
 scale = Vector2(0.025, 0.025)
