@@ -1,7 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://dql73mhoomw4s"]
+[gd_scene load_steps=4 format=3 uid="uid://dql73mhoomw4s"]
 
 [ext_resource type="TileSet" uid="uid://bcclw1ii0vyf" path="res://сцены/locations/tile_1.tres" id="1_cjusu"]
 [ext_resource type="PackedScene" uid="uid://ciehno2dtgtce" path="res://сцены/player.tscn" id="2_qh88c"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_c7fu0"]
+vertices = PackedVector2Array(902, 298, 1014, 298, 1014, 310, 890, 310, 890, 196.922, 902, 186, 730, 186, 742, 198.078, 730, 266, 742, 277.148, 678, 278.156, 666, 266, 666, 330, 678, 342, 570, 342, 582, 330, 570, 246, 582, 234, 502, 234, 490, 246, 490, 214, 502, 202, 438, 202, 438, 214, 582, 458, 582, 566, 570, 566, 570, 468.844, 518, 458, 506, 469.844, 506, 390, 518, 378, 486, 378, 474, 390, 474, 342, 486, 330, 438, 330, 426, 342, 426, 246, 186, 214, 26, 214, 26, 202, 198, 202, 198, 298, 186, 310, 278, 310, 266, 298, 278, 246, 266, 234, 426, 234, 426, 154, 438, 166, 522, 154, 534, 166, 534, 26, 522, 26)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(0, 3, 4, 5), PackedInt32Array(6, 5, 4, 7), PackedInt32Array(8, 6, 7, 9), PackedInt32Array(8, 9, 10, 11), PackedInt32Array(12, 11, 10, 13), PackedInt32Array(12, 13, 14, 15), PackedInt32Array(15, 14, 16, 17), PackedInt32Array(18, 17, 16, 19), PackedInt32Array(18, 19, 20, 21), PackedInt32Array(22, 21, 20, 23), PackedInt32Array(24, 25, 26, 27), PackedInt32Array(28, 24, 27, 29), PackedInt32Array(28, 29, 30, 31), PackedInt32Array(32, 31, 30, 33), PackedInt32Array(32, 33, 34, 35), PackedInt32Array(36, 35, 34, 37), PackedInt32Array(36, 37, 38, 23), PackedInt32Array(39, 40, 41, 42), PackedInt32Array(39, 42, 43, 44), PackedInt32Array(45, 44, 43, 46), PackedInt32Array(47, 45, 46, 48), PackedInt32Array(47, 48, 49, 38), PackedInt32Array(23, 38, 49), PackedInt32Array(23, 49, 50, 22), PackedInt32Array(51, 22, 50), PackedInt32Array(51, 50, 52, 53), PackedInt32Array(54, 53, 52, 55)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(16, 192, 208, 192, 208, 288, 256, 288, 256, 224, 416, 224, 416, 144, 512, 144, 512, 16, 544, 16, 544, 176, 448, 176, 448, 192, 512, 192, 512, 224, 592, 224, 592, 320, 656, 320, 656, 256, 720, 256, 720, 176, 912, 176, 912, 288, 1024, 288, 1024, 320, 880, 320, 880, 207, 752, 208, 752, 287, 688, 288, 688, 352, 560, 352, 560, 256, 480, 256, 480, 224, 448, 224, 448, 320, 496, 320, 496, 368, 528, 368, 528, 448, 592, 448, 592, 576, 560, 576, 560, 479, 496, 480, 496, 400, 464, 400, 464, 352, 416, 352, 416, 256, 288, 256, 288, 320, 176, 320, 176, 224, 16, 224)])
 
 [node name="Node2D" type="Node2D"]
 
@@ -14,3 +19,6 @@ layer_1/tile_data = PackedInt32Array(2555904, 65542, 2, 2555975, 196614, 2, 71, 
 
 [node name="Player" parent="." instance=ExtResource("2_qh88c")]
 position = Vector2(532, 23)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_c7fu0")
